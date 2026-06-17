@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Option Chain Sentiment Dashboard | PCR, OI, Max Pain &amp; IV Skew Tool</title>
+<meta content="Option Chain Sentiment Dashboard summarizes PCR, OI change, writer dominance, max pain, IV skew, volume/OI, and Greeks into Excel outputs and visual cards for live market decisions." name="description"/>
+<link href="https://automationintrade.com/option-chain-sentiment-dashboard/" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=99" rel="stylesheet"/>
+<meta content="option chain sentiment dashboard, PCR analysis, OI change, max pain, IV skew, option Greeks, writer dominance, options analytics tool" name="keywords"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Automation In Trade" name="author"/><meta content="#0b8173" name="theme-color"/><meta content="Automation In Trade" property="og:site_name"/><meta content="Option Chain Sentiment Dashboard | PCR, OI, Max Pain &amp; IV Skew Tool" property="og:title"/><meta content="Option Chain Sentiment Dashboard summarizes PCR, OI change, writer dominance, max pain, IV skew, volume/OI, and Greeks into Excel outputs and visual cards for live market decisions." property="og:description"/><meta content="https://automationintrade.com/option-chain-sentiment-dashboard/" property="og:url"/><meta content="article" property="og:type"/><meta content="https://automationintrade.com/assets/images/tools/option-sentiment/polycab-option-sentiment.webp" property="og:image"/><meta content="Option Chain Sentiment Dashboard | PCR, OI, Max Pain &amp; IV Skew Tool" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Option Chain Sentiment Dashboard | PCR, OI, Max Pain &amp; IV Skew Tool" name="twitter:title"/><meta content="Option Chain Sentiment Dashboard summarizes PCR, OI change, writer dominance, max pain, IV skew, volume/OI, and Greeks into Excel outputs and visual cards for live market decisions." name="twitter:description"/><meta content="https://automationintrade.com/assets/images/tools/option-sentiment/polycab-option-sentiment.webp" name="twitter:image"/><meta content="@AutomateTR" name="twitter:site"/><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://automationintrade.com/#organization",
+      "name": "Automation In Trade",
+      "url": "https://automationintrade.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://automationintrade.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.facebook.com/automationintrade",
+        "https://www.instagram.com/automationintrade/",
+        "https://www.youtube.com/@automationintrade",
+        "https://www.linkedin.com/company/automationintrade/",
+        "https://x.com/AutomateTR"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://automationintrade.com/option-chain-sentiment-dashboard/#webpage",
+      "url": "https://automationintrade.com/option-chain-sentiment-dashboard/",
+      "name": "Option Chain Sentiment Dashboard | PCR, OI, Max Pain & IV Skew Tool",
+      "description": "Option Chain Sentiment Dashboard summarizes PCR, OI change, writer dominance, max pain, IV skew, volume/OI, and Greeks into Excel outputs and visual cards for live market decisions.",
+      "isPartOf": {
+        "@id": "https://automationintrade.com/#website"
+      },
+      "publisher": {
+        "@id": "https://automationintrade.com/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Option Sentiment",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://automationintrade.com/option-chain-sentiment-dashboard/",
+      "description": "Option Chain Sentiment Dashboard summarizes PCR, OI change, writer dominance, max pain, IV skew, volume/OI, and Greeks into Excel outputs and visual cards for live market decisions.",
+      "publisher": {
+        "@id": "https://automationintrade.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "INR"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://automationintrade.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Option Sentiment",
+          "item": "https://automationintrade.com/option-chain-sentiment-dashboard/"
+        }
+      ]
+    }
+  ]
+}
+</script></head>
+<body>
+<header class="site-header">
+<nav class="navbar">
+<a aria-label="Automation In Trade home" class="brand" href="/">
+<img alt="Automation In Trade logo" class="brand-logo" decoding="async" loading="eager" src="/logo.png"/>
+<span>Automation In Trade</span>
+</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
+<div class="nav-links">
+<a href="../about-us/">About</a>
+<a href="../#content">Content</a>
+<a href="../market-tools/">Market Tools</a>
+<div class="nav-dropdown ait-tool-nav">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="../market-tools/stock-strength-ranker/">AIT Tool <span class="chevron">⌄</span></a>
+<div aria-label="AIT free tools menu" class="tools-dropdown ait-tools-dropdown">
+<a class="dropdown-item" href="../market-tools/stock-strength-ranker/"><div class="dropdown-icon">ST</div><div class="dropdown-copy"><strong>AIT Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across indices.</span></div></a>
+<a class="dropdown-item" href="../market-tools/bullish-bearish-momentum-scanner/"><div class="dropdown-icon">BM</div><div class="dropdown-copy"><strong>Bullish/Bearish Momentum Scanner</strong><span>Separate bullish and bearish momentum candidates.</span></div></a>
+<a class="dropdown-item" href="../market-tools/volume-surge-scanner/"><div class="dropdown-icon">VS</div><div class="dropdown-copy"><strong>Volume Surge Scanner</strong><span>Find stocks with unusual volume-backed moves.</span></div></a>
+<a class="dropdown-item" href="../market-tools/near-breakout-scanner/"><div class="dropdown-icon">NB</div><div class="dropdown-copy"><strong>Near Breakout Scanner</strong><span>Find stocks close to 52-week breakout zones.</span></div></a>
+</div>
+</div>
+
+<div class="nav-dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="../#tools">Tools <span class="chevron">⌄</span></a>
+<div aria-label="Automation In Trade tools menu" class="tools-dropdown">
+<a class="dropdown-item" href="../result-scanner/"><div class="dropdown-icon">RS</div><div class="dropdown-copy"><strong>Result Scanner</strong><span>Quick result scoring and decision view.</span></div></a>
+<a class="dropdown-item" href="../news-card/"><div class="dropdown-icon">NC</div><div class="dropdown-copy"><strong>News Card</strong><span>News, brokerage calls, target prices, and more.</span></div></a>
+<a class="dropdown-item" href="../#result-impact-card-generator"><div class="dropdown-icon">RI</div><div class="dropdown-copy"><strong>Result Impact Card Generator</strong><span>Instagram/YouTube-ready cards from result data.</span></div></a>
+<a class="dropdown-item" href="../institutional-holding-activity-tracker/"><div class="dropdown-icon">IH</div><div class="dropdown-copy"><strong>Institutional Holding Activity Tracker</strong><span>QoQ MF, FII, promoter, and retail holding changes.</span></div></a>
+<a class="dropdown-item" href="../technical-zone-finder/"><div class="dropdown-icon">TZ</div><div class="dropdown-copy"><strong>Technical Zone Finder</strong><span>Buy, target, and stop-loss zones on charts.</span></div></a>
+<a class="dropdown-item" href="../option-chain-sentiment-dashboard/"><div class="dropdown-icon">OC</div><div class="dropdown-copy"><strong>Option Chain Sentiment Dashboard</strong><span>PCR, OI change, Max Pain, and IV Skew summary.</span></div></a>
+<a class="dropdown-item" href="../sector-money-flow/"><div class="dropdown-icon">SB</div><div class="dropdown-copy"><strong>Sector Buying Flow Tracker</strong><span>Detect sector-level buying and selling flows.</span></div></a>
+<a class="dropdown-item" href="../sector-money-flow/"><div class="dropdown-icon">FD</div><div class="dropdown-copy"><strong>FII/DII Flow Visualizer</strong><span>Institutional flow visuals for images and reels.</span></div></a>
+<a class="dropdown-item" href="../market-tools/"><div class="dropdown-icon">52</div><div class="dropdown-copy"><strong>52W High-Low Scanner</strong><span>Track distance from a stock’s 52-week high.</span></div></a>
+<a class="dropdown-item" href="../portfolio-analyzer/"><div class="dropdown-icon">PA</div><div class="dropdown-copy"><strong>Portfolio Analyzer</strong><span>Portfolio quality scorecard with AIT score, grade, growth and risk view.</span></div></a>
+<a class="dropdown-item" href="../ait-smart-move-indicator/"><div class="dropdown-icon">AI</div><div class="dropdown-copy"><strong>AIT Smart Move Indicator</strong><span>Smart score, stock mood, buy zone, stoploss and targets.</span></div></a>
+<a class="dropdown-item" href="../price-action-zone-finder/"><div class="dropdown-icon">IA</div><div class="dropdown-copy"><strong>Price Action Zone Finder</strong><span>Real-time buy zone, stop-loss, target and trend levels.</span></div></a>
+</div>
+</div>
+<a class="nav-cta" href="../#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="option-hero section-padding">
+<div class="option-hero-copy">
+<div class="product-kicker"><span>Live Option Chain</span><span>Sentiment Score</span><span>Excel + Visuals</span></div>
+<h1>Option Sentiment</h1>
+<h2>Live option-chain mood → score, bias, levels and visual cards.</h2>
+<p>Option Sentiment retrieves live, minute-by-minute option-chain data for your watchlist or custom stock list. It helps you compare hundreds—even thousands—of stocks during live market hours and quickly understand option-chain mood using Excel summaries and clean visual cards.</p>
+<div class="product-stat-row">
+<div><strong>1-click</strong><span>Watchlist sentiment scan</span></div>
+<div><strong>Live</strong><span>Updated market context</span></div>
+<div><strong>Excel + Cards</strong><span>Deep view or glance view</span></div>
+</div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="/#option-samples">View Sample Cards</a>
+<a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSe603nY017xiYBi1p-HaFlhodAEOVECv-L5pwRBoF3ARytolw/viewform" rel="noopener" target="_blank">Request Trial / Purchase Access</a>
+</div>
+</div>
+<div aria-label="Option Sentiment output preview" class="option-hero-panel">
+<div class="panel-topline"><span class="panel-dot"></span><span>Option Sentiment Output</span><strong>Live View</strong></div>
+<img alt="Option Sentiment output preview showing final verdict, score, PCR, writer bias, max pain, IV skew and action plan" decoding="async" loading="eager" src="/assets/images/tools/option-sentiment/polycab-option-sentiment.webp"/>
+</div>
+</section>
+<section class="section-padding result-summary-section">
+<div class="section-heading">
+<p class="eyebrow">What it does</p>
+<h2>Analyze option-chain pressure without manually decoding every strike.</h2>
+<p>The tool reads live option-chain data and converts key fields such as PCR, writer bias, trend, max pain, IV skew, volume/OI, ATM delta and combined sentiment into a simple scorecard. You can inspect the Excel sheet for deeper analysis or use the visuals to decide within seconds.</p>
+</div>
+<div class="info-grid">
+<article class="info-card"><div class="card-icon">PCR</div><h3>PCR + Writer Bias</h3><p>Highlights whether call or put activity is dominating and whether writers are building bullish, bearish or neutral pressure.</p></article>
+<article class="info-card"><div class="card-icon">MP</div><h3>Max Pain + Range</h3><p>Shows max pain placement, projected range, support, resistance and important CE/PE wall zones.</p></article>
+<article class="info-card"><div class="card-icon">IV</div><h3>IV Skew + Vol/OI</h3><p>Tracks skew, volume/OI and ATM Greeks to identify pressure, caution zones and possible sentiment shifts.</p></article>
+</div>
+</section>
+<section class="section-padding split-section option-excel-section">
+<div class="page-copy">
+<p class="eyebrow">Excel intelligence layer</p>
+<h2>Use the Excel sheet for deep comparison across many stocks.</h2>
+<p>The Excel output acts like a live market dashboard. It lets you compare CMP, PCR, trend, CE/PE strikes, predicted high/low, support, resistance, IV skew, max pain, Greeks, volume, premiums and strike-level activity across your full watchlist.</p>
+<p>If you do not want to read the sheet during market hours, the visual cards compress the same idea into a quick final verdict, confidence score and action-plan view.</p>
+</div>
+<div class="excel-preview-stack">
+<img alt="Option Sentiment Excel sheet showing symbols, CMP, PCR, trend, CE and PE strikes, predicted range, support and resistance" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/excel-main.webp"/>
+<img alt="Option Sentiment Excel sheet showing max pain, IV skew, Greeks, CE volume, PE volume and premium data" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/excel-metrics.webp"/>
+</div>
+</section>
+<section class="section-padding usp-section">
+<div class="section-heading"><p class="eyebrow">Why use it during live market hours?</p><h2>Unique selling points of Option Sentiment.</h2></div>
+<div class="usp-grid">
+<article class="usp-card"><span>01</span><h3>Bulk live comparison</h3><p>Compare option-chain mood across your full watchlist instead of opening each stock manually.</p></article>
+<article class="usp-card"><span>02</span><h3>Instant verdict layer</h3><p>Final verdict, score and confidence help you quickly filter bullish, bearish, neutral and mixed setups.</p></article>
+<article class="usp-card"><span>03</span><h3>Strike-wall clarity</h3><p>Top CE/PE strikes, support, resistance and max pain make key zones easier to understand.</p></article>
+<article class="usp-card"><span>04</span><h3>Excel depth + visual speed</h3><p>Use Excel for detailed comparison or visual cards for quick decisions and content-ready outputs.</p></article>
+<article class="usp-card"><span>05</span><h3>Repeated live checks</h3><p>Run it continuously during market hours to capture sentiment changes as option data updates.</p></article>
+<article class="usp-card"><span>06</span><h3>Content and trading workflow</h3><p>Creates branded cards that can support daily analysis, market updates and social-media publishing.</p></article>
+</div>
+</section>
+<section class="section-padding option-samples-section" id="option-samples">
+<div class="section-heading option-samples-heading">
+<p class="eyebrow">Sample output preview</p>
+<h2>Option Sentiment visual cards generated from option-chain data.</h2>
+<p>Each card compresses option-chain mood into final verdict, score, factor-level marks, signal interpretation and a quick action-plan view.</p>
+</div>
+<div class="option-gallery">
+<article class="option-sample-card"><img alt="Polycab Option Sentiment visual card" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/polycab-option-sentiment.webp"/><h4>Polycab Option Sentiment</h4><p>Neutral/mixed verdict with score, support, resistance, PCR and projected range.</p></article>
+<article class="option-sample-card"><img alt="Sun Pharma Option Sentiment visual card" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/sunpharma-option-sentiment.webp"/><h4>Sun Pharma Option Sentiment</h4><p>Bearish scorecard view showing writer bias, IV skew and caution signals.</p></article>
+<article class="option-sample-card"><img alt="Trent Option Sentiment visual card" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/trent-option-sentiment.webp"/><h4>Trent Option Sentiment</h4><p>Bullish verdict layer with max pain, PCR and projected range context.</p></article>
+<article class="option-sample-card"><img alt="VBL Option Sentiment visual card" decoding="async" loading="lazy" src="/assets/images/tools/option-sentiment/vbl-option-sentiment.webp"/><h4>VBL Option Sentiment</h4><p>Live-market style scorecard for quick visual interpretation.</p></article>
+</div>
+</section>
+<section class="section-padding contact-section">
+<div class="contact-card"><p class="eyebrow">Automation In Trade</p><h2>Want to test Option Sentiment on your own watchlist?</h2><p>Request access for demo, purchase details, or custom setup using your own stock list and output format.</p><div class="contact-actions"><a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe603nY017xiYBi1p-HaFlhodAEOVECv-L5pwRBoF3ARytolw/viewform" rel="noopener" target="_blank">Request Trial / Purchase Access</a><a class="btn btn-secondary" href="../#tools">Explore All Tools</a></div></div>
+</section>
+</main>
+<footer class="site-footer"><p>© <span id="year"></span> Automation In Trade. All rights reserved.</p><p class="disclaimer">Disclaimer: Data-based educational content only. Not investment advice.</p></footer>
+<script src="/script.js?v=99"></script>
+</body>
+</html>
