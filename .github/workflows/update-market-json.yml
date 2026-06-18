@@ -21,11 +21,11 @@ on:
           - near-breakout
 
   # GitHub cron uses UTC time.
-  # Runs Monday-Friday at 4:07 PM, 7:07 PM, and 11:58 PM IST.
+  # Runs Monday-Friday at 4:07 PM, 5:50 PM, 7:07 PM, and 11:58 PM IST.
   schedule:
     - cron: "7 16 * * 1-5"
       timezone: "Asia/Kolkata"      
-    - cron: "38 17 * * *"
+    - cron: "50 17 * * *"
       timezone: "Asia/Kolkata"
     - cron: "7 19 * * 1-5"
       timezone: "Asia/Kolkata"
