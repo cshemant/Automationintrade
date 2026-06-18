@@ -23,9 +23,9 @@ on:
   # GitHub cron uses UTC time.
   # 10:45 UTC = 4:15 PM IST. Runs Monday-Friday after Indian market close.
   schedule:
-    - cron: "0 16 * * 1-5"
+    - cron: "7 16 * * 1-5"
       timezone: "Asia/Kolkata"
-    - cron: "0 19 * * 1-5"
+    - cron: "7 19 * * 1-5"
       timezone: "Asia/Kolkata"
     - cron: "58 23 * * 1-5"
       timezone: "Asia/Kolkata"
