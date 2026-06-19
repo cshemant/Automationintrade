@@ -533,7 +533,7 @@ if (fullscreenBtn && demoVideoFrame) {
     websiteUrl: 'https://automationintrade.com/',
     whatsappNumber: '918197565002',
     defaultTrialAmount: 499,
-    defaultPurchaseAmount: 4999,
+    defaultPurchaseAmount: 9999,
     testAmount: 1,
     apiBaseUrl: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
       ? 'https://automationintrade.com/api/razorpay'
@@ -573,6 +573,7 @@ if (fullscreenBtn && demoVideoFrame) {
     'Portfolio Analyzer': { trial: 999, full: 9999 },
     'AIT Smart Move Indicator': { trial: 999, full: 9999 },
     'Price Action Zone Finder': { trial: 999, full: 9999 },
+    'Stock Research Premium': { trial: 499, full: 9999 },
     'Automation In Trade Payment Test': { trial: 1, full: 1 }
   };
 
@@ -879,6 +880,23 @@ if (fullscreenBtn && demoVideoFrame) {
     'technical-analysis': { key: 'technicalAnalysis', label: 'Technical Analysis', page: '/technical-zone-finder/', badge: 'Technical View' }
   };
 
+  const FREE_RESEARCH_INDICES = new Set(['NIFTY 50', 'NIFTY BANK', 'BANK NIFTY']);
+  const PREMIUM_RESEARCH_TOOL = 'Stock Research Premium';
+  const PREMIUM_TRIAL_AMOUNT = 499;
+  const PREMIUM_FULL_AMOUNT = 9999;
+
+  function rupeeLocal(amount) {
+    return '₹' + Number(amount).toLocaleString('en-IN');
+  }
+
+  function isFreeResearchStock(stock) {
+    if (!stock) return false;
+    if (stock.accessTier === 'free' || stock.isFree === true) return true;
+    if (stock.accessTier === 'premium' || stock.isFree === false) return false;
+    const indices = Array.isArray(stock.indices) ? stock.indices : [];
+    return indices.some(indexName => FREE_RESEARCH_INDICES.has(normalize(indexName)));
+  }
+
   function normalize(value) {
     return String(value || '').trim().toUpperCase().replace(/\s+/g, ' ');
   }
@@ -905,6 +923,12 @@ if (fullscreenBtn && demoVideoFrame) {
     return `${sign}${num.toFixed(2)}%`;
   }
 
+  function oneDayMoveClass(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num) || num === 0) return 'is-neutral';
+    return num > 0 ? 'is-positive' : 'is-negative';
+  }
+
   function formatSigned(value) {
     const num = Number(value);
     if (!Number.isFinite(num)) return '—';
@@ -927,6 +951,36 @@ if (fullscreenBtn && demoVideoFrame) {
     if (type === 'percent') return formatPct(value);
     if (type === 'signed') return formatSigned(value);
     return escapeHtml(value);
+  }
+
+  function toPlainText(value) {
+    return String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function truncateMeta(value, limit) {
+    const text = toPlainText(value);
+    if (text.length <= limit) return text;
+    return text.slice(0, limit - 1).replace(/\s+\S*$/, '') + '…';
+  }
+
+  function setOrCreateMeta(attrName, attrValue, content) {
+    let tag = document.head.querySelector(`meta[${attrName}="${attrValue}"]`);
+    if (!tag) {
+      tag = document.createElement('meta');
+      tag.setAttribute(attrName, attrValue);
+      document.head.appendChild(tag);
+    }
+    tag.setAttribute('content', content);
+  }
+
+  function updateResearchSeoDescription(stock, tool, info, data) {
+    if (!stock || !tool) return;
+    const summary = toPlainText((data && data.summary) || (info && info.summary) || `${tool.label} research card with price, trend, result and market data.`);
+    const metaText = truncateMeta(`${stock.symbol} ${stock.stockName || ''} ${tool.label}: ${summary} CMP ${formatNumber(stock.cmp)}, 1D ${formatPct(stock.changePct)}.`, 165);
+    setOrCreateMeta('name', 'description', metaText);
+    setOrCreateMeta('property', 'og:description', metaText);
+    setOrCreateMeta('name', 'twitter:description', metaText);
+    if (stock.symbol) document.title = `${stock.symbol} ${tool.label} | Automation In Trade`;
   }
 
   function findStock(query) {
@@ -974,7 +1028,7 @@ if (fullscreenBtn && demoVideoFrame) {
       summary: 'This stock is available in the search index. Add detailed JSON values to show a complete HTML scorecard.',
       metrics: [
         { label: 'CMP', value: stock.cmp, type: 'price' },
-        { label: '1D Change', value: stock.changePct, type: 'percent' },
+        { label: '1D Change', value: stock.changePct, type: 'percent', tone: oneDayMoveClass(stock.changePct) },
         { label: 'Updated', value: stock.updatedAt || updatedAt || 'Latest' }
       ],
       rows: [
@@ -1009,7 +1063,6 @@ if (fullscreenBtn && demoVideoFrame) {
             <div><span>Grade</span><strong>${escapeHtml(data.grade || view)}</strong></div>
             <div><span>Confidence</span><strong>${displayValue(data.confidence, 'percent')}</strong></div>
           </div>
-          <p class="research-card-summary">${escapeHtml(data.summary || info.summary || 'Quarterly result quality view generated from JSON values.')}</p>
           <div class="research-metrics-grid">
             ${metrics.map(item => metric(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}
           </div>
@@ -1023,7 +1076,6 @@ if (fullscreenBtn && demoVideoFrame) {
           <span>${escapeHtml(tool.label)}</span>
           <strong class="${toneClass(view)}">${escapeHtml(view)}</strong>
         </div>
-        <p class="research-card-summary">${escapeHtml(data.summary || info.summary || 'Research view generated from JSON values.')}</p>
         <div class="research-metrics-grid">
           ${metrics.map(item => metric(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}
         </div>
@@ -1032,15 +1084,48 @@ if (fullscreenBtn && demoVideoFrame) {
       </article>`;
   }
 
+  function renderPremiumResult(stock, tool) {
+    const stockTitle = `${stock.symbol}${stock.stockName ? ' | ' + stock.stockName : ''}`;
+    updateResearchSeoDescription(stock, tool, stock[tool.key] || {}, null);
+    card.innerHTML = `
+      <div class="stock-result-loaded stock-result-premium-locked">
+        <article class="premium-lock-card">
+          <span class="premium-lock-badge">🔒 Premium</span>
+          <h2>${escapeHtml(stock.symbol)}</h2>
+          <h3>${escapeHtml(stock.stockName || '')}</h3>
+          <p>${escapeHtml(tool.label)} for this stock is part of Premium Research Tools. Free access is available for NIFTY 50 and Bank Nifty stocks.</p>
+          <div class="premium-feature-list">
+            <span>Price Action</span>
+            <span>Results</span>
+            <span>Technical Analysis</span>
+          </div>
+          <div class="premium-cta-box">
+            <strong>Unlock Premium Research</strong>
+            <p>Get access to locked stock research cards through the paid tool flow.</p>
+            <div class="premium-cta-actions">
+              <button type="button" class="tool-price-btn trial" data-plan="Premium Trial Access" data-amount="${PREMIUM_TRIAL_AMOUNT}" data-tool="${PREMIUM_RESEARCH_TOOL}">Start Trial ${rupeeLocal(PREMIUM_TRIAL_AMOUNT)}</button>
+              <button type="button" class="tool-price-btn full" data-plan="Premium Full Access" data-amount="${PREMIUM_FULL_AMOUNT}" data-tool="${PREMIUM_RESEARCH_TOOL}">Unlock ${rupeeLocal(PREMIUM_FULL_AMOUNT)}</button>
+            </div>
+          </div>
+        </article>
+      </div>`;
+  }
+
   function renderResult(stock) {
     if (!stock) {
-      card.innerHTML = `<div class="stock-result-empty"><span class="stock-result-badge">No match found</span><h2>Search another stock symbol.</h2><p>Try exact NSE symbols like RELIANCE, TCS, INFY, POLYCAB, AXISBANK or M&amp;M.</p></div>`;
+      card.innerHTML = `<div class="stock-result-empty"><span class="stock-result-badge">No match found</span><h2>Search another stock symbol.</h2><p>Try exact NSE symbols like RELIANCE, TCS, INFY, AXISBANK or M&amp;M.</p></div>`;
       return;
     }
 
     const tool = toolMap[select.value] || toolMap['price-action'];
+    if (!isFreeResearchStock(stock)) {
+      renderPremiumResult(stock, tool);
+      return;
+    }
+
     const info = stock[tool.key] || {};
     const data = getToolData(stock, tool);
+    updateResearchSeoDescription(stock, tool, info, data);
     const indices = Array.isArray(stock.indices) && stock.indices.length ? stock.indices.slice(0, 3).join(', ') : 'Stock universe';
 
     card.innerHTML = `
@@ -1049,17 +1134,15 @@ if (fullscreenBtn && demoVideoFrame) {
           <span class="stock-result-badge">${tool.label}</span>
           <h2>${escapeHtml(stock.symbol)}</h2>
           <h3>${escapeHtml(stock.stockName || '')}</h3>
-          <p>${escapeHtml(info.summary || 'Pre-generated research output for this stock.')}</p>
           <div class="stock-result-meta compact-meta">
             <span>CMP: ${formatNumber(stock.cmp)}</span>
-            <span>1D: ${formatPct(stock.changePct)}</span>
+            <span>1D: <strong class="stock-one-day-value ${oneDayMoveClass(stock.changePct)}">${formatPct(stock.changePct)}</strong></span>
             <span>${escapeHtml(indices)}</span>
             <span>Updated: ${escapeHtml(updatedAt || stock.updatedAt || 'Latest')}</span>
           </div>
           <div class="stock-result-actions">
             <a href="${tool.page}">Open ${tool.label} Tool</a>
           </div>
-          ${data ? '' : '<p class="stock-result-warning">Detailed JSON is not added yet. Showing a basic HTML card from available index values.</p>'}
         </aside>
         <section class="stock-result-image-box stock-result-html-box">
           ${renderHtmlResearchCard(stock, tool, info)}
@@ -1102,7 +1185,10 @@ if (fullscreenBtn && demoVideoFrame) {
       .filter(item => item.score < 9)
       .sort((a, b) => a.score - b.score || normalize(a.stock.symbol).localeCompare(normalize(b.stock.symbol)))
       .slice(0, MAX_SUGGESTIONS)
-      .map(item => `<option value="${escapeAttr(item.stock.symbol)} | ${escapeAttr(item.stock.stockName || item.stock.symbol)}"></option>`)
+      .map(item => {
+        const label = `${item.stock.symbol} | ${item.stock.stockName || item.stock.symbol}${isFreeResearchStock(item.stock) ? '' : ' 🔒 Premium'}`;
+        return `<option value="${escapeAttr(label)}"></option>`;
+      })
       .join('');
 
     datalist.innerHTML = matches;

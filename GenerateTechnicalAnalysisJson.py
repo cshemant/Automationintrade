@@ -43,6 +43,24 @@ MARKET_DATA_DIR = ROOT / "market-data"
 HIGH_LOW_DIR = MARKET_DATA_DIR / "52-week-high-low"
 OUTPUT_DIR = ROOT / "stock-research-data" / "technical-analysis"
 
+FREE_RESEARCH_INDICES = {"NIFTY 50", "NIFTY BANK", "BANK NIFTY"}
+
+
+def is_free_research_stock(meta: StockMeta) -> bool:
+    indices = {str(x or "").strip().upper() for x in getattr(meta, "indices", [])}
+    return bool(indices & FREE_RESEARCH_INDICES)
+
+
+def cleanup_premium_json(allowed_symbols: set[str]) -> None:
+    if not OUTPUT_DIR.exists():
+        return
+    for path in OUTPUT_DIR.glob("*.json"):
+        if safe_symbol(path.stem) not in allowed_symbols:
+            try:
+                path.unlink()
+            except OSError:
+                pass
+
 DEFAULT_PERIOD = "1y"
 DEFAULT_INTERVAL = "1d"
 DEFAULT_BATCH_SIZE = 80
@@ -461,6 +479,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate technical-analysis JSON cards for stock research search.")
     parser.add_argument("--symbols", default="", help="Optional comma/space separated NSE symbols to generate, e.g. RELIANCE,TCS,M&M")
     parser.add_argument("--limit", type=int, default=0, help="Optional max number of symbols for testing.")
+    parser.add_argument("--include-premium", action="store_true", help="Generate JSON for all stocks. By default only NIFTY 50 and Bank Nifty stocks are public/free.")
     parser.add_argument("--period", default=DEFAULT_PERIOD, help="yfinance period, default 1y")
     parser.add_argument("--interval", default=DEFAULT_INTERVAL, help="yfinance interval, default 1d")
     parser.add_argument("--batch-size", type=int, default=DEFAULT_BATCH_SIZE, help="Symbols per yfinance batch download.")
@@ -475,7 +494,12 @@ def main() -> int:
     else:
         stocks = universe
 
+    if not args.include_premium:
+        stocks = {symbol: meta for symbol, meta in stocks.items() if is_free_research_stock(meta)}
+
     symbols = sorted(stocks.keys())
+    if not args.include_premium:
+        cleanup_premium_json(set(symbols))
     if args.limit and args.limit > 0:
         symbols = symbols[: args.limit]
 

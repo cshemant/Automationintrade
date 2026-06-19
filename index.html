@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css?v=106" rel="stylesheet"/>
+<link href="/style.css?v=115" rel="stylesheet"/>
 <meta content="free stock market tools, stock market data tools, trading automation tools, 52 week high low scanner, AIT Smart Move Indicator, automationintrade indicator, result scanner, price action zone finder, option chain sentiment, FII DII flow, sector money flow, Automation In Trade" name="keywords"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Automation In Trade" name="author"/><meta content="#0b8173" name="theme-color"/><link href="https://automationintrade.com/" rel="canonical"/><meta content="Automation In Trade" property="og:site_name"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." property="og:description"/><meta content="https://automationintrade.com/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" property="og:image"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" name="twitter:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." name="twitter:description"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" name="twitter:image"/><meta content="@AutomateTR" name="twitter:site"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,7 +181,6 @@
 
 <section class="live-market-strip" aria-label="NSE market snapshot">
   <div class="live-market-inner">
-    <span class="live-market-label">NSE Market Snapshot</span>
     <div class="live-market-items" id="live-market-items">
       <div class="market-tile" data-index="NIFTY 50">
         <span class="market-name">NIFTY 50</span>
@@ -208,16 +207,9 @@
   </div>
 </section>
 <main>
-<section class="stock-research-desk section-padding" id="home">
-  <div class="stock-research-header-block">
-    <p class="eyebrow">Stock Market Data • Results • Technical Research</p>
-    <h1>Stock research in one search.</h1>
-    <p class="hero-text">Select an analysis type, search a stock, and view a fast HTML research card instantly.</p>
-  </div>
-
+<section class="stock-research-desk stock-research-google section-padding" id="home">
   <form class="stock-research-search" id="stockResearchForm" autocomplete="off">
     <div class="stock-research-controls">
-      <label for="researchTypeSelect">Analysis Type</label>
       <select id="researchTypeSelect" name="researchType" aria-label="Select analysis type">
         <option value="price-action">Price Action</option>
         <option value="results">Results</option>
@@ -225,26 +217,13 @@
       </select>
     </div>
     <div class="stock-research-controls stock-search-control">
-      <label for="stockSearchInput">Search Stock</label>
-      <input id="stockSearchInput" name="stockSearch" type="search" list="stockResearchSuggestions" placeholder="Search by symbol or company name, e.g. RELIANCE, TCS, POLYCAB" aria-label="Search stock by symbol or company name" />
+      <input id="stockSearchInput" name="stockSearch" type="search" list="stockResearchSuggestions" placeholder="Search stock or symbol" aria-label="Search stock by symbol or company name" />
       <datalist id="stockResearchSuggestions"></datalist>
     </div>
     <button class="btn btn-primary stock-research-submit" type="submit">View Analysis</button>
   </form>
 
-  <div class="stock-research-quick-links" aria-label="Popular stock search examples">
-    <button type="button" data-stock-pick="POLYCAB" data-research-pick="technical-analysis">POLYCAB Technical</button>
-    <button type="button" data-stock-pick="RELIANCE" data-research-pick="results">RELIANCE Results</button>
-    <button type="button" data-stock-pick="AXISBANK" data-research-pick="price-action">AXISBANK Price Action</button>
-  </div>
-
-  <div class="stock-research-result-card" id="stockResearchResult" data-stock-research-json="/market-data/stock-research-index.json">
-    <div class="stock-result-empty">
-      <span class="stock-result-badge">Select stock</span>
-      <h2>Choose Analysis Type + Stock.</h2>
-      <p>The matching HTML research card will appear below. Values come from JSON, not heavy images.</p>
-    </div>
-  </div>
+  <div class="stock-research-result-card" id="stockResearchResult" data-stock-research-json="/market-data/stock-research-index.json"></div>
 </section>
 <section class="section-padding about-section" id="about">
 <div class="section-heading">
@@ -430,6 +409,6 @@
 <p>© <span id="year"></span> Automation In Trade. All rights reserved.</p>
 <p class="disclaimer">Disclaimer: Data-based educational content only. Not investment advice.</p>
 </footer>
-<script src="/script.js?v=106"></script>
+<script src="/script.js?v=115"></script>
 </body>
 </html>
