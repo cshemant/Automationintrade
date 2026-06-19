@@ -5,6 +5,7 @@ This package includes:
 - `.github/workflows/update-market-json.yml`
 - `requirements.txt`
 - your existing `GenerateMarketToolsJson.py`
+- new `GenerateTechnicalAnalysisJson.py` for stock-research technical HTML cards
 - existing website files and `market-data/*.json`
 
 ## What the workflow does
@@ -15,10 +16,12 @@ This package includes:
 
    ```bash
    python GenerateMarketToolsJson.py --mode all
+   python GenerateTechnicalAnalysisJson.py
+   python GenerateStockResearchIndex.py
    ```
 
-4. It updates JSON files inside `market-data/`.
-5. It commits and pushes only changed `market-data` files.
+4. It updates JSON files inside `market-data/` and `stock-research-data/`.
+5. It commits and pushes changed JSON files.
 6. Cloudflare Pages auto-deploys the site after the GitHub push.
 
 ## Schedule
@@ -46,6 +49,8 @@ That means 10:45 UTC = 4:15 PM IST, Monday to Friday.
    ```text
    .github/workflows/update-market-json.yml
    GenerateMarketToolsJson.py
+   GenerateTechnicalAnalysisJson.py
+   GenerateStockResearchIndex.py
    index.html
    style.css
    script.js
@@ -121,3 +126,44 @@ python GenerateMarketToolsJson.py --mode near-breakout
 ```
 
 The GitHub Actions manual dropdown supports the same modes.
+
+
+## Stock research technical JSON commands
+
+Generate all technical-analysis JSON cards from the current stock universe:
+
+```bash
+python GenerateTechnicalAnalysisJson.py
+python GenerateStockResearchIndex.py
+```
+
+Test only a few symbols locally:
+
+```bash
+python GenerateTechnicalAnalysisJson.py --symbols MUTHOOTFIN,RELIANCE,TCS
+python GenerateStockResearchIndex.py
+python -m http.server 8000
+```
+
+The detailed technical HTML cards are written to:
+
+```text
+stock-research-data/technical-analysis/{SYMBOL}.json
+```
+
+
+## Simplified one-command update
+
+Use this command for the full local update:
+
+```bash
+python UpdateAllData.py --mode all
+```
+
+This automatically runs market tools JSON, Technical Analysis research JSON, and the homepage stock research index in the correct order.
+
+For quick research testing:
+
+```bash
+python UpdateAllData.py --mode research --technical-symbols MUTHOOTFIN,RELIANCE,TCS
+```

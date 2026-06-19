@@ -858,3 +858,315 @@ if (fullscreenBtn && demoVideoFrame) {
     attachPaymentEvents();
   });
 })();
+
+
+// V106: Homepage stock research search using lightweight JSON + HTML cards.
+(function initStockResearchSearch() {
+  const card = document.getElementById('stockResearchResult');
+  const form = document.getElementById('stockResearchForm');
+  const input = document.getElementById('stockSearchInput');
+  const select = document.getElementById('researchTypeSelect');
+  const datalist = document.getElementById('stockResearchSuggestions');
+  if (!card || !form || !input || !select) return;
+
+  const jsonUrl = card.getAttribute('data-stock-research-json') || '/market-data/stock-research-index.json';
+  let stocks = [];
+  let updatedAt = '';
+
+  const toolMap = {
+    'price-action': { key: 'priceAction', label: 'Price Action', page: '/price-action-zone-finder/', badge: 'Setup View' },
+    'results': { key: 'results', label: 'Results', page: '/result-scanner/', badge: 'Result Quality' },
+    'technical-analysis': { key: 'technicalAnalysis', label: 'Technical Analysis', page: '/technical-zone-finder/', badge: 'Technical View' }
+  };
+
+  function normalize(value) {
+    return String(value || '').trim().toUpperCase().replace(/\s+/g, ' ');
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function formatNumber(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num)) return '—';
+    return num.toLocaleString('en-IN', { maximumFractionDigits: 2, minimumFractionDigits: 2 });
+  }
+
+  function formatPct(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num)) return '—';
+    const sign = num > 0 ? '+' : '';
+    return `${sign}${num.toFixed(2)}%`;
+  }
+
+  function formatSigned(value) {
+    const num = Number(value);
+    if (!Number.isFinite(num)) return '—';
+    const sign = num > 0 ? '+' : '';
+    return `${sign}${num.toFixed(2)}`;
+  }
+
+  function toneClass(value) {
+    const text = normalize(value);
+    const num = Number(value);
+    if (Number.isFinite(num)) return num >= 0 ? 'is-positive' : 'is-negative';
+    if (/STRONG|UPTREND|BULL|GOOD|EXCELLENT|POSITIVE|BUY|IMPROV/.test(text)) return 'is-positive';
+    if (/WEAK|DOWNTREND|BEAR|POOR|NEGATIVE|SELL|AVOID|RISK|CAUTION/.test(text)) return 'is-negative';
+    return 'is-neutral';
+  }
+
+  function displayValue(value, type) {
+    if (value === null || value === undefined || value === '') return '—';
+    if (type === 'price') return formatNumber(value);
+    if (type === 'percent') return formatPct(value);
+    if (type === 'signed') return formatSigned(value);
+    return escapeHtml(value);
+  }
+
+  function findStock(query) {
+    const q = normalize(query).replace(/\s+\|.*$/, '');
+    if (!q) return null;
+    return stocks.find(stock => normalize(stock.symbol) === q) ||
+      stocks.find(stock => normalize(`${stock.symbol} | ${stock.stockName}`) === normalize(query)) ||
+      stocks.find(stock => normalize(stock.stockName) === q) ||
+      stocks.find(stock => normalize(stock.symbol).includes(q) || normalize(stock.stockName).includes(q));
+  }
+
+  function findExactStock(query) {
+    const q = normalize(query).replace(/\s+\|.*$/, '');
+    if (!q) return null;
+    return stocks.find(stock => normalize(stock.symbol) === q) ||
+      stocks.find(stock => normalize(`${stock.symbol} | ${stock.stockName}`) === normalize(query)) ||
+      stocks.find(stock => normalize(stock.stockName) === q);
+  }
+
+  function getToolData(stock, tool) {
+    const info = stock[tool.key] || {};
+    return info.data || info.htmlData || null;
+  }
+
+  function kv(label, value, tone, type) {
+    return `<div class="research-kv"><span>${escapeHtml(label)}</span><strong class="${tone || toneClass(value)}">${displayValue(value, type)}</strong></div>`;
+  }
+
+  function metric(label, value, tone, type) {
+    return `<div class="research-metric"><span>${escapeHtml(label)}</span><strong class="${tone || toneClass(value)}">${displayValue(value, type)}</strong></div>`;
+  }
+
+  function renderRows(rows) {
+    if (!Array.isArray(rows) || !rows.length) return '';
+    return `<div class="research-table-like">${rows.map(row => `
+      <div class="research-row">
+        <span>${escapeHtml(row.label || row.name || '')}</span>
+        <strong class="${toneClass(row.tone || row.value)}">${displayValue(row.value, row.type)}</strong>
+      </div>`).join('')}</div>`;
+  }
+
+  function buildFallbackData(stock, toolId) {
+    const base = {
+      view: 'Data Ready',
+      summary: 'This stock is available in the search index. Add detailed JSON values to show a complete HTML scorecard.',
+      metrics: [
+        { label: 'CMP', value: stock.cmp, type: 'price' },
+        { label: '1D Change', value: stock.changePct, type: 'percent' },
+        { label: 'Updated', value: stock.updatedAt || updatedAt || 'Latest' }
+      ],
+      rows: [
+        { label: 'Output Format', value: 'HTML JSON Card' },
+        { label: 'Image Dependency', value: 'Not Required' },
+        { label: 'Next Step', value: 'Add detailed JSON' }
+      ]
+    };
+    if (toolId === 'price-action') base.view = 'Price Action View';
+    if (toolId === 'results') base.view = 'Result Quality View';
+    if (toolId === 'technical-analysis') base.view = 'Technical View';
+    return base;
+  }
+
+  function renderHtmlResearchCard(stock, tool, info) {
+    const data = getToolData(stock, tool) || buildFallbackData(stock, select.value);
+    const metrics = Array.isArray(data.metrics) ? data.metrics : [];
+    const rows = Array.isArray(data.rows) ? data.rows : [];
+    const levels = Array.isArray(data.levels) ? data.levels : [];
+    const note = data.note || info.note || '';
+    const view = data.view || data.signal || data.grade || tool.badge;
+
+    if (select.value === 'results') {
+      return `
+        <article class="research-html-card results-html-card">
+          <div class="research-card-head">
+            <span>${escapeHtml(tool.label)}</span>
+            <strong class="${toneClass(view)}">${escapeHtml(view)}</strong>
+          </div>
+          <div class="research-score-band ${toneClass(data.score || view)}">
+            <div><span>Result Score</span><strong>${data.score ?? '—'}</strong></div>
+            <div><span>Grade</span><strong>${escapeHtml(data.grade || view)}</strong></div>
+            <div><span>Confidence</span><strong>${displayValue(data.confidence, 'percent')}</strong></div>
+          </div>
+          <p class="research-card-summary">${escapeHtml(data.summary || info.summary || 'Quarterly result quality view generated from JSON values.')}</p>
+          <div class="research-metrics-grid">
+            ${metrics.map(item => metric(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}
+          </div>
+          ${renderRows(rows)}
+        </article>`;
+    }
+
+    return `
+      <article class="research-html-card">
+        <div class="research-card-head">
+          <span>${escapeHtml(tool.label)}</span>
+          <strong class="${toneClass(view)}">${escapeHtml(view)}</strong>
+        </div>
+        <p class="research-card-summary">${escapeHtml(data.summary || info.summary || 'Research view generated from JSON values.')}</p>
+        <div class="research-metrics-grid">
+          ${metrics.map(item => metric(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}
+        </div>
+        ${levels.length ? `<div class="research-levels">${levels.map(item => kv(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}</div>` : ''}
+        ${renderRows(rows)}
+      </article>`;
+  }
+
+  function renderResult(stock) {
+    if (!stock) {
+      card.innerHTML = `<div class="stock-result-empty"><span class="stock-result-badge">No match found</span><h2>Search another stock symbol.</h2><p>Try exact NSE symbols like RELIANCE, TCS, INFY, POLYCAB, AXISBANK or M&amp;M.</p></div>`;
+      return;
+    }
+
+    const tool = toolMap[select.value] || toolMap['price-action'];
+    const info = stock[tool.key] || {};
+    const data = getToolData(stock, tool);
+    const indices = Array.isArray(stock.indices) && stock.indices.length ? stock.indices.slice(0, 3).join(', ') : 'Stock universe';
+
+    card.innerHTML = `
+      <div class="stock-result-loaded stock-result-two-boxes stock-result-html-mode">
+        <aside class="stock-result-info-box">
+          <span class="stock-result-badge">${tool.label}</span>
+          <h2>${escapeHtml(stock.symbol)}</h2>
+          <h3>${escapeHtml(stock.stockName || '')}</h3>
+          <p>${escapeHtml(info.summary || 'Pre-generated research output for this stock.')}</p>
+          <div class="stock-result-meta compact-meta">
+            <span>CMP: ${formatNumber(stock.cmp)}</span>
+            <span>1D: ${formatPct(stock.changePct)}</span>
+            <span>${escapeHtml(indices)}</span>
+            <span>Updated: ${escapeHtml(updatedAt || stock.updatedAt || 'Latest')}</span>
+          </div>
+          <div class="stock-result-actions">
+            <a href="${tool.page}">Open ${tool.label} Tool</a>
+          </div>
+          ${data ? '' : '<p class="stock-result-warning">Detailed JSON is not added yet. Showing a basic HTML card from available index values.</p>'}
+        </aside>
+        <section class="stock-result-image-box stock-result-html-box">
+          ${renderHtmlResearchCard(stock, tool, info)}
+        </section>
+      </div>`;
+  }
+
+  const suggestionListId = datalist ? datalist.id : '';
+  const MAX_SUGGESTIONS = 12;
+
+  function escapeAttr(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  function clearSuggestions() {
+    if (datalist) datalist.innerHTML = '';
+    input.removeAttribute('list');
+  }
+
+  function populateDatalist(query) {
+    if (!datalist) return;
+    const q = normalize(query);
+    if (!q) {
+      clearSuggestions();
+      return;
+    }
+
+    const matches = stocks
+      .map(stock => {
+        const symbol = normalize(stock.symbol);
+        const name = normalize(stock.stockName);
+        const starts = symbol.startsWith(q) || name.startsWith(q);
+        const contains = symbol.includes(q) || name.includes(q);
+        return { stock, score: starts ? 0 : contains ? 1 : 9 };
+      })
+      .filter(item => item.score < 9)
+      .sort((a, b) => a.score - b.score || normalize(a.stock.symbol).localeCompare(normalize(b.stock.symbol)))
+      .slice(0, MAX_SUGGESTIONS)
+      .map(item => `<option value="${escapeAttr(item.stock.symbol)} | ${escapeAttr(item.stock.stockName || item.stock.symbol)}"></option>`)
+      .join('');
+
+    datalist.innerHTML = matches;
+    if (matches && suggestionListId) {
+      input.setAttribute('list', suggestionListId);
+    } else {
+      input.removeAttribute('list');
+    }
+  }
+
+  fetch(jsonUrl + (jsonUrl.includes('?') ? '&' : '?') + 'v=' + Date.now(), { cache: 'no-store' })
+    .then(res => {
+      if (!res.ok) throw new Error('Stock research index not found');
+      return res.json();
+    })
+    .then(data => {
+      stocks = Array.isArray(data.stocks) ? data.stocks : [];
+      updatedAt = data.updatedAt || '';
+      clearSuggestions();
+    })
+    .catch(() => {
+      card.innerHTML = `<div class="stock-result-empty"><span class="stock-result-badge">JSON not loaded</span><h2>Stock search data is unavailable.</h2><p>Check /market-data/stock-research-index.json in your GitHub repo.</p></div>`;
+    });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    renderResult(findStock(input.value));
+  });
+
+  input.addEventListener('focus', () => {
+    populateDatalist(input.value);
+  });
+
+  input.addEventListener('click', () => {
+    if (!normalize(input.value)) clearSuggestions();
+  });
+
+  input.addEventListener('change', () => {
+    const stock = findStock(input.value);
+    if (stock) renderResult(stock);
+  });
+
+  let stockSearchTimer = null;
+  input.addEventListener('input', () => {
+    populateDatalist(input.value);
+    window.clearTimeout(stockSearchTimer);
+    stockSearchTimer = window.setTimeout(() => {
+      const stock = findExactStock(input.value);
+      if (stock) renderResult(stock);
+    }, 180);
+  });
+
+  select.addEventListener('change', () => {
+    const stock = findStock(input.value);
+    if (stock) renderResult(stock);
+  });
+
+  document.querySelectorAll('[data-stock-pick]').forEach(button => {
+    button.addEventListener('click', () => {
+      const symbol = button.getAttribute('data-stock-pick') || '';
+      const research = button.getAttribute('data-research-pick') || select.value;
+      select.value = research;
+      input.value = symbol;
+      renderResult(findStock(symbol));
+    });
+  });
+})();
