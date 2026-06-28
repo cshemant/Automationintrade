@@ -1265,3 +1265,106 @@ if (fullscreenBtn && demoVideoFrame) {
     });
   });
 })();
+
+
+/* AIT Ticket Form v136: auto email + centered success view */
+(function(){
+  const SUPPORT_EMAIL = 'automationintrade@gmail.com';
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/' + SUPPORT_EMAIL;
+
+  function ticketId(){
+    const d = new Date();
+    const date = d.getFullYear().toString() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0');
+    const rand = Math.random().toString(36).slice(2, 6).toUpperCase();
+    return 'AIT-' + date + '-' + rand;
+  }
+
+  function esc(value){
+    return String(value || '').replace(/[&<>"']/g, function(ch){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]);
+    });
+  }
+
+  function initTicketForms(){
+    document.querySelectorAll('[data-ticket-form]').forEach(function(form){
+      if(form.dataset.ready === '1') return;
+      form.dataset.ready = '1';
+
+      form.addEventListener('submit', async function(event){
+        event.preventDefault();
+        const data = new FormData(form);
+        const id = ticketId();
+        const name = data.get('name') || '';
+        const email = data.get('email') || '';
+        const phone = data.get('phone') || '';
+        const category = data.get('category') || '';
+        const page = data.get('page') || '';
+        const priority = data.get('priority') || 'Normal';
+        const message = data.get('message') || '';
+        const subject = 'Automation In Trade Ticket ' + id + ' - ' + category;
+        const output = form.querySelector('.ticket-output');
+        const submit = form.querySelector('.ticket-submit');
+
+        if(submit){
+          submit.disabled = true;
+          submit.textContent = 'Generating...';
+        }
+        if(output){
+          output.innerHTML = '<div class="ticket-success ticket-success-loading"><strong>Generating ticket...</strong><span>Please wait while your ticket is being created.</span></div>';
+        }
+
+        const payload = new FormData();
+        payload.append('_subject', subject);
+        payload.append('_template', 'table');
+        payload.append('_captcha', 'false');
+        payload.append('Ticket ID', id);
+        payload.append('Name', name);
+        payload.append('Email', email);
+        payload.append('WhatsApp', phone);
+        payload.append('Category', category);
+        payload.append('Related Tool / Page', page || '-');
+        payload.append('Priority', priority);
+        payload.append('Message', message);
+        payload.append('Page URL', window.location.href);
+        payload.append('Generated At', new Date().toLocaleString('en-IN'));
+
+        let sent = false;
+        try {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: payload
+          });
+          sent = response.ok;
+        } catch (err) {
+          sent = false;
+        }
+
+        form.classList.add('ticket-submitted');
+        if(output){
+          output.innerHTML = '<div class="ticket-success ticket-success-final">' +
+            '<strong>Ticket generated: ' + esc(id) + '</strong>' +
+            '<span>' + (sent ? 'Your ticket details have been emailed to Automation In Trade support.' : 'Your ticket was generated. Email delivery may require one-time form activation, so please keep this ticket ID saved.') + '</span>' +
+            '<div class="ticket-summary">' +
+              '<p><b>Name:</b> ' + esc(name) + '</p>' +
+              '<p><b>Email:</b> ' + esc(email) + '</p>' +
+              '<p><b>WhatsApp:</b> ' + esc(phone) + '</p>' +
+              '<p><b>Category:</b> ' + esc(category) + '</p>' +
+              '<p><b>Priority:</b> ' + esc(priority) + '</p>' +
+              (page ? '<p><b>Related Tool/Page:</b> ' + esc(page) + '</p>' : '') +
+              '<p><b>Message:</b> ' + esc(message) + '</p>' +
+            '</div>' +
+          '</div>';
+
+          setTimeout(function(){
+            output.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 80);
+        }
+      });
+    });
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initTicketForms);
+  else initTicketForms();
+})();
+
