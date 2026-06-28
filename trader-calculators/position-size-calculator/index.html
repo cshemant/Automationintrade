@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Position Size Calculator for Stock Trading in India | Quantity by Risk</title>
+<meta content="Find how many shares you can buy based on capital, risk per trade, entry price and stop loss with this free position size calculator." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=131" rel="stylesheet"/>
+<meta content="position size calculator India, quantity calculator stock trading, risk per trade calculator" name="keywords"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://automationintrade.com/trader-calculators/position-size-calculator/" rel="canonical"/>
+<meta content="Position Size Calculator | Automation In Trade" property="og:title"/>
+<meta content="Find how many shares you can buy based on capital, risk per trade, entry price and stop loss with this free position size calculator." property="og:description"/>
+<meta content="https://automationintrade.com/trader-calculators/position-size-calculator/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Position Size Calculator","url":"https://automationintrade.com/trader-calculators/position-size-calculator/","description":"Find how many shares you can buy based on capital, risk per trade, entry price and stop loss with this free position size calculator.","publisher":{"@type":"Organization","name":"Automation In Trade","url":"https://automationintrade.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the Position Size Calculator show?", "acceptedAnswer": {"@type": "Answer", "text": "Find suggested quantity based on trading capital and maximum risk per trade so one bad trade does not damage the account."}}, {"@type": "Question", "name": "When should you use the Position Size Calculator?", "acceptedAnswer": {"@type": "Answer", "text": "The suggested quantity is based on risk per share and the total rupee risk you are willing to accept. If the number is too small, your stop loss may be too wide for your chosen risk budget. If the position value becomes too large, capital concentration can also become a concern."}}]}</script>
+</head>
+<body>
+<header class="site-header">
+<nav class="navbar">
+<a aria-label="Automation In Trade home" class="brand" href="/">
+<img alt="Automation In Trade logo" class="brand-logo" decoding="async" loading="eager" src="/logo.png"/>
+<span>Automation In Trade</span>
+</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="nav-links">
+<a href="/market-tools/">Daily Market</a>
+<div class="nav-dropdown ait-tool-nav">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/market-tools/stock-strength-ranker/">AIT Stock Scanners <span class="chevron">⌄</span></a>
+<div aria-label="AIT stock scanners menu" class="tools-dropdown ait-tools-dropdown">
+<a class="dropdown-item" href="/market-tools/stock-strength-ranker/"><div class="dropdown-icon">ST</div><div class="dropdown-copy"><strong>AIT Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across indices.</span></div></a>
+<a class="dropdown-item" href="/market-tools/bullish-bearish-momentum-scanner/"><div class="dropdown-icon">BM</div><div class="dropdown-copy"><strong>Bullish/Bearish Momentum Scanner</strong><span>Separate bullish and bearish momentum candidates.</span></div></a><a class="dropdown-item" href="/market-tools/volume-surge-scanner/"><div class="dropdown-icon">VS</div><div class="dropdown-copy"><strong>Volume Surge Scanner</strong><span>Find stocks with unusual volume-backed moves.</span></div></a><a class="dropdown-item" href="/market-tools/near-breakout-scanner/"><div class="dropdown-icon">NB</div><div class="dropdown-copy"><strong>Near Breakout Scanner</strong><span>Find stocks close to 52-week breakout zones.</span></div></a>
+</div>
+</div>
+<div class="nav-dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/#tools">Research Tools <span class="chevron">⌄</span></a>
+<div aria-label="Automation In Trade research tools menu" class="tools-dropdown">
+<a class="dropdown-item" href="/result-scanner/">
+<div class="dropdown-icon">RS</div>
+<div class="dropdown-copy">
+<strong>Result Scanner</strong>
+<span>Quick result scoring and decision view.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/news-card/">
+<div class="dropdown-icon">NC</div>
+<div class="dropdown-copy">
+<strong>News Card</strong>
+<span>News, brokerage calls, target prices, and more.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/#result-impact-card-generator">
+<div class="dropdown-icon">RI</div>
+<div class="dropdown-copy">
+<strong>Result Impact Card Generator</strong>
+<span>Instagram/YouTube-ready cards from result data.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/institutional-holding-activity-tracker/">
+<div class="dropdown-icon">IH</div>
+<div class="dropdown-copy">
+<strong>Institutional Holding Activity Tracker</strong>
+<span>QoQ MF, FII, promoter, and retail holding changes.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/technical-zone-finder/">
+<div class="dropdown-icon">TZ</div>
+<div class="dropdown-copy">
+<strong>Technical Zone Finder</strong>
+<span>Buy, target, and stop-loss zones on charts.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/option-chain-sentiment-dashboard/">
+<div class="dropdown-icon">OC</div>
+<div class="dropdown-copy">
+<strong>Option Chain Sentiment Dashboard</strong>
+<span>PCR, OI change, Max Pain, and IV Skew summary.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/sector-money-flow/">
+<div class="dropdown-icon">SB</div>
+<div class="dropdown-copy">
+<strong>Sector Buying Flow Tracker</strong>
+<span>Detect sector-level buying and selling flows.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/sector-money-flow/">
+<div class="dropdown-icon">FD</div>
+<div class="dropdown-copy">
+<strong>FII/DII Flow Visualizer</strong>
+<span>Institutional flow visuals for images and reels.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/market-tools/">
+<div class="dropdown-icon">52</div>
+<div class="dropdown-copy">
+<strong>52W High-Low Scanner</strong>
+<span>Track distance from a stock’s 52-week high.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/portfolio-analyzer/">
+<div class="dropdown-icon">PA</div>
+<div class="dropdown-copy">
+<strong>Portfolio Analyzer</strong>
+<span>Portfolio quality scorecard with good, monitor and poor stock views.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/ait-smart-move-indicator/">
+<div class="dropdown-icon">AI</div>
+<div class="dropdown-copy">
+<strong>AIT Smart Move Indicator</strong>
+<span>Smart score, stock mood, buy zone, stoploss and targets.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/price-action-zone-finder/">
+<div class="dropdown-icon">IA</div>
+<div class="dropdown-copy">
+<strong>Price Action Zone Finder</strong>
+<span>Real-time buy zone, stop-loss, target and trend levels.</span>
+</div>
+</a>
+<a class="dropdown-item" href="/trader-calculators/">
+<div class="dropdown-icon">TC</div>
+<div class="dropdown-copy">
+<strong>Trader Calculators</strong>
+<span>Averaging, stop loss, position size, and risk calculators.</span>
+</div>
+</a>
+
+</div>
+</div>
+<a class="nav-cta" href="/#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="single-calculator-wrap section-padding">
+  <div class="single-calculator-breadcrumbs"><a href="/">Home</a><span>›</span><a href="/trader-calculators/">Trader Calculators</a><span>›</span><span>Position Size Calculator</span></div>
+  <div class="single-calculator-heading">
+    <p class="eyebrow">Trader Calculator</p>
+    <h1>Position Size Calculator</h1>
+    <p>Find suggested quantity based on trading capital and maximum risk per trade so one bad trade does not damage the account.</p>
+  </div>
+  <div class="single-calculator-layout">
+    <div class="single-calculator-main">
+      <article class="trader-calculator-card single-calculator-card" data-calculator="positionSize">
+        <div class="calc-form-grid"><label>Trading capital ₹<input type="number" data-field="capital" value="100000" min="0" step="100"></label><label>Risk per trade %<input type="number" data-field="riskPct" value="1" min="0" step="0.1"></label><label>Entry price<input type="number" data-field="entry" value="500" min="0" step="0.01"></label><label>Stop loss price<input type="number" data-field="sl" value="480" min="0" step="0.01"></label></div>
+        <button class="calc-button" type="button">Calculate</button>
+        <div class="calc-result" data-output="positionSize"></div>
+      </article>
+      <div class="single-calculator-copy"><section class="calculator-description-card"><h2>Why quantity sizing is critical</h2><p>Even good trade ideas can become dangerous when quantity is too large. Position sizing helps you match conviction with risk control. This calculator works backward from total capital and allowed risk per trade to estimate an appropriate quantity.</p></section><section class="calculator-description-card"><h2>What the result means</h2><p>The suggested quantity is based on risk per share and the total rupee risk you are willing to accept. If the number is too small, your stop loss may be too wide for your chosen risk budget. If the position value becomes too large, capital concentration can also become a concern.</p></section><section class="calculator-description-card"><h2>Best way to use it</h2><p>Use this before every swing trade or short-term trade. It creates a repeatable framework: define entry, define invalidation, define risk budget, and only then decide quantity. This is one of the simplest ways to improve consistency in trading.</p></section>
+        <section class="calculator-description-card">
+          <h2>Related tool</h2>
+          <p>If you want to go beyond calculator output, combine this page with our linked market research tools for deeper context. The calculator gives structure; the related tool helps with analysis.</p>
+          <p><a class="btn btn-secondary" href="/ait-smart-move-indicator/">Open AIT Smart Move Indicator</a></p>
+        </section>
+      </div>
+    </div>
+    <aside class="single-calculator-sidebar">
+      <div class="calculator-sidebar-card">
+        <h3>Popular trader calculators</h3>
+        <nav class="calculator-sidebar-links" aria-label="Popular trader calculators"><a href="/trader-calculators/averaging-risk-calculator/">Averaging Risk Calculator</a><a href="/trader-calculators/stop-loss-calculator/">Stop Loss Calculator</a><a href="/trader-calculators/position-size-calculator/">Position Size Calculator</a><a href="/trader-calculators/result-reaction-calculator/">Result Reaction Calculator</a><a href="/trader-calculators/correction-recovery-calculator/">Correction Recovery Calculator</a><a href="/trader-calculators/target-vs-risk-calculator/">Target vs Risk Calculator</a><a href="/trader-calculators/capital-allocation-calculator/">Capital Allocation Calculator</a></nav>
+      </div>
+      <div class="calculator-sidebar-card">
+        <h3>Why this page exists</h3>
+        <p>Visitors often search for one exact calculation, not a full tool collection. This focused page is built to answer that search quickly and then explain the context in plain language.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<script src="/trader-calculators/calculator-pages.js?v=131"></script>
+<footer class="site-footer ait-standard-footer" aria-label="Automation In Trade footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a class="footer-brand-link" href="/" aria-label="Automation In Trade home">
+          <img class="footer-logo" src="/logo.png" alt="Automation In Trade logo" loading="lazy" decoding="async" />
+          <span>Automation In Trade</span>
+        </a>
+        <p>Automation In Trade provides clean stock market data tools, scanners, dashboards and visual research content for Indian market learners.</p>
+        <p class="footer-note">Educational data platform for result analysis, market strength, sector flow, price action and research automation.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="AIT stock scanners">
+        <h3 class="footer-column-title">AIT Stock Scanners</h3>
+        <a href="/market-tools/stock-strength-ranker/">Stock Strength Ranker</a>
+        <a href="/market-tools/bullish-bearish-momentum-scanner/">Bullish / Bearish Momentum</a>
+        <a href="/market-tools/volume-surge-scanner/">Volume Surge Scanner</a>
+        <a href="/market-tools/near-breakout-scanner/">Near Breakout Scanner</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Research tools">
+        <h3 class="footer-column-title">Research Tools</h3>
+        <a href="/result-scanner/">Result Scanner</a>
+        <a href="/portfolio-analyzer/">Portfolio Analyzer</a>
+        <a href="/price-action-zone-finder/">Price Action Zone Finder</a>
+        <a href="/technical-zone-finder/">Technical Zone Finder</a>
+        <a href="/option-chain-sentiment-dashboard/">Option Sentiment Dashboard</a>
+        <a href="/trader-calculators/">Trader Calculators</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Market data tools">
+        <h3 class="footer-column-title">Market Data</h3>
+        <a href="/market-tools/">Daily Market Tools</a>
+        <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
+        <a href="/market-tools/index-performance/">Index Performance</a>
+        <a href="/sector-money-flow/">Sector Money Flow</a>
+        <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Blog guides">
+        <h3 class="footer-column-title">Blog Guides</h3>
+        <a href="/blog/price-action-trading-guide/">Price Action Guide</a>
+        <a href="/blog/company-quarterly-results-analysis/">Quarterly Results Guide</a>
+        <a href="/blog/technical-analysis-for-indian-stocks/">Technical Analysis Guide</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Company links">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="/about-us/">About</a>
+        <a href="/#content">Content</a>
+        <a href="/news-card/">News Card</a>
+        <a href="/#contact">Contact</a>
+        <a href="mailto:contact@automationintrade.com">Support</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-social-block">
+        <span class="footer-bottom-title">Find us on</span>
+        <div class="footer-social-row" aria-label="Automation In Trade social links">
+          <a class="footer-social-icon" href="https://www.youtube.com/@automationintrade" aria-label="YouTube" rel="noopener" target="_blank">▶</a>
+          <a class="footer-social-icon" href="https://www.instagram.com/automationintrade/" aria-label="Instagram" rel="noopener" target="_blank">◎</a>
+          <a class="footer-social-icon" href="https://x.com/AutomateTR" aria-label="X / Twitter" rel="noopener" target="_blank">𝕏</a>
+          <a class="footer-social-icon" href="https://www.linkedin.com/company/automationintrade/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+          <a class="footer-social-icon" href="https://www.facebook.com/automationintrade" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+        </div>
+      </div>
+
+      <div class="footer-support-block">
+        <span class="footer-bottom-title">Help and support</span>
+        <a href="mailto:contact@automationintrade.com">contact@automationintrade.com</a>
+      </div>
+
+      <div class="footer-legal-block">
+        <span>© <span id="year"></span> Automation In Trade. All rights reserved.</span>
+        <span class="footer-disclaimer">Data-based educational content only. Not investment advice. Values may be delayed, manually updated, or sample snapshots.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/script.js?v=120"></script>
+</body>
+</html>
