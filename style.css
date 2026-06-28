@@ -10351,3 +10351,26 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
   max-width: 820px;
   margin: 0 auto;
 }
+
+/* V138: Make Contact header link match normal navigation link */
+.nav-cta,
+.nav-links .nav-cta,
+.site-header .navbar .nav-links .nav-cta {
+  background: transparent !important;
+  color: var(--muted) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.nav-cta:hover,
+.nav-cta:focus,
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus,
+.site-header .navbar .nav-links .nav-cta:hover,
+.site-header .navbar .nav-links .nav-cta:focus {
+  background: transparent !important;
+  color: var(--primary) !important;
+  box-shadow: none !important;
+}
