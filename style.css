@@ -114,7 +114,7 @@ img {
 }
 
 
-/* Live market snapshot strip on homepage */
+/* Live market snapshot strip on Daily Market page */
 .live-market-strip {
   background: #f6faf9;
   border-bottom: 1px solid #e4eceb;
@@ -209,7 +209,7 @@ h1 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 3.35rem);
-  margin-bottom: 18px;
+  margin-bottom: 6px;
 }
 
 h3 {
@@ -467,7 +467,7 @@ h3 {
   }
 
   
-/* Live market snapshot strip on homepage */
+/* Live market snapshot strip on Daily Market page */
 .live-market-strip {
   background: #f6faf9;
   border-bottom: 1px solid #e4eceb;
@@ -7316,4 +7316,1226 @@ body { padding-top: var(--site-header-height) !important; }
 .stock-one-day-value {
   font: inherit;
   font-weight: 900;
+}
+
+
+/* V116 Professional Typography Upgrade
+   Site-wide font-size and font-style polish inspired by premium market dashboards. */
+:root {
+  --font-main: "Manrope", "Inter", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Manrope", "Inter", "Segoe UI", Arial, sans-serif;
+  --brand: var(--primary);
+  --ink: var(--text);
+  --teal: var(--primary);
+}
+
+html {
+  font-size: 16.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-main) !important;
+  font-weight: 500;
+  line-height: 1.66;
+  letter-spacing: -0.008em;
+  color: #101827;
+}
+
+button,
+input,
+select,
+textarea,
+.btn,
+.tool-price-btn,
+.market-json-toolbar input {
+  font-family: var(--font-main) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand,
+.nav-links,
+.btn,
+.tool-price-btn,
+.market-data-table th,
+.market-top5-card p,
+.product-kicker,
+.eyebrow,
+.hero-badge,
+.dropdown-copy strong,
+.tool-card h3,
+.info-card h3,
+.workflow-card h3,
+.feature-card h3,
+.stat-card h3,
+.market-tool-hub-card h3,
+.market-tools-card-grid strong {
+  font-family: var(--font-heading) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 850;
+  letter-spacing: -0.052em;
+  color: #0f172a;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 5.15vw, 5.15rem);
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: clamp(2.05rem, 3.8vw, 3.45rem);
+  line-height: 1.05;
+}
+
+h3 {
+  font-size: 1.24rem;
+  line-height: 1.18;
+}
+
+h4 {
+  font-size: 1.05rem;
+  line-height: 1.22;
+  font-weight: 800;
+}
+
+p,
+li,
+span,
+a,
+td,
+th,
+label,
+input,
+select,
+textarea {
+  letter-spacing: -0.006em;
+}
+
+p,
+.hero-text,
+.section-heading p,
+.tools-box p,
+.contact-card p,
+.feature-card p,
+.stat-card p,
+.info-card p,
+.workflow-card p,
+.page-copy p,
+.bullet-panel li,
+.market-page-intro,
+.market-tools-hero p,
+.market-tools-summary-card p,
+.about-hero-copy p,
+.about-story-card p,
+.about-disclaimer-card p,
+.about-audience-panel p {
+  font-size: clamp(1rem, 0.18vw + 0.96rem, 1.08rem);
+  line-height: 1.72;
+  font-weight: 570;
+}
+
+.site-header {
+  font-family: var(--font-main) !important;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.brand {
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.nav-links {
+  font-size: 0.94rem;
+  font-weight: 780;
+  letter-spacing: -0.012em;
+}
+
+.nav-links a,
+.dropdown-trigger {
+  line-height: 1.2;
+}
+
+.nav-cta,
+.btn,
+.tool-price-btn {
+  font-weight: 850;
+  letter-spacing: -0.012em;
+}
+
+.btn {
+  font-size: 0.98rem;
+}
+
+.eyebrow,
+.product-kicker,
+.live-market-label,
+.hero-badge,
+.market-page-badges span,
+.market-tool-hub-card span,
+.tool-card span {
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.hero h1 {
+  font-size: clamp(2.85rem, 5vw, 4.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.058em;
+  max-width: 760px;
+}
+
+.hero-text {
+  font-size: clamp(1.02rem, 0.35vw + 0.96rem, 1.15rem);
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+.section-heading {
+  max-width: 820px;
+}
+
+.section-heading h2,
+.result-samples-heading h2,
+.technical-samples-heading h2,
+.news-samples-heading h2,
+.option-samples-heading h2,
+.sector-samples-heading h2,
+.pa-samples-heading h2,
+.portfolio-flow-heading h2 {
+  letter-spacing: -0.056em;
+}
+
+.stat-card,
+.feature-card,
+.contact-card,
+.tools-box,
+.info-card,
+.workflow-card,
+.page-copy,
+.bullet-panel,
+.sample-block,
+.result-sample-group,
+.market-tools-summary-card,
+.market-tool-hub-card,
+.market-top5-card,
+.market-tools-fii-card,
+.about-story-card,
+.about-disclaimer-card,
+.about-hero-card {
+  letter-spacing: -0.008em;
+}
+
+.stat-card h3,
+.feature-card h3,
+.info-card h3,
+.workflow-card h3,
+.tool-card h3,
+.market-tool-hub-card h3,
+.about-tool-grid strong {
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.check-list li,
+.bullet-panel li,
+.audience-list span,
+.related-sector-link,
+.panel-strip span,
+.market-page-badges span,
+.market-top5-card li,
+.fii-dii-table td,
+.fii-dii-table th {
+  font-weight: 750;
+}
+
+.dropdown-copy strong {
+  font-size: 0.98rem;
+  font-weight: 850;
+}
+
+.dropdown-copy span {
+  font-size: 0.86rem;
+  line-height: 1.42;
+  font-weight: 600;
+}
+
+.tool-card p,
+.market-tool-hub-card p,
+.market-tools-card-grid span,
+.about-tool-grid span,
+.seo-link-grid span,
+.market-top5-card li span,
+.sample-card-copy p,
+.result-sample-card h4,
+.technical-sample-card p,
+.news-sample-card p,
+.option-sample-card p,
+.sector-sample-card p,
+.pa-sample-card p,
+.portfolio-sample-card p,
+.excel-sample-card p,
+.smart-sample-card h4,
+.portfolio-video-body p {
+  line-height: 1.58;
+  font-weight: 650;
+}
+
+/* Product/tool hero pages: keep premium large headings but improve readability. */
+.result-product-hero h1,
+.technical-hero h1,
+.news-hero h1,
+.option-hero h1,
+.sector-flow-hero h1,
+.pa-hero h1,
+.smart-hero h1,
+.portfolio-hero h1,
+.page-hero-compact h1,
+.about-hero-copy h1 {
+  font-weight: 900 !important;
+  letter-spacing: -0.068em !important;
+  line-height: 0.98 !important;
+}
+
+.result-product-hero h2,
+.technical-hero h2,
+.news-hero h2,
+.option-hero h2,
+.sector-flow-hero h2,
+.pa-hero h2,
+.smart-hero h2,
+.portfolio-hero h2 {
+  font-weight: 850 !important;
+  letter-spacing: -0.052em !important;
+  line-height: 1.1 !important;
+}
+
+.result-product-hero p,
+.technical-hero p,
+.news-hero p,
+.option-hero p,
+.sector-flow-hero p,
+.pa-hero p,
+.smart-hero p,
+.portfolio-hero p {
+  font-weight: 620 !important;
+  line-height: 1.62 !important;
+}
+
+.product-stat-row strong,
+.market-tools-summary-card strong,
+.output-preview-card strong,
+.portfolio-flow-metric strong,
+.fii-card-title,
+.fii-card-banner,
+.market-price,
+.market-name,
+.market-change {
+  font-family: var(--font-heading) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.035em;
+}
+
+.market-data-table th,
+.market-data-table td {
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.market-data-table th {
+  letter-spacing: -0.012em;
+}
+
+.market-table-hero h1 {
+  font-size: clamp(2.15rem, 3.55vw, 3.45rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.052em !important;
+}
+
+.market-table-hero .market-page-intro,
+.market-explain-section .compact-market-seo p {
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+  font-weight: 570 !important;
+}
+
+.market-table-heading h2,
+.market-explain-section .compact-market-seo h2 {
+  font-weight: 880 !important;
+  letter-spacing: -0.045em !important;
+}
+
+/* Small pages and payment pages */
+.payment-success-card h1,
+.test-payment-card h1,
+.payment-status-box strong {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.payment-success-card p,
+.test-payment-card p,
+.payment-status-box p {
+  font-weight: 570;
+  line-height: 1.7;
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .hero h1 {
+    font-size: clamp(2.55rem, 4.45vw, 4.25rem);
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 860px) {
+  html {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .nav-links {
+    font-size: 1rem;
+  }
+
+  h1,
+  .hero h1,
+  .page-hero-compact h1,
+  .about-hero-copy h1 {
+    font-size: clamp(2.25rem, 11vw, 3.8rem) !important;
+    line-height: 1.04 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 7.5vw, 2.65rem);
+  }
+
+  p,
+  .hero-text,
+  .section-heading p,
+  .market-page-intro {
+    font-size: 1rem !important;
+    line-height: 1.66 !important;
+  }
+}
+
+
+/* V117 Professional Typography Correction
+   Fixes oversized V116 headings and makes text scale closer to real financial dashboards. */
+:root {
+  --font-main: "Inter", "Manrope", "Segoe UI", Arial, sans-serif;
+  --font-heading: "Inter", "Manrope", "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  font-size: 16px !important;
+}
+
+body {
+  font-family: var(--font-main) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.002em !important;
+  color: #111827 !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.brand, .nav-links, .btn, .tool-price-btn,
+.market-data-table th, .market-data-table td,
+.market-name, .market-price, .market-change {
+  font-family: var(--font-heading) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 750 !important;
+  letter-spacing: -0.032em !important;
+  line-height: 1.16 !important;
+  color: #111827;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 3.25vw, 3.45rem) !important;
+  max-width: 880px;
+}
+
+h2 {
+  font-size: clamp(1.55rem, 2.45vw, 2.45rem) !important;
+  line-height: 1.18 !important;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 1.06rem !important;
+  line-height: 1.28 !important;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 0.98rem !important;
+  line-height: 1.3 !important;
+}
+
+p,
+.hero-text,
+.section-heading p,
+.tools-box p,
+.contact-card p,
+.feature-card p,
+.stat-card p,
+.info-card p,
+.workflow-card p,
+.page-copy p,
+.bullet-panel li,
+.market-page-intro,
+.market-tools-hero p,
+.market-tools-summary-card p,
+.about-hero-copy p,
+.about-story-card p,
+.about-disclaimer-card p,
+.about-audience-panel p,
+.result-product-hero p,
+.technical-hero p,
+.news-hero p,
+.option-hero p,
+.sector-flow-hero p,
+.pa-hero p,
+.smart-hero p,
+.portfolio-hero p {
+  font-size: 0.96rem !important;
+  line-height: 1.6 !important;
+  font-weight: 450 !important;
+  letter-spacing: -0.004em !important;
+}
+
+.section-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.navbar {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+
+.brand {
+  font-size: 1rem !important;
+  font-weight: 760 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.nav-links {
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.006em !important;
+}
+
+.nav-cta,
+.btn,
+.tool-price-btn {
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.005em !important;
+}
+
+.eyebrow,
+.product-kicker,
+.live-market-label,
+.hero-badge,
+.market-page-badges span,
+.market-tool-hub-card span,
+.tool-card span {
+  font-size: 0.72rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.09em !important;
+}
+
+.hero,
+.result-hero,
+.result-product-hero,
+.technical-hero,
+.news-hero,
+.option-hero,
+.sector-flow-hero,
+.pa-hero,
+.smart-hero,
+.portfolio-hero,
+.page-hero-compact,
+.about-page-hero,
+.market-tools-hero,
+.market-table-hero {
+  min-height: auto !important;
+}
+
+.hero h1,
+.page-hero-compact h1,
+.result-hero h1,
+.result-product-hero h1,
+.technical-hero h1,
+.news-hero h1,
+.option-hero h1,
+.sector-flow-hero h1,
+.pa-hero h1,
+.smart-hero h1,
+.portfolio-hero h1,
+.about-hero-copy h1,
+.market-tools-hero h1,
+.market-table-hero h1 {
+  font-size: clamp(2.2rem, 3.55vw, 3.65rem) !important;
+  font-weight: 780 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.04em !important;
+  max-width: 860px !important;
+}
+
+.about-hero-copy h1,
+.portfolio-hero h1,
+.option-hero h1,
+.technical-hero h1,
+.result-product-hero h1,
+.news-hero h1,
+.sector-flow-hero h1,
+.pa-hero h1,
+.smart-hero h1 {
+  font-size: clamp(2.15rem, 3.35vw, 3.45rem) !important;
+  line-height: 1.14 !important;
+}
+
+.hero-text,
+.hero .hero-text,
+.page-hero-compact .hero-text,
+.result-hero .hero-text,
+.about-hero-copy p,
+.market-tools-hero p,
+.market-table-hero .market-page-intro,
+.market-page-intro {
+  font-size: 0.98rem !important;
+  line-height: 1.62 !important;
+  max-width: 720px !important;
+}
+
+.result-product-hero h2,
+.technical-hero h2,
+.news-hero h2,
+.option-hero h2,
+.sector-flow-hero h2,
+.pa-hero h2,
+.smart-hero h2,
+.portfolio-hero h2,
+.market-table-heading h2,
+.market-explain-section .compact-market-seo h2,
+.section-heading h2,
+.result-samples-heading h2,
+.technical-samples-heading h2,
+.news-samples-heading h2,
+.option-samples-heading h2,
+.sector-samples-heading h2,
+.pa-samples-heading h2,
+.portfolio-flow-heading h2 {
+  font-size: clamp(1.55rem, 2.25vw, 2.25rem) !important;
+  font-weight: 740 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.034em !important;
+}
+
+/* Cards and tool blocks: keep headings readable, not poster-like. */
+.stat-card h3,
+.feature-card h3,
+.info-card h3,
+.workflow-card h3,
+.tool-card h3,
+.market-tool-hub-card h3,
+.market-tools-card-grid strong,
+.about-tool-grid strong,
+.about-sample-grid h3,
+.portfolio-sample-card h3,
+.fii-card-title {
+  font-size: 1rem !important;
+  font-weight: 720 !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.018em !important;
+}
+
+.stat-card,
+.feature-card,
+.contact-card,
+.tools-box,
+.info-card,
+.workflow-card,
+.page-copy,
+.bullet-panel,
+.sample-block,
+.result-sample-group,
+.market-tools-summary-card,
+.market-tool-hub-card,
+.market-top5-card,
+.market-tools-fii-card,
+.about-story-card,
+.about-disclaimer-card,
+.about-hero-card {
+  letter-spacing: 0 !important;
+}
+
+.market-tools-summary-card strong,
+.output-preview-card strong,
+.portfolio-flow-metric strong,
+.product-stat-row strong {
+  font-size: clamp(1.18rem, 1.65vw, 1.65rem) !important;
+  font-weight: 760 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.22 !important;
+}
+
+.market-tools-summary-card span,
+.market-tools-summary-card p,
+.output-preview-card span,
+.product-stat-row span {
+  font-size: 0.92rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Tables: compact financial-dashboard sizing. */
+.market-data-table,
+.market-json-table,
+.fii-dii-table,
+.stock-result-table {
+  font-size: 0.88rem !important;
+}
+
+.market-data-table th,
+.market-data-table td,
+.market-json-table th,
+.market-json-table td,
+.fii-dii-table th,
+.fii-dii-table td,
+.stock-result-table th,
+.stock-result-table td {
+  font-size: 0.88rem !important;
+  line-height: 1.32 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.004em !important;
+}
+
+.market-data-table td,
+.market-json-table td,
+.stock-result-table td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.market-data-table th,
+.market-json-table th,
+.stock-result-table th {
+  font-size: 0.78rem !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.035em !important;
+  text-transform: uppercase;
+}
+
+.market-score-pill,
+.score-pill,
+.stock-badge,
+.related-sector-link {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+}
+
+.market-top5-card p {
+  font-size: 0.84rem !important;
+  font-weight: 740 !important;
+}
+
+.market-top5-card li {
+  font-size: 0.76rem !important;
+  font-weight: 550 !important;
+}
+
+.market-explain-section .compact-market-seo h2 {
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem) !important;
+}
+
+.market-explain-section .compact-market-seo p {
+  font-size: 0.92rem !important;
+  line-height: 1.58 !important;
+  font-weight: 430 !important;
+}
+
+.payment-success-card h1,
+.test-payment-card h1,
+.payment-status-box strong {
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem) !important;
+  font-weight: 760 !important;
+}
+
+@media (min-width: 901px) and (max-height: 820px) {
+  .hero h1,
+  .page-hero-compact h1,
+  .result-hero h1,
+  .result-product-hero h1,
+  .technical-hero h1,
+  .news-hero h1,
+  .option-hero h1,
+  .sector-flow-hero h1,
+  .pa-hero h1,
+  .smart-hero h1,
+  .portfolio-hero h1,
+  .about-hero-copy h1,
+  .market-tools-hero h1,
+  .market-table-hero h1 {
+    font-size: clamp(2rem, 3.1vw, 3.05rem) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  html { font-size: 15.5px !important; }
+  .section-padding { padding-top: 46px !important; padding-bottom: 46px !important; }
+  .navbar { padding-top: 12px !important; padding-bottom: 12px !important; }
+  .nav-links { font-size: 0.95rem !important; }
+
+  h1,
+  .hero h1,
+  .page-hero-compact h1,
+  .result-hero h1,
+  .result-product-hero h1,
+  .technical-hero h1,
+  .news-hero h1,
+  .option-hero h1,
+  .sector-flow-hero h1,
+  .pa-hero h1,
+  .smart-hero h1,
+  .portfolio-hero h1,
+  .about-hero-copy h1,
+  .market-tools-hero h1,
+  .market-table-hero h1 {
+    font-size: clamp(1.9rem, 8.2vw, 2.85rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  h2,
+  .section-heading h2,
+  .result-product-hero h2,
+  .technical-hero h2,
+  .news-hero h2,
+  .option-hero h2,
+  .sector-flow-hero h2,
+  .pa-hero h2,
+  .smart-hero h2,
+  .portfolio-hero h2 {
+    font-size: clamp(1.35rem, 6vw, 2rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  p,
+  .hero-text,
+  .section-heading p,
+  .market-page-intro,
+  .about-hero-copy p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .market-data-table th,
+  .market-data-table td,
+  .market-json-table th,
+  .market-json-table td,
+  .stock-result-table th,
+  .stock-result-table td {
+    font-size: 0.82rem !important;
+  }
+}
+
+
+/* ==========================================================
+   V118: Standard dark footer used consistently across pages
+   Inspired by modern finance platforms: compact, multi-column,
+   clear links, support, social and compliance information.
+   ========================================================== */
+.site-footer.ait-standard-footer {
+  text-align: left;
+  margin-top: 0;
+  padding: 56px 22px 32px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(15, 129, 114, 0.14), transparent 34%),
+    linear-gradient(180deg, #161d24 0%, #10161c 100%);
+  color: #d8e3e8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.45fr) repeat(4, minmax(145px, 1fr));
+  gap: 38px;
+  align-items: start;
+  padding-bottom: 38px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.12);
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 820;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.site-footer .footer-brand-block p {
+  max-width: 340px;
+  color: #c1ccd4;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  margin: 0 0 18px;
+  letter-spacing: 0;
+}
+
+.site-footer .footer-brand-block .footer-note {
+  color: #97a6b1;
+  font-size: 0.86rem;
+  margin-bottom: 0;
+}
+
+.footer-column-title {
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 780;
+  line-height: 1.2;
+  letter-spacing: -0.012em;
+  margin: 3px 0 20px;
+}
+
+.footer-column a {
+  display: block;
+  color: #d6e1e7;
+  font-size: 0.92rem;
+  font-weight: 520;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-column a:hover,
+.footer-support-block a:hover {
+  color: #8ee6d8;
+  transform: translateX(2px);
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.9fr) minmax(220px, 0.95fr) minmax(310px, 1.35fr);
+  gap: 34px;
+  align-items: start;
+  padding-top: 28px;
+}
+
+.footer-bottom-title {
+  display: block;
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-weight: 720;
+  margin-bottom: 14px;
+}
+
+.footer-social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  align-items: center;
+}
+
+.footer-social-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #f8fbfc;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.88rem;
+  font-weight: 820;
+  line-height: 1;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  background: rgba(15, 129, 114, 0.30);
+  border-color: rgba(142, 230, 216, 0.42);
+  transform: translateY(-2px);
+}
+
+.footer-support-block a {
+  display: inline-block;
+  color: #d8e3e8;
+  font-size: 0.94rem;
+  font-weight: 560;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-legal-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #c1ccd4;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.footer-disclaimer {
+  color: #91a0aa;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1040px) {
+  .footer-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand-block {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer .footer-brand-block p {
+    max-width: 680px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-legal-block {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer.ait-standard-footer {
+    padding: 42px 18px 28px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-top {
+    padding-bottom: 28px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 14px;
+  }
+
+  .footer-column a {
+    margin-bottom: 11px;
+  }
+
+  .footer-legal-block {
+    text-align: left;
+  }
+}
+
+
+/* V119 header nav cleanup: About and Content removed from header/mobile drawer; footer keeps these links. */
+
+/* V120: NSE snapshot moved from Home to Daily Market page */
+.market-tools-hero + .live-market-strip {
+  margin-top: 0;
+}
+
+/* V121: Home page search tool centered in the first screen.
+   The About/content blocks now begin after the first-screen search area. */
+body > main > .stock-research-google {
+  min-height: calc(100vh - 72px) !important;
+  min-height: calc(100svh - 72px) !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+body > main > .stock-research-google .stock-research-search {
+  width: min(100%, 900px) !important;
+  margin: 0 auto !important;
+}
+
+body > main > .stock-research-google .stock-research-result-card:empty {
+  display: none !important;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) {
+  justify-content: flex-start !important;
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .stock-research-search {
+  margin-top: 0 !important;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .stock-research-result-card {
+  margin-top: 26px !important;
+}
+
+body > main > .stock-research-google + .about-section {
+  padding-top: 72px !important;
+}
+
+@media (max-width: 900px) {
+  body > main > .stock-research-google {
+    min-height: calc(100vh - 70px) !important;
+    min-height: calc(100svh - 70px) !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  body > main > .stock-research-google .stock-research-search {
+    width: min(100%, 620px) !important;
+  }
+
+  body > main > .stock-research-google + .about-section {
+    padding-top: 54px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  body > main > .stock-research-google {
+    min-height: calc(100vh - 68px) !important;
+    min-height: calc(100svh - 68px) !important;
+  }
+}
+
+
+/* V122: Home search title above the stock search box */
+.home-search-title {
+  margin: 0 0 6px;
+  text-align: center;
+  color: var(--text);
+  font-family: var(--heading-font, inherit);
+  font-size: clamp(1.55rem, 2.2vw, 2.05rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  font-weight: 850;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .home-search-title {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .home-search-title {
+    margin-bottom: 6px;
+    font-size: clamp(1.45rem, 4.8vw, 1.9rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .home-search-title {
+    margin-bottom: 6px;
+    font-size: 1.38rem;
+  }
+}
+
+
+/* V123: Center the home search title and form as one balanced block */
+.home-search-center {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-34px);
+}
+
+body > main > .stock-research-google .home-search-center .stock-research-search {
+  width: 100% !important;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .home-search-center {
+  transform: none;
+  width: min(100%, 900px);
+}
+
+@media (max-width: 900px) {
+  .home-search-center {
+    width: min(100%, 680px);
+    transform: translateY(-24px);
+  }
+}
+
+@media (max-width: 560px) {
+  .home-search-center {
+    width: 100%;
+    transform: translateY(-14px);
+  }
+}
+
+
+/* V125: Place the subtitle directly below the title and above the search box */
+.home-search-subtitle {
+  margin: 4px 0 18px;
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--body-font, inherit);
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .home-search-subtitle {
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  .home-search-subtitle {
+    margin: 4px 0 16px;
+    font-size: 12px;
+    padding: 0 14px;
+  }
 }

@@ -8,7 +8,7 @@
 <meta name="keywords" content="volume surge scanner, Indian stock volume scanner, unusual volume stocks, high volume stocks today, free NSE scanner"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <link rel="canonical" href="https://automationintrade.com/market-tools/volume-surge-scanner/"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=105" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=125" rel="stylesheet"/>
 <meta property="og:site_name" content="Automation In Trade"/>
 <meta property="og:title" content="Volume Surge Scanner | Free AIT Tool"/>
 <meta property="og:description" content="Find unusual volume activity using volume surge ratio, daily move and strength score."/>
@@ -25,8 +25,6 @@
 </a>
 <button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
 <div class="nav-links">
-<a href="/about-us/">About</a>
-<a href="/#content">Content</a>
 <a href="/market-tools/">Daily Market</a>
 <div class="nav-dropdown ait-tool-nav">
 <a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/market-tools/stock-strength-ranker/">AIT Stock Scanners <span class="chevron">⌄</span></a>
@@ -101,7 +99,78 @@
     </section>
   </div>
 </section>
-</main><footer class="site-footer"><p>© <span id="year"></span> Automation In Trade. All rights reserved.</p><p class="disclaimer">Disclaimer: Data-based educational content only. Not investment advice. Values shown may be delayed, manually updated, or sample snapshots.</p></footer>
+</main><footer class="site-footer ait-standard-footer" aria-label="Automation In Trade footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a class="footer-brand-link" href="/" aria-label="Automation In Trade home">
+          <img class="footer-logo" src="/logo.png" alt="Automation In Trade logo" loading="lazy" decoding="async" />
+          <span>Automation In Trade</span>
+        </a>
+        <p>Automation In Trade provides clean stock market data tools, scanners, dashboards and visual research content for Indian market learners.</p>
+        <p class="footer-note">Educational data platform for result analysis, market strength, sector flow, price action and research automation.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="AIT stock scanners">
+        <h3 class="footer-column-title">AIT Stock Scanners</h3>
+        <a href="/market-tools/stock-strength-ranker/">Stock Strength Ranker</a>
+        <a href="/market-tools/bullish-bearish-momentum-scanner/">Bullish / Bearish Momentum</a>
+        <a href="/market-tools/volume-surge-scanner/">Volume Surge Scanner</a>
+        <a href="/market-tools/near-breakout-scanner/">Near Breakout Scanner</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Research tools">
+        <h3 class="footer-column-title">Research Tools</h3>
+        <a href="/result-scanner/">Result Scanner</a>
+        <a href="/portfolio-analyzer/">Portfolio Analyzer</a>
+        <a href="/price-action-zone-finder/">Price Action Zone Finder</a>
+        <a href="/technical-zone-finder/">Technical Zone Finder</a>
+        <a href="/option-chain-sentiment-dashboard/">Option Sentiment Dashboard</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Market data tools">
+        <h3 class="footer-column-title">Market Data</h3>
+        <a href="/market-tools/">Daily Market Tools</a>
+        <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
+        <a href="/market-tools/index-performance/">Index Performance</a>
+        <a href="/sector-money-flow/">Sector Money Flow</a>
+        <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Company links">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="/about-us/">About</a>
+        <a href="/#content">Content</a>
+        <a href="/news-card/">News Card</a>
+        <a href="/#contact">Contact</a>
+        <a href="mailto:contact@automationintrade.com">Support</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-social-block">
+        <span class="footer-bottom-title">Find us on</span>
+        <div class="footer-social-row" aria-label="Automation In Trade social links">
+          <a class="footer-social-icon" href="https://www.youtube.com/@automationintrade" aria-label="YouTube" rel="noopener" target="_blank">▶</a>
+          <a class="footer-social-icon" href="https://www.instagram.com/automationintrade/" aria-label="Instagram" rel="noopener" target="_blank">◎</a>
+          <a class="footer-social-icon" href="https://x.com/AutomateTR" aria-label="X / Twitter" rel="noopener" target="_blank">𝕏</a>
+          <a class="footer-social-icon" href="https://www.linkedin.com/company/automationintrade/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+          <a class="footer-social-icon" href="https://www.facebook.com/automationintrade" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+        </div>
+      </div>
+
+      <div class="footer-support-block">
+        <span class="footer-bottom-title">Help and support</span>
+        <a href="mailto:contact@automationintrade.com">contact@automationintrade.com</a>
+      </div>
+
+      <div class="footer-legal-block">
+        <span>© <span id="year"></span> Automation In Trade. All rights reserved.</span>
+        <span class="footer-disclaimer">Data-based educational content only. Not investment advice. Values may be delayed, manually updated, or sample snapshots.</span>
+      </div>
+    </div>
+  </div>
+</footer>
 <script>
 (function(){
   const body=document.getElementById('volumeTableBody');
@@ -163,4 +232,4 @@
   document.getElementById('filterAll')?.addEventListener('click',()=>{mode='all'; render();});
 })();
 </script>
-<script src="/script.js?v=115"></script></body></html>
+<script src="/script.js?v=120"></script></body></html>

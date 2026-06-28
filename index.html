@@ -8,8 +8,8 @@
 <meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css?v=115" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=125" rel="stylesheet"/>
 <meta content="free stock market tools, stock market data tools, trading automation tools, 52 week high low scanner, AIT Smart Move Indicator, automationintrade indicator, result scanner, price action zone finder, option chain sentiment, FII DII flow, sector money flow, Automation In Trade" name="keywords"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Automation In Trade" name="author"/><meta content="#0b8173" name="theme-color"/><link href="https://automationintrade.com/" rel="canonical"/><meta content="Automation In Trade" property="og:site_name"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." property="og:description"/><meta content="https://automationintrade.com/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" property="og:image"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" name="twitter:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." name="twitter:description"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" name="twitter:image"/><meta content="@AutomateTR" name="twitter:site"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -75,8 +75,6 @@
 <span></span>
 </button>
 <div class="nav-links">
-<a href="/about-us/">About</a>
-<a href="/#content">Content</a>
 <a href="/market-tools/">Daily Market</a>
 <div class="nav-dropdown ait-tool-nav">
 <a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/market-tools/stock-strength-ranker/">AIT Stock Scanners <span class="chevron">⌄</span></a>
@@ -179,36 +177,12 @@
 </nav>
 </header>
 
-<section class="live-market-strip" aria-label="NSE market snapshot">
-  <div class="live-market-inner">
-    <div class="live-market-items" id="live-market-items">
-      <div class="market-tile" data-index="NIFTY 50">
-        <span class="market-name">NIFTY 50</span>
-        <strong class="market-price">23,719.30</strong>
-        <span class="market-change up">+64.60 (+0.27%)</span>
-      </div>
-      <div class="market-tile" data-index="BANK NIFTY">
-        <span class="market-name">BANK NIFTY</span>
-        <strong class="market-price">54,239.20</strong>
-        <span class="market-change down">-614.65 (-1.12%)</span>
-      </div>
-      <div class="market-tile" data-index="NIFTY MIDCAP SELECT">
-        <span class="market-name">MIDCAP SELECT</span>
-        <strong class="market-price">12,794.45</strong>
-        <span class="market-change muted">Latest snapshot</span>
-      </div>
-      <div class="market-tile" data-index="INDIA VIX">
-        <span class="market-name">INDIA VIX</span>
-        <strong class="market-price">—</strong>
-        <span class="market-change muted">Live via proxy</span>
-      </div>
-    </div>
-    <span class="market-source-note" id="market-source-note">NSE data needs server-side proxy for live updates</span>
-  </div>
-</section>
 <main>
 <section class="stock-research-desk stock-research-google section-padding" id="home">
-  <form class="stock-research-search" id="stockResearchForm" autocomplete="off">
+  <div class="home-search-center">
+    <h1 class="home-search-title">Search Stock</h1>
+    <p class="home-search-subtitle">Stock technical analysis tool for traders in India.</p>
+    <form class="stock-research-search" id="stockResearchForm" autocomplete="off">
     <div class="stock-research-controls">
       <select id="researchTypeSelect" name="researchType" aria-label="Select analysis type">
         <option value="price-action">Price Action</option>
@@ -221,7 +195,8 @@
       <datalist id="stockResearchSuggestions"></datalist>
     </div>
     <button class="btn btn-primary stock-research-submit" type="submit">View Analysis</button>
-  </form>
+    </form>
+  </div>
 
   <div class="stock-research-result-card" id="stockResearchResult" data-stock-research-json="/market-data/stock-research-index.json"></div>
 </section>
@@ -405,10 +380,78 @@
 </div>
 </section>
 </main>
-<footer class="site-footer">
-<p>© <span id="year"></span> Automation In Trade. All rights reserved.</p>
-<p class="disclaimer">Disclaimer: Data-based educational content only. Not investment advice.</p>
+<footer class="site-footer ait-standard-footer" aria-label="Automation In Trade footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a class="footer-brand-link" href="/" aria-label="Automation In Trade home">
+          <img class="footer-logo" src="/logo.png" alt="Automation In Trade logo" loading="lazy" decoding="async" />
+          <span>Automation In Trade</span>
+        </a>
+        <p>Automation In Trade provides clean stock market data tools, scanners, dashboards and visual research content for Indian market learners.</p>
+        <p class="footer-note">Educational data platform for result analysis, market strength, sector flow, price action and research automation.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="AIT stock scanners">
+        <h3 class="footer-column-title">AIT Stock Scanners</h3>
+        <a href="/market-tools/stock-strength-ranker/">Stock Strength Ranker</a>
+        <a href="/market-tools/bullish-bearish-momentum-scanner/">Bullish / Bearish Momentum</a>
+        <a href="/market-tools/volume-surge-scanner/">Volume Surge Scanner</a>
+        <a href="/market-tools/near-breakout-scanner/">Near Breakout Scanner</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Research tools">
+        <h3 class="footer-column-title">Research Tools</h3>
+        <a href="/result-scanner/">Result Scanner</a>
+        <a href="/portfolio-analyzer/">Portfolio Analyzer</a>
+        <a href="/price-action-zone-finder/">Price Action Zone Finder</a>
+        <a href="/technical-zone-finder/">Technical Zone Finder</a>
+        <a href="/option-chain-sentiment-dashboard/">Option Sentiment Dashboard</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Market data tools">
+        <h3 class="footer-column-title">Market Data</h3>
+        <a href="/market-tools/">Daily Market Tools</a>
+        <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
+        <a href="/market-tools/index-performance/">Index Performance</a>
+        <a href="/sector-money-flow/">Sector Money Flow</a>
+        <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Company links">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="/about-us/">About</a>
+        <a href="/#content">Content</a>
+        <a href="/news-card/">News Card</a>
+        <a href="/#contact">Contact</a>
+        <a href="mailto:contact@automationintrade.com">Support</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-social-block">
+        <span class="footer-bottom-title">Find us on</span>
+        <div class="footer-social-row" aria-label="Automation In Trade social links">
+          <a class="footer-social-icon" href="https://www.youtube.com/@automationintrade" aria-label="YouTube" rel="noopener" target="_blank">▶</a>
+          <a class="footer-social-icon" href="https://www.instagram.com/automationintrade/" aria-label="Instagram" rel="noopener" target="_blank">◎</a>
+          <a class="footer-social-icon" href="https://x.com/AutomateTR" aria-label="X / Twitter" rel="noopener" target="_blank">𝕏</a>
+          <a class="footer-social-icon" href="https://www.linkedin.com/company/automationintrade/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+          <a class="footer-social-icon" href="https://www.facebook.com/automationintrade" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+        </div>
+      </div>
+
+      <div class="footer-support-block">
+        <span class="footer-bottom-title">Help and support</span>
+        <a href="mailto:contact@automationintrade.com">contact@automationintrade.com</a>
+      </div>
+
+      <div class="footer-legal-block">
+        <span>© <span id="year"></span> Automation In Trade. All rights reserved.</span>
+        <span class="footer-disclaimer">Data-based educational content only. Not investment advice. Values may be delayed, manually updated, or sample snapshots.</span>
+      </div>
+    </div>
+  </div>
 </footer>
-<script src="/script.js?v=115"></script>
+<script src="/script.js?v=120"></script>
 </body>
 </html>
