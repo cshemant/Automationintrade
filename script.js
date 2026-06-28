@@ -1208,6 +1208,15 @@ if (fullscreenBtn && demoVideoFrame) {
       stocks = Array.isArray(data.stocks) ? data.stocks : [];
       updatedAt = data.updatedAt || '';
       clearSuggestions();
+      const researchFromUrl = new URLSearchParams(window.location.search);
+      const stockFromUrl = researchFromUrl.get('stock');
+      const toolFromUrl = researchFromUrl.get('research') || researchFromUrl.get('tool');
+      if (toolFromUrl && toolMap[toolFromUrl]) select.value = toolFromUrl;
+      if (stockFromUrl) {
+        input.value = stockFromUrl;
+        const directStock = findStock(stockFromUrl);
+        if (directStock) renderResult(directStock);
+      }
     })
     .catch(() => {
       card.innerHTML = `<div class="stock-result-empty"><span class="stock-result-badge">JSON not loaded</span><h2>Stock search data is unavailable.</h2><p>Check /market-data/stock-research-index.json in your GitHub repo.</p></div>`;
