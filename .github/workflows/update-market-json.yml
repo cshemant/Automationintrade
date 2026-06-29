@@ -68,15 +68,15 @@ jobs:
 
       - name: Show changed data files
         run: |
-          git status --short market-data stock-research-data || true
+          git status --short market-data stock-research-data markets/sector || true
 
       - name: Commit and push updated JSON
         run: |
-          if [ -n "$(git status --porcelain market-data stock-research-data)" ]; then
+          if [ -n "$(git status --porcelain market-data stock-research-data markets/sector)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add market-data stock-research-data
-            git commit -m "chore: auto-update market and research JSON"
+            git add market-data stock-research-data markets/sector
+            git commit -m "chore: auto-update market, sector and research data"
             git push
           else
             echo "No JSON changes found. Nothing to commit."

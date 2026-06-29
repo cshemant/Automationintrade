@@ -15,7 +15,8 @@ What --mode all does:
   2) Generates Price Action research-card JSON via GeneratePriceActionJson.py
   3) Generates Results research-card JSON via GenerateResultsJson.py
   4) Generates Technical Analysis research-card JSON via GenerateTechnicalAnalysisJson.py
-  5) Rebuilds homepage stock search index via GenerateStockResearchIndex.py
+  5) Rebuilds sector-wise stock JSON/pages via GenerateSectorWiseStocks.py
+  6) Rebuilds homepage stock search index via GenerateStockResearchIndex.py
 
 Useful testing commands:
 
@@ -80,6 +81,7 @@ def parse_args() -> argparse.Namespace:
             "results",
             "technical-analysis",
             "stock-index",
+            "sector-pages",
             *sorted(MARKET_MODES),
         ],
         help=(
@@ -181,6 +183,10 @@ def run_stock_index() -> None:
     run_step("Homepage stock research search index", [sys.executable, "GenerateStockResearchIndex.py"])
 
 
+def run_sector_pages() -> None:
+    run_step("Sector-wise stock JSON and pages", [sys.executable, "GenerateSectorWiseStocks.py"])
+
+
 def main() -> int:
     args = parse_args()
     mode = args.mode
@@ -191,6 +197,7 @@ def main() -> int:
 
     if mode == "all":
         run_market("all")
+        run_sector_pages()
         if not args.skip_price_action:
             run_price_action(args)
         if not args.skip_results:
@@ -201,6 +208,7 @@ def main() -> int:
 
     elif mode == "market":
         run_market("all")
+        run_sector_pages()
         run_stock_index()
 
     elif mode == "research":
@@ -224,8 +232,13 @@ def main() -> int:
     elif mode == "stock-index":
         run_stock_index()
 
+    elif mode == "sector-pages":
+        run_sector_pages()
+
     elif mode in MARKET_MODES:
         run_market(mode)
+        if mode in {"stock-strength", "52w"}:
+            run_sector_pages()
         # Rebuilding the index is cheap and keeps homepage search in sync
         # when 52w/index universe data changes.
         run_stock_index()
@@ -238,6 +251,8 @@ def main() -> int:
     print("Generated/updated folders to commit/deploy:")
     print("  market-data/")
     print("  stock-research-data/")
+    print("  market-data/sector-wise-stocks.json")
+    print("  markets/sector/")
     print("=" * 72)
     return 0
 

@@ -2046,6 +2046,19 @@ def parse_args():
     return parser.parse_args()
 
 
+def update_sector_wise_stock_pages():
+    """Rebuild sector-wise JSON/pages from the freshly updated stock strength universe."""
+    import subprocess
+    import sys
+
+    script_path = Path(__file__).resolve().parent / "GenerateSectorWiseStocks.py"
+    if not script_path.exists():
+        print("Sector page update skipped: GenerateSectorWiseStocks.py not found.")
+        return
+    print("\nUpdating Sector Wise Stocks from latest Stock Strength data")
+    subprocess.run([sys.executable, str(script_path)], check=True)
+
+
 def print_upload_paths(paths):
     print("\nCompleted successfully.")
     print("Upload these updated paths:")
@@ -2085,6 +2098,9 @@ def main():
     if mode in ["all", "stock-strength"]:
         update_stock_strength_ranker()
         upload_paths.append(STOCK_STRENGTH_FILE)
+        update_sector_wise_stock_pages()
+        upload_paths.append(WEBSITE_ROOT / "market-data" / "sector-wise-stocks.json")
+        upload_paths.append(Path("markets") / "sector")
 
     if mode in ["all", "momentum-scanner"]:
         update_bullish_bearish_momentum_scanner()
