@@ -274,6 +274,8 @@ def main() -> int:
     print("  stock-research-data/")
     print("  market-data/sector-wise-stocks.json")
     print("  markets/sector/")
+    print("  technical-analysis/")
+    print("  sitemap.xml")
     print("=" * 72)
     return 0
 

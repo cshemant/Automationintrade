@@ -8,7 +8,7 @@
 <meta name="keywords" content="near breakout scanner, Indian stock breakout scanner, stocks near 52 week high, breakout watch stocks, free NSE scanner"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <link rel="canonical" href="https://automationintrade.com/market-tools/near-breakout-scanner/"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=146" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=155" rel="stylesheet"/>
 <meta property="og:site_name" content="Automation In Trade"/>
 <meta property="og:title" content="Near Breakout Scanner | Free AIT Tool"/>
 <meta property="og:description" content="Find stocks close to 52-week breakout zones using high proximity, daily move and strength score."/>
@@ -195,7 +195,9 @@
   const fmtPct=(v,plus=false)=>{const n=num(v); if(n===null)return '-'; return (plus&&n>0?'+':'')+n.toFixed(2)+'%';};
   const cls=v=>{const n=num(v); return n===null?'':(n>=0?'positive':'negative');};
   function stockName(r){return r.stockName||r.symbol||'-';}
-  function mini(items,key,type){ if(!items.length)return '<li><span>No valid data</span><strong>-</strong></li>'; return items.map(r=>'<li><span>'+esc(stockName(r))+'</span><strong class="'+(type==='pct'||type==='move'?cls(r[key]):'')+'">'+(type==='score'?esc(r[key]??'-'):fmtPct(r[key], type==='move'))+'</strong></li>').join(''); }
+  function profileSlug(r){let base=String(stockName(r)||r.symbol||'stock').trim().replace(/&/g,' and '); base=base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi,''); base=base.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,''); if(!base) base=String(r.symbol||'stock').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'stock'; return base+'-technical-analysis';}
+  function profileLink(r){return '<a class="stock-profile-link" href="/technical-analysis/'+esc(profileSlug(r))+'/">'+esc(stockName(r))+'</a>';}
+  function mini(items,key,type){ if(!items.length)return '<li><span>No valid data</span><strong>-</strong></li>'; return items.map(r=>'<li><span>'+profileLink(r)+'</span><strong class="'+(type==='pct'||type==='move'?cls(r[key]):'')+'">'+(type==='score'?esc(r[key]??'-'):fmtPct(r[key], type==='move'))+'</strong></li>').join(''); }
   function renderInsights(data){
     const fresh=data.filter(r=>r.signal==='Fresh Breakout').sort((a,b)=>num(b.breakoutScore)-num(a.breakoutScore)).slice(0,5);
     const near=data.filter(r=>r.signal==='Near Breakout').sort((a,b)=>num(a.breakoutGapPct)-num(b.breakoutGapPct)).slice(0,5);
@@ -220,7 +222,7 @@
     if(!visible.length){body.innerHTML='<tr><td colspan="9">No matching near breakout signals found.</td></tr>'; return;}
     body.innerHTML=visible.map((r,i)=>'<tr>'+
       '<td><strong>#'+(i+1)+'</strong></td>'+ 
-      '<td><strong>'+esc(stockName(r))+'</strong></td>'+ 
+      '<td><strong>'+profileLink(r)+'</strong></td>'+ 
       '<td>'+esc((r.indices||[]).slice(0,2).join(', '))+'</td>'+ 
       '<td><strong>'+fmtNum(r.cmp)+'</strong></td>'+ 
       '<td>'+fmtNum(r.high52)+'</td>'+ 
@@ -242,4 +244,4 @@
   document.getElementById('filterAllBreakout')?.addEventListener('click',()=>{mode='all'; render();});
 })();
 </script>
-<script src="/script.js?v=136"></script></body></html>
+<script src="/script.js?v=155"></script></body></html>

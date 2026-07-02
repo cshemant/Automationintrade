@@ -8,7 +8,7 @@
 <meta name="keywords" content="stock strength ranker India, free stock screener, strongest stocks today, weakest stocks today, momentum scanner, NSE stock ranker"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <link rel="canonical" href="https://automationintrade.com/market-tools/stock-strength-ranker/"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=146" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=155" rel="stylesheet"/>
 <meta property="og:site_name" content="Automation In Trade"/>
 <meta property="og:title" content="AIT Stock Strength Ranker | Free Stock Market Tool"/>
 <meta property="og:description" content="Rank strongest and weakest stocks across indices using daily move and 52-week high-low position."/>
@@ -205,12 +205,14 @@
   const fmtPct=(v,plus=false)=>{ const n=num(v); if(n===null)return '-'; return (plus&&n>0?'+':'')+n.toFixed(2)+'%'; };
   const cls=v=>{ const n=num(v); return n===null?'':(n>=0?'positive':'negative'); };
   function stockName(r){return r.stockName || r.symbol || '-';}
+  function profileSlug(r){let base=String(stockName(r)||r.symbol||'stock').trim().replace(/&/g,' and '); base=base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi,''); base=base.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,''); if(!base) base=String(r.symbol||'stock').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'stock'; return base+'-technical-analysis';}
+  function profileLink(r){return '<a class="stock-profile-link" href="/technical-analysis/'+esc(profileSlug(r))+'/">'+esc(stockName(r))+'</a>';}
   function mini(items,key,type){
     if(!items.length) return '<li><span>No valid data</span><strong>-</strong></li>';
     return items.map(r=>{
       const val=type==='score' ? (num(r[key]) ?? '-') : fmtPct(r[key], key==='changePct' || key==='aboveLowPct');
       const klass=type==='score' ? 'positive' : cls(r[key]);
-      return '<li><span>'+esc(stockName(r))+'</span><strong class="'+klass+'">'+esc(val)+'</strong></li>';
+      return '<li><span>'+profileLink(r)+'</span><strong class="'+klass+'">'+esc(val)+'</strong></li>';
     }).join('');
   }
   function renderInsights(data){
@@ -238,7 +240,7 @@
     if(!visible.length){ body.innerHTML='<tr><td colspan="9">No matching stocks found.</td></tr>'; return; }
     body.innerHTML=visible.map(r=>'<tr>'+ 
       '<td><strong>#'+esc(r.rank||'-')+'</strong></td>'+ 
-      '<td><strong>'+esc(stockName(r))+'</strong></td>'+ 
+      '<td><strong>'+profileLink(r)+'</strong></td>'+ 
       '<td>'+esc((r.indices||[]).slice(0,2).join(', '))+'</td>'+ 
       '<td><strong>'+fmtNum(r.cmp)+'</strong></td>'+ 
       '<td class="'+cls(r.changePct)+'">'+fmtPct(r.changePct,true)+'</td>'+ 
@@ -267,4 +269,4 @@
   document.getElementById('sortDailyMove')?.addEventListener('click',()=>{sortMode='daily';render();});
 })();
 </script>
-<script src="/script.js?v=136"></script></body></html>
+<script src="/script.js?v=155"></script></body></html>

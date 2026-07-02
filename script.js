@@ -4,6 +4,25 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+
+// V155: shared stock profile URL helper for internal linking.
+function aitEscapeHtml(value) {
+  return String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+}
+function aitTechnicalProfileSlug(stockName, symbol) {
+  let base = String(stockName || symbol || 'stock').trim().replace(/&/g, ' and ');
+  base = base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi, '');
+  base = base.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  if (!base) base = String(symbol || 'stock').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'stock';
+  return base + '-technical-analysis';
+}
+function aitStockProfileLink(row) {
+  const name = row && (row.stockName || row.name || row.symbol) ? (row.stockName || row.name || row.symbol) : '-';
+  const symbol = row && row.symbol ? row.symbol : '';
+  const slug = aitTechnicalProfileSlug(name, symbol);
+  return '<a class="stock-profile-link" href="/technical-analysis/' + aitEscapeHtml(slug) + '/">' + aitEscapeHtml(name) + '</a>';
+}
+
 // Mobile header menu (V97)
 // - Desktop keeps the existing hover dropdowns.
 // - Mobile hamburger opens the full menu. Tapping a dropdown heading opens its submenu
@@ -414,7 +433,7 @@ if (fullscreenBtn && demoVideoFrame) {
     }
     tbody.innerHTML = dataRows.map(row => `
       <tr>
-        <td>${row.stockName || '-'}</td>
+        <td>${window.aitStockProfileLink ? window.aitStockProfileLink(row) : (row.stockName || '-')}</td>
         <td>${fmtNumber(row.high52)}</td>
         <td>${fmtNumber(row.low52)}</td>
         <td><strong>${fmtNumber(row.cmp)}</strong></td>
@@ -430,7 +449,7 @@ if (fullscreenBtn && demoVideoFrame) {
   }
 
   function stockLabel(row) {
-    return `${row.stockName || row.symbol || '-'}`;
+    return window.aitStockProfileLink ? window.aitStockProfileLink(row) : `${row.stockName || row.symbol || '-'}`;
   }
 
   function miniList(items, valueKey, valueType) {
@@ -1141,7 +1160,8 @@ if (fullscreenBtn && demoVideoFrame) {
             <span>Updated: ${escapeHtml(updatedAt || stock.updatedAt || 'Latest')}</span>
           </div>
           <div class="stock-result-actions">
-            <a href="${tool.page}">Open ${tool.label} Tool</a>
+            <a href="${(select.value === 'technical-analysis' && info.profilePath) ? info.profilePath : tool.page}">${select.value === 'technical-analysis' && info.profilePath ? 'Open Full Technical Profile' : 'Open ' + tool.label + ' Tool'}</a>
+            ${select.value === 'technical-analysis' && info.profilePath ? `<a href="${tool.page}">Open Technical Tool</a>` : ''}
           </div>
         </aside>
         <section class="stock-result-image-box stock-result-html-box">

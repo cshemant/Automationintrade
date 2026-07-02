@@ -89,16 +89,16 @@ jobs:
 
       - name: Show changed data files
         run: |
-          git status --short market-data stock-research-data markets/sector || true
+          git status --short market-data stock-research-data markets/sector technical-analysis sitemap.xml || true
 
       - name: Commit and push updated JSON
         run: |
           BRANCH="${GITHUB_REF_NAME:-main}"
 
-          if [ -n "$(git status --porcelain market-data stock-research-data markets/sector)" ]; then
+          if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis sitemap.xml)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add market-data stock-research-data markets/sector
+            git add market-data stock-research-data markets/sector technical-analysis sitemap.xml
             git commit -m "chore: auto-update market data"
 
             echo "Pushing generated market data to origin/${BRANCH}..."
@@ -121,8 +121,8 @@ jobs:
                 git rebase --abort 2>/dev/null || true
                 git reset --hard "origin/$BRANCH"
                 python UpdateAllData.py --mode "${MODE:-market}" --batch-size 80
-                git add market-data stock-research-data markets/sector
-                if [ -n "$(git status --porcelain market-data stock-research-data markets/sector)" ]; then
+                git add market-data stock-research-data markets/sector technical-analysis sitemap.xml
+                if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis sitemap.xml)" ]; then
                   git commit -m "chore: auto-update market data"
                 else
                   echo "No JSON changes after rebuilding. Nothing to push."

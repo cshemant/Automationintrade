@@ -17,6 +17,7 @@ HTML from JSON first, so heavy images are not required.
 import json
 from pathlib import Path
 from datetime import datetime
+import re
 
 WEBSITE_ROOT = Path(__file__).resolve().parent
 MARKET_DATA_DIR = WEBSITE_ROOT / "market-data"
@@ -45,6 +46,16 @@ TOOL_CONFIG = {
 }
 
 FREE_RESEARCH_INDICES = {"NIFTY 50", "NIFTY BANK", "BANK NIFTY"}
+
+COMPANY_SUFFIX_RE = re.compile(r"\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b", re.I)
+
+
+def technical_profile_slug(stock_name: str, symbol: str = "") -> str:
+    base = str(stock_name or symbol or "stock").strip().replace("&", " and ")
+    base = COMPANY_SUFFIX_RE.sub("", base)
+    base = re.sub(r"[^a-zA-Z0-9]+", "-", base.lower())
+    base = re.sub(r"-+", "-", base).strip("-") or re.sub(r"[^a-zA-Z0-9]+", "-", str(symbol).lower()).strip("-") or "stock"
+    return f"{base}-technical-analysis"
 
 
 def is_free_research_stock(item: dict) -> bool:
@@ -125,7 +136,7 @@ def load_stock_universe():
     return stocks
 
 
-def output_info(symbol: str, tool_id: str):
+def output_info(symbol: str, tool_id: str, stock_name: str = ""):
     cfg = TOOL_CONFIG[tool_id]
     folder = DATA_BASE / cfg["folder"]
     public_folder = f"/stock-research-data/{cfg['folder']}"
@@ -140,7 +151,7 @@ def output_info(symbol: str, tool_id: str):
             legacy_image = f"{public_folder}/{symbol}.{ext}"
             break
 
-    return {
+    info = {
         "available": bool(data),
         "title": cfg["label"],
         "summary": cfg["summary"],
@@ -149,6 +160,11 @@ def output_info(symbol: str, tool_id: str):
         "source": "pre-generated-json" if data else ("legacy-image-only" if legacy_image else "expected-json-path"),
         "data": data,
     }
+    if tool_id == "technical-analysis":
+        name_for_slug = stock_name or (data or {}).get("stockName") or symbol
+        slug = technical_profile_slug(name_for_slug, symbol)
+        info["profilePath"] = f"/technical-analysis/{slug}/"
+    return info
 
 
 def main():
@@ -170,9 +186,9 @@ def main():
                 "cmp": item.get("cmp"),
                 "changePct": item.get("changePct"),
                 "updatedAt": item.get("updatedAt", ""),
-                "priceAction": output_info(symbol, "price-action"),
-                "results": output_info(symbol, "results"),
-                "technicalAnalysis": output_info(symbol, "technical-analysis"),
+                "priceAction": output_info(symbol, "price-action", item.get("stockName") or symbol),
+                "results": output_info(symbol, "results", item.get("stockName") or symbol),
+                "technicalAnalysis": output_info(symbol, "technical-analysis", item.get("stockName") or symbol),
             })
         else:
             # Keep only searchable identity in the public index. Detailed values stay locked.
