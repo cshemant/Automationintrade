@@ -8,9 +8,10 @@ What this script does:
 - Updates homepage snapshot:
     market-data/nse-snapshot.json
 - Tries data sources in this order:
-    1) Yahoo Finance using yfinance
-    2) NSE quote API as fallback when accessible
-    3) Previous JSON value as safe fallback
+    1) NSE India live index API for current CMP and 52W data
+    2) NSE India quote API per symbol if index API data is unavailable
+    3) Yahoo Finance using yfinance only as fallback
+    4) Previous JSON value as safe fallback
 - Adds validation so wrong prices like split-adjusted / bad-source values are not blindly published.
 
 Recommended daily workflow:
@@ -44,7 +45,8 @@ Recommended daily workflow:
 
 Important:
 - NSE may return 403 Forbidden. This is handled automatically.
-- Yahoo may sometimes return bad/split-adjusted values. Validation is applied against previous JSON values.
+- NSE India is always tried before Yahoo Finance for stock price updates.
+- Yahoo may sometimes return delayed/bad/split-adjusted values, so it is used only as fallback and validated against previous JSON values.
 - If both sources fail, the script preserves the previous JSON value instead of publishing blanks.
 """
 
@@ -626,7 +628,83 @@ def fetch_from_nse(symbol, stock_name):
         "low52": round_or_none(low52),
         "cmp": round_or_none(cmp_price),
         "changePct": round_or_none(p_change),
-        "source": "NSE",
+        "source": "NSE Quote",
+        "dataQuality": "OK",
+    }
+
+    return add_calculated_fields(item)
+
+
+def nse_live_index_api_name(index_name):
+    """Return the NSE index name used by the equity-stockIndices endpoint."""
+    aliases = {
+        "FINNIFTY": "NIFTY FINANCIAL SERVICES",
+        "NIFTY FINANCIAL SERVICES": "NIFTY FINANCIAL SERVICES",
+        "S&P BSE SENSEX": None,
+        "SENSEX": None,
+    }
+    return aliases.get(index_name, index_name)
+
+
+def fetch_nse_live_index_rows(index_name):
+    """Fetch the full live constituent table from NSE for one index.
+
+    This is the preferred source for 52W pages because it gives current
+    lastPrice/pChange/yearHigh/yearLow for the full index in one NSE call.
+    """
+    api_index_name = nse_live_index_api_name(index_name)
+    if not api_index_name:
+        return {}
+
+    encoded_index = quote(api_index_name, safe="")
+    url = f"https://www.nseindia.com/api/equity-stockIndices?index={encoded_index}"
+    data = nse_get_json(url)
+    rows = data.get("data", []) if isinstance(data, dict) else []
+
+    result = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        symbol = clean_symbol(row.get("symbol", ""))
+        if not symbol or symbol == clean_symbol(api_index_name):
+            continue
+        if safe_float(row.get("lastPrice")) is None:
+            continue
+        result[symbol] = row
+
+    if not result:
+        raise ValueError(f"No NSE live index rows returned for {api_index_name}")
+
+    return result
+
+
+def fetch_from_nse_index_row(symbol, stock_name, row):
+    if not row:
+        raise ValueError("NSE live index row missing")
+
+    cmp_price = safe_float(row.get("lastPrice"))
+    prev_close = safe_float(row.get("previousClose"))
+    p_change = safe_float(row.get("pChange"))
+    high52 = safe_float(row.get("yearHigh")) or safe_float(row.get("high52"))
+    low52 = safe_float(row.get("yearLow")) or safe_float(row.get("low52"))
+
+    if cmp_price is None or cmp_price <= MIN_VALID_PRICE:
+        raise ValueError("Invalid NSE live index CMP")
+
+    if p_change is None and prev_close:
+        p_change = ((cmp_price - prev_close) / prev_close) * 100
+
+    meta = row.get("meta", {}) if isinstance(row.get("meta", {}), dict) else {}
+    company_name = meta.get("companyName") or row.get("companyName") or stock_name or symbol
+
+    item = {
+        "symbol": clean_symbol(symbol),
+        "stockName": company_name,
+        "high52": round_or_none(high52),
+        "low52": round_or_none(low52),
+        "cmp": round_or_none(cmp_price),
+        "changePct": round_or_none(p_change),
+        "source": "NSE Live Index",
         "dataQuality": "OK",
     }
 
@@ -698,14 +776,28 @@ def build_from_previous(symbol, stock_name, previous_item, reason):
     }
 
 
-def choose_best_stock_data(symbol, stock_name, previous_item):
+def choose_best_stock_data(symbol, stock_name, previous_item, nse_index_row=None):
     errors = []
+    suspicious_candidates = []
 
-    # Priority 1: Yahoo, because NSE quote API often blocks scripted requests.
-    for source_name, fetcher in [
+    # Required priority:
+    # 1) NSE live index row (fastest and freshest when available)
+    # 2) NSE quote API per symbol
+    # 3) Yahoo Finance fallback
+    source_plan = []
+
+    if nse_index_row:
+        source_plan.append((
+            "NSE Live Index",
+            lambda s, n: fetch_from_nse_index_row(s, n, nse_index_row),
+        ))
+
+    source_plan.extend([
+        ("NSE Quote", fetch_from_nse),
         ("Yahoo", fetch_from_yahoo),
-        ("NSE", fetch_from_nse),
-    ]:
+    ])
+
+    for source_name, fetcher in source_plan:
         try:
             item = fetcher(symbol, stock_name)
             suspicious, reason = looks_suspicious(item, previous_item)
@@ -714,16 +806,21 @@ def choose_best_stock_data(symbol, stock_name, previous_item):
                 return item
 
             errors.append(f"{source_name} suspicious: {reason}")
-
-            if previous_item and PREFER_PREVIOUS_WHEN_SUSPICIOUS:
-                return build_from_previous(symbol, stock_name, previous_item, reason)
-
-            item["dataQuality"] = f"Data Check Required: {reason}"
-            item["status"] = "Data Check Required"
-            return item
+            suspicious_candidates.append((item, reason, source_name))
+            # Do not stop at the first suspicious NSE result. Try the next source,
+            # so Yahoo can still refresh the price when NSE data looks wrong.
 
         except Exception as e:
             errors.append(f"{source_name} failed: {e}")
+
+    if previous_item and PREFER_PREVIOUS_WHEN_SUSPICIOUS:
+        return build_from_previous(symbol, stock_name, previous_item, " | ".join(errors))
+
+    if suspicious_candidates:
+        item, reason, source_name = suspicious_candidates[0]
+        item["dataQuality"] = f"Data Check Required: {source_name}: {reason}"
+        item["status"] = "Data Check Required"
+        return item
 
     return build_from_previous(symbol, stock_name, previous_item, " | ".join(errors))
 
@@ -745,19 +842,31 @@ def update_index_json(slug):
         print(f"No constituents found for {slug}. Skipping.")
         return
 
+    nse_live_rows = {}
+    try:
+        nse_live_rows = fetch_nse_live_index_rows(index_name)
+        print(f"Fetched NSE live index rows for {len(nse_live_rows)} stocks: {index_name}")
+    except Exception as e:
+        print(f"NSE live index batch unavailable for {index_name}: {e}")
+        print("Falling back to NSE quote API per symbol, then Yahoo Finance.")
+
     updated_stocks = []
 
     for i, row in enumerate(constituents, start=1):
         symbol = clean_symbol(row["symbol"])
         stock_name = row.get("stockName", symbol)
         previous_item = previous_map.get(symbol)
+        nse_index_row = nse_live_rows.get(symbol)
 
         print(f"  {i}/{len(constituents)} {symbol}")
 
-        item = choose_best_stock_data(symbol, stock_name, previous_item)
+        item = choose_best_stock_data(symbol, stock_name, previous_item, nse_index_row=nse_index_row)
         updated_stocks.append(item)
 
-        time.sleep(REQUEST_SLEEP_SECONDS)
+        # If the NSE index batch already supplied this symbol, no per-symbol network
+        # request was needed. Keep a small delay only when falling back to quote/Yahoo.
+        if not nse_index_row:
+            time.sleep(REQUEST_SLEEP_SECONDS)
 
     updated_stocks = [item for item in updated_stocks if is_publishable_stock_item(item)]
 
@@ -772,8 +881,8 @@ def update_index_json(slug):
         "updatedAt": format_timestamp(),
         "sourceNote": (
             "Generated by Automation In Trade hybrid script. "
-            "Primary source: Yahoo Finance via yfinance; fallback: NSE quote API where accessible; "
-            "previous JSON used when live sources fail or look suspicious. Values may be delayed. "
+            "Primary source: NSE India live index/quote APIs; Yahoo Finance is used only as fallback; "
+            "previous JSON is used only when all live sources fail or look suspicious. Values may be delayed. "
             "Educational use only."
         ),
         "stocks": updated_stocks,
@@ -2018,6 +2127,106 @@ def update_near_breakout_scanner():
 
     print(f"Saved: {NEAR_BREAKOUT_FILE}")
 
+
+
+# ============================================================
+# TARGETED INDEX / FAST TEST HELPERS
+# ============================================================
+
+INDEX_SLUG_ALIASES = {
+    "nifty50": "nifty-50",
+    "nifty-50": "nifty-50",
+    "nifty 50": "nifty-50",
+    "n50": "nifty-50",
+
+    "midcap50": "nifty-midcap-50",
+    "midcap-50": "nifty-midcap-50",
+    "nifty-midcap-50": "nifty-midcap-50",
+
+    "banknifty": "nifty-bank",
+    "bank-nifty": "nifty-bank",
+    "nifty-bank": "nifty-bank",
+    "nifty bank": "nifty-bank",
+
+    "finnifty": "finnifty",
+    "fin-nifty": "finnifty",
+
+    "sensex": "sensex",
+}
+
+
+def normalize_index_slug(value):
+    raw = str(value or "").strip().lower()
+    if not raw:
+        return ""
+    raw = raw.replace("_", "-")
+    alias_key = raw.replace("-", " ").strip()
+    compact_key = raw.replace("-", "").replace(" ", "")
+    for key in [raw, alias_key, compact_key]:
+        if key in INDEX_SLUG_ALIASES:
+            return INDEX_SLUG_ALIASES[key]
+    return raw
+
+
+def parse_target_index_slugs(raw_value):
+    """Return validated index slugs from --index.
+
+    Examples:
+      --index nifty-50
+      --index nifty-50,nifty-bank
+      --index all
+    """
+    raw_value = str(raw_value or "").strip()
+    if not raw_value:
+        return []
+
+    if raw_value.lower().strip() == "all":
+        return list(INDEX_CONFIG.keys())
+
+    result = []
+    for part in raw_value.split(","):
+        slug = normalize_index_slug(part)
+        if not slug:
+            continue
+        if slug not in INDEX_CONFIG:
+            valid = ", ".join(INDEX_CONFIG.keys())
+            raise SystemExit(f"Unknown --index value: {part}. Valid values: {valid}")
+        if slug not in result:
+            result.append(slug)
+
+    return result
+
+
+def update_52w_index_group(target_slugs, label="selected index"):
+    """Update one or more 52W index JSON files and return their file paths."""
+    updated_paths = []
+    if not target_slugs:
+        return updated_paths
+
+    print("\n" + "=" * 72)
+    print(f"Refreshing 52W CMP source for {label}: {', '.join(target_slugs)}")
+    print("=" * 72)
+
+    for slug in target_slugs:
+        update_index_json(slug)
+        updated_paths.append(JSON_FOLDER / f"{slug}.json")
+
+    return updated_paths
+
+
+def scanner_mode_needs_strength(mode):
+    return mode in {"stock-strength", "momentum-scanner", "volume-surge", "near-breakout"}
+
+
+def print_fast_mode_note(mode, target_slugs, refresh_52w):
+    if scanner_mode_needs_strength(mode) and not target_slugs and not refresh_52w:
+        print(
+            "\nNOTE: Scanner-only modes use the existing stock-strength-ranker.json. "
+            "To refresh CMP before scanner generation, run with --index nifty-50 "
+            "or use --refresh-52w."
+        )
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -2028,14 +2237,47 @@ def parse_args():
     )
     parser.add_argument(
         "--mode",
-        choices=["all", "52w", "market-snapshot", "fii-dii", "index-performance", "stock-strength", "momentum-scanner", "volume-surge", "near-breakout"],
+        choices=[
+            "all",
+            "52w",
+            "market-snapshot",
+            "fii-dii",
+            "index-performance",
+            "stock-strength",
+            "momentum-scanner",
+            "volume-surge",
+            "near-breakout",
+        ],
         default="all",
         help=(
             "Choose what to update. "
-            "all = 52-week JSON + market snapshot + FII/DII; "
+            "all = 52-week JSON + market snapshot + FII/DII + scanners; "
             "52w = only index 52-week high-low files; "
             "market-snapshot = only homepage NSE snapshot; "
-            "fii-dii = only FII/DII activity JSON; index-performance = only full-page index performance JSON; stock-strength = only AIT Stock Strength Ranker JSON; momentum-scanner = only Bullish/Bearish Momentum Scanner JSON; volume-surge = only Volume Surge Scanner JSON; near-breakout = only Near Breakout Scanner JSON."
+            "fii-dii = only FII/DII activity JSON; "
+            "index-performance = only full-page index performance JSON; "
+            "stock-strength = only AIT Stock Strength Ranker JSON; "
+            "momentum-scanner = only Bullish/Bearish Momentum Scanner JSON; "
+            "volume-surge = only Volume Surge Scanner JSON; "
+            "near-breakout = only Near Breakout Scanner JSON."
+        ),
+    )
+    parser.add_argument(
+        "--index",
+        default="",
+        help=(
+            "Optional comma-separated index slug for quick CMP testing or targeted update. "
+            "Examples: --index nifty-50, --index nifty-bank, --index nifty-50,nifty-bank. "
+            "Use --index all to refresh every index."
+        ),
+    )
+    parser.add_argument(
+        "--refresh-52w",
+        action="store_true",
+        help=(
+            "Use with stock-strength/momentum-scanner/volume-surge/near-breakout to refresh "
+            "52W CMP source first. If --index is also provided, only that index is refreshed; "
+            "otherwise all index JSON files are refreshed."
         ),
     )
     parser.add_argument(
@@ -2044,7 +2286,6 @@ def parse_args():
         help="Shortcut for --mode fii-dii. Updates only market-data/fii-dii-activity.json.",
     )
     return parser.parse_args()
-
 
 def update_sector_wise_stock_pages():
     """Rebuild sector-wise JSON/pages from the freshly updated stock strength universe."""
@@ -2069,6 +2310,8 @@ def print_upload_paths(paths):
 def main():
     args = parse_args()
     mode = "fii-dii" if args.only_fii_dii else args.mode
+    target_slugs = parse_target_index_slugs(args.index)
+    scanner_modes = {"stock-strength", "momentum-scanner", "volume-surge", "near-breakout"}
 
     if mode in ["all", "52w"] and not JSON_FOLDER.exists():
         raise FileNotFoundError(
@@ -2077,11 +2320,42 @@ def main():
         )
 
     upload_paths = []
+    refreshed_52w_source = False
+    rebuilt_strength = False
 
-    if mode in ["all", "52w"]:
+    print_fast_mode_note(mode, target_slugs, args.refresh_52w)
+
+    # Targeted CMP refresh:
+    #   python GenerateMarketToolsJson.py --mode 52w --index nifty-50
+    #   python GenerateMarketToolsJson.py --mode momentum-scanner --index nifty-50
+    #
+    # For scanner modes, --index first refreshes the selected 52W source JSON,
+    # then rebuilds stock-strength-ranker.json, then generates the selected scanner.
+    if target_slugs and mode in ["all", "52w", *scanner_modes]:
+        upload_paths.extend(update_52w_index_group(target_slugs, label="targeted test/update"))
+        refreshed_52w_source = True
+
+    elif args.refresh_52w and mode in scanner_modes:
+        all_slugs = list(INDEX_CONFIG.keys())
+        upload_paths.extend(update_52w_index_group(all_slugs, label="scanner source refresh"))
+        refreshed_52w_source = True
+
+    if mode in ["all", "52w"] and not refreshed_52w_source:
         for slug in INDEX_CONFIG.keys():
             update_index_json(slug)
         upload_paths.append(JSON_FOLDER)
+
+    if mode == "52w":
+        print_upload_paths(upload_paths)
+        return
+
+    # If we refreshed any 52W source for a scanner/strength mode, rebuild the
+    # strength universe before generating scanner JSON. This is the missing
+    # step that caused scanner CMP values to remain old.
+    if refreshed_52w_source and mode in ["all", *scanner_modes]:
+        update_stock_strength_ranker()
+        rebuilt_strength = True
+        upload_paths.append(STOCK_STRENGTH_FILE)
 
     if mode in ["all", "market-snapshot"]:
         update_market_snapshot()
@@ -2095,9 +2369,12 @@ def main():
         update_fii_dii_activity()
         upload_paths.append(FII_DII_ACTIVITY_FILE)
 
-    if mode in ["all", "stock-strength"]:
+    if mode in ["all", "stock-strength"] and not rebuilt_strength:
         update_stock_strength_ranker()
+        rebuilt_strength = True
         upload_paths.append(STOCK_STRENGTH_FILE)
+
+    if mode in ["all", "stock-strength"]:
         update_sector_wise_stock_pages()
         upload_paths.append(WEBSITE_ROOT / "market-data" / "sector-wise-stocks.json")
         upload_paths.append(Path("markets") / "sector")

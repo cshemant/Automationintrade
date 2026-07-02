@@ -94,6 +94,22 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--index",
+        default="",
+        help=(
+            "Optional comma-separated index slug passed to GenerateMarketToolsJson.py, "
+            "for example --index nifty-50 or --index nifty-50,nifty-bank."
+        ),
+    )
+    parser.add_argument(
+        "--refresh-52w",
+        action="store_true",
+        help=(
+            "Passes --refresh-52w to GenerateMarketToolsJson.py so scanner modes refresh "
+            "52-week CMP source JSON before rebuilding scanner files."
+        ),
+    )
+    parser.add_argument(
         "--batch-size",
         type=int,
         default=80,
@@ -133,10 +149,15 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def run_market(mode: str) -> None:
+def run_market(mode: str, args: argparse.Namespace) -> None:
+    cmd = [sys.executable, "GenerateMarketToolsJson.py", "--mode", mode]
+    if args.index:
+        cmd += ["--index", args.index]
+    if args.refresh_52w:
+        cmd += ["--refresh-52w"]
     run_step(
         f"Market tools JSON ({mode})",
-        [sys.executable, "GenerateMarketToolsJson.py", "--mode", mode],
+        cmd,
     )
 
 
@@ -196,7 +217,7 @@ def main() -> int:
     print(f"Mode: {mode}")
 
     if mode == "all":
-        run_market("all")
+        run_market("all", args)
         run_sector_pages()
         if not args.skip_price_action:
             run_price_action(args)
@@ -207,7 +228,7 @@ def main() -> int:
         run_stock_index()
 
     elif mode == "market":
-        run_market("all")
+        run_market("all", args)
         run_sector_pages()
         run_stock_index()
 
@@ -236,7 +257,7 @@ def main() -> int:
         run_sector_pages()
 
     elif mode in MARKET_MODES:
-        run_market(mode)
+        run_market(mode, args)
         if mode in {"stock-strength", "52w"}:
             run_sector_pages()
         # Rebuilding the index is cheap and keeps homepage search in sync

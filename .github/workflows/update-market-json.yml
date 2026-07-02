@@ -13,8 +13,11 @@ on:
           - all
           - market
           - research
+          - price-action
+          - results
           - technical-analysis
           - stock-index
+          - sector-pages
           - 52w
           - market-snapshot
           - fii-dii
@@ -25,6 +28,8 @@ on:
           - near-breakout
 
   # GitHub cron uses UTC time.
+  # Scheduled runs use MODE=market so stock prices/market JSON are committed
+  # even if heavier research generators are not needed.
   # Runs Monday-Friday at 4:07 PM, 7:07 PM and 11:58 PM IST.
   schedule:
     - cron: "37 10 * * 1-5"
@@ -46,6 +51,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main before generating data
+        run: |
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          echo "Using branch: ${BRANCH}"
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+          git reset --hard "origin/$BRANCH"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -62,8 +77,14 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: |
-          MODE="${{ github.event.inputs.mode || 'all' }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            MODE="market"
+          else
+            MODE="${{ github.event.inputs.mode || 'all' }}"
+          fi
+
           echo "Running UpdateAllData.py with mode: $MODE"
+          echo "MODE=$MODE" >> "$GITHUB_ENV"
           python UpdateAllData.py --mode "$MODE" --batch-size 80
 
       - name: Show changed data files
@@ -72,12 +93,50 @@ jobs:
 
       - name: Commit and push updated JSON
         run: |
+          BRANCH="${GITHUB_REF_NAME:-main}"
+
           if [ -n "$(git status --porcelain market-data stock-research-data markets/sector)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add market-data stock-research-data markets/sector
-            git commit -m "chore: auto-update market, sector and research data"
-            git push
+            git commit -m "chore: auto-update market data"
+
+            echo "Pushing generated market data to origin/${BRANCH}..."
+
+            for attempt in 1 2 3; do
+              if git push origin "HEAD:$BRANCH"; then
+                echo "Push successful."
+                exit 0
+              fi
+
+              echo "Push attempt ${attempt} failed. Rebasing generated data on latest origin/${BRANCH}..."
+              git fetch origin "$BRANCH"
+
+              # During rebase, -X theirs keeps the generated JSON from this workflow
+              # when the same auto-generated files changed remotely during the run.
+              if git rebase -X theirs "origin/$BRANCH"; then
+                echo "Rebase successful. Retrying push..."
+              else
+                echo "Rebase failed. Rebuilding market data on latest origin/${BRANCH}..."
+                git rebase --abort 2>/dev/null || true
+                git reset --hard "origin/$BRANCH"
+                python UpdateAllData.py --mode "${MODE:-market}" --batch-size 80
+                git add market-data stock-research-data markets/sector
+                if [ -n "$(git status --porcelain market-data stock-research-data markets/sector)" ]; then
+                  git commit -m "chore: auto-update market data"
+                else
+                  echo "No JSON changes after rebuilding. Nothing to push."
+                  exit 0
+                fi
+              fi
+
+              if [ "$attempt" = "3" ]; then
+                echo "Unable to push after 3 attempts."
+                exit 1
+              fi
+
+              sleep 5
+            done
           else
             echo "No JSON changes found. Nothing to commit."
           fi
