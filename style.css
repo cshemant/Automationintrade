@@ -11219,3 +11219,143 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
     border-radius: 16px;
   }
 }
+
+/* V156: Corporate Actions Tracker */
+.corporate-actions-page {
+  background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.11), transparent 28%), #f5f7fb;
+}
+.corporate-actions-hero h1 {
+  max-width: 900px;
+}
+.corporate-actions-summary-card strong {
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+}
+.corporate-actions-insight-grid .market-top5-card li span {
+  min-width: 0;
+}
+.corporate-actions-table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
+.corporate-actions-table th,
+.corporate-actions-table td {
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.corporate-actions-table th:nth-child(1),
+.corporate-actions-table td:nth-child(1) { width: 20%; }
+.corporate-actions-table th:nth-child(2),
+.corporate-actions-table td:nth-child(2) { width: 11%; }
+.corporate-actions-table th:nth-child(3),
+.corporate-actions-table td:nth-child(3) { width: 21%; }
+.corporate-actions-table th:nth-child(4),
+.corporate-actions-table td:nth-child(4) { width: 12%; }
+.corporate-actions-table th:nth-child(5),
+.corporate-actions-table td:nth-child(5) { width: 12%; }
+.corporate-actions-table th:nth-child(6),
+.corporate-actions-table td:nth-child(6) { width: 8%; }
+.corporate-actions-table th:nth-child(7),
+.corporate-actions-table td:nth-child(7) { width: 16%; }
+.corporate-actions-table td:first-child {
+  white-space: normal;
+}
+.corporate-actions-table td:last-child,
+.corporate-actions-table th:last-child {
+  min-width: 0;
+}
+.corporate-actions-table td:last-child {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.corporate-actions-table .stock-symbol {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 850;
+}
+.corporate-event-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 950;
+  background: #ecfdf5;
+  color: var(--primary-dark);
+  border: 1px solid #c6f6df;
+  white-space: nowrap;
+}
+.corporate-event-dividend { background: #ecfdf5; color: #0f766e; border-color: #bbf7d0; }
+.corporate-event-bonus { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+.corporate-event-split { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.corporate-event-buyback { background: #fef2f2; color: #b4232c; border-color: #fecaca; }
+.corporate-event-rights { background: #f5f3ff; color: #6d28d9; border-color: #ddd6fe; }
+.corporate-event-record_date { background: #f8fafc; color: #334155; border-color: #cbd5e1; }
+.corporate-actions-toolbar select {
+  border: 1px solid #dbe4ee;
+  border-radius: 999px;
+  padding: 13px 18px;
+  font: inherit;
+  font-weight: 750;
+  color: #0f172a;
+  background: #ffffff;
+}
+.corporate-actions-logic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+.corporate-actions-logic-grid article {
+  padding: 18px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+.corporate-actions-logic-grid strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+.corporate-actions-logic-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.55;
+}
+.market-tool-hub-card.market-tools-corporate-link {
+  background: linear-gradient(135deg, #7c2d12 0%, #f59e0b 100%);
+  color: #fff;
+}
+.market-tool-hub-card.market-tools-corporate-link h3,
+.market-tool-hub-card.market-tools-corporate-link p,
+.market-tool-hub-card.market-tools-corporate-link span {
+  color: #fff;
+}
+.market-tool-hub-card.market-tools-corporate-link p { opacity: .94; }
+.market-tool-hub-card.market-tools-corporate-link span { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.30); }
+@media (max-width: 900px) {
+  .corporate-actions-logic-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .corporate-actions-toolbar select,
+  .corporate-actions-toolbar .btn,
+  .corporate-actions-toolbar input { width: 100%; min-width: 0; }
+  .corporate-actions-table-card { padding: 18px !important; border-radius: 22px; }
+}
+
+@media (min-width: 721px) {
+  .corporate-actions-table th,
+  .corporate-actions-table td {
+    padding: 12px 14px;
+  }
+  .corporate-actions-table-card .market-data-table-wrap {
+    overflow-x: visible;
+  }
+}

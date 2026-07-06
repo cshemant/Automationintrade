@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Corporate Actions Tracker | Dividend, Bonus, Split & Buyback Events | Automation In Trade</title>
+<meta name="description" content="Track NSE corporate actions for Indian stocks including dividends, bonus issues, stock splits, buybacks, rights issues, ex-date and record-date details in a clean Automation In Trade dashboard."/>
+<meta name="keywords" content="corporate actions India, NSE corporate actions, dividend ex date, bonus issue stocks, stock split India, buyback stocks, record date tracker, Automation In Trade"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<link rel="canonical" href="https://automationintrade.com/market-tools/corporate-actions/"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=156" rel="stylesheet"/>
+<meta property="og:site_name" content="Automation In Trade"/>
+<meta property="og:title" content="Corporate Actions Tracker | Dividend, Bonus, Split & Buyback Events"/>
+<meta property="og:description" content="Track dividend, bonus, split, buyback, rights issue, ex-date and record-date events for Indian stocks."/>
+<meta property="og:url" content="https://automationintrade.com/market-tools/corporate-actions/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://automationintrade.com/assets/images/market-dashboard.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://automationintrade.com/#organization","name":"Automation In Trade","url":"https://automationintrade.com/"},{"@type":"WebPage","@id":"https://automationintrade.com/market-tools/corporate-actions/#webpage","url":"https://automationintrade.com/market-tools/corporate-actions/","name":"Corporate Actions Tracker","description":"NSE corporate actions tracker for dividends, bonus issues, stock splits, buybacks, rights issues, ex-date and record-date details."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://automationintrade.com/"},{"@type":"ListItem","position":2,"name":"Free Stock Market Tools","item":"https://automationintrade.com/market-tools/"},{"@type":"ListItem","position":3,"name":"Corporate Actions Tracker","item":"https://automationintrade.com/market-tools/corporate-actions/"}]}]}</script>
+</head>
+<body><header class="site-header">
+<nav class="navbar">
+<a aria-label="Automation In Trade home" class="brand" href="/">
+<img alt="Automation In Trade logo" class="brand-logo" decoding="async" loading="eager" src="/logo.png"/>
+<span>Automation In Trade</span>
+</a>
+<button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
+<div class="nav-links">
+<a href="/market-tools/">Daily Market</a>
+<a href="/markets/sector/">Sectors</a>
+<div class="nav-dropdown ait-tool-nav">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/market-tools/stock-strength-ranker/">AIT Stock Scanners <span class="chevron">⌄</span></a>
+<div aria-label="AIT stock scanners menu" class="tools-dropdown ait-tools-dropdown">
+<a class="dropdown-item" href="/market-tools/stock-strength-ranker/"><div class="dropdown-icon">ST</div><div class="dropdown-copy"><strong>AIT Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across indices.</span></div></a>
+<a class="dropdown-item" href="/market-tools/bullish-bearish-momentum-scanner/"><div class="dropdown-icon">BM</div><div class="dropdown-copy"><strong>Bullish/Bearish Momentum Scanner</strong><span>Separate bullish and bearish momentum candidates.</span></div></a><a class="dropdown-item" href="/market-tools/volume-surge-scanner/"><div class="dropdown-icon">VS</div><div class="dropdown-copy"><strong>Volume Surge Scanner</strong><span>Find stocks with unusual volume-backed moves.</span></div></a><a class="dropdown-item" href="/market-tools/near-breakout-scanner/"><div class="dropdown-icon">NB</div><div class="dropdown-copy"><strong>Near Breakout Scanner</strong><span>Find stocks close to 52-week breakout zones.</span></div></a><a class="dropdown-item" href="/market-tools/corporate-actions/"><div class="dropdown-icon">CA</div><div class="dropdown-copy"><strong>Corporate Actions Tracker</strong><span>Track dividend, bonus, split, buyback and record-date events.</span></div></a>
+</div>
+</div>
+<div class="nav-dropdown">
+<a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/#tools">Research Tools <span class="chevron">⌄</span></a>
+<div aria-label="Automation In Trade research tools menu" class="tools-dropdown">
+<a class="dropdown-item" href="/result-scanner/"><div class="dropdown-icon">RS</div><div class="dropdown-copy"><strong>Result Scanner</strong><span>Quick result scoring and decision view.</span></div></a>
+<a class="dropdown-item" href="/news-card/"><div class="dropdown-icon">NC</div><div class="dropdown-copy"><strong>News Card</strong><span>News, brokerage calls, target prices, and more.</span></div></a>
+<a class="dropdown-item" href="/institutional-holding-activity-tracker/"><div class="dropdown-icon">IH</div><div class="dropdown-copy"><strong>Institutional Holding Activity Tracker</strong><span>QoQ MF, FII, promoter, and retail holding changes.</span></div></a><a class="dropdown-item" href="/market-tools/corporate-actions/"><div class="dropdown-icon">CA</div><div class="dropdown-copy"><strong>Corporate Actions Tracker</strong><span>Dividend, bonus, split, buyback and record-date watch.</span></div></a>
+<a class="dropdown-item" href="/technical-zone-finder/"><div class="dropdown-icon">TZ</div><div class="dropdown-copy"><strong>Technical Zone Finder</strong><span>Buy, target, and stop-loss zones on charts.</span></div></a>
+<a class="dropdown-item" href="/option-chain-sentiment-dashboard/"><div class="dropdown-icon">OC</div><div class="dropdown-copy"><strong>Option Chain Sentiment Dashboard</strong><span>PCR, OI change, Max Pain, and IV Skew summary.</span></div></a>
+<a class="dropdown-item" href="/sector-money-flow/"><div class="dropdown-icon">SB</div><div class="dropdown-copy"><strong>Sector Money Flow Tracker</strong><span>Detect sector-level buying and selling flows.</span></div></a>
+<a class="dropdown-item" href="/market-tools/stock-strength-ranker/"><div class="dropdown-icon">ST</div><div class="dropdown-copy"><strong>Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across indices.</span></div></a><a class="dropdown-item" href="/market-tools/"><div class="dropdown-icon">52</div><div class="dropdown-copy"><strong>52W High-Low Scanner</strong><span>Free sector-wise 52-week high-low tools.</span></div></a>
+<a class="dropdown-item" href="/ait-smart-move-indicator/"><div class="dropdown-icon">AI</div><div class="dropdown-copy"><strong>AIT Smart Move Indicator</strong><span>Smart score, stock mood, buy zone and targets.</span></div></a>
+<a class="dropdown-item" href="/price-action-zone-finder/"><div class="dropdown-icon">PA</div><div class="dropdown-copy"><strong>Price Action Zone Finder</strong><span>Real-time buy zone, stop-loss, target and trend levels.</span></div></a>
+</div>
+</div>
+<a class="nav-cta" href="/contact/">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="corporate-actions-page stock-strength-page section-padding">
+  <div class="container">
+    <div class="stock-strength-hero corporate-actions-hero">
+      <div>
+        <p class="eyebrow">Free Market Tool</p>
+        <h1>Corporate Actions Tracker</h1>
+        <p class="market-page-intro">Track dividend, bonus, split, buyback, rights issue, ex-date and record-date events for Indian stocks in one clean dashboard. Use it as a watchlist layer before checking the official filing.</p>
+        <div class="market-page-badges"><span>Dividend</span><span>Bonus</span><span>Split</span><span>Buyback</span><span>Record Date</span></div>
+      </div>
+      <div class="market-tools-summary-card stock-strength-summary-card corporate-actions-summary-card">
+        <span>Tracked Events</span>
+        <strong id="corpTotalCount">Loading...</strong>
+        <p id="corpUpdated">Corporate action data is loading from market-data JSON.</p>
+      </div>
+    </div>
+
+    <div class="stock-strength-insight-grid corporate-actions-insight-grid" id="corpInsightGrid">
+      <article class="market-top5-card"><p>Upcoming Actions</p><ul><li><span>Loading...</span><strong>-</strong></li></ul></article>
+      <article class="market-top5-card"><p>Dividend Rows</p><ul><li><span>Loading...</span><strong>-</strong></li></ul></article>
+      <article class="market-top5-card"><p>Bonus / Split Rows</p><ul><li><span>Loading...</span><strong>-</strong></li></ul></article>
+      <article class="market-top5-card"><p>Record Date Rows</p><ul><li><span>Loading...</span><strong>-</strong></li></ul></article>
+    </div>
+
+    <div class="stock-strength-table-card corporate-actions-table-card">
+      <div class="market-table-heading">
+        <div><p class="eyebrow">Corporate Action List</p><h2>Dividend, bonus, split and buyback tracker</h2></div>
+        <p class="market-updated" id="corpSourceNote">Values may be delayed.</p>
+      </div>
+      <div class="market-json-toolbar corporate-actions-toolbar">
+        <input id="corpSearch" type="search" placeholder="Search stock, symbol, purpose or event..." aria-label="Search corporate actions">
+        <select id="corpEventFilter" aria-label="Filter by event type">
+          <option value="">All events</option>
+          <option value="DIVIDEND">Dividend</option>
+          <option value="BONUS">Bonus</option>
+          <option value="SPLIT">Split</option>
+          <option value="BUYBACK">Buyback</option>
+          <option value="RIGHTS">Rights</option>
+          <option value="RECORD_DATE">Record Date</option>
+        </select>
+        <select id="corpDateFilter" aria-label="Filter by date bucket">
+          <option value="">All dates</option>
+          <option value="Upcoming">Upcoming</option>
+          <option value="Today">Today</option>
+          <option value="Recent">Recent</option>
+          <option value="No Ex-Date">No Ex-Date</option>
+        </select>
+        <button id="corpSortUpcoming" class="btn btn-secondary" type="button">Sort: Upcoming</button>
+        <button id="corpSortRecent" class="btn btn-secondary" type="button">Sort: Recent</button>
+      </div>
+      <div class="market-data-table-wrap">
+        <table class="market-data-table corporate-actions-table">
+          <thead><tr><th>Stock</th><th>Event</th><th>Purpose</th><th>Ex-Date</th><th>Record Date</th><th>Days</th><th>Action View</th></tr></thead>
+          <tbody id="corpTableBody"><tr><td colspan="7">Loading corporate action data...</td></tr></tbody>
+        </table>
+      </div>
+      <p class="market-table-note">Corporate actions can change price, quantity or eligibility dates, but they are not automatic buy/sell signals. Verify every event from the official exchange or company filing before making a decision.</p>
+    </div>
+
+    <section class="market-explain-section corporate-actions-explain">
+      <div class="section-heading compact-market-seo">
+        <p class="eyebrow">How to use this tool</p>
+        <h2>Do not miss ex-date and record-date events</h2>
+        <p>Use this tracker to quickly identify stocks with corporate actions. Dividends affect ex-date planning, bonus and split events adjust price and quantity, buybacks need entitlement checks, and rights issues need careful date and pricing verification.</p>
+      </div>
+      <div class="corporate-actions-logic-grid">
+        <article><strong>Dividend</strong><span>Check ex-date, record date and actual yield. Price usually adjusts around ex-date.</span></article>
+        <article><strong>Bonus / Split</strong><span>Quantity changes, price adjusts, and market value does not increase automatically.</span></article>
+        <article><strong>Buyback / Rights</strong><span>Verify route, eligibility, ratio, price and application timeline before acting.</span></article>
+      </div>
+      <div class="related-sector-links"><strong>Related free tools:</strong><a class="related-sector-link" href="/market-tools/stock-strength-ranker/">Stock Strength Ranker</a><a class="related-sector-link" href="/market-tools/index-performance/">Index Performance</a><a class="related-sector-link" href="/market-tools/">All Market Tools</a></div>
+    </section>
+  </div>
+</section>
+</main>
+<footer class="site-footer ait-standard-footer" aria-label="Automation In Trade footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a class="footer-brand-link" href="/" aria-label="Automation In Trade home">
+          <img class="footer-logo" src="/logo.png" alt="Automation In Trade logo" loading="lazy" decoding="async" />
+          <span>Automation In Trade</span>
+        </a>
+        <p>Automation In Trade provides clean stock market data tools, scanners, dashboards and visual research content for Indian market learners.</p>
+        <p class="footer-note">Educational data platform for result analysis, market strength, sector flow, price action and research automation.</p>
+      </div>
+
+      <nav class="footer-column" aria-label="AIT stock scanners">
+        <h3 class="footer-column-title">AIT Stock Scanners</h3>
+        <a href="/market-tools/stock-strength-ranker/">Stock Strength Ranker</a>
+        <a href="/market-tools/bullish-bearish-momentum-scanner/">Bullish / Bearish Momentum</a>
+        <a href="/market-tools/volume-surge-scanner/">Volume Surge Scanner</a>
+        <a href="/market-tools/near-breakout-scanner/">Near Breakout Scanner</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Research tools">
+        <h3 class="footer-column-title">Research Tools</h3>
+        <a href="/result-scanner/">Result Scanner</a>
+        <a href="/portfolio-analyzer/">Portfolio Analyzer</a>
+        <a href="/price-action-zone-finder/">Price Action Zone Finder</a>
+        <a href="/technical-zone-finder/">Technical Zone Finder</a>
+        <a href="/option-chain-sentiment-dashboard/">Option Sentiment Dashboard</a>
+        <a href="/trader-calculators/">Trader Calculators</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Market data tools">
+        <h3 class="footer-column-title">Market Data</h3>
+        <a href="/market-tools/">Daily Market Tools</a>
+        <a href="/markets/sector/">Sector Wise Stocks</a>
+        <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
+        <a href="/market-tools/index-performance/">Index Performance</a>
+        <a href="/market-tools/corporate-actions/">Corporate Actions</a>
+        <a href="/sector-money-flow/">Sector Money Flow</a>
+        <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Blog guides">
+        <h3 class="footer-column-title">Blog Guides</h3>
+        <a href="/blog/price-action-trading-guide/">Price Action Guide</a>
+        <a href="/blog/company-quarterly-results-analysis/">Quarterly Results Guide</a>
+        <a href="/blog/technical-analysis-for-indian-stocks/">Technical Analysis Guide</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Company links">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="/about-us/">About</a>
+        <a href="/#content">Content</a>
+        <a href="/news-card/">News Card</a>
+        <a href="/contact/">Contact</a>
+        <a href="mailto:contact@automationintrade.com">Support</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-social-block">
+        <span class="footer-bottom-title">Find us on</span>
+        <div class="footer-social-row" aria-label="Automation In Trade social links">
+          <a class="footer-social-icon" href="https://www.youtube.com/@automationintrade" aria-label="YouTube" rel="noopener" target="_blank">▶</a>
+          <a class="footer-social-icon" href="https://www.instagram.com/automationintrade/" aria-label="Instagram" rel="noopener" target="_blank">◎</a>
+          <a class="footer-social-icon" href="https://x.com/AutomateTR" aria-label="X / Twitter" rel="noopener" target="_blank">𝕏</a>
+          <a class="footer-social-icon" href="https://www.linkedin.com/company/automationintrade/" aria-label="LinkedIn" rel="noopener" target="_blank">in</a>
+          <a class="footer-social-icon" href="https://www.facebook.com/automationintrade" aria-label="Facebook" rel="noopener" target="_blank">f</a>
+        </div>
+      </div>
+
+      <div class="footer-support-block">
+        <span class="footer-bottom-title">Help and support</span>
+        <a href="mailto:contact@automationintrade.com">contact@automationintrade.com</a>
+      </div>
+
+      <div class="footer-legal-block">
+        <span>© <span id="year"></span> Automation In Trade. All rights reserved.</span>
+        <span class="footer-disclaimer">Data-based educational content only. Not investment advice. Values may be delayed, manually updated, or sample snapshots.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  const body=document.getElementById('corpTableBody');
+  if(!body) return;
+  const search=document.getElementById('corpSearch');
+  const eventFilter=document.getElementById('corpEventFilter');
+  const dateFilter=document.getElementById('corpDateFilter');
+  const total=document.getElementById('corpTotalCount');
+  const updated=document.getElementById('corpUpdated');
+  const source=document.getElementById('corpSourceNote');
+  const insights=document.getElementById('corpInsightGrid');
+  let rows=[];
+  let sortMode='upcoming';
+  const esc=v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+  const num=v=>{ const n=Number(v); return Number.isFinite(n)?n:null; };
+  function stockName(r){return r.stockName || r.companyName || r.symbol || '-';}
+  function profileSlug(r){let base=String(stockName(r)||r.symbol||'stock').trim().replace(/&/g,' and '); base=base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi,''); base=base.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,''); if(!base) base=String(r.symbol||'stock').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'stock'; return base+'-technical-analysis';}
+  function profileLink(r){return '<a class="stock-profile-link" href="/technical-analysis/'+esc(profileSlug(r))+'/">'+esc(stockName(r))+'</a>';}
+  function eventBadge(r){ const type=String(r.eventType||'OTHER').toLowerCase(); return '<span class="corporate-event-badge corporate-event-'+esc(type)+'">'+esc(r.eventLabel||r.eventType||'Other')+'</span>'; }
+  function daysText(r){ const d=num(r.daysToExDate); if(d===null) return esc(r.dateBucket||'-'); if(d>0) return '<strong class="positive">'+d+'d left</strong>'; if(d===0) return '<strong class="positive">Today</strong>'; return '<strong class="negative">'+Math.abs(d)+'d ago</strong>'; }
+  function sorted(list){
+    const copy=list.slice();
+    if(sortMode==='recent') copy.sort((a,b)=>{ const ax=num(a.daysToExDate), bx=num(b.daysToExDate); return (ax===null?999999:Math.abs(ax))-(bx===null?999999:Math.abs(bx)); });
+    else copy.sort((a,b)=>{ const ax=num(a.daysToExDate), bx=num(b.daysToExDate); const av=ax===null?999999:(ax>=0?ax:100000+Math.abs(ax)); const bv=bx===null?999999:(bx>=0?bx:100000+Math.abs(bx)); return av-bv; });
+    return copy;
+  }
+  function countType(data,type){ return data.filter(r=>String(r.eventType||'')===type).length; }
+  function renderInsights(data){
+    if(!insights) return;
+    const upcoming=data.filter(r=>{ const d=num(r.daysToExDate); return d!==null && d>=0; }).length;
+    const dividend=countType(data,'DIVIDEND');
+    const bonusSplit=data.filter(r=>['BONUS','SPLIT'].includes(String(r.eventType||''))).length;
+    const record=data.filter(r=>r.recordDate).length;
+    insights.innerHTML='<article class="market-top5-card"><p>Upcoming Actions</p><ul><li><span>Events with pending ex-date</span><strong class="positive">'+upcoming+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Dividend Rows</p><ul><li><span>Dividend / payout watch</span><strong>'+dividend+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Bonus / Split Rows</p><ul><li><span>Quantity adjustment events</span><strong>'+bonusSplit+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Record Date Rows</p><ul><li><span>Eligibility-date records</span><strong>'+record+'</strong></li></ul></article>';
+  }
+  function filterRows(){
+    const q=(search?.value||'').trim().toLowerCase();
+    const eventVal=eventFilter?.value||'';
+    const dateVal=dateFilter?.value||'';
+    return rows.filter(r=>{
+      const text=[r.symbol,r.stockName,r.companyName,r.eventLabel,r.eventType,r.purpose,(r.indices||[]).join(' ')].join(' ').toLowerCase();
+      if(q && !text.includes(q)) return false;
+      if(eventVal && String(r.eventType||'')!==eventVal) return false;
+      if(dateVal && String(r.dateBucket||'')!==dateVal) return false;
+      return true;
+    });
+  }
+  function render(){
+    let visible=sorted(filterRows());
+    if(!visible.length){ body.innerHTML='<tr><td colspan="7">No corporate actions found for the selected filter.</td></tr>'; return; }
+    body.innerHTML=visible.map(r=>'<tr>'+ 
+      '<td><strong>'+profileLink(r)+'</strong></td>'+ 
+      '<td>'+eventBadge(r)+'</td>'+ 
+      '<td>'+esc(r.purpose||'-')+'</td>'+ 
+      '<td>'+esc(r.exDate||'-')+'</td>'+ 
+      '<td>'+esc(r.recordDate||'-')+'</td>'+ 
+      '<td>'+daysText(r)+'</td>'+ 
+      '<td>'+esc(r.actionView||'-')+'</td>'+ 
+    '</tr>').join('');
+  }
+  fetch('/market-data/corporate-actions.json?v='+Date.now(),{cache:'no-store'})
+    .then(res=>{ if(!res.ok) throw new Error('Corporate actions JSON not found'); return res.json(); })
+    .then(data=>{
+      rows=Array.isArray(data.actions)?data.actions:[];
+      const summary=data.summary||{};
+      if(total) total.textContent=(summary.totalActions??rows.length).toLocaleString('en-IN')+' events tracked';
+      if(updated) updated.textContent=(data.fromDate&&data.toDate)?('Window: '+data.fromDate+' to '+data.toDate):'Matched with market universe.';
+      if(source) source.textContent=data.sourceNote||'Generated from market-data JSON.';
+      renderInsights(rows); render();
+    })
+    .catch(()=>{
+      if(updated) updated.textContent='Corporate action data could not be loaded.';
+      body.innerHTML='<tr><td colspan="7">Unable to load corporate-actions.json.</td></tr>'; 
+    });
+  search?.addEventListener('input',render);
+  eventFilter?.addEventListener('change',render);
+  dateFilter?.addEventListener('change',render);
+  document.getElementById('corpSortUpcoming')?.addEventListener('click',()=>{sortMode='upcoming';render();});
+  document.getElementById('corpSortRecent')?.addEventListener('click',()=>{sortMode='recent';render();});
+})();
+</script>
+<script src="/script.js?v=155"></script></body></html>

@@ -16,7 +16,8 @@ What --mode all does:
   3) Generates Results research-card JSON via GenerateResultsJson.py
   4) Generates Technical Analysis research-card JSON via GenerateTechnicalAnalysisJson.py
   5) Rebuilds sector-wise stock JSON/pages via GenerateSectorWiseStocks.py
-  6) Rebuilds homepage stock search index via GenerateStockResearchIndex.py
+  6) Updates corporate actions JSON via GenerateCorporateActionsJson.py
+  7) Rebuilds homepage stock search index via GenerateStockResearchIndex.py
 
 Useful testing commands:
 
@@ -82,6 +83,7 @@ def parse_args() -> argparse.Namespace:
             "technical-analysis",
             "stock-index",
             "sector-pages",
+            "corporate-actions",
             *sorted(MARKET_MODES),
         ],
         help=(
@@ -90,7 +92,7 @@ def parse_args() -> argparse.Namespace:
             "research = price-action + results + technical-analysis + stock index. "
             "price-action/results/technical-analysis = only that research JSON + stock index. "
             "stock-index = rebuild search index only. "
-            "Other values are passed to GenerateMarketToolsJson.py --mode."
+            "corporate-actions = only market-data/corporate-actions.json. Other values are passed to GenerateMarketToolsJson.py --mode."
         ),
     )
     parser.add_argument(
@@ -208,6 +210,10 @@ def run_sector_pages() -> None:
     run_step("Sector-wise stock JSON and pages", [sys.executable, "GenerateSectorWiseStocks.py"])
 
 
+def run_corporate_actions() -> None:
+    run_step("Corporate actions JSON", [sys.executable, "GenerateCorporateActionsJson.py", "--write-empty-on-fail"])
+
+
 def main() -> int:
     args = parse_args()
     mode = args.mode
@@ -225,11 +231,13 @@ def main() -> int:
             run_results(args)
         if not args.skip_technical:
             run_technical(args)
+        run_corporate_actions()
         run_stock_index()
 
     elif mode == "market":
         run_market("all", args)
         run_sector_pages()
+        run_corporate_actions()
         run_stock_index()
 
     elif mode == "research":
@@ -249,6 +257,9 @@ def main() -> int:
     elif mode == "technical-analysis":
         run_technical(args)
         run_stock_index()
+
+    elif mode == "corporate-actions":
+        run_corporate_actions()
 
     elif mode == "stock-index":
         run_stock_index()
@@ -273,6 +284,7 @@ def main() -> int:
     print("  market-data/")
     print("  stock-research-data/")
     print("  market-data/sector-wise-stocks.json")
+    print("  market-data/corporate-actions.json")
     print("  markets/sector/")
     print("  technical-analysis/")
     print("  sitemap.xml")
