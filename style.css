@@ -11387,66 +11387,6 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
 }
 
 
-/* V159: keep Corporate Actions visible from the home first screen */
-.nav-corporate-actions-link {
-  color: #0b8173 !important;
-  font-weight: 900 !important;
-}
-.home-primary-tool-links {
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.home-primary-tool-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  max-width: min(100%, 560px);
-  padding: 12px 18px;
-  border-radius: 999px;
-  background: rgba(13, 127, 115, 0.08);
-  border: 1px solid rgba(13, 127, 115, 0.18);
-  color: #0b8173;
-  text-decoration: none;
-  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
-}
-.home-primary-tool-link span {
-  font-weight: 950;
-  white-space: nowrap;
-}
-.home-primary-tool-link small {
-  color: #566579;
-  font-size: 0.86rem;
-  font-weight: 750;
-  line-height: 1.35;
-}
-.home-primary-tool-link:hover,
-.home-primary-tool-link:focus {
-  background: #0b8173;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-.home-primary-tool-link:hover small,
-.home-primary-tool-link:focus small {
-  color: rgba(255,255,255,.9);
-}
-body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)) .home-primary-tool-links {
-  display: none !important;
-}
-@media (max-width: 720px) {
-  .home-primary-tool-link {
-    border-radius: 18px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
-    padding: 13px 16px;
-  }
-  .home-primary-tool-link span {
-    white-space: normal;
-  }
-}
-
 /* V162: Corporate Actions mobile card layout */
 @media (max-width: 720px) {
   .corporate-actions-page .section-padding {
