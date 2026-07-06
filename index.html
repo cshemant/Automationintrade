@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/style.css?v=155" rel="stylesheet"/>
+<link href="/style.css?v=159" rel="stylesheet"/>
 <meta content="free stock market tools, stock market data tools, trading automation tools, 52 week high low scanner, AIT Smart Move Indicator, automationintrade indicator, result scanner, price action zone finder, option chain sentiment, FII DII flow, sector money flow, Automation In Trade" name="keywords"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Automation In Trade" name="author"/><meta content="#0b8173" name="theme-color"/><link href="https://automationintrade.com/" rel="canonical"/><meta content="Automation In Trade" property="og:site_name"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." property="og:description"/><meta content="https://automationintrade.com/" property="og:url"/><meta content="website" property="og:type"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" property="og:image"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Automation In Trade | Stock Market Data Tools &amp; Trading Automation" name="twitter:title"/><meta content="Automation In Trade provides free stock market tools and market data visuals for result analysis, 52-week high-low tracking, price action zones, option chain sentiment, FII/DII flow, sector money flow, and trading automation." name="twitter:description"/><meta content="https://automationintrade.com/assets/images/market-dashboard.png" name="twitter:image"/><meta content="@AutomateTR" name="twitter:site"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,12 +76,13 @@
 </button>
 <div class="nav-links">
 <a href="/market-tools/">Daily Market</a>
+<a class="nav-corporate-actions-link" href="/market-tools/corporate-actions/">Corporate Actions</a>
 <a href="/markets/sector/">Sectors</a>
 <div class="nav-dropdown ait-tool-nav">
 <a aria-expanded="false" aria-haspopup="true" class="dropdown-trigger" href="/market-tools/stock-strength-ranker/">AIT Stock Scanners <span class="chevron">⌄</span></a>
 <div aria-label="AIT stock scanners menu" class="tools-dropdown ait-tools-dropdown">
 <a class="dropdown-item" href="/market-tools/stock-strength-ranker/"><div class="dropdown-icon">ST</div><div class="dropdown-copy"><strong>AIT Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across indices.</span></div></a>
-<a class="dropdown-item" href="/market-tools/bullish-bearish-momentum-scanner/"><div class="dropdown-icon">BM</div><div class="dropdown-copy"><strong>Bullish/Bearish Momentum Scanner</strong><span>Separate bullish and bearish momentum candidates.</span></div></a><a class="dropdown-item" href="/market-tools/volume-surge-scanner/"><div class="dropdown-icon">VS</div><div class="dropdown-copy"><strong>Volume Surge Scanner</strong><span>Find stocks with unusual volume-backed moves.</span></div></a><a class="dropdown-item" href="/market-tools/near-breakout-scanner/"><div class="dropdown-icon">NB</div><div class="dropdown-copy"><strong>Near Breakout Scanner</strong><span>Find stocks close to 52-week breakout zones.</span></div></a>
+<a class="dropdown-item" href="/market-tools/bullish-bearish-momentum-scanner/"><div class="dropdown-icon">BM</div><div class="dropdown-copy"><strong>Bullish/Bearish Momentum Scanner</strong><span>Separate bullish and bearish momentum candidates.</span></div></a><a class="dropdown-item" href="/market-tools/volume-surge-scanner/"><div class="dropdown-icon">VS</div><div class="dropdown-copy"><strong>Volume Surge Scanner</strong><span>Find stocks with unusual volume-backed moves.</span></div></a><a class="dropdown-item" href="/market-tools/near-breakout-scanner/"><div class="dropdown-icon">NB</div><div class="dropdown-copy"><strong>Near Breakout Scanner</strong><span>Find stocks close to 52-week breakout zones.</span></div></a><a class="dropdown-item" href="/market-tools/corporate-actions/"><div class="dropdown-icon">CA</div><div class="dropdown-copy"><strong>Corporate Actions Tracker</strong><span>Track dividend, bonus, split, buyback and record-date events.</span></div></a>
 </div>
 </div>
 <div class="nav-dropdown">
@@ -205,6 +206,12 @@
     </div>
     <button class="btn btn-primary stock-research-submit" type="submit">View Analysis</button>
     </form>
+    <div class="home-primary-tool-links" aria-label="Quick market tools">
+      <a class="home-primary-tool-link corporate-action-home-link" href="/market-tools/corporate-actions/">
+        <span>Corporate Actions</span>
+        <small>Dividend, bonus, split, buyback and record-date tracker</small>
+      </a>
+    </div>
   </div>
 
   <div class="stock-research-result-card" id="stockResearchResult" data-stock-research-json="/market-data/stock-research-index.json"></div>
@@ -245,6 +252,7 @@
 <a href="/option-chain-sentiment-dashboard/"><strong>Option Chain Sentiment Dashboard</strong><span>PCR, OI change, max pain, IV skew and writer bias.</span></a>
 <a href="/sector-money-flow/"><strong>Sector Money Flow Tracker</strong><span>Sector buying, selling, rotation and FII/DII flow visuals.</span></a>
 <a href="/market-tools/"><strong>Free Stock Market Tools</strong><span>52-week high-low trackers for NIFTY IT, Auto, Bank, Pharma and FMCG.</span></a>
+<a href="/market-tools/corporate-actions/"><strong>Corporate Actions Tracker</strong><span>Track ex-date, record-date, dividend, bonus, split and buyback events.</span></a>
 </div>
 </section>
 
@@ -256,6 +264,7 @@
   </div>
   <div class="market-tools-card-grid"><a class="market-tools-main-link" href="/market-tools/stock-strength-ranker/"><strong>AIT Stock Strength Ranker</strong><span>Rank strongest and weakest stocks across major index lists.</span></a>
     <a class="market-tools-main-link" href="/market-tools/index-performance/"><strong>Index Performance</strong><span>Full-page NIFTY, sector and Sensex performance snapshot.</span></a>
+    <a class="market-tools-main-link" href="/market-tools/corporate-actions/"><strong>Corporate Actions Tracker</strong><span>Dividend, bonus, split, buyback and record-date events.</span></a>
     <a href="/market-tools/52-week-high-low/nifty-it/"><strong>NIFTY IT 52W High-Low</strong><span>IT stocks near 52-week high or low.</span></a>
     <a href="/market-tools/52-week-high-low/nifty-auto/"><strong>NIFTY Auto 52W High-Low</strong><span>Auto sector high-low positioning.</span></a>
     <a href="/market-tools/52-week-high-low/nifty-bank/"><strong>NIFTY Bank 52W High-Low</strong><span>Banking stocks high-low tracker.</span></a>
@@ -427,6 +436,7 @@
         <a href="/markets/sector/">Sector Wise Stocks</a>
         <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
         <a href="/market-tools/index-performance/">Index Performance</a>
+        <a href="/market-tools/corporate-actions/">Corporate Actions</a>
         <a href="/sector-money-flow/">Sector Money Flow</a>
         <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
       </nav>
