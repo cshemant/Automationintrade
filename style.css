@@ -11305,6 +11305,19 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
   color: #0f172a;
   background: #ffffff;
 }
+
+.corporate-actions-date-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.corporate-actions-date-tabs .btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(15, 118, 110, 0.18);
+}
 .corporate-actions-logic-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -11341,7 +11354,20 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
 .market-tool-hub-card.market-tools-corporate-link p { opacity: .94; }
 .market-tool-hub-card.market-tools-corporate-link span { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.30); }
 @media (max-width: 900px) {
-  .corporate-actions-logic-grid { grid-template-columns: 1fr; }
+  
+.corporate-actions-date-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.corporate-actions-date-tabs .btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(15, 118, 110, 0.18);
+}
+.corporate-actions-logic-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .corporate-actions-toolbar select,
@@ -11418,5 +11444,152 @@ body > main > .stock-research-google:has(.stock-research-result-card:not(:empty)
   }
   .home-primary-tool-link span {
     white-space: normal;
+  }
+}
+
+/* V162: Corporate Actions mobile card layout */
+@media (max-width: 720px) {
+  .corporate-actions-page .section-padding {
+    padding-top: 26px;
+  }
+
+  .corporate-actions-hero {
+    gap: 16px;
+  }
+
+  .corporate-actions-hero h1 {
+    font-size: clamp(2.05rem, 10vw, 2.75rem);
+    line-height: 1.04;
+  }
+
+  .corporate-actions-table-card .market-table-heading {
+    align-items: flex-start;
+  }
+
+  .corporate-actions-table-card .market-data-table-wrap {
+    overflow-x: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .corporate-actions-table {
+    min-width: 0 !important;
+    width: 100% !important;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+    table-layout: auto;
+  }
+
+  .corporate-actions-table thead {
+    display: none;
+  }
+
+  .corporate-actions-table tbody,
+  .corporate-actions-table tr,
+  .corporate-actions-table td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .corporate-actions-table tr {
+    overflow: hidden;
+    margin: 0 0 14px;
+    border: 1px solid #dfe8f2;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+  }
+
+  .corporate-actions-table th,
+  .corporate-actions-table td {
+    padding: 11px 14px !important;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.9rem !important;
+    line-height: 1.38 !important;
+    text-align: right;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .corporate-actions-table td {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .corporate-actions-table td::before {
+    flex: 0 0 92px;
+    max-width: 92px;
+    color: #64748b;
+    content: '';
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .corporate-actions-table td:nth-child(1)::before { content: 'Stock'; }
+  .corporate-actions-table td:nth-child(2)::before { content: 'Event'; }
+  .corporate-actions-table td:nth-child(3)::before { content: 'Purpose'; }
+  .corporate-actions-table td:nth-child(4)::before { content: 'Ex-Date'; }
+  .corporate-actions-table td:nth-child(5)::before { content: 'Record Date'; }
+  .corporate-actions-table td:nth-child(6)::before { content: 'Days'; }
+  .corporate-actions-table td:nth-child(7)::before { content: 'Action View'; }
+
+  .corporate-actions-table td:first-child {
+    align-items: center;
+    background: #f8fafc;
+    font-size: 0.95rem !important;
+  }
+
+  .corporate-actions-table td:first-child strong {
+    display: block;
+    max-width: calc(100% - 106px);
+    text-align: right;
+  }
+
+  .corporate-actions-table td:last-child {
+    border-bottom: 0;
+    font-size: 0.86rem !important;
+  }
+
+  .corporate-actions-table td:last-child::before {
+    padding-top: 1px;
+  }
+
+  .corporate-event-badge {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .corporate-actions-table td[colspan] {
+    display: block !important;
+    padding: 16px !important;
+    text-align: center;
+  }
+
+  .corporate-actions-table td[colspan]::before {
+    content: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .corporate-actions-table-card {
+    padding: 14px !important;
+  }
+
+  .corporate-actions-table td::before {
+    flex-basis: 82px;
+    max-width: 82px;
+  }
+
+  .corporate-actions-table td:first-child strong {
+    max-width: calc(100% - 96px);
   }
 }

@@ -8,7 +8,7 @@
 <meta name="keywords" content="corporate actions India, NSE corporate actions, dividend ex date, bonus issue stocks, stock split India, buyback stocks, record date tracker, Automation In Trade"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <link rel="canonical" href="https://automationintrade.com/market-tools/corporate-actions/"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=156" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="/style.css?v=162" rel="stylesheet"/>
 <meta property="og:site_name" content="Automation In Trade"/>
 <meta property="og:title" content="Corporate Actions Tracker | Dividend, Bonus, Split & Buyback Events"/>
 <meta property="og:description" content="Track dividend, bonus, split, buyback, rights issue, ex-date and record-date events for Indian stocks."/>
@@ -80,7 +80,7 @@
     <div class="stock-strength-table-card corporate-actions-table-card">
       <div class="market-table-heading">
         <div><p class="eyebrow">Corporate Action List</p><h2>Dividend, bonus, split and buyback tracker</h2></div>
-        <p class="market-updated" id="corpSourceNote">Values may be delayed.</p>
+        <p class="market-updated" id="corpSourceNote">Showing upcoming corporate actions from NSE. Data may be delayed.</p>
       </div>
       <div class="market-json-toolbar corporate-actions-toolbar">
         <input id="corpSearch" type="search" placeholder="Search stock, symbol, purpose or event..." aria-label="Search corporate actions">
@@ -93,15 +93,12 @@
           <option value="RIGHTS">Rights</option>
           <option value="RECORD_DATE">Record Date</option>
         </select>
-        <select id="corpDateFilter" aria-label="Filter by date bucket">
-          <option value="">All dates</option>
-          <option value="Upcoming">Upcoming</option>
-          <option value="Today">Today</option>
-          <option value="Recent">Recent</option>
-          <option value="No Ex-Date">No Ex-Date</option>
-        </select>
-        <button id="corpSortUpcoming" class="btn btn-secondary" type="button">Sort: Upcoming</button>
-        <button id="corpSortRecent" class="btn btn-secondary" type="button">Sort: Recent</button>
+        <div class="corporate-actions-date-tabs" aria-label="Filter by corporate action date range">
+          <button class="btn btn-secondary active" data-date-filter="UPCOMING" type="button">Upcoming Actions</button>
+          <button class="btn btn-secondary" data-date-filter="TODAY" type="button">Today</button>
+          <button class="btn btn-secondary" data-date-filter="NEXT_7" type="button">Next 7 Days</button>
+          <button class="btn btn-secondary" data-date-filter="NEXT_30" type="button">Next 30 Days</button>
+        </div>
       </div>
       <div class="market-data-table-wrap">
         <table class="market-data-table corporate-actions-table">
@@ -164,7 +161,7 @@
         <a href="/markets/sector/">Sector Wise Stocks</a>
         <a href="/market-tools/52-week-high-low/nifty-50/">52-Week High-Low</a>
         <a href="/market-tools/index-performance/">Index Performance</a>
-        <a href="/market-tools/corporate-actions/">Corporate Actions</a>
+        <a href="/market-tools/corporate-actions/">Corporate Actions Tracker</a>
         <a href="/sector-money-flow/">Sector Money Flow</a>
         <a href="/institutional-holding-activity-tracker/">Institutional Holding Activity</a>
       </nav>
@@ -216,55 +213,103 @@
   if(!body) return;
   const search=document.getElementById('corpSearch');
   const eventFilter=document.getElementById('corpEventFilter');
-  const dateFilter=document.getElementById('corpDateFilter');
   const total=document.getElementById('corpTotalCount');
   const updated=document.getElementById('corpUpdated');
   const source=document.getElementById('corpSourceNote');
   const insights=document.getElementById('corpInsightGrid');
+  const dateButtons=[...document.querySelectorAll('[data-date-filter]')];
+
   let rows=[];
-  let sortMode='upcoming';
+  let activeDateFilter='UPCOMING';
+
   const esc=v=>String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
   const num=v=>{ const n=Number(v); return Number.isFinite(n)?n:null; };
   function stockName(r){return r.stockName || r.companyName || r.symbol || '-';}
-  function profileSlug(r){let base=String(stockName(r)||r.symbol||'stock').trim().replace(/&/g,' and '); base=base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi,''); base=base.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,''); if(!base) base=String(r.symbol||'stock').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'stock'; return base+'-technical-analysis';}
-  function profileLink(r){return '<a class="stock-profile-link" href="/technical-analysis/'+esc(profileSlug(r))+'/">'+esc(stockName(r))+'</a>';}
-  function eventBadge(r){ const type=String(r.eventType||'OTHER').toLowerCase(); return '<span class="corporate-event-badge corporate-event-'+esc(type)+'">'+esc(r.eventLabel||r.eventType||'Other')+'</span>'; }
-  function daysText(r){ const d=num(r.daysToExDate); if(d===null) return esc(r.dateBucket||'-'); if(d>0) return '<strong class="positive">'+d+'d left</strong>'; if(d===0) return '<strong class="positive">Today</strong>'; return '<strong class="negative">'+Math.abs(d)+'d ago</strong>'; }
-  function sorted(list){
-    const copy=list.slice();
-    if(sortMode==='recent') copy.sort((a,b)=>{ const ax=num(a.daysToExDate), bx=num(b.daysToExDate); return (ax===null?999999:Math.abs(ax))-(bx===null?999999:Math.abs(bx)); });
-    else copy.sort((a,b)=>{ const ax=num(a.daysToExDate), bx=num(b.daysToExDate); const av=ax===null?999999:(ax>=0?ax:100000+Math.abs(ax)); const bv=bx===null?999999:(bx>=0?bx:100000+Math.abs(bx)); return av-bv; });
-    return copy;
+  function profileSlug(r){
+    let base=String(stockName(r)||r.symbol||'stock').trim().replace(/&/g,' and ');
+    base=base.replace(/\b(limited|ltd\.?|inc\.?|company|co\.?|corporation|corp\.?|industries|industry)\b/gi,'');
+    base=base.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+    if(!base) base=String(r.symbol||'stock').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'stock';
+    return base+'-technical-analysis';
   }
-  function countType(data,type){ return data.filter(r=>String(r.eventType||'')===type).length; }
-  function renderInsights(data){
+  function stockCell(r){
+    const name=esc(stockName(r));
+    if(r.hasProfile || r.inUniverse){
+      return '<a class="stock-profile-link" href="/technical-analysis/'+esc(profileSlug(r))+'/">'+name+'</a>';
+    }
+    return '<span class="stock-profile-link plain-stock-name">'+name+'</span>';
+  }
+  function eventBadge(r){
+    const type=String(r.eventType||'OTHER').toLowerCase();
+    return '<span class="corporate-event-badge corporate-event-'+esc(type)+'">'+esc(r.eventLabel||r.eventType||'Other')+'</span>';
+  }
+  function actionDays(r){
+    const action=num(r.daysToAction);
+    const ex=num(r.daysToExDate);
+    return action!==null?action:ex;
+  }
+  function daysText(r){
+    const d=actionDays(r);
+    if(d===null) return esc(r.dateBucket||'-');
+    if(d>0) return '<strong class="positive">'+d+'d left</strong>';
+    if(d===0) return '<strong class="positive">Today</strong>';
+    return '<strong class="negative">Expired</strong>';
+  }
+  function isFresh(r){
+    const d=actionDays(r);
+    return d===null || d>=0;
+  }
+  function sorted(list){
+    return list.slice().sort((a,b)=>{
+      const ax=actionDays(a), bx=actionDays(b);
+      const av=ax===null?999999:ax;
+      const bv=bx===null?999999:bx;
+      return av-bv || String(a.symbol||'').localeCompare(String(b.symbol||''));
+    });
+  }
+  function countFor(filter){
+    return rows.filter(r=>matchesDateFilter(r,filter)).length;
+  }
+  function countType(type){
+    return rows.filter(r=>String(r.eventType||'')===type).length;
+  }
+  function matchesDateFilter(r,filter){
+    const d=actionDays(r);
+    if(filter==='TODAY') return d===0;
+    if(filter==='NEXT_7') return d!==null && d>=0 && d<=7;
+    if(filter==='NEXT_30') return d!==null && d>=0 && d<=30;
+    return isFresh(r);
+  }
+  function setActiveDateButton(){
+    dateButtons.forEach(btn=>btn.classList.toggle('active',btn.dataset.dateFilter===activeDateFilter));
+  }
+  function renderInsights(){
     if(!insights) return;
-    const upcoming=data.filter(r=>{ const d=num(r.daysToExDate); return d!==null && d>=0; }).length;
-    const dividend=countType(data,'DIVIDEND');
-    const bonusSplit=data.filter(r=>['BONUS','SPLIT'].includes(String(r.eventType||''))).length;
-    const record=data.filter(r=>r.recordDate).length;
-    insights.innerHTML='<article class="market-top5-card"><p>Upcoming Actions</p><ul><li><span>Events with pending ex-date</span><strong class="positive">'+upcoming+'</strong></li></ul></article>'+ 
-      '<article class="market-top5-card"><p>Dividend Rows</p><ul><li><span>Dividend / payout watch</span><strong>'+dividend+'</strong></li></ul></article>'+ 
-      '<article class="market-top5-card"><p>Bonus / Split Rows</p><ul><li><span>Quantity adjustment events</span><strong>'+bonusSplit+'</strong></li></ul></article>'+ 
-      '<article class="market-top5-card"><p>Record Date Rows</p><ul><li><span>Eligibility-date records</span><strong>'+record+'</strong></li></ul></article>';
+    insights.innerHTML='<article class="market-top5-card"><p>Upcoming Actions</p><ul><li><span>Fresh front-end records</span><strong class="positive">'+countFor('UPCOMING')+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Today</p><ul><li><span>Action date today</span><strong>'+countFor('TODAY')+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Next 7 Days</p><ul><li><span>Near-term watchlist</span><strong>'+countFor('NEXT_7')+'</strong></li></ul></article>'+ 
+      '<article class="market-top5-card"><p>Next 30 Days</p><ul><li><span>Monthly action window</span><strong>'+countFor('NEXT_30')+'</strong></li></ul></article>';
   }
   function filterRows(){
     const q=(search?.value||'').trim().toLowerCase();
     const eventVal=eventFilter?.value||'';
-    const dateVal=dateFilter?.value||'';
     return rows.filter(r=>{
+      if(!matchesDateFilter(r,activeDateFilter)) return false;
       const text=[r.symbol,r.stockName,r.companyName,r.eventLabel,r.eventType,r.purpose,(r.indices||[]).join(' ')].join(' ').toLowerCase();
       if(q && !text.includes(q)) return false;
       if(eventVal && String(r.eventType||'')!==eventVal) return false;
-      if(dateVal && String(r.dateBucket||'')!==dateVal) return false;
       return true;
     });
   }
   function render(){
-    let visible=sorted(filterRows());
-    if(!visible.length){ body.innerHTML='<tr><td colspan="7">No corporate actions found for the selected filter.</td></tr>'; return; }
+    setActiveDateButton();
+    const visible=sorted(filterRows());
+    if(!visible.length){
+      body.innerHTML='<tr><td colspan="7">No upcoming corporate actions found for the selected filter.</td></tr>';
+      return;
+    }
     body.innerHTML=visible.map(r=>'<tr>'+ 
-      '<td><strong>'+profileLink(r)+'</strong></td>'+ 
+      '<td><strong>'+stockCell(r)+'</strong></td>'+ 
       '<td>'+eventBadge(r)+'</td>'+ 
       '<td>'+esc(r.purpose||'-')+'</td>'+ 
       '<td>'+esc(r.exDate||'-')+'</td>'+ 
@@ -276,12 +321,14 @@
   fetch('/market-data/corporate-actions.json?v='+Date.now(),{cache:'no-store'})
     .then(res=>{ if(!res.ok) throw new Error('Corporate actions JSON not found'); return res.json(); })
     .then(data=>{
-      rows=Array.isArray(data.actions)?data.actions:[];
+      const payloadActions=Array.isArray(data.freshActions)?data.freshActions:(Array.isArray(data.actions)?data.actions:[]);
+      rows=payloadActions.filter(isFresh);
       const summary=data.summary||{};
-      if(total) total.textContent=(summary.totalActions??rows.length).toLocaleString('en-IN')+' events tracked';
-      if(updated) updated.textContent=(data.fromDate&&data.toDate)?('Window: '+data.fromDate+' to '+data.toDate):'Matched with market universe.';
-      if(source) source.textContent=data.sourceNote||'Generated from market-data JSON.';
-      renderInsights(rows); render();
+      if(total) total.textContent=Number(summary.freshCount??rows.length).toLocaleString('en-IN')+' upcoming';
+      if(updated) updated.textContent=(data.fromDate&&data.toDate)?('Upcoming window: '+data.fromDate+' to '+data.toDate):'Showing upcoming corporate actions from NSE.';
+      if(source) source.textContent=data.sourceNote||'Showing upcoming corporate actions from NSE. Data may be delayed. Educational use only.';
+      renderInsights();
+      render();
     })
     .catch(()=>{
       if(updated) updated.textContent='Corporate action data could not be loaded.';
@@ -289,9 +336,10 @@
     });
   search?.addEventListener('input',render);
   eventFilter?.addEventListener('change',render);
-  dateFilter?.addEventListener('change',render);
-  document.getElementById('corpSortUpcoming')?.addEventListener('click',()=>{sortMode='upcoming';render();});
-  document.getElementById('corpSortRecent')?.addEventListener('click',()=>{sortMode='recent';render();});
+  dateButtons.forEach(btn=>btn.addEventListener('click',()=>{
+    activeDateFilter=btn.dataset.dateFilter||'UPCOMING';
+    render();
+  }));
 })();
 </script>
-<script src="/script.js?v=155"></script></body></html>
+<script src="/script.js?v=162"></script></body></html>
