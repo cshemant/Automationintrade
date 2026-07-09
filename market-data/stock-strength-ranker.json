@@ -1,1290 +1,162 @@
 {
   "toolName": "AIT Stock Strength Ranker",
-  "updatedAt": "08-Jul-2026 21:07 IST",
-  "generatedAt": "08-Jul-2026 21:11 IST",
+  "updatedAt": "09-Jul-2026 14:42 IST",
+  "generatedAt": "09-Jul-2026 14:46 IST",
   "universeCount": 218,
   "sourceNote": "Generated from existing Automation In Trade 52-week high-low JSON files. Strength score combines daily move percentile, 52-week high proximity, distance from 52-week low, and index membership. Educational use only.",
   "stocks": [
     {
-      "symbol": "ADANIENSOL",
-      "stockName": "Adani Energy Solutions Ltd.",
-      "cmp": 1651.0,
-      "high52": 1663.9,
-      "low52": 744.9,
-      "changePct": 1.74,
-      "downFromHighPct": -0.78,
-      "aboveLowPct": 121.64,
+      "symbol": "WELCORP",
+      "stockName": "Welspun Corp Ltd.",
+      "cmp": 1601.9,
+      "high52": 1618.7,
+      "low52": 710.0,
+      "changePct": 4.75,
+      "downFromHighPct": -1.04,
+      "aboveLowPct": 125.62,
       "status": "Near 52W High",
       "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY NEXT 50"
+        "NIFTY METAL"
       ],
-      "strengthScore": 96.2,
+      "strengthScore": 91.3,
       "signal": "Strong Momentum",
       "rank": 1
     },
     {
-      "symbol": "SHRIRAMFIN",
-      "stockName": "Shriram Finance Ltd.",
-      "cmp": 1066.8,
-      "high52": 1108.0,
-      "low52": 566.5,
-      "changePct": 0.42,
-      "downFromHighPct": -3.72,
-      "aboveLowPct": 88.31,
+      "symbol": "LAURUSLABS",
+      "stockName": "Laurus Labs Ltd.",
+      "cmp": 1507.4,
+      "high52": 1555.0,
+      "low52": 775.15,
+      "changePct": 2.6,
+      "downFromHighPct": -3.06,
+      "aboveLowPct": 94.47,
       "status": "Near 52W High",
       "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FINANCIAL SERVICES"
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
       ],
-      "strengthScore": 86.8,
+      "strengthScore": 88.8,
       "signal": "Strong Momentum",
       "rank": 2
     },
     {
-      "symbol": "GLAND",
-      "stockName": "Gland Pharma Ltd.",
-      "cmp": 2550.0,
-      "high52": 2562.9,
-      "low52": 1573.6,
-      "changePct": 3.52,
-      "downFromHighPct": -0.5,
-      "aboveLowPct": 62.05,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 84.8,
-      "signal": "Strong Momentum",
-      "rank": 3
-    },
-    {
-      "symbol": "TITAN",
-      "stockName": "Titan Company Ltd",
-      "cmp": 4604.2,
-      "high52": 4655.9,
-      "low52": 3303.1,
-      "changePct": 2.67,
-      "downFromHighPct": -1.11,
-      "aboveLowPct": 39.39,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 84.3,
-      "signal": "Strong Momentum",
-      "rank": 4
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "stockName": "IndusInd Bank Ltd",
-      "cmp": 1022.25,
-      "high52": 1038.0,
-      "low52": 710.6,
-      "changePct": 1.23,
-      "downFromHighPct": -1.52,
-      "aboveLowPct": 43.86,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 83.9,
-      "signal": "Strong Momentum",
-      "rank": 5
-    },
-    {
-      "symbol": "FEDERALBNK",
-      "stockName": "Federal Bank Ltd.",
-      "cmp": 331.55,
-      "high52": 334.3,
-      "low52": 185.11,
-      "changePct": 0.38,
-      "downFromHighPct": -0.82,
-      "aboveLowPct": 79.11,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK"
-      ],
-      "strengthScore": 83.5,
-      "signal": "Strong Momentum",
-      "rank": 6
-    },
-    {
-      "symbol": "BAJFINANCE",
-      "stockName": "Bajaj Finance Ltd",
-      "cmp": 1042.5,
-      "high52": 1102.5,
-      "low52": 787.9,
-      "changePct": 1.3,
-      "downFromHighPct": -5.44,
-      "aboveLowPct": 32.31,
-      "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FINANCIAL SERVICES",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 81.1,
-      "signal": "Strong Momentum",
-      "rank": 7
-    },
-    {
-      "symbol": "TORNTPHARM",
-      "stockName": "Torrent Pharmaceuticals Ltd.",
-      "cmp": 4856.7,
-      "high52": 4878.9,
-      "low52": 3295.3,
-      "changePct": 0.7,
-      "downFromHighPct": -0.46,
-      "aboveLowPct": 47.38,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 80.3,
-      "signal": "Strong Momentum",
-      "rank": 8
-    },
-    {
-      "symbol": "RBLBANK",
-      "stockName": "RBL Bank Ltd.",
-      "cmp": 375.1,
-      "high52": 381.7,
-      "low52": 243.25,
-      "changePct": 1.76,
-      "downFromHighPct": -1.73,
-      "aboveLowPct": 54.2,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY PVT BANK"
-      ],
-      "strengthScore": 80.3,
-      "signal": "Strong Momentum",
-      "rank": 9
-    },
-    {
-      "symbol": "JBCHEPHARM",
-      "stockName": "J.B. Chemicals & Pharmaceuticals Ltd.",
-      "cmp": 2422.0,
-      "high52": 2428.8,
-      "low52": 1603.5,
-      "changePct": 1.34,
-      "downFromHighPct": -0.28,
-      "aboveLowPct": 51.04,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 78.9,
-      "signal": "Strong Momentum",
-      "rank": 10
-    },
-    {
-      "symbol": "SONACOMS",
-      "stockName": "Sona BLW Precision Forgings Ltd.",
-      "cmp": 671.2,
-      "high52": 674.0,
-      "low52": 402.3,
-      "changePct": 0.55,
-      "downFromHighPct": -0.42,
-      "aboveLowPct": 66.84,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY AUTO"
-      ],
-      "strengthScore": 77.8,
-      "signal": "Positive Watchlist",
-      "rank": 11
-    },
-    {
-      "symbol": "EICHERMOT",
-      "stockName": "Eicher Motors Ltd.",
-      "cmp": 7536.0,
-      "high52": 8230.0,
-      "low52": 5353.0,
-      "changePct": 0.86,
-      "downFromHighPct": -8.43,
-      "aboveLowPct": 40.78,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY AUTO"
-      ],
-      "strengthScore": 77.7,
-      "signal": "Positive Watchlist",
-      "rank": 12
-    },
-    {
-      "symbol": "AUBANK",
-      "stockName": "AU Small Finance Bank Ltd.",
-      "cmp": 1066.9,
-      "high52": 1090.4,
-      "low52": 682.15,
-      "changePct": 0.52,
-      "downFromHighPct": -2.16,
-      "aboveLowPct": 56.4,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 77.5,
-      "signal": "Positive Watchlist",
-      "rank": 13
-    },
-    {
-      "symbol": "CHOLAFIN",
-      "stockName": "Cholamandalam Investment and Finance Company Ltd.",
-      "cmp": 1853.4,
-      "high52": 1875.0,
-      "low52": 1299.4,
-      "changePct": 0.16,
-      "downFromHighPct": -1.15,
-      "aboveLowPct": 42.64,
-      "status": "Near 52W High",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 77.0,
-      "signal": "Positive Watchlist",
-      "rank": 14
-    },
-    {
-      "symbol": "INDHOTEL",
-      "stockName": "Indian Hotels Co. Ltd.",
-      "cmp": 745.95,
-      "high52": 811.95,
-      "low52": 565.0,
-      "changePct": 1.06,
-      "downFromHighPct": -8.13,
-      "aboveLowPct": 32.03,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 76.7,
-      "signal": "Positive Watchlist",
-      "rank": 15
-    },
-    {
-      "symbol": "SBILIFE",
-      "stockName": "SBI Life Insurance Company Ltd.",
-      "cmp": 1832.3,
-      "high52": 2132.0,
-      "low52": 1700.4,
-      "changePct": 2.49,
-      "downFromHighPct": -14.06,
-      "aboveLowPct": 7.76,
-      "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FINANCIAL SERVICES"
-      ],
-      "strengthScore": 76.5,
-      "signal": "Positive Watchlist",
-      "rank": 16
-    },
-    {
-      "symbol": "GMRAIRPORT",
-      "stockName": "GMR Airports Ltd.",
-      "cmp": 114.98,
-      "high52": 115.64,
-      "low52": 84.11,
-      "changePct": 1.35,
-      "downFromHighPct": -0.57,
-      "aboveLowPct": 36.7,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 76.4,
-      "signal": "Positive Watchlist",
-      "rank": 17
-    },
-    {
-      "symbol": "ZYDUSLIFE",
-      "stockName": "Zydus Lifesciences Ltd.",
-      "cmp": 1153.0,
-      "high52": 1168.8,
-      "low52": 835.5,
-      "changePct": 0.44,
-      "downFromHighPct": -1.35,
-      "aboveLowPct": 38.0,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 76.2,
-      "signal": "Positive Watchlist",
-      "rank": 18
-    },
-    {
-      "symbol": "OFSS",
-      "stockName": "Oracle Financial Services Software Ltd.",
-      "cmp": 11097.0,
-      "high52": 11360.0,
-      "low52": 6234.5,
-      "changePct": 0.23,
-      "downFromHighPct": -2.32,
-      "aboveLowPct": 77.99,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY IT"
-      ],
-      "strengthScore": 76.2,
-      "signal": "Positive Watchlist",
-      "rank": 19
-    },
-    {
-      "symbol": "HINDPETRO",
-      "stockName": "Hindustan Petroleum Corporation Ltd.",
-      "cmp": 405.95,
-      "high52": 508.45,
-      "low52": 316.2,
-      "changePct": 1.4,
-      "downFromHighPct": -20.16,
-      "aboveLowPct": 28.38,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 75.9,
-      "signal": "Positive Watchlist",
-      "rank": 20
-    },
-    {
-      "symbol": "PAYTM",
-      "stockName": "One 97 Communications Ltd.",
-      "cmp": 1246.0,
-      "high52": 1381.8,
-      "low52": 896.1,
-      "changePct": 2.28,
-      "downFromHighPct": -9.83,
-      "aboveLowPct": 39.05,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 75.7,
-      "signal": "Positive Watchlist",
-      "rank": 21
-    },
-    {
       "symbol": "LODHA",
       "stockName": "Lodha Developers Ltd.",
-      "cmp": 1102.55,
+      "cmp": 1192.15,
       "high52": 1461.5,
       "low52": 650.8,
-      "changePct": 0.61,
-      "downFromHighPct": -24.56,
-      "aboveLowPct": 69.41,
+      "changePct": 6.91,
+      "downFromHighPct": -18.43,
+      "aboveLowPct": 83.18,
       "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY NEXT 50",
         "NIFTY REALTY"
       ],
-      "strengthScore": 75.6,
-      "signal": "Positive Watchlist",
-      "rank": 22
+      "strengthScore": 88.0,
+      "signal": "Strong Momentum",
+      "rank": 3
     },
     {
-      "symbol": "BPCL",
-      "stockName": "Bharat Petroleum Corporation Ltd.",
-      "cmp": 313.95,
-      "high52": 391.65,
-      "low52": 266.6,
-      "changePct": 1.88,
-      "downFromHighPct": -19.84,
-      "aboveLowPct": 17.76,
+      "symbol": "GVT&D",
+      "stockName": "GE Vernova T&D India Ltd.",
+      "cmp": 4643.4,
+      "high52": 5650.0,
+      "low52": 2265.0,
+      "changePct": 3.96,
+      "downFromHighPct": -17.82,
+      "aboveLowPct": 105.01,
       "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
+        "NIFTY ENERGY"
       ],
-      "strengthScore": 75.6,
-      "signal": "Positive Watchlist",
-      "rank": 23
+      "strengthScore": 84.5,
+      "signal": "Strong Momentum",
+      "rank": 4
     },
     {
-      "symbol": "COFORGE",
-      "stockName": "Coforge Ltd.",
-      "cmp": 1516.2,
-      "high52": 1994.0,
-      "low52": 1008.1,
-      "changePct": 2.31,
-      "downFromHighPct": -23.96,
-      "aboveLowPct": 50.4,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY IT",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 75.6,
-      "signal": "Positive Watchlist",
-      "rank": 24
-    },
-    {
-      "symbol": "NYKAA",
-      "stockName": "FSN E-Commerce Ventures Ltd.",
-      "cmp": 315.2,
-      "high52": 319.8,
-      "low52": 200.14,
-      "changePct": 0.54,
-      "downFromHighPct": -1.44,
-      "aboveLowPct": 57.49,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 75.6,
-      "signal": "Positive Watchlist",
-      "rank": 25
-    },
-    {
-      "symbol": "WELCORP",
-      "stockName": "Welspun Corp Ltd.",
-      "cmp": 1541.0,
-      "high52": 1566.0,
-      "low52": 710.0,
-      "changePct": -0.17,
-      "downFromHighPct": -1.6,
-      "aboveLowPct": 117.04,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 75.5,
-      "signal": "Positive Watchlist",
-      "rank": 26
-    },
-    {
-      "symbol": "BAJAJ-AUTO",
-      "stockName": "Bajaj Auto Ltd.",
-      "cmp": 10109.5,
-      "high52": 10834.0,
-      "low52": 7858.5,
-      "changePct": 0.73,
-      "downFromHighPct": -6.69,
-      "aboveLowPct": 28.64,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY AUTO"
-      ],
-      "strengthScore": 75.2,
-      "signal": "Positive Watchlist",
-      "rank": 27
-    },
-    {
-      "symbol": "UNITDSPR",
-      "stockName": "United Spirits Ltd.",
-      "cmp": 1439.4,
-      "high52": 1488.0,
-      "low52": 1210.8,
-      "changePct": 0.85,
-      "downFromHighPct": -3.27,
-      "aboveLowPct": 18.88,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY FMCG",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 75.1,
-      "signal": "Positive Watchlist",
-      "rank": 28
-    },
-    {
-      "symbol": "TECHM",
-      "stockName": "Tech Mahindra Ltd",
-      "cmp": 1447.5,
-      "high52": 1854.0,
-      "low52": 1304.1,
-      "changePct": 2.92,
-      "downFromHighPct": -21.93,
-      "aboveLowPct": 11.0,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY IT",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 74.9,
-      "signal": "Positive Watchlist",
-      "rank": 29
-    },
-    {
-      "symbol": "MARICO",
-      "stockName": "Marico Ltd.",
-      "cmp": 847.65,
-      "high52": 873.0,
-      "low52": 690.2,
-      "changePct": 1.14,
-      "downFromHighPct": -2.9,
-      "aboveLowPct": 22.81,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY FMCG",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 74.5,
-      "signal": "Positive Watchlist",
-      "rank": 30
-    },
-    {
-      "symbol": "PIDILITIND",
-      "stockName": "Pidilite Industries Ltd.",
-      "cmp": 1622.3,
-      "high52": 1626.7,
-      "low52": 1259.0,
-      "changePct": 0.33,
-      "downFromHighPct": -0.27,
-      "aboveLowPct": 28.86,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 73.9,
-      "signal": "Positive Watchlist",
-      "rank": 31
-    },
-    {
-      "symbol": "ALKEM",
-      "stockName": "Alkem Laboratories Ltd.",
-      "cmp": 5667.5,
-      "high52": 5933.5,
-      "low52": 4716.2,
-      "changePct": 1.23,
-      "downFromHighPct": -4.48,
-      "aboveLowPct": 20.17,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 73.7,
-      "signal": "Positive Watchlist",
-      "rank": 32
-    },
-    {
-      "symbol": "IPCALAB",
-      "stockName": "Ipca Laboratories Ltd.",
-      "cmp": 1793.1,
-      "high52": 1812.5,
-      "low52": 1251.6,
-      "changePct": 0.6,
-      "downFromHighPct": -1.07,
-      "aboveLowPct": 43.26,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 73.7,
-      "signal": "Positive Watchlist",
-      "rank": 33
-    },
-    {
-      "symbol": "ETERNAL",
-      "stockName": "Eternal Ltd.",
-      "cmp": 289.4,
-      "high52": 368.45,
-      "low52": 212.6,
-      "changePct": 2.12,
-      "downFromHighPct": -21.45,
-      "aboveLowPct": 36.12,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50"
-      ],
-      "strengthScore": 73.6,
-      "signal": "Positive Watchlist",
-      "rank": 34
-    },
-    {
-      "symbol": "BAJAJFINSV",
-      "stockName": "Bajaj Finserv Ltd",
-      "cmp": 1885.3,
-      "high52": 2195.0,
-      "low52": 1597.0,
-      "changePct": 0.78,
-      "downFromHighPct": -14.11,
-      "aboveLowPct": 18.05,
-      "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FINANCIAL SERVICES",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 73.4,
-      "signal": "Positive Watchlist",
-      "rank": 35
-    },
-    {
-      "symbol": "MFSL",
-      "stockName": "Max Financial Services Ltd.",
-      "cmp": 1608.9,
-      "high52": 1892.5,
-      "low52": 1433.6,
+      "symbol": "SHRIRAMFIN",
+      "stockName": "Shriram Finance Ltd.",
+      "cmp": 1031.7,
+      "high52": 1108.0,
+      "low52": 566.5,
       "changePct": 1.71,
-      "downFromHighPct": -14.99,
-      "aboveLowPct": 12.23,
+      "downFromHighPct": -6.89,
+      "aboveLowPct": 82.12,
       "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 72.8,
-      "signal": "Positive Watchlist",
-      "rank": 36
-    },
-    {
-      "symbol": "JSWSTEEL",
-      "stockName": "JSW Steel Ltd",
-      "cmp": 1246.4,
-      "high52": 1328.0,
-      "low52": 1017.4,
-      "changePct": 0.26,
-      "downFromHighPct": -6.14,
-      "aboveLowPct": 22.51,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY METAL",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 72.8,
-      "signal": "Positive Watchlist",
-      "rank": 37
-    },
-    {
-      "symbol": "AXISBANK",
-      "stockName": "Axis Bank Ltd",
-      "cmp": 1341.0,
-      "high52": 1418.3,
-      "low52": 1042.5,
-      "changePct": 0.1,
-      "downFromHighPct": -5.45,
-      "aboveLowPct": 28.63,
-      "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY BANK",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY PVT BANK"
-      ],
-      "strengthScore": 72.3,
-      "signal": "Positive Watchlist",
-      "rank": 38
-    },
-    {
-      "symbol": "NESTLEIND",
-      "stockName": "Nestle India Ltd",
-      "cmp": 1471.8,
-      "high52": 1498.1,
-      "low52": 1084.7,
-      "changePct": -0.13,
-      "downFromHighPct": -1.76,
-      "aboveLowPct": 35.69,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FMCG",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 72.2,
-      "signal": "Positive Watchlist",
-      "rank": 39
-    },
-    {
-      "symbol": "TVSMOTOR",
-      "stockName": "TVS Motor Company Ltd.",
-      "cmp": 3712.7,
-      "high52": 3970.0,
-      "low52": 2728.7,
-      "changePct": 0.21,
-      "downFromHighPct": -6.48,
-      "aboveLowPct": 36.06,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY AUTO",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 72.1,
-      "signal": "Positive Watchlist",
-      "rank": 40
-    },
-    {
-      "symbol": "NAUKRI",
-      "stockName": "Info Edge (India) Ltd.",
-      "cmp": 1159.45,
-      "high52": 1485.0,
-      "low52": 908.3,
-      "changePct": 13.1,
-      "downFromHighPct": -21.92,
-      "aboveLowPct": 27.65,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 72.0,
-      "signal": "Positive Watchlist",
-      "rank": 41
-    },
-    {
-      "symbol": "ADANIPOWER",
-      "stockName": "Adani Power Ltd.",
-      "cmp": 218.07,
-      "high52": 254.2,
-      "low52": 110.45,
-      "changePct": -0.81,
-      "downFromHighPct": -14.21,
-      "aboveLowPct": 97.44,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 71.8,
-      "signal": "Positive Watchlist",
-      "rank": 42
-    },
-    {
-      "symbol": "HCLTECH",
-      "stockName": "HCL Technologies Ltd",
-      "cmp": 1168.2,
-      "high52": 1780.1,
-      "low52": 1030.0,
-      "changePct": 3.0,
-      "downFromHighPct": -34.37,
-      "aboveLowPct": 13.42,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY IT",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 71.5,
-      "signal": "Positive Watchlist",
-      "rank": 43
-    },
-    {
-      "symbol": "MARUTI",
-      "stockName": "Maruti Suzuki India Ltd",
-      "cmp": 14538.0,
-      "high52": 17370.0,
-      "low52": 12201.0,
-      "changePct": 0.57,
-      "downFromHighPct": -16.3,
-      "aboveLowPct": 19.15,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY AUTO",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 71.5,
-      "signal": "Positive Watchlist",
-      "rank": 44
-    },
-    {
-      "symbol": "TORNTPOWER",
-      "stockName": "Torrent Power Ltd.",
-      "cmp": 1399.7,
-      "high52": 1824.1,
-      "low52": 1188.0,
-      "changePct": 3.12,
-      "downFromHighPct": -23.27,
-      "aboveLowPct": 17.82,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 71.2,
-      "signal": "Positive Watchlist",
-      "rank": 45
-    },
-    {
-      "symbol": "MPHASIS",
-      "stockName": "MphasiS Ltd.",
-      "cmp": 2374.6,
-      "high52": 3037.2,
-      "low52": 2013.0,
-      "changePct": 2.92,
-      "downFromHighPct": -21.82,
-      "aboveLowPct": 17.96,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY IT",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 71.2,
-      "signal": "Positive Watchlist",
-      "rank": 46
-    },
-    {
-      "symbol": "TATACAP",
-      "stockName": "Tata Capital Ltd.",
-      "cmp": 352.6,
-      "high52": 379.95,
-      "low52": 296.0,
-      "changePct": 0.7,
-      "downFromHighPct": -7.2,
-      "aboveLowPct": 19.12,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 70.5,
-      "signal": "Positive Watchlist",
-      "rank": 47
-    },
-    {
-      "symbol": "PERSISTENT",
-      "stockName": "Persistent Systems Ltd.",
-      "cmp": 4884.8,
-      "high52": 6599.0,
-      "low52": 4244.5,
-      "changePct": 3.58,
-      "downFromHighPct": -25.98,
-      "aboveLowPct": 15.09,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY IT",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 70.4,
-      "signal": "Positive Watchlist",
-      "rank": 48
-    },
-    {
-      "symbol": "LLOYDSME",
-      "stockName": "Lloyds Metals And Energy Ltd.",
-      "cmp": 1755.6,
-      "high52": 1888.6,
-      "low52": 1042.9,
-      "changePct": 0.01,
-      "downFromHighPct": -7.04,
-      "aboveLowPct": 68.34,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 70.4,
-      "signal": "Positive Watchlist",
-      "rank": 49
-    },
-    {
-      "symbol": "BANKINDIA",
-      "stockName": "Bank of India",
-      "cmp": 142.41,
-      "high52": 178.36,
-      "low52": 108.81,
-      "changePct": 1.87,
-      "downFromHighPct": -20.16,
-      "aboveLowPct": 30.88,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 70.1,
-      "signal": "Positive Watchlist",
-      "rank": 50
-    },
-    {
-      "symbol": "APLAPOLLO",
-      "stockName": "APL Apollo Tubes Ltd.",
-      "cmp": 1819.8,
-      "high52": 2301.4,
-      "low52": 1492.0,
-      "changePct": 0.85,
-      "downFromHighPct": -20.93,
-      "aboveLowPct": 21.97,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY METAL",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 69.7,
-      "signal": "Positive Watchlist",
-      "rank": 51
-    },
-    {
-      "symbol": "NAZARA",
-      "stockName": "Nazara Technologies Ltd.",
-      "cmp": 301.25,
-      "high52": 363.25,
-      "low52": 215.7,
-      "changePct": 0.87,
-      "downFromHighPct": -17.07,
-      "aboveLowPct": 39.66,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 69.7,
-      "signal": "Positive Watchlist",
-      "rank": 52
-    },
-    {
-      "symbol": "TATACONSUM",
-      "stockName": "Tata Consumer Products Ltd.",
-      "cmp": 1125.0,
-      "high52": 1282.7,
-      "low52": 1007.2,
-      "changePct": 0.64,
-      "downFromHighPct": -12.29,
-      "aboveLowPct": 11.7,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FMCG"
-      ],
-      "strengthScore": 69.5,
-      "signal": "Positive Watchlist",
-      "rank": 53
-    },
-    {
-      "symbol": "HDFCAMC",
-      "stockName": "HDFC Asset Management Company Ltd.",
-      "cmp": 2783.4,
-      "high52": 2967.25,
-      "low52": 2205.6,
-      "changePct": 0.36,
-      "downFromHighPct": -6.2,
-      "aboveLowPct": 26.2,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 69.3,
-      "signal": "Positive Watchlist",
-      "rank": 54
-    },
-    {
-      "symbol": "INFY",
-      "stockName": "Infosys Ltd",
-      "cmp": 1071.8,
-      "high52": 1728.0,
-      "low52": 982.4,
-      "changePct": 2.84,
-      "downFromHighPct": -37.97,
-      "aboveLowPct": 9.1,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY IT",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 69.0,
-      "signal": "Positive Watchlist",
-      "rank": 55
-    },
-    {
-      "symbol": "BOSCHLTD",
-      "stockName": "Bosch Ltd.",
-      "cmp": 41935.0,
-      "high52": 42565.0,
-      "low52": 28610.0,
-      "changePct": -0.45,
-      "downFromHighPct": -1.48,
-      "aboveLowPct": 46.57,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY AUTO",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 69.0,
-      "signal": "Positive Watchlist",
-      "rank": 56
-    },
-    {
-      "symbol": "PETRONET",
-      "stockName": "Petronet LNG Ltd.",
-      "cmp": 279.6,
-      "high52": 326.4,
-      "low52": 235.35,
-      "changePct": 1.49,
-      "downFromHighPct": -14.34,
-      "aboveLowPct": 18.8,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 69.0,
-      "signal": "Positive Watchlist",
-      "rank": 57
-    },
-    {
-      "symbol": "JIOFIN",
-      "stockName": "Jio Financial Services Ltd.",
-      "cmp": 243.07,
-      "high52": 338.6,
-      "low52": 223.3,
-      "changePct": 1.28,
-      "downFromHighPct": -28.21,
-      "aboveLowPct": 8.85,
-      "status": "Corrected",
       "indices": [
         "FINNIFTY",
         "NIFTY 100",
         "NIFTY 50",
         "NIFTY FINANCIAL SERVICES"
       ],
-      "strengthScore": 68.9,
-      "signal": "Positive Watchlist",
-      "rank": 58
+      "strengthScore": 83.4,
+      "signal": "Strong Momentum",
+      "rank": 5
     },
     {
-      "symbol": "HDFCLIFE",
-      "stockName": "HDFC Life Insurance Company Ltd.",
-      "cmp": 572.45,
-      "high52": 815.0,
-      "low52": 543.0,
-      "changePct": 1.46,
-      "downFromHighPct": -29.76,
-      "aboveLowPct": 5.42,
-      "status": "Corrected",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FINANCIAL SERVICES"
-      ],
-      "strengthScore": 68.7,
-      "signal": "Positive Watchlist",
-      "rank": 59
-    },
-    {
-      "symbol": "SBIN",
-      "stockName": "State Bank of India",
-      "cmp": 1038.1,
-      "high52": 1234.7,
-      "low52": 786.55,
-      "changePct": 0.04,
+      "symbol": "POWERINDIA",
+      "stockName": "Hitachi Energy India Ltd.",
+      "cmp": 32610.0,
+      "high52": 38785.0,
+      "low52": 16111.0,
+      "changePct": 2.69,
       "downFromHighPct": -15.92,
-      "aboveLowPct": 31.98,
+      "aboveLowPct": 102.41,
       "status": "Corrected",
       "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY BANK",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY PSU BANK"
+        "NIFTY ENERGY"
       ],
-      "strengthScore": 68.7,
-      "signal": "Positive Watchlist",
-      "rank": 60
+      "strengthScore": 83.4,
+      "signal": "Strong Momentum",
+      "rank": 6
     },
     {
-      "symbol": "RADICO",
-      "stockName": "Radico Khaitan Ltd",
-      "cmp": 4098.6,
-      "high52": 4161.8,
-      "low52": 2500.0,
-      "changePct": -0.2,
-      "downFromHighPct": -1.52,
-      "aboveLowPct": 63.94,
-      "status": "Near 52W High",
+      "symbol": "THERMAX",
+      "stockName": "Thermax Ltd.",
+      "cmp": 4785.0,
+      "high52": 5277.8,
+      "low52": 2742.7,
+      "changePct": 3.97,
+      "downFromHighPct": -9.34,
+      "aboveLowPct": 74.46,
+      "status": "Mid Range",
       "indices": [
-        "NIFTY FMCG"
+        "NIFTY ENERGY"
       ],
-      "strengthScore": 68.7,
-      "signal": "Positive Watchlist",
-      "rank": 61
+      "strengthScore": 83.0,
+      "signal": "Strong Momentum",
+      "rank": 7
     },
     {
-      "symbol": "LUPIN",
-      "stockName": "Lupin Ltd.",
-      "cmp": 2490.2,
-      "high52": 2517.0,
-      "low52": 1836.8,
-      "changePct": -0.06,
-      "downFromHighPct": -1.06,
-      "aboveLowPct": 35.57,
+      "symbol": "PHOENIXLTD",
+      "stockName": "Phoenix Mills Ltd.",
+      "cmp": 2088.0,
+      "high52": 2134.7,
+      "low52": 1402.5,
+      "changePct": 3.24,
+      "downFromHighPct": -2.19,
+      "aboveLowPct": 48.88,
       "status": "Near 52W High",
       "indices": [
         "NIFTY MIDCAP 50",
-        "NIFTY PHARMA"
+        "NIFTY REALTY"
       ],
-      "strengthScore": 68.7,
-      "signal": "Positive Watchlist",
-      "rank": 62
-    },
-    {
-      "symbol": "HINDCOPPER",
-      "stockName": "Hindustan Copper Ltd.",
-      "cmp": 495.45,
-      "high52": 760.05,
-      "low52": 226.7,
-      "changePct": 0.17,
-      "downFromHighPct": -34.81,
-      "aboveLowPct": 118.55,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 68.6,
-      "signal": "Positive Watchlist",
-      "rank": 63
-    },
-    {
-      "symbol": "SHREECEM",
-      "stockName": "Shree Cement Ltd.",
-      "cmp": 26710.0,
-      "high52": 32490.0,
-      "low52": 22550.0,
-      "changePct": 0.3,
-      "downFromHighPct": -17.79,
-      "aboveLowPct": 18.45,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 68.2,
-      "signal": "Positive Watchlist",
-      "rank": 64
-    },
-    {
-      "symbol": "POLICYBZR",
-      "stockName": "PB Fintech Ltd.",
-      "cmp": 1608.0,
-      "high52": 1974.0,
-      "low52": 1364.0,
-      "changePct": 1.73,
-      "downFromHighPct": -18.54,
-      "aboveLowPct": 17.89,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 67.7,
-      "signal": "Positive Watchlist",
-      "rank": 65
-    },
-    {
-      "symbol": "HAVELLS",
-      "stockName": "Havells India Ltd.",
-      "cmp": 1225.0,
-      "high52": 1621.1,
-      "low52": 1123.6,
-      "changePct": 3.68,
-      "downFromHighPct": -24.43,
-      "aboveLowPct": 9.02,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 67.5,
-      "signal": "Positive Watchlist",
-      "rank": 66
-    },
-    {
-      "symbol": "ICICIGI",
-      "stockName": "ICICI Lombard General Insurance Company Ltd.",
-      "cmp": 1794.3,
-      "high52": 2064.9,
-      "low52": 1629.5,
-      "changePct": 0.5,
-      "downFromHighPct": -13.1,
-      "aboveLowPct": 10.11,
-      "status": "Mid Range",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 67.4,
-      "signal": "Positive Watchlist",
-      "rank": 67
-    },
-    {
-      "symbol": "HEROMOTOCO",
-      "stockName": "Hero MotoCorp Ltd.",
-      "cmp": 4995.4,
-      "high52": 6388.5,
-      "low52": 4190.0,
-      "changePct": 1.03,
-      "downFromHighPct": -21.81,
-      "aboveLowPct": 19.22,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY AUTO",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 67.1,
-      "signal": "Positive Watchlist",
-      "rank": 68
+      "strengthScore": 82.8,
+      "signal": "Strong Momentum",
+      "rank": 8
     },
     {
       "symbol": "SUNPHARMA",
       "stockName": "Sun Pharmaceutical Industries Ltd",
-      "cmp": 1903.4,
-      "high52": 1925.1,
+      "cmp": 1938.7,
+      "high52": 1952.0,
       "low52": 1548.0,
-      "changePct": -0.49,
-      "downFromHighPct": -1.13,
-      "aboveLowPct": 22.96,
+      "changePct": 2.67,
+      "downFromHighPct": -0.68,
+      "aboveLowPct": 25.24,
       "status": "Near 52W High",
       "indices": [
         "NIFTY 100",
@@ -1292,98 +164,386 @@
         "NIFTY PHARMA",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 66.8,
-      "signal": "Positive Watchlist",
-      "rank": 69
+      "strengthScore": 82.5,
+      "signal": "Strong Momentum",
+      "rank": 9
     },
     {
-      "symbol": "LTM",
-      "stockName": "LTM Ltd.",
-      "cmp": 3858.5,
-      "high52": 6429.5,
-      "low52": 3528.0,
-      "changePct": 3.51,
-      "downFromHighPct": -39.99,
-      "aboveLowPct": 9.37,
-      "status": "Deep Correction",
+      "symbol": "INDUSINDBK",
+      "stockName": "IndusInd Bank Ltd",
+      "cmp": 1015.15,
+      "high52": 1038.0,
+      "low52": 710.6,
+      "changePct": 2.06,
+      "downFromHighPct": -2.2,
+      "aboveLowPct": 42.86,
+      "status": "Near 52W High",
       "indices": [
-        "NIFTY 100",
-        "NIFTY IT",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 66.7,
-      "signal": "Positive Watchlist",
-      "rank": 70
-    },
-    {
-      "symbol": "TCS",
-      "stockName": "Tata Consultancy Services Ltd",
-      "cmp": 2096.1,
-      "high52": 3425.0,
-      "low52": 1976.8,
-      "changePct": 1.87,
-      "downFromHighPct": -38.8,
-      "aboveLowPct": 6.04,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY IT",
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 66.7,
-      "signal": "Positive Watchlist",
-      "rank": 71
+      "strengthScore": 82.0,
+      "signal": "Strong Momentum",
+      "rank": 10
     },
     {
-      "symbol": "HINDUNILVR",
-      "stockName": "Hindustan Unilever Ltd",
-      "cmp": 2208.8,
-      "high52": 2750.0,
-      "low52": 2022.5,
-      "changePct": 0.31,
-      "downFromHighPct": -19.68,
-      "aboveLowPct": 9.21,
-      "status": "Corrected",
+      "symbol": "TIPSMUSIC",
+      "stockName": "Tips Music Ltd.",
+      "cmp": 711.15,
+      "high52": 726.75,
+      "low52": 481.15,
+      "changePct": 6.39,
+      "downFromHighPct": -2.15,
+      "aboveLowPct": 47.8,
+      "status": "Near 52W High",
       "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FMCG",
-        "S&P BSE SENSEX"
+        "NIFTY MEDIA"
       ],
-      "strengthScore": 66.1,
-      "signal": "Positive Watchlist",
-      "rank": 72
+      "strengthScore": 81.8,
+      "signal": "Strong Momentum",
+      "rank": 11
     },
     {
-      "symbol": "BHARTIARTL",
-      "stockName": "Bharti Airtel Ltd",
-      "cmp": 1925.8,
-      "high52": 2174.5,
-      "low52": 1740.5,
-      "changePct": 0.01,
-      "downFromHighPct": -11.44,
-      "aboveLowPct": 10.65,
+      "symbol": "SAREGAMA",
+      "stockName": "Saregama India Ltd",
+      "cmp": 476.1,
+      "high52": 520.0,
+      "low52": 307.05,
+      "changePct": 6.46,
+      "downFromHighPct": -8.44,
+      "aboveLowPct": 55.06,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 81.2,
+      "signal": "Strong Momentum",
+      "rank": 12
+    },
+    {
+      "symbol": "ENRIN",
+      "stockName": "Siemens Energy India Ltd.",
+      "cmp": 3438.0,
+      "high52": 3968.0,
+      "low52": 2115.0,
+      "changePct": 2.36,
+      "downFromHighPct": -13.36,
+      "aboveLowPct": 62.55,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA",
-        "S&P BSE SENSEX"
+        "NIFTY ENERGY",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 66.0,
-      "signal": "Positive Watchlist",
-      "rank": 73
+      "strengthScore": 80.4,
+      "signal": "Strong Momentum",
+      "rank": 13
     },
     {
-      "symbol": "UNIONBANK",
-      "stockName": "Union Bank of India",
-      "cmp": 161.08,
-      "high52": 205.49,
-      "low52": 124.64,
-      "changePct": 0.0,
-      "downFromHighPct": -21.61,
-      "aboveLowPct": 29.24,
+      "symbol": "BSE",
+      "stockName": "BSE Ltd.",
+      "cmp": 3805.7,
+      "high52": 4446.8,
+      "low52": 2021.5,
+      "changePct": 1.78,
+      "downFromHighPct": -14.42,
+      "aboveLowPct": 88.26,
+      "status": "Mid Range",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 80.3,
+      "signal": "Strong Momentum",
+      "rank": 14
+    },
+    {
+      "symbol": "BHARATFORG",
+      "stockName": "Bharat Forge Ltd.",
+      "cmp": 2130.6,
+      "high52": 2238.0,
+      "low52": 1100.5,
+      "changePct": 1.43,
+      "downFromHighPct": -4.8,
+      "aboveLowPct": 93.6,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY AUTO",
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 80.2,
+      "signal": "Strong Momentum",
+      "rank": 15
+    },
+    {
+      "symbol": "DLF",
+      "stockName": "DLF Ltd.",
+      "cmp": 659.6,
+      "high52": 856.45,
+      "low52": 489.4,
+      "changePct": 4.04,
+      "downFromHighPct": -22.98,
+      "aboveLowPct": 34.78,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50",
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 78.9,
+      "signal": "Strong Momentum",
+      "rank": 16
+    },
+    {
+      "symbol": "PRESTIGE",
+      "stockName": "Prestige Estates Projects Ltd.",
+      "cmp": 1673.9,
+      "high52": 1814.0,
+      "low52": 1090.0,
+      "changePct": 2.36,
+      "downFromHighPct": -7.72,
+      "aboveLowPct": 53.57,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 78.2,
+      "signal": "Strong Momentum",
+      "rank": 17
+    },
+    {
+      "symbol": "AUROPHARMA",
+      "stockName": "Aurobindo Pharma Ltd.",
+      "cmp": 1587.4,
+      "high52": 1636.8,
+      "low52": 1016.1,
+      "changePct": 1.93,
+      "downFromHighPct": -3.02,
+      "aboveLowPct": 56.22,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 77.2,
+      "signal": "Positive Watchlist",
+      "rank": 18
+    },
+    {
+      "symbol": "MOTHERSON",
+      "stockName": "Samvardhana Motherson International Ltd.",
+      "cmp": 142.8,
+      "high52": 155.25,
+      "low52": 89.7,
+      "changePct": 1.53,
+      "downFromHighPct": -8.02,
+      "aboveLowPct": 59.2,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY AUTO",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 77.1,
+      "signal": "Positive Watchlist",
+      "rank": 19
+    },
+    {
+      "symbol": "GRASIM",
+      "stockName": "Grasim Industries Ltd.",
+      "cmp": 3191.9,
+      "high52": 3222.0,
+      "low52": 2502.5,
+      "changePct": 1.82,
+      "downFromHighPct": -0.93,
+      "aboveLowPct": 27.55,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY INFRA"
+      ],
+      "strengthScore": 76.8,
+      "signal": "Positive Watchlist",
+      "rank": 20
+    },
+    {
+      "symbol": "IDFCFIRSTB",
+      "stockName": "IDFC First Bank Ltd.",
+      "cmp": 79.46,
+      "high52": 87.0,
+      "low52": 58.08,
+      "changePct": 2.11,
+      "downFromHighPct": -8.67,
+      "aboveLowPct": 36.81,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK"
+      ],
+      "strengthScore": 76.5,
+      "signal": "Positive Watchlist",
+      "rank": 21
+    },
+    {
+      "symbol": "PFOCUS",
+      "stockName": "Prime Focus Ltd.",
+      "cmp": 244.47,
+      "high52": 367.0,
+      "low52": 136.53,
+      "changePct": 4.57,
+      "downFromHighPct": -33.39,
+      "aboveLowPct": 79.06,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 76.3,
+      "signal": "Positive Watchlist",
+      "rank": 22
+    },
+    {
+      "symbol": "PAYTM",
+      "stockName": "One 97 Communications Ltd.",
+      "cmp": 1262.9,
+      "high52": 1381.8,
+      "low52": 902.0,
+      "changePct": 3.23,
+      "downFromHighPct": -8.6,
+      "aboveLowPct": 40.01,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 76.3,
+      "signal": "Positive Watchlist",
+      "rank": 23
+    },
+    {
+      "symbol": "NYKAA",
+      "stockName": "FSN E-Commerce Ventures Ltd.",
+      "cmp": 324.05,
+      "high52": 325.9,
+      "low52": 200.14,
+      "changePct": 1.92,
+      "downFromHighPct": -0.57,
+      "aboveLowPct": 61.91,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 76.3,
+      "signal": "Positive Watchlist",
+      "rank": 24
+    },
+    {
+      "symbol": "HDFCAMC",
+      "stockName": "HDFC Asset Management Company Ltd.",
+      "cmp": 2737.1,
+      "high52": 2967.25,
+      "low52": 2205.6,
+      "changePct": 2.93,
+      "downFromHighPct": -7.76,
+      "aboveLowPct": 24.1,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 75.7,
+      "signal": "Positive Watchlist",
+      "rank": 25
+    },
+    {
+      "symbol": "MARICO",
+      "stockName": "Marico Ltd.",
+      "cmp": 860.05,
+      "high52": 873.0,
+      "low52": 690.2,
+      "changePct": 2.37,
+      "downFromHighPct": -1.48,
+      "aboveLowPct": 24.61,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY FMCG",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 75.5,
+      "signal": "Positive Watchlist",
+      "rank": 26
+    },
+    {
+      "symbol": "TATACAP",
+      "stockName": "Tata Capital Ltd.",
+      "cmp": 355.85,
+      "high52": 379.95,
+      "low52": 296.0,
+      "changePct": 2.77,
+      "downFromHighPct": -6.34,
+      "aboveLowPct": 20.22,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 75.2,
+      "signal": "Positive Watchlist",
+      "rank": 27
+    },
+    {
+      "symbol": "AEGISLOG",
+      "stockName": "Aegis Logistics Ltd.",
+      "cmp": 1264.1,
+      "high52": 1423.5,
+      "low52": 576.1,
+      "changePct": 1.5,
+      "downFromHighPct": -11.2,
+      "aboveLowPct": 119.42,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 75.2,
+      "signal": "Positive Watchlist",
+      "rank": 28
+    },
+    {
+      "symbol": "ADANIENT",
+      "stockName": "Adani Enterprises Ltd.",
+      "cmp": 3083.6,
+      "high52": 3245.0,
+      "low52": 1753.0,
+      "changePct": 1.2,
+      "downFromHighPct": -4.97,
+      "aboveLowPct": 75.9,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY METAL"
+      ],
+      "strengthScore": 75.0,
+      "signal": "Positive Watchlist",
+      "rank": 29
+    },
+    {
+      "symbol": "CANBK",
+      "stockName": "Canara Bank",
+      "cmp": 124.8,
+      "high52": 162.89,
+      "low52": 103.55,
+      "changePct": 3.01,
+      "downFromHighPct": -23.38,
+      "aboveLowPct": 20.52,
       "status": "Corrected",
       "indices": [
         "NIFTY 100",
@@ -1391,19 +551,453 @@
         "NIFTY NEXT 50",
         "NIFTY PSU BANK"
       ],
-      "strengthScore": 65.7,
+      "strengthScore": 74.9,
       "signal": "Positive Watchlist",
-      "rank": 74
+      "rank": 30
+    },
+    {
+      "symbol": "GODREJPROP",
+      "stockName": "Godrej Properties Ltd.",
+      "cmp": 2029.9,
+      "high52": 2407.9,
+      "low52": 1434.0,
+      "changePct": 2.55,
+      "downFromHighPct": -15.7,
+      "aboveLowPct": 41.56,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 74.8,
+      "signal": "Positive Watchlist",
+      "rank": 31
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "stockName": "Bajaj Finserv Ltd",
+      "cmp": 1895.0,
+      "high52": 2195.0,
+      "low52": 1597.0,
+      "changePct": 2.16,
+      "downFromHighPct": -13.67,
+      "aboveLowPct": 18.66,
+      "status": "Mid Range",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FINANCIAL SERVICES",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 74.4,
+      "signal": "Positive Watchlist",
+      "rank": 32
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "stockName": "Bharti Airtel Ltd",
+      "cmp": 1931.1,
+      "high52": 2174.5,
+      "low52": 1740.5,
+      "changePct": 2.28,
+      "downFromHighPct": -11.19,
+      "aboveLowPct": 10.95,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY INFRA",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 74.0,
+      "signal": "Positive Watchlist",
+      "rank": 33
+    },
+    {
+      "symbol": "BOSCHLTD",
+      "stockName": "Bosch Ltd.",
+      "cmp": 42225.0,
+      "high52": 42565.0,
+      "low52": 28610.0,
+      "changePct": 1.48,
+      "downFromHighPct": -0.8,
+      "aboveLowPct": 47.59,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY AUTO",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 73.8,
+      "signal": "Positive Watchlist",
+      "rank": 34
+    },
+    {
+      "symbol": "INDIGO",
+      "stockName": "InterGlobe Aviation Ltd.",
+      "cmp": 5229.5,
+      "high52": 6232.5,
+      "low52": 3895.2,
+      "changePct": 2.06,
+      "downFromHighPct": -16.09,
+      "aboveLowPct": 34.25,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY INFRA"
+      ],
+      "strengthScore": 73.2,
+      "signal": "Positive Watchlist",
+      "rank": 35
+    },
+    {
+      "symbol": "LUPIN",
+      "stockName": "Lupin Ltd.",
+      "cmp": 2503.3,
+      "high52": 2526.9,
+      "low52": 1836.8,
+      "changePct": 1.8,
+      "downFromHighPct": -0.93,
+      "aboveLowPct": 36.29,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 73.2,
+      "signal": "Positive Watchlist",
+      "rank": 36
+    },
+    {
+      "symbol": "NAZARA",
+      "stockName": "Nazara Technologies Ltd.",
+      "cmp": 303.8,
+      "high52": 363.25,
+      "low52": 215.7,
+      "changePct": 2.79,
+      "downFromHighPct": -16.37,
+      "aboveLowPct": 40.84,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 73.1,
+      "signal": "Positive Watchlist",
+      "rank": 37
+    },
+    {
+      "symbol": "ANANTRAJ",
+      "stockName": "Anant Raj Ltd.",
+      "cmp": 569.45,
+      "high52": 743.65,
+      "low52": 403.0,
+      "changePct": 4.53,
+      "downFromHighPct": -23.42,
+      "aboveLowPct": 41.3,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 72.7,
+      "signal": "Positive Watchlist",
+      "rank": 38
+    },
+    {
+      "symbol": "MCX",
+      "stockName": "Multi Commodity Exchange of India Ltd.",
+      "cmp": 2785.4,
+      "high52": 3480.0,
+      "low52": 1460.8,
+      "changePct": 1.58,
+      "downFromHighPct": -19.96,
+      "aboveLowPct": 90.68,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 72.1,
+      "signal": "Positive Watchlist",
+      "rank": 39
+    },
+    {
+      "symbol": "BANDHANBNK",
+      "stockName": "Bandhan Bank Ltd.",
+      "cmp": 199.86,
+      "high52": 218.13,
+      "low52": 134.25,
+      "changePct": 1.95,
+      "downFromHighPct": -8.38,
+      "aboveLowPct": 48.87,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY PVT BANK"
+      ],
+      "strengthScore": 71.9,
+      "signal": "Positive Watchlist",
+      "rank": 40
+    },
+    {
+      "symbol": "OFSS",
+      "stockName": "Oracle Financial Services Software Ltd.",
+      "cmp": 11134.0,
+      "high52": 11360.0,
+      "low52": 6234.5,
+      "changePct": 1.2,
+      "downFromHighPct": -1.99,
+      "aboveLowPct": 78.59,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY IT"
+      ],
+      "strengthScore": 71.5,
+      "signal": "Positive Watchlist",
+      "rank": 41
+    },
+    {
+      "symbol": "CHOLAFIN",
+      "stockName": "Cholamandalam Investment and Finance Company Ltd.",
+      "cmp": 1791.9,
+      "high52": 1875.0,
+      "low52": 1299.4,
+      "changePct": 1.27,
+      "downFromHighPct": -4.43,
+      "aboveLowPct": 37.9,
+      "status": "Near 52W High",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 71.2,
+      "signal": "Positive Watchlist",
+      "rank": 42
+    },
+    {
+      "symbol": "DIXON",
+      "stockName": "Dixon Technologies (India) Ltd.",
+      "cmp": 13477.0,
+      "high52": 18471.0,
+      "low52": 9600.0,
+      "changePct": 4.2,
+      "downFromHighPct": -27.04,
+      "aboveLowPct": 40.39,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 71.2,
+      "signal": "Positive Watchlist",
+      "rank": 43
+    },
+    {
+      "symbol": "INDUSTOWER",
+      "stockName": "Indus Towers Ltd.",
+      "cmp": 398.15,
+      "high52": 481.5,
+      "low52": 312.55,
+      "changePct": 2.47,
+      "downFromHighPct": -17.31,
+      "aboveLowPct": 27.39,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 71.1,
+      "signal": "Positive Watchlist",
+      "rank": 44
+    },
+    {
+      "symbol": "NLCINDIA",
+      "stockName": "NLC India Ltd.",
+      "cmp": 303.25,
+      "high52": 387.8,
+      "low52": 222.0,
+      "changePct": 3.06,
+      "downFromHighPct": -21.8,
+      "aboveLowPct": 36.6,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 71.0,
+      "signal": "Positive Watchlist",
+      "rank": 45
+    },
+    {
+      "symbol": "BHEL",
+      "stockName": "Bharat Heavy Electricals Ltd.",
+      "cmp": 381.6,
+      "high52": 424.9,
+      "low52": 205.12,
+      "changePct": 1.01,
+      "downFromHighPct": -10.19,
+      "aboveLowPct": 86.04,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY ENERGY",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 71.0,
+      "signal": "Positive Watchlist",
+      "rank": 46
+    },
+    {
+      "symbol": "SONACOMS",
+      "stockName": "Sona BLW Precision Forgings Ltd.",
+      "cmp": 670.75,
+      "high52": 680.8,
+      "low52": 402.3,
+      "changePct": 1.31,
+      "downFromHighPct": -1.48,
+      "aboveLowPct": 66.73,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY AUTO"
+      ],
+      "strengthScore": 70.8,
+      "signal": "Positive Watchlist",
+      "rank": 47
+    },
+    {
+      "symbol": "PNB",
+      "stockName": "Punjab National Bank",
+      "cmp": 103.44,
+      "high52": 135.15,
+      "low52": 98.5,
+      "changePct": 2.47,
+      "downFromHighPct": -23.46,
+      "aboveLowPct": 5.02,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY BANK",
+        "NIFTY NEXT 50",
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 70.0,
+      "signal": "Positive Watchlist",
+      "rank": 48
+    },
+    {
+      "symbol": "MAHABANK",
+      "stockName": "Bank of Maharashtra",
+      "cmp": 82.01,
+      "high52": 94.5,
+      "low52": 51.71,
+      "changePct": 1.75,
+      "downFromHighPct": -13.22,
+      "aboveLowPct": 58.6,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 70.0,
+      "signal": "Positive Watchlist",
+      "rank": 49
+    },
+    {
+      "symbol": "SAIL",
+      "stockName": "Steel Authority of India Ltd.",
+      "cmp": 165.9,
+      "high52": 209.7,
+      "low52": 118.1,
+      "changePct": 2.39,
+      "downFromHighPct": -20.89,
+      "aboveLowPct": 40.47,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY METAL"
+      ],
+      "strengthScore": 69.6,
+      "signal": "Positive Watchlist",
+      "rank": 50
+    },
+    {
+      "symbol": "ETERNAL",
+      "stockName": "Eternal Ltd.",
+      "cmp": 292.45,
+      "high52": 368.45,
+      "low52": 212.6,
+      "changePct": 2.01,
+      "downFromHighPct": -20.63,
+      "aboveLowPct": 37.56,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50"
+      ],
+      "strengthScore": 69.4,
+      "signal": "Positive Watchlist",
+      "rank": 51
+    },
+    {
+      "symbol": "UNIONBANK",
+      "stockName": "Union Bank of India",
+      "cmp": 157.26,
+      "high52": 205.49,
+      "low52": 124.64,
+      "changePct": 1.86,
+      "downFromHighPct": -23.47,
+      "aboveLowPct": 26.17,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY BANK",
+        "NIFTY NEXT 50",
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 69.3,
+      "signal": "Positive Watchlist",
+      "rank": 52
+    },
+    {
+      "symbol": "INDIANB",
+      "stockName": "Indian Bank",
+      "cmp": 793.15,
+      "high52": 1000.9,
+      "low52": 606.0,
+      "changePct": 2.69,
+      "downFromHighPct": -20.76,
+      "aboveLowPct": 30.88,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 69.3,
+      "signal": "Positive Watchlist",
+      "rank": 53
+    },
+    {
+      "symbol": "MANKIND",
+      "stockName": "Mankind Pharma Ltd.",
+      "cmp": 2532.0,
+      "high52": 2716.5,
+      "low52": 1909.7,
+      "changePct": 1.64,
+      "downFromHighPct": -6.79,
+      "aboveLowPct": 32.59,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 69.0,
+      "signal": "Positive Watchlist",
+      "rank": 54
     },
     {
       "symbol": "KOTAKBANK",
       "stockName": "Kotak Mahindra Bank Ltd",
-      "cmp": 381.7,
+      "cmp": 377.15,
       "high52": 453.2,
       "low52": 345.5,
-      "changePct": 0.1,
-      "downFromHighPct": -15.78,
-      "aboveLowPct": 10.48,
+      "changePct": 1.9,
+      "downFromHighPct": -16.78,
+      "aboveLowPct": 9.16,
       "status": "Corrected",
       "indices": [
         "FINNIFTY",
@@ -1413,19 +1007,185 @@
         "NIFTY FINANCIAL SERVICES",
         "NIFTY PVT BANK"
       ],
-      "strengthScore": 65.6,
+      "strengthScore": 68.7,
       "signal": "Positive Watchlist",
-      "rank": 75
+      "rank": 55
+    },
+    {
+      "symbol": "SBILIFE",
+      "stockName": "SBI Life Insurance Company Ltd.",
+      "cmp": 1821.7,
+      "high52": 2132.0,
+      "low52": 1700.4,
+      "changePct": 1.83,
+      "downFromHighPct": -14.55,
+      "aboveLowPct": 7.13,
+      "status": "Mid Range",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FINANCIAL SERVICES"
+      ],
+      "strengthScore": 68.7,
+      "signal": "Positive Watchlist",
+      "rank": 56
+    },
+    {
+      "symbol": "GLENMARK",
+      "stockName": "Glenmark Pharmaceuticals Ltd.",
+      "cmp": 2267.2,
+      "high52": 2474.0,
+      "low52": 1792.6,
+      "changePct": 1.96,
+      "downFromHighPct": -8.36,
+      "aboveLowPct": 26.48,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 68.0,
+      "signal": "Positive Watchlist",
+      "rank": 57
+    },
+    {
+      "symbol": "PIDILITIND",
+      "stockName": "Pidilite Industries Ltd.",
+      "cmp": 1590.4,
+      "high52": 1626.7,
+      "low52": 1259.0,
+      "changePct": 1.27,
+      "downFromHighPct": -2.23,
+      "aboveLowPct": 26.32,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY COMMODITIES",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 67.4,
+      "signal": "Positive Watchlist",
+      "rank": 58
+    },
+    {
+      "symbol": "COLPAL",
+      "stockName": "Colgate Palmolive (India) Ltd.",
+      "cmp": 2063.0,
+      "high52": 2504.0,
+      "low52": 1782.0,
+      "changePct": 2.12,
+      "downFromHighPct": -17.61,
+      "aboveLowPct": 15.77,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY FMCG",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 67.4,
+      "signal": "Positive Watchlist",
+      "rank": 59
+    },
+    {
+      "symbol": "NESTLEIND",
+      "stockName": "Nestle India Ltd",
+      "cmp": 1463.2,
+      "high52": 1498.1,
+      "low52": 1084.7,
+      "changePct": 0.88,
+      "downFromHighPct": -2.33,
+      "aboveLowPct": 34.89,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FMCG",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 67.3,
+      "signal": "Positive Watchlist",
+      "rank": 60
+    },
+    {
+      "symbol": "ZYDUSLIFE",
+      "stockName": "Zydus Lifesciences Ltd.",
+      "cmp": 1159.0,
+      "high52": 1181.5,
+      "low52": 835.5,
+      "changePct": 0.96,
+      "downFromHighPct": -1.9,
+      "aboveLowPct": 38.72,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 67.3,
+      "signal": "Positive Watchlist",
+      "rank": 61
+    },
+    {
+      "symbol": "BANKINDIA",
+      "stockName": "Bank of India",
+      "cmp": 138.53,
+      "high52": 178.36,
+      "low52": 108.81,
+      "changePct": 2.52,
+      "downFromHighPct": -22.33,
+      "aboveLowPct": 27.31,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 67.3,
+      "signal": "Positive Watchlist",
+      "rank": 62
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "stockName": "Apollo Hospitals Enterprise Ltd.",
+      "cmp": 8845.5,
+      "high52": 8950.0,
+      "low52": 6696.5,
+      "changePct": 1.05,
+      "downFromHighPct": -1.17,
+      "aboveLowPct": 32.09,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY INFRA"
+      ],
+      "strengthScore": 67.2,
+      "signal": "Positive Watchlist",
+      "rank": 63
+    },
+    {
+      "symbol": "LLOYDSME",
+      "stockName": "Lloyds Metals And Energy Ltd.",
+      "cmp": 1745.1,
+      "high52": 1888.6,
+      "low52": 1042.9,
+      "changePct": 1.12,
+      "downFromHighPct": -7.6,
+      "aboveLowPct": 67.33,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY METAL"
+      ],
+      "strengthScore": 66.9,
+      "signal": "Positive Watchlist",
+      "rank": 64
     },
     {
       "symbol": "ULTRACEMCO",
       "stockName": "UltraTech Cement Ltd",
-      "cmp": 11649.0,
+      "cmp": 11524.0,
       "high52": 13110.0,
       "low52": 10325.0,
-      "changePct": -0.1,
-      "downFromHighPct": -11.14,
-      "aboveLowPct": 12.82,
+      "changePct": 1.51,
+      "downFromHighPct": -12.1,
+      "aboveLowPct": 11.61,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
@@ -1434,94 +1194,202 @@
         "NIFTY INFRA",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 65.5,
+      "strengthScore": 66.7,
       "signal": "Positive Watchlist",
-      "rank": 76
+      "rank": 65
     },
     {
-      "symbol": "BHARATFORG",
-      "stockName": "Bharat Forge Ltd.",
-      "cmp": 2111.6,
-      "high52": 2238.0,
-      "low52": 1100.5,
-      "changePct": -1.27,
-      "downFromHighPct": -5.65,
-      "aboveLowPct": 91.88,
-      "status": "Mid Range",
+      "symbol": "PPLPHARMA",
+      "stockName": "Piramal Pharma Ltd.",
+      "cmp": 171.99,
+      "high52": 220.85,
+      "low52": 132.3,
+      "changePct": 2.31,
+      "downFromHighPct": -22.12,
+      "aboveLowPct": 30.0,
+      "status": "Corrected",
       "indices": [
-        "NIFTY AUTO",
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 66.4,
+      "signal": "Positive Watchlist",
+      "rank": 66
+    },
+    {
+      "symbol": "BAJAJHLDNG",
+      "stockName": "Bajaj Holdings & Investment Ltd.",
+      "cmp": 10581.0,
+      "high52": 14763.0,
+      "low52": 8588.0,
+      "changePct": 2.37,
+      "downFromHighPct": -28.33,
+      "aboveLowPct": 23.21,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 66.1,
+      "signal": "Positive Watchlist",
+      "rank": 67
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "stockName": "Federal Bank Ltd.",
+      "cmp": 327.75,
+      "high52": 334.3,
+      "low52": 185.11,
+      "changePct": 0.37,
+      "downFromHighPct": -1.96,
+      "aboveLowPct": 77.06,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK"
+      ],
+      "strengthScore": 65.9,
+      "signal": "Positive Watchlist",
+      "rank": 68
+    },
+    {
+      "symbol": "MGL",
+      "stockName": "Mahanagar Gas Ltd.",
+      "cmp": 1122.7,
+      "high52": 1562.0,
+      "low52": 900.0,
+      "changePct": 2.63,
+      "downFromHighPct": -28.12,
+      "aboveLowPct": 24.74,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
       ],
       "strengthScore": 65.4,
       "signal": "Positive Watchlist",
-      "rank": 77
+      "rank": 69
     },
     {
-      "symbol": "GRASIM",
-      "stockName": "Grasim Industries Ltd.",
-      "cmp": 3190.9,
-      "high52": 3222.0,
-      "low52": 2502.5,
-      "changePct": -0.69,
-      "downFromHighPct": -0.97,
-      "aboveLowPct": 27.51,
-      "status": "Near 52W High",
+      "symbol": "PETRONET",
+      "stockName": "Petronet LNG Ltd.",
+      "cmp": 277.15,
+      "high52": 326.4,
+      "low52": 235.35,
+      "changePct": 2.04,
+      "downFromHighPct": -15.09,
+      "aboveLowPct": 17.76,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 65.4,
+      "signal": "Positive Watchlist",
+      "rank": 70
+    },
+    {
+      "symbol": "MAXHEALTH",
+      "stockName": "Max Healthcare Institute Ltd.",
+      "cmp": 1101.3,
+      "high52": 1301.7,
+      "low52": 903.0,
+      "changePct": 1.52,
+      "downFromHighPct": -15.4,
+      "aboveLowPct": 21.96,
+      "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY 50",
-        "NIFTY COMMODITIES",
         "NIFTY INFRA"
+      ],
+      "strengthScore": 65.3,
+      "signal": "Positive Watchlist",
+      "rank": 71
+    },
+    {
+      "symbol": "VBL",
+      "stockName": "Varun Beverages Ltd.",
+      "cmp": 481.4,
+      "high52": 555.8,
+      "low52": 381.0,
+      "changePct": 1.44,
+      "downFromHighPct": -13.39,
+      "aboveLowPct": 26.35,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY FMCG",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 65.3,
+      "signal": "Positive Watchlist",
+      "rank": 72
+    },
+    {
+      "symbol": "CUMMINSIND",
+      "stockName": "Cummins India Ltd.",
+      "cmp": 5542.5,
+      "high52": 6100.0,
+      "low52": 3465.0,
+      "changePct": 0.8,
+      "downFromHighPct": -9.14,
+      "aboveLowPct": 59.96,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 65.3,
+      "signal": "Positive Watchlist",
+      "rank": 73
+    },
+    {
+      "symbol": "CGPOWER",
+      "stockName": "CG Power and Industrial Solutions Ltd.",
+      "cmp": 910.9,
+      "high52": 980.9,
+      "low52": 525.5,
+      "changePct": 0.31,
+      "downFromHighPct": -7.14,
+      "aboveLowPct": 73.34,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
       ],
       "strengthScore": 65.1,
       "signal": "Positive Watchlist",
-      "rank": 78
+      "rank": 74
     },
     {
-      "symbol": "DABUR",
-      "stockName": "Dabur India Ltd.",
-      "cmp": 453.5,
-      "high52": 577.0,
-      "low52": 403.35,
-      "changePct": 0.83,
-      "downFromHighPct": -21.4,
-      "aboveLowPct": 12.43,
+      "symbol": "NAUKRI",
+      "stockName": "Info Edge (India) Ltd.",
+      "cmp": 1201.85,
+      "high52": 1485.0,
+      "low52": 908.3,
+      "changePct": 1.94,
+      "downFromHighPct": -19.07,
+      "aboveLowPct": 32.32,
       "status": "Corrected",
       "indices": [
-        "NIFTY FMCG",
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 65.1,
       "signal": "Positive Watchlist",
-      "rank": 79
+      "rank": 75
     },
     {
-      "symbol": "PFOCUS",
-      "stockName": "Prime Focus Ltd.",
-      "cmp": 235.39,
-      "high52": 367.0,
-      "low52": 136.53,
-      "changePct": 0.36,
-      "downFromHighPct": -35.86,
-      "aboveLowPct": 72.41,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 65.0,
-      "signal": "Positive Watchlist",
-      "rank": 80
-    },
-    {
-      "symbol": "ADANIGREEN",
-      "stockName": "Adani Green Energy Ltd.",
-      "cmp": 1519.0,
-      "high52": 1589.1,
-      "low52": 765.0,
-      "changePct": -1.95,
-      "downFromHighPct": -4.41,
-      "aboveLowPct": 98.56,
-      "status": "Near 52W High",
+      "symbol": "BPCL",
+      "stockName": "Bharat Petroleum Corporation Ltd.",
+      "cmp": 308.2,
+      "high52": 391.65,
+      "low52": 266.6,
+      "changePct": 1.53,
+      "downFromHighPct": -21.31,
+      "aboveLowPct": 15.6,
+      "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY COMMODITIES",
@@ -1531,556 +1399,631 @@
       ],
       "strengthScore": 64.8,
       "signal": "Neutral / Stable",
-      "rank": 81
+      "rank": 76
     },
     {
-      "symbol": "IOC",
-      "stockName": "Indian Oil Corporation Ltd.",
-      "cmp": 142.18,
-      "high52": 188.96,
-      "low52": 130.22,
-      "changePct": 0.35,
-      "downFromHighPct": -24.76,
-      "aboveLowPct": 9.18,
+      "symbol": "INDHOTEL",
+      "stockName": "Indian Hotels Co. Ltd.",
+      "cmp": 731.45,
+      "high52": 811.95,
+      "low52": 565.0,
+      "changePct": 1.18,
+      "downFromHighPct": -9.91,
+      "aboveLowPct": 29.46,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 64.8,
+      "signal": "Neutral / Stable",
+      "rank": 77
+    },
+    {
+      "symbol": "SHREECEM",
+      "stockName": "Shree Cement Ltd.",
+      "cmp": 26295.0,
+      "high52": 32490.0,
+      "low52": 22550.0,
+      "changePct": 1.49,
+      "downFromHighPct": -19.07,
+      "aboveLowPct": 16.61,
       "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
         "NIFTY INFRA",
         "NIFTY NEXT 50"
       ],
       "strengthScore": 64.7,
+      "signal": "Neutral / Stable",
+      "rank": 78
+    },
+    {
+      "symbol": "YESBANK",
+      "stockName": "Yes Bank Ltd.",
+      "cmp": 23.64,
+      "high52": 25.78,
+      "low52": 17.2,
+      "changePct": 0.94,
+      "downFromHighPct": -8.3,
+      "aboveLowPct": 37.44,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK"
+      ],
+      "strengthScore": 64.7,
+      "signal": "Neutral / Stable",
+      "rank": 79
+    },
+    {
+      "symbol": "ABREL",
+      "stockName": "Aditya Birla Real Estate Ltd.",
+      "cmp": 1404.0,
+      "high52": 2280.0,
+      "low52": 1080.1,
+      "changePct": 3.82,
+      "downFromHighPct": -38.42,
+      "aboveLowPct": 29.99,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 64.7,
+      "signal": "Neutral / Stable",
+      "rank": 80
+    },
+    {
+      "symbol": "TATACONSUM",
+      "stockName": "Tata Consumer Products Ltd.",
+      "cmp": 1106.7,
+      "high52": 1282.7,
+      "low52": 1007.2,
+      "changePct": 1.55,
+      "downFromHighPct": -13.72,
+      "aboveLowPct": 9.88,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FMCG"
+      ],
+      "strengthScore": 64.4,
+      "signal": "Neutral / Stable",
+      "rank": 81
+    },
+    {
+      "symbol": "BRIGADE",
+      "stockName": "Brigade Enterprises Ltd.",
+      "cmp": 534.0,
+      "high52": 856.5,
+      "low52": 450.75,
+      "changePct": 6.22,
+      "downFromHighPct": -37.65,
+      "aboveLowPct": 18.47,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 64.3,
       "signal": "Neutral / Stable",
       "rank": 82
     },
     {
-      "symbol": "INDIGO",
-      "stockName": "InterGlobe Aviation Ltd.",
-      "cmp": 5395.0,
-      "high52": 6232.5,
-      "low52": 3895.2,
-      "changePct": -0.25,
-      "downFromHighPct": -13.44,
-      "aboveLowPct": 38.5,
-      "status": "Mid Range",
+      "symbol": "TORNTPHARM",
+      "stockName": "Torrent Pharmaceuticals Ltd.",
+      "cmp": 4898.2,
+      "high52": 4948.0,
+      "low52": 3307.6,
+      "changePct": 0.65,
+      "downFromHighPct": -1.01,
+      "aboveLowPct": 48.09,
+      "status": "Near 52W High",
       "indices": [
         "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA"
+        "NIFTY NEXT 50",
+        "NIFTY PHARMA"
       ],
-      "strengthScore": 64.7,
+      "strengthScore": 64.2,
       "signal": "Neutral / Stable",
       "rank": 83
     },
     {
-      "symbol": "ZEEL",
-      "stockName": "Zee Entertainment Enterprises Ltd.",
-      "cmp": 102.37,
-      "high52": 147.24,
-      "low52": 68.0,
-      "changePct": 0.51,
-      "downFromHighPct": -30.47,
-      "aboveLowPct": 50.54,
-      "status": "Deep Correction",
+      "symbol": "COFORGE",
+      "stockName": "Coforge Ltd.",
+      "cmp": 1468.6,
+      "high52": 1989.7,
+      "low52": 1008.1,
+      "changePct": 1.57,
+      "downFromHighPct": -26.19,
+      "aboveLowPct": 45.68,
+      "status": "Corrected",
       "indices": [
-        "NIFTY MEDIA"
+        "NIFTY IT",
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 64.1,
+      "strengthScore": 64.2,
       "signal": "Neutral / Stable",
       "rank": 84
     },
     {
-      "symbol": "AUROPHARMA",
-      "stockName": "Aurobindo Pharma Ltd.",
-      "cmp": 1583.1,
-      "high52": 1636.8,
-      "low52": 1016.1,
-      "changePct": -0.72,
-      "downFromHighPct": -3.28,
-      "aboveLowPct": 55.8,
+      "symbol": "AUBANK",
+      "stockName": "AU Small Finance Bank Ltd.",
+      "cmp": 1047.4,
+      "high52": 1090.4,
+      "low52": 682.15,
+      "changePct": 0.83,
+      "downFromHighPct": -3.94,
+      "aboveLowPct": 53.54,
       "status": "Near 52W High",
       "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY PHARMA"
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 64.0,
+      "strengthScore": 64.1,
       "signal": "Neutral / Stable",
       "rank": 85
     },
     {
-      "symbol": "ONGC",
-      "stockName": "Oil & Natural Gas Corporation Ltd.",
-      "cmp": 244.18,
-      "high52": 307.5,
-      "low52": 227.65,
-      "changePct": 0.11,
-      "downFromHighPct": -20.59,
-      "aboveLowPct": 7.26,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY INFRA"
-      ],
-      "strengthScore": 63.7,
-      "signal": "Neutral / Stable",
-      "rank": 86
-    },
-    {
-      "symbol": "EXIDEIND",
-      "stockName": "Exide Industries Ltd.",
-      "cmp": 414.5,
-      "high52": 431.0,
-      "low52": 287.0,
-      "changePct": -0.3,
-      "downFromHighPct": -3.83,
-      "aboveLowPct": 44.43,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY AUTO"
-      ],
-      "strengthScore": 63.7,
-      "signal": "Neutral / Stable",
-      "rank": 87
-    },
-    {
-      "symbol": "HDFCBANK",
-      "stockName": "HDFC Bank Ltd",
-      "cmp": 829.3,
-      "high52": 1020.5,
-      "low52": 726.65,
-      "changePct": -0.07,
-      "downFromHighPct": -18.74,
-      "aboveLowPct": 14.13,
-      "status": "Corrected",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY BANK",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY PVT BANK"
-      ],
-      "strengthScore": 63.6,
-      "signal": "Neutral / Stable",
-      "rank": 88
-    },
-    {
-      "symbol": "APOLLOHOSP",
-      "stockName": "Apollo Hospitals Enterprise Ltd.",
-      "cmp": 8837.0,
-      "high52": 8950.0,
-      "low52": 6696.5,
-      "changePct": -0.58,
-      "downFromHighPct": -1.26,
-      "aboveLowPct": 31.96,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA"
-      ],
-      "strengthScore": 63.6,
-      "signal": "Neutral / Stable",
-      "rank": 89
-    },
-    {
-      "symbol": "GODREJPROP",
-      "stockName": "Godrej Properties Ltd.",
-      "cmp": 2043.1,
-      "high52": 2407.9,
-      "low52": 1434.0,
-      "changePct": -0.16,
-      "downFromHighPct": -15.15,
-      "aboveLowPct": 42.48,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 63.2,
-      "signal": "Neutral / Stable",
-      "rank": 90
-    },
-    {
-      "symbol": "TATAPOWER",
-      "stockName": "Tata Power Co. Ltd.",
-      "cmp": 377.2,
-      "high52": 464.9,
-      "low52": 342.5,
-      "changePct": -0.09,
-      "downFromHighPct": -18.86,
-      "aboveLowPct": 10.13,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 62.7,
-      "signal": "Neutral / Stable",
-      "rank": 91
-    },
-    {
-      "symbol": "THERMAX",
-      "stockName": "Thermax Ltd.",
-      "cmp": 4709.0,
-      "high52": 5277.8,
-      "low52": 2742.7,
-      "changePct": -0.58,
-      "downFromHighPct": -10.78,
-      "aboveLowPct": 71.69,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 62.6,
-      "signal": "Neutral / Stable",
-      "rank": 92
-    },
-    {
-      "symbol": "GAIL",
-      "stockName": "GAIL (India) Ltd.",
-      "cmp": 174.01,
-      "high52": 195.45,
-      "low52": 134.36,
-      "changePct": -0.58,
-      "downFromHighPct": -10.97,
-      "aboveLowPct": 29.51,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 62.4,
-      "signal": "Neutral / Stable",
-      "rank": 93
-    },
-    {
-      "symbol": "M&M",
-      "stockName": "Mahindra & Mahindra Ltd",
-      "cmp": 3196.4,
-      "high52": 3839.9,
-      "low52": 2896.0,
-      "changePct": -0.15,
-      "downFromHighPct": -16.76,
-      "aboveLowPct": 10.37,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY AUTO",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 62.2,
-      "signal": "Neutral / Stable",
-      "rank": 94
-    },
-    {
-      "symbol": "POWERGRID",
-      "stockName": "Power Grid Corporation of India Ltd",
-      "cmp": 284.35,
-      "high52": 324.95,
-      "low52": 250.0,
-      "changePct": -0.37,
-      "downFromHighPct": -12.49,
-      "aboveLowPct": 13.74,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 62.2,
-      "signal": "Neutral / Stable",
-      "rank": 95
-    },
-    {
-      "symbol": "MGL",
-      "stockName": "Mahanagar Gas Ltd.",
-      "cmp": 1133.7,
-      "high52": 1562.0,
-      "low52": 900.0,
-      "changePct": 0.69,
-      "downFromHighPct": -27.42,
-      "aboveLowPct": 25.97,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 62.1,
-      "signal": "Neutral / Stable",
-      "rank": 96
-    },
-    {
       "symbol": "SWIGGY",
       "stockName": "Swiggy Ltd.",
-      "cmp": 266.27,
+      "cmp": 280.95,
       "high52": 474.0,
       "low52": 235.75,
-      "changePct": 7.21,
-      "downFromHighPct": -43.82,
-      "aboveLowPct": 12.95,
+      "changePct": 7.47,
+      "downFromHighPct": -40.73,
+      "aboveLowPct": 19.17,
       "status": "Deep Correction",
       "indices": [
         "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 61.8,
+      "strengthScore": 64.1,
       "signal": "Neutral / Stable",
-      "rank": 97
+      "rank": 86
     },
     {
-      "symbol": "CGPOWER",
-      "stockName": "CG Power and Industrial Solutions Ltd.",
-      "cmp": 910.5,
-      "high52": 980.9,
-      "low52": 525.5,
-      "changePct": -1.57,
-      "downFromHighPct": -7.18,
-      "aboveLowPct": 73.26,
+      "symbol": "BIOCON",
+      "stockName": "Biocon Ltd.",
+      "cmp": 403.55,
+      "high52": 440.4,
+      "low52": 331.0,
+      "changePct": 1.64,
+      "downFromHighPct": -8.37,
+      "aboveLowPct": 21.92,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 64.0,
+      "signal": "Neutral / Stable",
+      "rank": 87
+    },
+    {
+      "symbol": "ADANIPOWER",
+      "stockName": "Adani Power Ltd.",
+      "cmp": 216.32,
+      "high52": 254.2,
+      "low52": 110.45,
+      "changePct": -0.07,
+      "downFromHighPct": -14.9,
+      "aboveLowPct": 95.85,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
+        "NIFTY COMMODITIES",
         "NIFTY ENERGY",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 63.9,
+      "signal": "Neutral / Stable",
+      "rank": 88
+    },
+    {
+      "symbol": "UNOMINDA",
+      "stockName": "UNO Minda Ltd.",
+      "cmp": 1154.5,
+      "high52": 1382.0,
+      "low52": 994.0,
+      "changePct": 2.0,
+      "downFromHighPct": -16.46,
+      "aboveLowPct": 16.15,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY AUTO"
+      ],
+      "strengthScore": 63.9,
+      "signal": "Neutral / Stable",
+      "rank": 89
+    },
+    {
+      "symbol": "BANKBARODA",
+      "stockName": "Bank of Baroda",
+      "cmp": 244.6,
+      "high52": 325.5,
+      "low52": 230.81,
+      "changePct": 1.73,
+      "downFromHighPct": -24.85,
+      "aboveLowPct": 5.97,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY BANK",
+        "NIFTY NEXT 50",
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 63.8,
+      "signal": "Neutral / Stable",
+      "rank": 90
+    },
+    {
+      "symbol": "SRF",
+      "stockName": "SRF Ltd.",
+      "cmp": 2756.9,
+      "high52": 3325.0,
+      "low52": 2355.0,
+      "changePct": 1.75,
+      "downFromHighPct": -17.09,
+      "aboveLowPct": 17.07,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 63.8,
+      "signal": "Neutral / Stable",
+      "rank": 91
+    },
+    {
+      "symbol": "LICHSGFIN",
+      "stockName": "LIC Housing Finance Ltd.",
+      "cmp": 539.8,
+      "high52": 646.5,
+      "low52": 458.9,
+      "changePct": 1.73,
+      "downFromHighPct": -16.5,
+      "aboveLowPct": 17.63,
+      "status": "Corrected",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY FINANCIAL SERVICES"
+      ],
+      "strengthScore": 63.7,
+      "signal": "Neutral / Stable",
+      "rank": 92
+    },
+    {
+      "symbol": "HINDPETRO",
+      "stockName": "Hindustan Petroleum Corporation Ltd.",
+      "cmp": 392.1,
+      "high52": 508.45,
+      "low52": 316.2,
+      "changePct": 1.36,
+      "downFromHighPct": -22.88,
+      "aboveLowPct": 24.0,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 63.5,
+      "signal": "Neutral / Stable",
+      "rank": 93
+    },
+    {
+      "symbol": "EXIDEIND",
+      "stockName": "Exide Industries Ltd.",
+      "cmp": 425.2,
+      "high52": 431.0,
+      "low52": 287.0,
+      "changePct": 0.91,
+      "downFromHighPct": -1.35,
+      "aboveLowPct": 48.15,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY AUTO"
+      ],
+      "strengthScore": 63.3,
+      "signal": "Neutral / Stable",
+      "rank": 94
+    },
+    {
+      "symbol": "SUZLON",
+      "stockName": "Suzlon Energy Ltd.",
+      "cmp": 53.7,
+      "high52": 68.3,
+      "low52": 38.19,
+      "changePct": 1.07,
+      "downFromHighPct": -21.38,
+      "aboveLowPct": 40.61,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 62.0,
+      "signal": "Neutral / Stable",
+      "rank": 95
+    },
+    {
+      "symbol": "AMBUJACEM",
+      "stockName": "Ambuja Cements Ltd.",
+      "cmp": 428.15,
+      "high52": 624.95,
+      "low52": 394.0,
+      "changePct": 1.67,
+      "downFromHighPct": -31.49,
+      "aboveLowPct": 8.67,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY COMMODITIES",
         "NIFTY INFRA",
         "NIFTY NEXT 50"
       ],
       "strengthScore": 61.6,
       "signal": "Neutral / Stable",
+      "rank": 96
+    },
+    {
+      "symbol": "DIVISLAB",
+      "stockName": "Divi's Laboratories Ltd.",
+      "cmp": 6813.0,
+      "high52": 7009.5,
+      "low52": 5636.5,
+      "changePct": 0.86,
+      "downFromHighPct": -2.8,
+      "aboveLowPct": 20.87,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 61.5,
+      "signal": "Neutral / Stable",
+      "rank": 97
+    },
+    {
+      "symbol": "JSL",
+      "stockName": "Jindal Stainless Ltd.",
+      "cmp": 709.6,
+      "high52": 884.0,
+      "low52": 652.25,
+      "changePct": 1.99,
+      "downFromHighPct": -19.73,
+      "aboveLowPct": 8.79,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY METAL"
+      ],
+      "strengthScore": 61.3,
+      "signal": "Neutral / Stable",
       "rank": 98
     },
     {
-      "symbol": "DMART",
-      "stockName": "Avenue Supermarts Ltd.",
-      "cmp": 4070.9,
-      "high52": 4949.5,
-      "low52": 3600.0,
-      "changePct": 0.15,
-      "downFromHighPct": -17.75,
-      "aboveLowPct": 13.08,
-      "status": "Corrected",
+      "symbol": "RECLTD",
+      "stockName": "REC Ltd.",
+      "cmp": 352.0,
+      "high52": 408.25,
+      "low52": 304.05,
+      "changePct": 0.93,
+      "downFromHighPct": -13.78,
+      "aboveLowPct": 15.77,
+      "status": "Mid Range",
       "indices": [
+        "FINNIFTY",
         "NIFTY 100",
+        "NIFTY FINANCIAL SERVICES",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 60.9,
+      "strengthScore": 61.1,
       "signal": "Neutral / Stable",
       "rank": 99
     },
     {
-      "symbol": "MOTHERSON",
-      "stockName": "Samvardhana Motherson International Ltd.",
-      "cmp": 143.37,
-      "high52": 155.25,
-      "low52": 89.7,
-      "changePct": -1.35,
-      "downFromHighPct": -7.65,
-      "aboveLowPct": 59.83,
+      "symbol": "ADANIGREEN",
+      "stockName": "Adani Green Energy Ltd.",
+      "cmp": 1486.6,
+      "high52": 1589.1,
+      "low52": 765.0,
+      "changePct": -1.2,
+      "downFromHighPct": -6.45,
+      "aboveLowPct": 94.33,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY AUTO",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
         "NIFTY INFRA",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 60.9,
+      "strengthScore": 61.1,
       "signal": "Neutral / Stable",
       "rank": 100
     },
     {
-      "symbol": "TATASTEEL",
-      "stockName": "Tata Steel Ltd",
-      "cmp": 189.79,
-      "high52": 224.4,
-      "low52": 152.51,
-      "changePct": -0.57,
-      "downFromHighPct": -15.42,
-      "aboveLowPct": 24.44,
-      "status": "Corrected",
+      "symbol": "ABB",
+      "stockName": "ABB India Ltd.",
+      "cmp": 6820.0,
+      "high52": 7822.5,
+      "low52": 4637.5,
+      "changePct": 0.72,
+      "downFromHighPct": -12.82,
+      "aboveLowPct": 47.06,
+      "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY METAL",
-        "S&P BSE SENSEX"
+        "NIFTY ENERGY",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 60.8,
+      "strengthScore": 60.7,
       "signal": "Neutral / Stable",
       "rank": 101
     },
     {
-      "symbol": "MANKIND",
-      "stockName": "Mankind Pharma Ltd.",
-      "cmp": 2527.4,
-      "high52": 2716.5,
-      "low52": 1909.7,
-      "changePct": -0.55,
-      "downFromHighPct": -6.96,
-      "aboveLowPct": 32.35,
+      "symbol": "ADANIENSOL",
+      "stockName": "Adani Energy Solutions Ltd.",
+      "cmp": 1618.5,
+      "high52": 1712.0,
+      "low52": 744.9,
+      "changePct": -2.23,
+      "downFromHighPct": -5.46,
+      "aboveLowPct": 117.28,
       "status": "Mid Range",
       "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY PHARMA"
+        "NIFTY 100",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 60.5,
+      "strengthScore": 60.7,
       "signal": "Neutral / Stable",
       "rank": 102
     },
     {
-      "symbol": "BRITANNIA",
-      "stockName": "Britannia Industries Ltd.",
-      "cmp": 5447.0,
-      "high52": 6336.0,
-      "low52": 5035.0,
-      "changePct": -0.14,
-      "downFromHighPct": -14.03,
-      "aboveLowPct": 8.18,
-      "status": "Mid Range",
+      "symbol": "RBLBANK",
+      "stockName": "RBL Bank Ltd.",
+      "cmp": 362.8,
+      "high52": 381.7,
+      "low52": 243.25,
+      "changePct": 0.83,
+      "downFromHighPct": -4.95,
+      "aboveLowPct": 49.15,
+      "status": "Near 52W High",
       "indices": [
-        "NIFTY 100",
-        "NIFTY FMCG",
-        "NIFTY NEXT 50"
+        "NIFTY PVT BANK"
       ],
-      "strengthScore": 60.4,
+      "strengthScore": 60.5,
       "signal": "Neutral / Stable",
       "rank": 103
     },
     {
-      "symbol": "MUTHOOTFIN",
-      "stockName": "Muthoot Finance Ltd.",
-      "cmp": 3124.5,
-      "high52": 4149.5,
-      "low52": 2476.6,
-      "changePct": -0.42,
-      "downFromHighPct": -24.7,
-      "aboveLowPct": 26.16,
-      "status": "Corrected",
+      "symbol": "AJANTPHARM",
+      "stockName": "Ajanta Pharmaceuticals Ltd.",
+      "cmp": 3307.6,
+      "high52": 3506.9,
+      "low52": 2329.9,
+      "changePct": 0.88,
+      "downFromHighPct": -5.68,
+      "aboveLowPct": 41.96,
+      "status": "Mid Range",
       "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY NEXT 50"
+        "NIFTY PHARMA"
       ],
-      "strengthScore": 60.1,
+      "strengthScore": 60.0,
       "signal": "Neutral / Stable",
       "rank": 104
     },
     {
-      "symbol": "IDFCFIRSTB",
-      "stockName": "IDFC First Bank Ltd.",
-      "cmp": 80.43,
-      "high52": 87.0,
-      "low52": 58.08,
-      "changePct": -0.88,
-      "downFromHighPct": -7.55,
-      "aboveLowPct": 38.48,
-      "status": "Mid Range",
+      "symbol": "ABBOTINDIA",
+      "stockName": "Abbott India Ltd.",
+      "cmp": 26770.0,
+      "high52": 35310.0,
+      "low52": 25150.0,
+      "changePct": 2.0,
+      "downFromHighPct": -24.19,
+      "aboveLowPct": 6.44,
+      "status": "Corrected",
       "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK"
+        "NIFTY PHARMA"
       ],
-      "strengthScore": 59.9,
+      "strengthScore": 59.6,
       "signal": "Neutral / Stable",
       "rank": 105
     },
     {
-      "symbol": "ITC",
-      "stockName": "ITC Ltd",
-      "cmp": 288.75,
-      "high52": 427.0,
-      "low52": 275.05,
-      "changePct": 0.17,
-      "downFromHighPct": -32.38,
-      "aboveLowPct": 4.98,
-      "status": "Near 52W Low",
+      "symbol": "SIEMENS",
+      "stockName": "Siemens Ltd.",
+      "cmp": 3476.4,
+      "high52": 3937.3,
+      "low52": 2826.0,
+      "changePct": 0.88,
+      "downFromHighPct": -11.71,
+      "aboveLowPct": 23.01,
+      "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FMCG",
-        "S&P BSE SENSEX"
+        "NIFTY ENERGY",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 59.8,
+      "strengthScore": 59.5,
       "signal": "Neutral / Stable",
       "rank": 106
     },
     {
-      "symbol": "ICICIBANK",
-      "stockName": "ICICI Bank Ltd",
-      "cmp": 1414.7,
-      "high52": 1500.0,
-      "low52": 1187.6,
-      "changePct": -0.86,
-      "downFromHighPct": -5.69,
-      "aboveLowPct": 19.12,
-      "status": "Mid Range",
+      "symbol": "ADANIPORTS",
+      "stockName": "Adani Ports and Special Economic Zone Ltd.",
+      "cmp": 1800.1,
+      "high52": 1891.1,
+      "low52": 1290.5,
+      "changePct": 0.47,
+      "downFromHighPct": -4.81,
+      "aboveLowPct": 39.49,
+      "status": "Near 52W High",
       "indices": [
-        "FINNIFTY",
         "NIFTY 100",
         "NIFTY 50",
-        "NIFTY BANK",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY PVT BANK"
+        "NIFTY INFRA"
       ],
-      "strengthScore": 59.7,
+      "strengthScore": 59.2,
       "signal": "Neutral / Stable",
       "rank": 107
     },
     {
-      "symbol": "AEGISLOG",
-      "stockName": "Aegis Logistics Ltd.",
-      "cmp": 1383.7,
-      "high52": 1423.5,
-      "low52": 576.1,
-      "changePct": -1.81,
-      "downFromHighPct": -2.8,
-      "aboveLowPct": 140.18,
-      "status": "Near 52W High",
+      "symbol": "SOBHA",
+      "stockName": "Sobha Ltd.",
+      "cmp": 1469.8,
+      "high52": 1732.5,
+      "low52": 1130.0,
+      "changePct": 1.28,
+      "downFromHighPct": -15.16,
+      "aboveLowPct": 30.07,
+      "status": "Corrected",
       "indices": [
-        "NIFTY ENERGY"
+        "NIFTY REALTY"
       ],
-      "strengthScore": 59.0,
+      "strengthScore": 59.2,
       "signal": "Neutral / Stable",
       "rank": 108
     },
     {
-      "symbol": "GLENMARK",
-      "stockName": "Glenmark Pharmaceuticals Ltd.",
-      "cmp": 2264.9,
-      "high52": 2474.0,
-      "low52": 1792.6,
-      "changePct": -0.26,
-      "downFromHighPct": -8.45,
-      "aboveLowPct": 26.35,
-      "status": "Mid Range",
+      "symbol": "GODREJCP",
+      "stockName": "Godrej Consumer Products Ltd.",
+      "cmp": 1087.4,
+      "high52": 1309.0,
+      "low52": 967.05,
+      "changePct": 1.13,
+      "downFromHighPct": -16.93,
+      "aboveLowPct": 12.45,
+      "status": "Corrected",
       "indices": [
-        "NIFTY PHARMA"
+        "NIFTY 100",
+        "NIFTY FMCG",
+        "NIFTY NEXT 50"
       ],
       "strengthScore": 59.0,
       "signal": "Neutral / Stable",
       "rank": 109
     },
     {
-      "symbol": "COLPAL",
-      "stockName": "Colgate Palmolive (India) Ltd.",
-      "cmp": 2077.2,
-      "high52": 2504.0,
-      "low52": 1782.0,
-      "changePct": -0.12,
-      "downFromHighPct": -17.04,
-      "aboveLowPct": 16.57,
+      "symbol": "MFSL",
+      "stockName": "Max Financial Services Ltd.",
+      "cmp": 1576.8,
+      "high52": 1892.5,
+      "low52": 1433.6,
+      "changePct": 1.14,
+      "downFromHighPct": -16.68,
+      "aboveLowPct": 9.99,
       "status": "Corrected",
       "indices": [
-        "NIFTY FMCG",
+        "FINNIFTY",
+        "NIFTY FINANCIAL SERVICES",
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 58.8,
@@ -2088,501 +2031,504 @@
       "rank": 110
     },
     {
-      "symbol": "GODREJCP",
-      "stockName": "Godrej Consumer Products Ltd.",
-      "cmp": 1097.2,
-      "high52": 1309.0,
-      "low52": 967.05,
-      "changePct": -0.31,
-      "downFromHighPct": -16.18,
-      "aboveLowPct": 13.46,
-      "status": "Corrected",
+      "symbol": "GAIL",
+      "stockName": "GAIL (India) Ltd.",
+      "cmp": 170.2,
+      "high52": 192.7,
+      "low52": 134.36,
+      "changePct": 0.57,
+      "downFromHighPct": -11.68,
+      "aboveLowPct": 26.67,
+      "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY FMCG",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 58.7,
+      "strengthScore": 58.3,
       "signal": "Neutral / Stable",
       "rank": 111
     },
     {
-      "symbol": "YESBANK",
-      "stockName": "Yes Bank Ltd.",
-      "cmp": 24.01,
-      "high52": 25.78,
-      "low52": 17.2,
-      "changePct": -1.03,
-      "downFromHighPct": -6.87,
-      "aboveLowPct": 39.59,
-      "status": "Mid Range",
+      "symbol": "JIOFIN",
+      "stockName": "Jio Financial Services Ltd.",
+      "cmp": 233.37,
+      "high52": 338.6,
+      "low52": 223.3,
+      "changePct": 1.47,
+      "downFromHighPct": -31.08,
+      "aboveLowPct": 4.51,
+      "status": "Near 52W Low",
       "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK"
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FINANCIAL SERVICES"
       ],
-      "strengthScore": 58.5,
+      "strengthScore": 58.1,
       "signal": "Neutral / Stable",
       "rank": 112
     },
     {
-      "symbol": "ASIANPAINT",
-      "stockName": "Asian Paints Ltd",
-      "cmp": 2731.4,
-      "high52": 2985.7,
-      "low52": 2115.0,
-      "changePct": -0.85,
-      "downFromHighPct": -8.52,
-      "aboveLowPct": 29.14,
+      "symbol": "JSWSTEEL",
+      "stockName": "JSW Steel Ltd",
+      "cmp": 1225.8,
+      "high52": 1328.0,
+      "low52": 1017.4,
+      "changePct": 0.52,
+      "downFromHighPct": -7.7,
+      "aboveLowPct": 20.48,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
         "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY METAL",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 58.2,
+      "strengthScore": 58.0,
       "signal": "Neutral / Stable",
       "rank": 113
     },
     {
-      "symbol": "NTPC",
-      "stockName": "NTPC Ltd",
-      "cmp": 354.2,
-      "high52": 414.4,
-      "low52": 315.55,
-      "changePct": -0.58,
-      "downFromHighPct": -14.53,
-      "aboveLowPct": 12.25,
-      "status": "Mid Range",
+      "symbol": "HDFCBANK",
+      "stockName": "HDFC Bank Ltd",
+      "cmp": 817.55,
+      "high52": 1020.5,
+      "low52": 726.65,
+      "changePct": 0.89,
+      "downFromHighPct": -19.89,
+      "aboveLowPct": 12.51,
+      "status": "Corrected",
       "indices": [
+        "FINNIFTY",
         "NIFTY 100",
         "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "S&P BSE SENSEX"
+        "NIFTY BANK",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY PVT BANK"
       ],
-      "strengthScore": 58.1,
+      "strengthScore": 57.9,
       "signal": "Neutral / Stable",
       "rank": 114
     },
     {
-      "symbol": "HINDALCO",
-      "stockName": "Hindalco Industries Ltd.",
-      "cmp": 969.5,
-      "high52": 1176.0,
-      "low52": 657.5,
-      "changePct": -1.11,
-      "downFromHighPct": -17.56,
-      "aboveLowPct": 47.45,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY METAL"
-      ],
-      "strengthScore": 58.0,
-      "signal": "Neutral / Stable",
-      "rank": 115
-    },
-    {
-      "symbol": "COALINDIA",
-      "stockName": "Coal India Ltd.",
-      "cmp": 428.95,
-      "high52": 491.25,
-      "low52": 368.65,
-      "changePct": -0.79,
-      "downFromHighPct": -12.68,
-      "aboveLowPct": 16.36,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 57.9,
-      "signal": "Neutral / Stable",
-      "rank": 116
-    },
-    {
-      "symbol": "SOBHA",
-      "stockName": "Sobha Ltd.",
-      "cmp": 1454.2,
-      "high52": 1732.5,
-      "low52": 1130.0,
-      "changePct": -0.19,
-      "downFromHighPct": -16.06,
-      "aboveLowPct": 28.69,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 57.6,
-      "signal": "Neutral / Stable",
-      "rank": 117
-    },
-    {
-      "symbol": "INDIANB",
-      "stockName": "Indian Bank",
-      "cmp": 785.95,
-      "high52": 1000.9,
-      "low52": 606.0,
-      "changePct": -0.12,
-      "downFromHighPct": -21.48,
-      "aboveLowPct": 29.69,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 57.1,
-      "signal": "Neutral / Stable",
-      "rank": 118
-    },
-    {
-      "symbol": "JSWENERGY",
-      "stockName": "JSW Energy Ltd.",
-      "cmp": 544.2,
-      "high52": 617.35,
-      "low52": 427.75,
-      "changePct": -0.58,
-      "downFromHighPct": -11.85,
-      "aboveLowPct": 27.22,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 56.7,
-      "signal": "Neutral / Stable",
-      "rank": 119
-    },
-    {
-      "symbol": "POWERINDIA",
-      "stockName": "Hitachi Energy India Ltd.",
-      "cmp": 31915.0,
-      "high52": 38785.0,
-      "low52": 16111.0,
-      "changePct": -1.38,
-      "downFromHighPct": -17.71,
-      "aboveLowPct": 98.09,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 56.5,
-      "signal": "Neutral / Stable",
-      "rank": 120
-    },
-    {
-      "symbol": "PNB",
-      "stockName": "Punjab National Bank",
-      "cmp": 103.79,
-      "high52": 135.15,
-      "low52": 98.5,
-      "changePct": -0.48,
-      "downFromHighPct": -23.2,
-      "aboveLowPct": 5.37,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY BANK",
-        "NIFTY NEXT 50",
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 56.3,
-      "signal": "Neutral / Stable",
-      "rank": 121
-    },
-    {
-      "symbol": "DRREDDY",
-      "stockName": "Dr. Reddy's Laboratories Ltd.",
-      "cmp": 1354.6,
-      "high52": 1414.9,
-      "low52": 1148.4,
-      "changePct": -0.97,
-      "downFromHighPct": -4.26,
-      "aboveLowPct": 17.96,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 55.9,
-      "signal": "Neutral / Stable",
-      "rank": 122
-    },
-    {
-      "symbol": "SOLARINDS",
-      "stockName": "Solar Industries India Ltd.",
-      "cmp": 18268.0,
-      "high52": 18972.0,
-      "low52": 11646.0,
-      "changePct": -1.46,
-      "downFromHighPct": -3.71,
-      "aboveLowPct": 56.86,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 55.9,
-      "signal": "Neutral / Stable",
-      "rank": 123
-    },
-    {
       "symbol": "NMDC",
       "stockName": "NMDC Ltd.",
-      "cmp": 84.35,
+      "cmp": 84.42,
       "high52": 97.49,
       "low52": 67.15,
-      "changePct": -0.85,
-      "downFromHighPct": -13.48,
-      "aboveLowPct": 25.61,
+      "changePct": 0.81,
+      "downFromHighPct": -13.41,
+      "aboveLowPct": 25.72,
       "status": "Mid Range",
       "indices": [
         "NIFTY COMMODITIES",
         "NIFTY METAL",
         "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 55.9,
+      "strengthScore": 57.9,
       "signal": "Neutral / Stable",
-      "rank": 124
+      "rank": 115
+    },
+    {
+      "symbol": "TATAPOWER",
+      "stockName": "Tata Power Co. Ltd.",
+      "cmp": 375.5,
+      "high52": 464.9,
+      "low52": 342.5,
+      "changePct": 0.91,
+      "downFromHighPct": -19.23,
+      "aboveLowPct": 9.64,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 57.8,
+      "signal": "Neutral / Stable",
+      "rank": 116
+    },
+    {
+      "symbol": "DABUR",
+      "stockName": "Dabur India Ltd.",
+      "cmp": 443.15,
+      "high52": 577.0,
+      "low52": 403.35,
+      "changePct": 1.51,
+      "downFromHighPct": -23.2,
+      "aboveLowPct": 9.87,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY FMCG",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 57.6,
+      "signal": "Neutral / Stable",
+      "rank": 117
     },
     {
       "symbol": "DBCORP",
       "stockName": "D.B.Corp Ltd.",
-      "cmp": 198.77,
+      "cmp": 201.43,
       "high52": 287.9,
       "low52": 184.51,
-      "changePct": 0.5,
-      "downFromHighPct": -30.96,
-      "aboveLowPct": 7.73,
+      "changePct": 1.96,
+      "downFromHighPct": -30.03,
+      "aboveLowPct": 9.17,
       "status": "Deep Correction",
       "indices": [
         "NIFTY MEDIA"
       ],
-      "strengthScore": 55.9,
+      "strengthScore": 57.5,
+      "signal": "Neutral / Stable",
+      "rank": 118
+    },
+    {
+      "symbol": "RADICO",
+      "stockName": "Radico Khaitan Ltd",
+      "cmp": 4089.0,
+      "high52": 4161.8,
+      "low52": 2500.0,
+      "changePct": 0.28,
+      "downFromHighPct": -1.75,
+      "aboveLowPct": 63.56,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY FMCG"
+      ],
+      "strengthScore": 57.2,
+      "signal": "Neutral / Stable",
+      "rank": 119
+    },
+    {
+      "symbol": "EMAMILTD",
+      "stockName": "Emami Ltd.",
+      "cmp": 415.1,
+      "high52": 634.2,
+      "low52": 376.4,
+      "changePct": 2.0,
+      "downFromHighPct": -34.55,
+      "aboveLowPct": 10.28,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY FMCG"
+      ],
+      "strengthScore": 56.7,
+      "signal": "Neutral / Stable",
+      "rank": 120
+    },
+    {
+      "symbol": "ALKEM",
+      "stockName": "Alkem Laboratories Ltd.",
+      "cmp": 5648.5,
+      "high52": 5933.5,
+      "low52": 4716.2,
+      "changePct": 0.76,
+      "downFromHighPct": -4.8,
+      "aboveLowPct": 19.77,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 56.7,
+      "signal": "Neutral / Stable",
+      "rank": 121
+    },
+    {
+      "symbol": "GMRAIRPORT",
+      "stockName": "GMR Airports Ltd.",
+      "cmp": 111.83,
+      "high52": 115.64,
+      "low52": 84.11,
+      "changePct": 0.74,
+      "downFromHighPct": -3.29,
+      "aboveLowPct": 32.96,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 56.7,
+      "signal": "Neutral / Stable",
+      "rank": 122
+    },
+    {
+      "symbol": "JBCHEPHARM",
+      "stockName": "J.B. Chemicals & Pharmaceuticals Ltd.",
+      "cmp": 2444.5,
+      "high52": 2474.0,
+      "low52": 1603.5,
+      "changePct": 0.36,
+      "downFromHighPct": -1.19,
+      "aboveLowPct": 52.45,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 56.6,
+      "signal": "Neutral / Stable",
+      "rank": 123
+    },
+    {
+      "symbol": "SBIN",
+      "stockName": "State Bank of India",
+      "cmp": 1022.1,
+      "high52": 1234.7,
+      "low52": 786.55,
+      "changePct": 0.51,
+      "downFromHighPct": -17.22,
+      "aboveLowPct": 29.95,
+      "status": "Corrected",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY BANK",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 56.3,
+      "signal": "Neutral / Stable",
+      "rank": 124
+    },
+    {
+      "symbol": "LTM",
+      "stockName": "LTM Ltd.",
+      "cmp": 3854.4,
+      "high52": 6429.5,
+      "low52": 3528.0,
+      "changePct": 1.59,
+      "downFromHighPct": -40.05,
+      "aboveLowPct": 9.25,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY IT",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 55.8,
       "signal": "Neutral / Stable",
       "rank": 125
     },
     {
-      "symbol": "SBICARD",
-      "stockName": "SBI Cards and Payment Services Ltd.",
-      "cmp": 604.95,
-      "high52": 1004.75,
-      "low52": 565.45,
-      "changePct": 0.24,
-      "downFromHighPct": -39.79,
-      "aboveLowPct": 6.99,
-      "status": "Deep Correction",
+      "symbol": "CIPLA",
+      "stockName": "Cipla Ltd.",
+      "cmp": 1441.3,
+      "high52": 1673.0,
+      "low52": 1165.7,
+      "changePct": 0.66,
+      "downFromHighPct": -13.85,
+      "aboveLowPct": 23.64,
+      "status": "Mid Range",
       "indices": [
-        "FINNIFTY",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY MIDCAP 50"
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY PHARMA"
       ],
       "strengthScore": 55.8,
       "signal": "Neutral / Stable",
       "rank": 126
     },
     {
-      "symbol": "ABB",
-      "stockName": "ABB India Ltd.",
-      "cmp": 6978.0,
-      "high52": 7822.5,
-      "low52": 4637.5,
-      "changePct": -1.34,
-      "downFromHighPct": -10.8,
-      "aboveLowPct": 50.47,
+      "symbol": "POWERGRID",
+      "stockName": "Power Grid Corporation of India Ltd",
+      "cmp": 281.35,
+      "high52": 324.95,
+      "low52": 250.0,
+      "changePct": 0.59,
+      "downFromHighPct": -13.42,
+      "aboveLowPct": 12.54,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
+        "NIFTY 50",
         "NIFTY ENERGY",
-        "NIFTY NEXT 50"
+        "NIFTY INFRA",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 55.8,
+      "strengthScore": 55.5,
       "signal": "Neutral / Stable",
       "rank": 127
     },
     {
-      "symbol": "CASTROLIND",
-      "stockName": "Castrol India Ltd.",
-      "cmp": 184.36,
-      "high52": 232.43,
-      "low52": 170.1,
-      "changePct": 0.09,
-      "downFromHighPct": -20.68,
-      "aboveLowPct": 8.38,
-      "status": "Corrected",
+      "symbol": "FORTIS",
+      "stockName": "Fortis Healthcare Ltd.",
+      "cmp": 951.45,
+      "high52": 1104.3,
+      "low52": 757.15,
+      "changePct": 0.82,
+      "downFromHighPct": -13.84,
+      "aboveLowPct": 25.66,
+      "status": "Mid Range",
       "indices": [
-        "NIFTY ENERGY"
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 55.8,
+      "strengthScore": 55.5,
       "signal": "Neutral / Stable",
       "rank": 128
     },
     {
-      "symbol": "BANDHANBNK",
-      "stockName": "Bandhan Bank Ltd.",
-      "cmp": 205.1,
-      "high52": 218.13,
-      "low52": 134.25,
-      "changePct": -1.1,
-      "downFromHighPct": -5.97,
-      "aboveLowPct": 52.77,
-      "status": "Mid Range",
+      "symbol": "DMART",
+      "stockName": "Avenue Supermarts Ltd.",
+      "cmp": 4079.4,
+      "high52": 4949.5,
+      "low52": 3600.0,
+      "changePct": 1.01,
+      "downFromHighPct": -17.58,
+      "aboveLowPct": 13.32,
+      "status": "Corrected",
       "indices": [
-        "NIFTY PVT BANK"
+        "NIFTY 100",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 55.7,
+      "strengthScore": 55.4,
       "signal": "Neutral / Stable",
       "rank": 129
     },
     {
-      "symbol": "ADANIENT",
-      "stockName": "Adani Enterprises Ltd.",
-      "cmp": 3107.2,
-      "high52": 3245.0,
-      "low52": 1753.0,
-      "changePct": -3.1,
-      "downFromHighPct": -4.25,
-      "aboveLowPct": 77.25,
-      "status": "Near 52W High",
+      "symbol": "JINDALSTEL",
+      "stockName": "Jindal Steel Ltd.",
+      "cmp": 1029.8,
+      "high52": 1306.2,
+      "low52": 926.75,
+      "changePct": 0.81,
+      "downFromHighPct": -21.16,
+      "aboveLowPct": 11.12,
+      "status": "Corrected",
       "indices": [
         "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY METAL"
+        "NIFTY COMMODITIES",
+        "NIFTY METAL",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 55.4,
+      "strengthScore": 55.1,
       "signal": "Neutral / Stable",
       "rank": 130
     },
     {
-      "symbol": "LAURUSLABS",
-      "stockName": "Laurus Labs Ltd.",
-      "cmp": 1477.4,
-      "high52": 1555.0,
-      "low52": 761.2,
-      "changePct": -3.39,
-      "downFromHighPct": -4.99,
-      "aboveLowPct": 94.09,
-      "status": "Near 52W High",
+      "symbol": "TMCV",
+      "stockName": "Tata Motors Ltd.",
+      "cmp": 419.85,
+      "high52": 509.0,
+      "low52": 306.3,
+      "changePct": 0.74,
+      "downFromHighPct": -17.51,
+      "aboveLowPct": 37.07,
+      "status": "Corrected",
       "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY PHARMA"
+        "NIFTY 100",
+        "NIFTY NEXT 50"
       ],
       "strengthScore": 55.1,
       "signal": "Neutral / Stable",
       "rank": 131
     },
     {
-      "symbol": "TIINDIA",
-      "stockName": "Tube Investments of India Ltd.",
-      "cmp": 2978.8,
-      "high52": 3419.9,
-      "low52": 2164.9,
-      "changePct": -0.9,
-      "downFromHighPct": -12.9,
-      "aboveLowPct": 37.6,
-      "status": "Mid Range",
+      "symbol": "IPCALAB",
+      "stockName": "Ipca Laboratories Ltd.",
+      "cmp": 1770.4,
+      "high52": 1812.5,
+      "low52": 1251.6,
+      "changePct": 0.45,
+      "downFromHighPct": -2.32,
+      "aboveLowPct": 41.45,
+      "status": "Near 52W High",
       "indices": [
-        "NIFTY AUTO",
-        "NIFTY MIDCAP 50"
+        "NIFTY PHARMA"
       ],
-      "strengthScore": 55.0,
+      "strengthScore": 55.1,
       "signal": "Neutral / Stable",
       "rank": 132
     },
     {
-      "symbol": "FORTIS",
-      "stockName": "Fortis Healthcare Ltd.",
-      "cmp": 971.9,
-      "high52": 1104.3,
-      "low52": 757.15,
-      "changePct": -0.83,
-      "downFromHighPct": -11.99,
-      "aboveLowPct": 28.36,
-      "status": "Mid Range",
+      "symbol": "PSB",
+      "stockName": "Punjab & Sind Bank",
+      "cmp": 24.46,
+      "high52": 33.54,
+      "low52": 20.5,
+      "changePct": 1.49,
+      "downFromHighPct": -27.07,
+      "aboveLowPct": 19.32,
+      "status": "Corrected",
       "indices": [
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
+        "NIFTY PSU BANK"
       ],
       "strengthScore": 54.9,
       "signal": "Neutral / Stable",
       "rank": 133
     },
     {
-      "symbol": "PHOENIXLTD",
-      "stockName": "Phoenix Mills Ltd.",
-      "cmp": 2075.1,
-      "high52": 2134.7,
-      "low52": 1402.5,
-      "changePct": -1.46,
-      "downFromHighPct": -2.79,
-      "aboveLowPct": 47.96,
-      "status": "Near 52W High",
+      "symbol": "BRITANNIA",
+      "stockName": "Britannia Industries Ltd.",
+      "cmp": 5361.5,
+      "high52": 6336.0,
+      "low52": 5035.0,
+      "changePct": 0.87,
+      "downFromHighPct": -15.38,
+      "aboveLowPct": 6.48,
+      "status": "Corrected",
       "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY REALTY"
+        "NIFTY 100",
+        "NIFTY FMCG",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 54.6,
+      "strengthScore": 54.8,
       "signal": "Neutral / Stable",
       "rank": 134
     },
     {
-      "symbol": "ADANIPORTS",
-      "stockName": "Adani Ports and Special Economic Zone Ltd.",
-      "cmp": 1833.9,
-      "high52": 1891.1,
-      "low52": 1290.5,
-      "changePct": -1.64,
-      "downFromHighPct": -3.02,
-      "aboveLowPct": 42.11,
-      "status": "Near 52W High",
+      "symbol": "TORNTPOWER",
+      "stockName": "Torrent Power Ltd.",
+      "cmp": 1414.9,
+      "high52": 1824.1,
+      "low52": 1188.0,
+      "changePct": 0.99,
+      "downFromHighPct": -22.43,
+      "aboveLowPct": 19.1,
+      "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA"
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY"
       ],
-      "strengthScore": 54.5,
+      "strengthScore": 54.6,
       "signal": "Neutral / Stable",
       "rank": 135
     },
     {
-      "symbol": "LT",
-      "stockName": "Larsen & Toubro Ltd",
-      "cmp": 3991.9,
-      "high52": 4440.0,
-      "low52": 3288.1,
-      "changePct": -1.22,
-      "downFromHighPct": -10.09,
-      "aboveLowPct": 21.4,
-      "status": "Mid Range",
+      "symbol": "WAAREEENER",
+      "stockName": "Waaree Energies Ltd.",
+      "cmp": 2863.4,
+      "high52": 3865.0,
+      "low52": 2403.0,
+      "changePct": 1.42,
+      "downFromHighPct": -25.91,
+      "aboveLowPct": 19.16,
+      "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA",
-        "S&P BSE SENSEX"
+        "NIFTY MIDCAP 50"
       ],
       "strengthScore": 54.4,
       "signal": "Neutral / Stable",
       "rank": 136
     },
     {
-      "symbol": "OIL",
-      "stockName": "Oil India Ltd.",
-      "cmp": 423.15,
-      "high52": 531.0,
-      "low52": 384.6,
-      "changePct": -0.56,
-      "downFromHighPct": -20.31,
-      "aboveLowPct": 10.02,
+      "symbol": "PERSISTENT",
+      "stockName": "Persistent Systems Ltd.",
+      "cmp": 4829.9,
+      "high52": 6599.0,
+      "low52": 4244.5,
+      "changePct": 1.27,
+      "downFromHighPct": -26.81,
+      "aboveLowPct": 13.79,
       "status": "Corrected",
       "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY ENERGY",
+        "NIFTY IT",
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 54.3,
@@ -2590,325 +2536,557 @@
       "rank": 137
     },
     {
-      "symbol": "ENRIN",
-      "stockName": "Siemens Energy India Ltd.",
-      "cmp": 3368.9,
-      "high52": 3968.0,
-      "low52": 2115.0,
-      "changePct": -1.5,
-      "downFromHighPct": -15.1,
-      "aboveLowPct": 59.29,
+      "symbol": "PVRINOX",
+      "stockName": "PVR INOX Ltd.",
+      "cmp": 989.5,
+      "high52": 1249.7,
+      "low52": 907.4,
+      "changePct": 1.36,
+      "downFromHighPct": -20.82,
+      "aboveLowPct": 9.05,
       "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY ENERGY",
-        "NIFTY NEXT 50"
+        "NIFTY MEDIA"
       ],
       "strengthScore": 54.0,
       "signal": "Neutral / Stable",
       "rank": 138
     },
     {
-      "symbol": "SJVN",
-      "stockName": "SJVN Ltd.",
-      "cmp": 71.8,
-      "high52": 101.45,
-      "low52": 63.02,
-      "changePct": 0.07,
-      "downFromHighPct": -29.23,
-      "aboveLowPct": 13.93,
-      "status": "Corrected",
+      "symbol": "TIINDIA",
+      "stockName": "Tube Investments of India Ltd.",
+      "cmp": 2916.2,
+      "high52": 3419.9,
+      "low52": 2164.9,
+      "changePct": 0.58,
+      "downFromHighPct": -14.73,
+      "aboveLowPct": 34.7,
+      "status": "Mid Range",
       "indices": [
-        "NIFTY ENERGY"
+        "NIFTY AUTO",
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 53.8,
+      "strengthScore": 53.9,
       "signal": "Neutral / Stable",
       "rank": 139
     },
     {
-      "symbol": "CUMMINSIND",
-      "stockName": "Cummins India Ltd.",
-      "cmp": 5471.5,
-      "high52": 6100.0,
-      "low52": 3414.0,
-      "changePct": -1.92,
-      "downFromHighPct": -10.3,
-      "aboveLowPct": 60.27,
-      "status": "Mid Range",
+      "symbol": "NATIONALUM",
+      "stockName": "National Aluminium Co. Ltd.",
+      "cmp": 349.5,
+      "high52": 445.15,
+      "low52": 179.93,
+      "changePct": -0.07,
+      "downFromHighPct": -21.49,
+      "aboveLowPct": 94.24,
+      "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
+        "NIFTY METAL"
       ],
-      "strengthScore": 53.6,
+      "strengthScore": 53.9,
       "signal": "Neutral / Stable",
       "rank": 140
     },
     {
-      "symbol": "TIPSMUSIC",
-      "stockName": "Tips Music Ltd.",
-      "cmp": 681.2,
-      "high52": 726.75,
-      "low52": 481.15,
-      "changePct": -1.1,
-      "downFromHighPct": -6.27,
-      "aboveLowPct": 41.58,
+      "symbol": "ASIANPAINT",
+      "stockName": "Asian Paints Ltd",
+      "cmp": 2673.8,
+      "high52": 2985.7,
+      "low52": 2115.0,
+      "changePct": 0.3,
+      "downFromHighPct": -10.45,
+      "aboveLowPct": 26.42,
       "status": "Mid Range",
       "indices": [
-        "NIFTY MEDIA"
+        "NIFTY 100",
+        "NIFTY 50",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 53.6,
+      "strengthScore": 52.9,
       "signal": "Neutral / Stable",
       "rank": 141
     },
     {
-      "symbol": "SRF",
-      "stockName": "SRF Ltd.",
-      "cmp": 2810.6,
-      "high52": 3325.0,
-      "low52": 2355.0,
-      "changePct": -0.71,
-      "downFromHighPct": -15.47,
-      "aboveLowPct": 19.35,
+      "symbol": "CENTRALBK",
+      "stockName": "Central Bank of India",
+      "cmp": 31.65,
+      "high52": 40.92,
+      "low52": 29.32,
+      "changePct": 1.28,
+      "downFromHighPct": -22.65,
+      "aboveLowPct": 7.95,
       "status": "Corrected",
       "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY MIDCAP 50"
+        "NIFTY PSU BANK"
       ],
-      "strengthScore": 53.5,
+      "strengthScore": 52.6,
       "signal": "Neutral / Stable",
       "rank": 142
     },
     {
-      "symbol": "DIVISLAB",
-      "stockName": "Divi's Laboratories Ltd.",
-      "cmp": 6771.5,
-      "high52": 7071.5,
-      "low52": 5636.5,
-      "changePct": -1.25,
-      "downFromHighPct": -4.24,
-      "aboveLowPct": 20.14,
-      "status": "Near 52W High",
+      "symbol": "ICICIBANK",
+      "stockName": "ICICI Bank Ltd",
+      "cmp": 1380.7,
+      "high52": 1500.0,
+      "low52": 1187.6,
+      "changePct": 0.01,
+      "downFromHighPct": -7.95,
+      "aboveLowPct": 16.26,
+      "status": "Mid Range",
       "indices": [
+        "FINNIFTY",
         "NIFTY 100",
-        "NIFTY NEXT 50",
-        "NIFTY PHARMA"
+        "NIFTY 50",
+        "NIFTY BANK",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY PVT BANK"
       ],
-      "strengthScore": 53.1,
+      "strengthScore": 52.3,
       "signal": "Neutral / Stable",
       "rank": 143
     },
     {
-      "symbol": "DIXON",
-      "stockName": "Dixon Technologies (India) Ltd.",
-      "cmp": 13242.0,
-      "high52": 18471.0,
-      "low52": 9600.0,
-      "changePct": -0.47,
-      "downFromHighPct": -28.31,
-      "aboveLowPct": 37.94,
-      "status": "Corrected",
+      "symbol": "BAJAJ-AUTO",
+      "stockName": "Bajaj Auto Ltd.",
+      "cmp": 10155.0,
+      "high52": 10834.0,
+      "low52": 7858.5,
+      "changePct": -0.09,
+      "downFromHighPct": -6.27,
+      "aboveLowPct": 29.22,
+      "status": "Mid Range",
       "indices": [
-        "NIFTY MIDCAP 50"
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY AUTO"
       ],
-      "strengthScore": 53.1,
+      "strengthScore": 52.2,
       "signal": "Neutral / Stable",
       "rank": 144
     },
     {
-      "symbol": "PSB",
-      "stockName": "Punjab & Sind Bank",
-      "cmp": 24.77,
-      "high52": 33.54,
-      "low52": 20.5,
-      "changePct": -0.16,
-      "downFromHighPct": -26.15,
-      "aboveLowPct": 20.83,
-      "status": "Corrected",
+      "symbol": "SUPREMEIND",
+      "stockName": "Supreme Industries Ltd.",
+      "cmp": 3228.4,
+      "high52": 4664.9,
+      "low52": 3140.0,
+      "changePct": 1.54,
+      "downFromHighPct": -30.79,
+      "aboveLowPct": 2.82,
+      "status": "Near 52W Low",
       "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 53.1,
-      "signal": "Neutral / Stable",
-      "rank": 145
-    },
-    {
-      "symbol": "HAL",
-      "stockName": "Hindustan Aeronautics Ltd.",
-      "cmp": 4400.3,
-      "high52": 5065.0,
-      "low52": 3479.1,
-      "changePct": -0.91,
-      "downFromHighPct": -13.12,
-      "aboveLowPct": 26.48,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 52.8,
-      "signal": "Neutral / Stable",
-      "rank": 146
-    },
-    {
-      "symbol": "BAJAJHLDNG",
-      "stockName": "Bajaj Holdings & Investment Ltd.",
-      "cmp": 10759.0,
-      "high52": 14763.0,
-      "low52": 8588.0,
-      "changePct": -0.55,
-      "downFromHighPct": -27.12,
-      "aboveLowPct": 25.28,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 52.4,
-      "signal": "Neutral / Stable",
-      "rank": 147
-    },
-    {
-      "symbol": "BHEL",
-      "stockName": "Bharat Heavy Electricals Ltd.",
-      "cmp": 376.45,
-      "high52": 424.9,
-      "low52": 205.12,
-      "changePct": -2.85,
-      "downFromHighPct": -11.4,
-      "aboveLowPct": 83.53,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY ENERGY",
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 52.1,
       "signal": "Neutral / Stable",
+      "rank": 145
+    },
+    {
+      "symbol": "COALINDIA",
+      "stockName": "Coal India Ltd.",
+      "cmp": 429.9,
+      "high52": 491.25,
+      "low52": 368.65,
+      "changePct": 0.2,
+      "downFromHighPct": -12.49,
+      "aboveLowPct": 16.61,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 52.0,
+      "signal": "Neutral / Stable",
+      "rank": 146
+    },
+    {
+      "symbol": "WOCKPHARMA",
+      "stockName": "Wockhardt Ltd.",
+      "cmp": 1831.3,
+      "high52": 2422.3,
+      "low52": 1086.7,
+      "changePct": 0.37,
+      "downFromHighPct": -24.4,
+      "aboveLowPct": 68.52,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 51.7,
+      "signal": "Neutral / Stable",
+      "rank": 147
+    },
+    {
+      "symbol": "TITAN",
+      "stockName": "Titan Company Ltd",
+      "cmp": 4555.8,
+      "high52": 4679.8,
+      "low52": 3303.1,
+      "changePct": -0.67,
+      "downFromHighPct": -2.65,
+      "aboveLowPct": 37.92,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 51.5,
+      "signal": "Neutral / Stable",
       "rank": 148
     },
     {
-      "symbol": "ASHOKLEY",
-      "stockName": "Ashok Leyland Ltd.",
-      "cmp": 164.16,
-      "high52": 215.42,
-      "low52": 114.96,
-      "changePct": -1.18,
-      "downFromHighPct": -23.8,
-      "aboveLowPct": 42.8,
+      "symbol": "PFC",
+      "stockName": "Power Finance Corporation Ltd.",
+      "cmp": 404.1,
+      "high52": 486.5,
+      "low52": 329.9,
+      "changePct": 0.12,
+      "downFromHighPct": -16.94,
+      "aboveLowPct": 22.49,
       "status": "Corrected",
       "indices": [
-        "NIFTY AUTO",
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY NEXT 50"
       ],
-      "strengthScore": 52.0,
+      "strengthScore": 51.0,
       "signal": "Neutral / Stable",
       "rank": 149
     },
     {
-      "symbol": "BANKBARODA",
-      "stockName": "Bank of Baroda",
-      "cmp": 247.85,
-      "high52": 325.5,
-      "low52": 230.81,
-      "changePct": -0.84,
-      "downFromHighPct": -23.86,
-      "aboveLowPct": 7.38,
-      "status": "Corrected",
+      "symbol": "BAJFINANCE",
+      "stockName": "Bajaj Finance Ltd",
+      "cmp": 1003.8,
+      "high52": 1102.5,
+      "low52": 787.9,
+      "changePct": -0.65,
+      "downFromHighPct": -8.95,
+      "aboveLowPct": 27.4,
+      "status": "Mid Range",
       "indices": [
+        "FINNIFTY",
         "NIFTY 100",
-        "NIFTY BANK",
-        "NIFTY NEXT 50",
-        "NIFTY PSU BANK"
+        "NIFTY 50",
+        "NIFTY FINANCIAL SERVICES",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 51.9,
+      "strengthScore": 50.3,
       "signal": "Neutral / Stable",
       "rank": 150
     },
     {
-      "symbol": "PRESTIGE",
-      "stockName": "Prestige Estates Projects Ltd.",
-      "cmp": 1673.3,
-      "high52": 1814.0,
-      "low52": 1090.0,
-      "changePct": -1.77,
-      "downFromHighPct": -7.76,
-      "aboveLowPct": 53.51,
+      "symbol": "HAL",
+      "stockName": "Hindustan Aeronautics Ltd.",
+      "cmp": 4378.9,
+      "high52": 5065.0,
+      "low52": 3479.1,
+      "changePct": 0.33,
+      "downFromHighPct": -13.55,
+      "aboveLowPct": 25.86,
       "status": "Mid Range",
-      "indices": [
-        "NIFTY MIDCAP 50",
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 51.8,
-      "signal": "Neutral / Stable",
-      "rank": 151
-    },
-    {
-      "symbol": "BSE",
-      "stockName": "BSE Ltd.",
-      "cmp": 3683.4,
-      "high52": 4446.8,
-      "low52": 2021.5,
-      "changePct": -3.14,
-      "downFromHighPct": -17.17,
-      "aboveLowPct": 82.21,
-      "status": "Corrected",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 51.7,
-      "signal": "Neutral / Stable",
-      "rank": 152
-    },
-    {
-      "symbol": "TMCV",
-      "stockName": "Tata Motors Ltd.",
-      "cmp": 425.0,
-      "high52": 509.0,
-      "low52": 306.3,
-      "changePct": -1.14,
-      "downFromHighPct": -16.5,
-      "aboveLowPct": 38.75,
-      "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 51.4,
-      "signal": "Neutral / Stable",
+      "strengthScore": 49.9,
+      "signal": "Weak / Corrected",
+      "rank": 151
+    },
+    {
+      "symbol": "LT",
+      "stockName": "Larsen & Toubro Ltd",
+      "cmp": 3886.0,
+      "high52": 4440.0,
+      "low52": 3288.1,
+      "changePct": -0.16,
+      "downFromHighPct": -12.48,
+      "aboveLowPct": 18.18,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY INFRA",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 49.9,
+      "signal": "Weak / Corrected",
+      "rank": 152
+    },
+    {
+      "symbol": "TVSMOTOR",
+      "stockName": "TVS Motor Company Ltd.",
+      "cmp": 3626.1,
+      "high52": 3970.0,
+      "low52": 2728.7,
+      "changePct": -0.37,
+      "downFromHighPct": -8.66,
+      "aboveLowPct": 32.89,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY AUTO",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 49.9,
+      "signal": "Weak / Corrected",
       "rank": 153
     },
     {
-      "symbol": "CANBK",
-      "stockName": "Canara Bank",
-      "cmp": 125.03,
-      "high52": 162.89,
-      "low52": 103.55,
-      "changePct": -1.13,
-      "downFromHighPct": -23.24,
-      "aboveLowPct": 20.74,
+      "symbol": "MPHASIS",
+      "stockName": "MphasiS Ltd.",
+      "cmp": 2261.3,
+      "high52": 3037.2,
+      "low52": 2013.0,
+      "changePct": 0.87,
+      "downFromHighPct": -25.55,
+      "aboveLowPct": 12.33,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY IT",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 49.9,
+      "signal": "Weak / Corrected",
+      "rank": 154
+    },
+    {
+      "symbol": "OBEROIRLTY",
+      "stockName": "Oberoi Realty Ltd.",
+      "cmp": 1873.2,
+      "high52": 1986.1,
+      "low52": 1391.2,
+      "changePct": 0.17,
+      "downFromHighPct": -5.68,
+      "aboveLowPct": 34.65,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY REALTY"
+      ],
+      "strengthScore": 49.9,
+      "signal": "Weak / Corrected",
+      "rank": 155
+    },
+    {
+      "symbol": "TATASTEEL",
+      "stockName": "Tata Steel Ltd",
+      "cmp": 187.91,
+      "high52": 224.4,
+      "low52": 152.51,
+      "changePct": -0.15,
+      "downFromHighPct": -16.26,
+      "aboveLowPct": 23.21,
       "status": "Corrected",
       "indices": [
         "NIFTY 100",
-        "NIFTY BANK",
-        "NIFTY NEXT 50",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY METAL",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 49.8,
+      "signal": "Weak / Corrected",
+      "rank": 156
+    },
+    {
+      "symbol": "ATGL",
+      "stockName": "Adani Total Gas Ltd.",
+      "cmp": 700.65,
+      "high52": 859.85,
+      "low52": 462.8,
+      "changePct": 0.29,
+      "downFromHighPct": -18.51,
+      "aboveLowPct": 51.39,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 49.4,
+      "signal": "Weak / Corrected",
+      "rank": 157
+    },
+    {
+      "symbol": "NAVA",
+      "stockName": "Nava Ltd.",
+      "cmp": 596.6,
+      "high52": 739.4,
+      "low52": 501.65,
+      "changePct": 0.79,
+      "downFromHighPct": -19.31,
+      "aboveLowPct": 18.93,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 49.3,
+      "signal": "Weak / Corrected",
+      "rank": 158
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "stockName": "Hindustan Unilever Ltd",
+      "cmp": 2144.5,
+      "high52": 2750.0,
+      "low52": 2022.5,
+      "changePct": 0.41,
+      "downFromHighPct": -22.02,
+      "aboveLowPct": 6.03,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FMCG",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 49.2,
+      "signal": "Weak / Corrected",
+      "rank": 159
+    },
+    {
+      "symbol": "HINDALCO",
+      "stockName": "Hindalco Industries Ltd.",
+      "cmp": 963.45,
+      "high52": 1176.0,
+      "low52": 657.5,
+      "changePct": -0.84,
+      "downFromHighPct": -18.07,
+      "aboveLowPct": 46.53,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY METAL"
+      ],
+      "strengthScore": 49.2,
+      "signal": "Weak / Corrected",
+      "rank": 160
+    },
+    {
+      "symbol": "HINDCOPPER",
+      "stockName": "Hindustan Copper Ltd.",
+      "cmp": 486.45,
+      "high52": 760.05,
+      "low52": 226.7,
+      "changePct": -0.16,
+      "downFromHighPct": -36.0,
+      "aboveLowPct": 114.58,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY METAL"
+      ],
+      "strengthScore": 49.1,
+      "signal": "Weak / Corrected",
+      "rank": 161
+    },
+    {
+      "symbol": "IOB",
+      "stockName": "Indian Overseas Bank",
+      "cmp": 33.76,
+      "high52": 41.8,
+      "low52": 31.2,
+      "changePct": 0.87,
+      "downFromHighPct": -19.23,
+      "aboveLowPct": 8.21,
+      "status": "Corrected",
+      "indices": [
         "NIFTY PSU BANK"
       ],
-      "strengthScore": 51.0,
-      "signal": "Neutral / Stable",
-      "rank": 154
+      "strengthScore": 48.8,
+      "signal": "Weak / Corrected",
+      "rank": 162
+    },
+    {
+      "symbol": "AXISBANK",
+      "stockName": "Axis Bank Ltd",
+      "cmp": 1297.6,
+      "high52": 1418.3,
+      "low52": 1042.5,
+      "changePct": -0.91,
+      "downFromHighPct": -8.51,
+      "aboveLowPct": 24.47,
+      "status": "Mid Range",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY BANK",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY PVT BANK"
+      ],
+      "strengthScore": 48.1,
+      "signal": "Weak / Corrected",
+      "rank": 163
+    },
+    {
+      "symbol": "IOC",
+      "stockName": "Indian Oil Corporation Ltd.",
+      "cmp": 138.26,
+      "high52": 188.96,
+      "low52": 130.22,
+      "changePct": 0.46,
+      "downFromHighPct": -26.83,
+      "aboveLowPct": 6.17,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 48.1,
+      "signal": "Weak / Corrected",
+      "rank": 164
+    },
+    {
+      "symbol": "EICHERMOT",
+      "stockName": "Eicher Motors Ltd.",
+      "cmp": 7361.0,
+      "high52": 8230.0,
+      "low52": 5353.0,
+      "changePct": -0.78,
+      "downFromHighPct": -10.56,
+      "aboveLowPct": 37.51,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY AUTO"
+      ],
+      "strengthScore": 48.0,
+      "signal": "Weak / Corrected",
+      "rank": 165
+    },
+    {
+      "symbol": "GLAND",
+      "stockName": "Gland Pharma Ltd.",
+      "cmp": 2469.5,
+      "high52": 2573.5,
+      "low52": 1573.6,
+      "changePct": -1.05,
+      "downFromHighPct": -4.04,
+      "aboveLowPct": 56.93,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 47.8,
+      "signal": "Weak / Corrected",
+      "rank": 166
     },
     {
       "symbol": "RELIANCE",
       "stockName": "Reliance Industries Ltd",
-      "cmp": 1308.4,
+      "cmp": 1279.8,
       "high52": 1611.8,
       "low52": 1253.2,
-      "changePct": -0.98,
-      "downFromHighPct": -18.82,
-      "aboveLowPct": 4.4,
+      "changePct": 0.31,
+      "downFromHighPct": -20.6,
+      "aboveLowPct": 2.12,
       "status": "Near 52W Low",
       "indices": [
         "NIFTY 100",
@@ -2918,1114 +3096,902 @@
         "NIFTY INFRA",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 50.8,
-      "signal": "Neutral / Stable",
-      "rank": 155
+      "strengthScore": 47.7,
+      "signal": "Weak / Corrected",
+      "rank": 167
     },
     {
       "symbol": "IGL",
       "stockName": "Indraprastha Gas Ltd.",
-      "cmp": 152.28,
-      "high52": 229.0,
+      "cmp": 151.77,
+      "high52": 228.55,
       "low52": 141.74,
-      "changePct": 0.04,
-      "downFromHighPct": -33.5,
-      "aboveLowPct": 7.44,
+      "changePct": 1.1,
+      "downFromHighPct": -33.59,
+      "aboveLowPct": 7.08,
       "status": "Deep Correction",
       "indices": [
         "NIFTY ENERGY"
       ],
-      "strengthScore": 50.8,
-      "signal": "Neutral / Stable",
-      "rank": 156
+      "strengthScore": 47.0,
+      "signal": "Weak / Corrected",
+      "rank": 168
     },
     {
-      "symbol": "IOB",
-      "stockName": "Indian Overseas Bank",
-      "cmp": 34.03,
-      "high52": 41.8,
-      "low52": 31.2,
-      "changePct": -0.5,
-      "downFromHighPct": -18.59,
-      "aboveLowPct": 9.07,
+      "symbol": "POLICYBZR",
+      "stockName": "PB Fintech Ltd.",
+      "cmp": 1572.5,
+      "high52": 1974.0,
+      "low52": 1364.0,
+      "changePct": 0.64,
+      "downFromHighPct": -20.34,
+      "aboveLowPct": 15.29,
       "status": "Corrected",
       "indices": [
-        "NIFTY PSU BANK"
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 50.5,
-      "signal": "Neutral / Stable",
-      "rank": 157
-    },
-    {
-      "symbol": "MAXHEALTH",
-      "stockName": "Max Healthcare Institute Ltd.",
-      "cmp": 1118.4,
-      "high52": 1310.8,
-      "low52": 903.0,
-      "changePct": -1.25,
-      "downFromHighPct": -14.68,
-      "aboveLowPct": 23.85,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY INFRA"
-      ],
-      "strengthScore": 50.3,
-      "signal": "Neutral / Stable",
-      "rank": 158
-    },
-    {
-      "symbol": "CIPLA",
-      "stockName": "Cipla Ltd.",
-      "cmp": 1451.8,
-      "high52": 1673.0,
-      "low52": 1165.7,
-      "changePct": -1.39,
-      "downFromHighPct": -13.22,
-      "aboveLowPct": 24.54,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 49.7,
+      "strengthScore": 46.5,
       "signal": "Weak / Corrected",
-      "rank": 159
+      "rank": 169
     },
     {
-      "symbol": "EMAMILTD",
-      "stockName": "Emami Ltd.",
-      "cmp": 416.35,
-      "high52": 634.2,
-      "low52": 376.4,
-      "changePct": -0.1,
-      "downFromHighPct": -34.35,
-      "aboveLowPct": 10.61,
+      "symbol": "HATHWAY",
+      "stockName": "Hathway Cable & Datacom Ltd.",
+      "cmp": 10.89,
+      "high52": 17.98,
+      "low52": 8.76,
+      "changePct": 0.93,
+      "downFromHighPct": -39.43,
+      "aboveLowPct": 24.32,
       "status": "Deep Correction",
       "indices": [
-        "NIFTY FMCG"
+        "NIFTY MEDIA"
       ],
-      "strengthScore": 49.7,
+      "strengthScore": 46.4,
       "signal": "Weak / Corrected",
-      "rank": 160
+      "rank": 170
     },
     {
-      "symbol": "LICHSGFIN",
-      "stockName": "LIC Housing Finance Ltd.",
-      "cmp": 543.55,
-      "high52": 646.5,
-      "low52": 458.9,
-      "changePct": -0.97,
-      "downFromHighPct": -15.92,
-      "aboveLowPct": 18.45,
-      "status": "Corrected",
+      "symbol": "HCLTECH",
+      "stockName": "HCL Technologies Ltd",
+      "cmp": 1150.4,
+      "high52": 1780.1,
+      "low52": 1030.0,
+      "changePct": 0.42,
+      "downFromHighPct": -35.37,
+      "aboveLowPct": 11.69,
+      "status": "Deep Correction",
       "indices": [
-        "FINNIFTY",
-        "NIFTY FINANCIAL SERVICES"
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY IT",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 49.5,
+      "strengthScore": 45.8,
       "signal": "Weak / Corrected",
-      "rank": 161
+      "rank": 171
+    },
+    {
+      "symbol": "ITC",
+      "stockName": "ITC Ltd",
+      "cmp": 282.05,
+      "high52": 427.0,
+      "low52": 275.05,
+      "changePct": 0.5,
+      "downFromHighPct": -33.95,
+      "aboveLowPct": 2.54,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FMCG",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 45.5,
+      "signal": "Weak / Corrected",
+      "rank": 172
+    },
+    {
+      "symbol": "SOLARINDS",
+      "stockName": "Solar Industries India Ltd.",
+      "cmp": 17380.0,
+      "high52": 18972.0,
+      "low52": 11646.0,
+      "changePct": -3.29,
+      "downFromHighPct": -8.39,
+      "aboveLowPct": 49.24,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 45.2,
+      "signal": "Weak / Corrected",
+      "rank": 173
     },
     {
       "symbol": "NHPC",
       "stockName": "NHPC Ltd.",
-      "cmp": 78.89,
+      "cmp": 78.61,
       "high52": 89.75,
       "low52": 71.62,
-      "changePct": -1.2,
-      "downFromHighPct": -12.1,
-      "aboveLowPct": 10.15,
+      "changePct": -0.25,
+      "downFromHighPct": -12.41,
+      "aboveLowPct": 9.76,
       "status": "Mid Range",
       "indices": [
         "NIFTY COMMODITIES",
         "NIFTY ENERGY",
         "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 49.5,
-      "signal": "Weak / Corrected",
-      "rank": 162
-    },
-    {
-      "symbol": "UCOBANK",
-      "stockName": "UCO Bank",
-      "cmp": 26.4,
-      "high52": 34.2,
-      "low52": 22.22,
-      "changePct": -0.64,
-      "downFromHighPct": -22.81,
-      "aboveLowPct": 18.81,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 48.8,
-      "signal": "Weak / Corrected",
-      "rank": 163
-    },
-    {
-      "symbol": "INDUSTOWER",
-      "stockName": "Indus Towers Ltd.",
-      "cmp": 382.8,
-      "high52": 481.5,
-      "low52": 312.55,
-      "changePct": -0.97,
-      "downFromHighPct": -20.5,
-      "aboveLowPct": 22.48,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 48.7,
-      "signal": "Weak / Corrected",
-      "rank": 164
-    },
-    {
-      "symbol": "GVT&D",
-      "stockName": "GE Vernova T&D India Ltd.",
-      "cmp": 4440.8,
-      "high52": 5650.0,
-      "low52": 2265.0,
-      "changePct": -2.5,
-      "downFromHighPct": -21.4,
-      "aboveLowPct": 96.06,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 48.6,
-      "signal": "Weak / Corrected",
-      "rank": 165
-    },
-    {
-      "symbol": "PFC",
-      "stockName": "Power Finance Corporation Ltd.",
-      "cmp": 413.15,
-      "high52": 486.5,
-      "low52": 329.9,
-      "changePct": -1.89,
-      "downFromHighPct": -15.08,
-      "aboveLowPct": 25.23,
-      "status": "Corrected",
-      "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 48.5,
-      "signal": "Weak / Corrected",
-      "rank": 166
-    },
-    {
-      "symbol": "AJANTPHARM",
-      "stockName": "Ajanta Pharmaceuticals Ltd.",
-      "cmp": 3314.5,
-      "high52": 3506.9,
-      "low52": 2329.9,
-      "changePct": -1.75,
-      "downFromHighPct": -5.49,
-      "aboveLowPct": 42.26,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 48.2,
-      "signal": "Weak / Corrected",
-      "rank": 167
-    },
-    {
-      "symbol": "UNOMINDA",
-      "stockName": "UNO Minda Ltd.",
-      "cmp": 1129.2,
-      "high52": 1382.0,
-      "low52": 994.0,
-      "changePct": -0.77,
-      "downFromHighPct": -18.29,
-      "aboveLowPct": 13.6,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY AUTO"
-      ],
-      "strengthScore": 48.1,
-      "signal": "Weak / Corrected",
-      "rank": 168
-    },
-    {
-      "symbol": "ABBOTINDIA",
-      "stockName": "Abbott India Ltd.",
-      "cmp": 26725.0,
-      "high52": 35310.0,
-      "low52": 25150.0,
-      "changePct": -0.5,
-      "downFromHighPct": -24.31,
-      "aboveLowPct": 6.26,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 48.1,
-      "signal": "Weak / Corrected",
-      "rank": 169
-    },
-    {
-      "symbol": "IRFC",
-      "stockName": "Indian Railway Finance Corporation Ltd.",
-      "cmp": 89.92,
-      "high52": 139.39,
-      "low52": 87.0,
-      "changePct": -0.35,
-      "downFromHighPct": -35.49,
-      "aboveLowPct": 3.36,
-      "status": "Near 52W Low",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 47.7,
-      "signal": "Weak / Corrected",
-      "rank": 170
-    },
-    {
-      "symbol": "NATIONALUM",
-      "stockName": "National Aluminium Co. Ltd.",
-      "cmp": 342.55,
-      "high52": 445.15,
-      "low52": 179.93,
-      "changePct": -2.42,
-      "downFromHighPct": -23.05,
-      "aboveLowPct": 90.38,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 47.6,
-      "signal": "Weak / Corrected",
-      "rank": 171
-    },
-    {
-      "symbol": "ABREL",
-      "stockName": "Aditya Birla Real Estate Ltd.",
-      "cmp": 1409.8,
-      "high52": 2294.0,
-      "low52": 1080.1,
-      "changePct": -0.54,
-      "downFromHighPct": -38.54,
-      "aboveLowPct": 30.52,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 47.3,
-      "signal": "Weak / Corrected",
-      "rank": 172
-    },
-    {
-      "symbol": "HATHWAY",
-      "stockName": "Hathway Cable & Datacom Ltd.",
-      "cmp": 11.09,
-      "high52": 17.98,
-      "low52": 8.76,
-      "changePct": -0.54,
-      "downFromHighPct": -38.32,
-      "aboveLowPct": 26.6,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 46.6,
-      "signal": "Weak / Corrected",
-      "rank": 173
-    },
-    {
-      "symbol": "POLYCAB",
-      "stockName": "Polycab India Ltd.",
-      "cmp": 9401.0,
-      "high52": 10126.0,
-      "low52": 6620.0,
-      "changePct": -1.91,
-      "downFromHighPct": -7.16,
-      "aboveLowPct": 42.01,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 46.5,
+      "strengthScore": 45.2,
       "signal": "Weak / Corrected",
       "rank": 174
     },
     {
-      "symbol": "SUZLON",
-      "stockName": "Suzlon Energy Ltd.",
-      "cmp": 54.38,
-      "high52": 68.3,
-      "low52": 38.19,
-      "changePct": -1.97,
-      "downFromHighPct": -20.38,
-      "aboveLowPct": 42.39,
+      "symbol": "TECHM",
+      "stockName": "Tech Mahindra Ltd",
+      "cmp": 1426.3,
+      "high52": 1854.0,
+      "low52": 1304.1,
+      "changePct": -0.17,
+      "downFromHighPct": -23.07,
+      "aboveLowPct": 9.37,
       "status": "Corrected",
       "indices": [
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY IT",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 46.4,
+      "strengthScore": 44.3,
       "signal": "Weak / Corrected",
       "rank": 175
     },
     {
-      "symbol": "JPPOWER",
-      "stockName": "Jaiprakash Power Ventures Ltd.",
-      "cmp": 17.56,
-      "high52": 27.7,
-      "low52": 13.15,
-      "changePct": -0.73,
-      "downFromHighPct": -36.61,
-      "aboveLowPct": 33.54,
-      "status": "Deep Correction",
+      "symbol": "ICICIGI",
+      "stockName": "ICICI Lombard General Insurance Company Ltd.",
+      "cmp": 1794.7,
+      "high52": 2064.9,
+      "low52": 1629.5,
+      "changePct": -0.53,
+      "downFromHighPct": -13.09,
+      "aboveLowPct": 10.14,
+      "status": "Mid Range",
       "indices": [
-        "NIFTY ENERGY"
+        "FINNIFTY",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 46.0,
+      "strengthScore": 44.0,
       "signal": "Weak / Corrected",
       "rank": 176
     },
     {
-      "symbol": "RECLTD",
-      "stockName": "REC Ltd.",
-      "cmp": 356.25,
-      "high52": 408.25,
-      "low52": 304.05,
-      "changePct": -2.33,
-      "downFromHighPct": -12.74,
-      "aboveLowPct": 17.17,
-      "status": "Mid Range",
+      "symbol": "ZEEL",
+      "stockName": "Zee Entertainment Enterprises Ltd.",
+      "cmp": 99.79,
+      "high52": 146.99,
+      "low52": 68.0,
+      "changePct": 0.23,
+      "downFromHighPct": -32.11,
+      "aboveLowPct": 46.75,
+      "status": "Deep Correction",
       "indices": [
-        "FINNIFTY",
-        "NIFTY 100",
-        "NIFTY FINANCIAL SERVICES",
-        "NIFTY NEXT 50"
+        "NIFTY MEDIA"
       ],
-      "strengthScore": 45.9,
+      "strengthScore": 43.5,
       "signal": "Weak / Corrected",
       "rank": 177
     },
     {
-      "symbol": "ATGL",
-      "stockName": "Adani Total Gas Ltd.",
-      "cmp": 711.2,
-      "high52": 859.85,
-      "low52": 462.8,
-      "changePct": -1.8,
-      "downFromHighPct": -17.29,
-      "aboveLowPct": 53.67,
+      "symbol": "M&M",
+      "stockName": "Mahindra & Mahindra Ltd",
+      "cmp": 3085.4,
+      "high52": 3839.9,
+      "low52": 2896.0,
+      "changePct": -0.55,
+      "downFromHighPct": -19.65,
+      "aboveLowPct": 6.54,
       "status": "Corrected",
       "indices": [
-        "NIFTY ENERGY"
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY AUTO",
+        "S&P BSE SENSEX"
       ],
-      "strengthScore": 45.9,
+      "strengthScore": 43.2,
       "signal": "Weak / Corrected",
       "rank": 178
     },
     {
-      "symbol": "VBL",
-      "stockName": "Varun Beverages Ltd.",
-      "cmp": 484.25,
-      "high52": 555.8,
-      "low52": 381.0,
-      "changePct": -2.14,
-      "downFromHighPct": -12.87,
-      "aboveLowPct": 27.1,
+      "symbol": "JSWENERGY",
+      "stockName": "JSW Energy Ltd.",
+      "cmp": 533.45,
+      "high52": 617.35,
+      "low52": 427.75,
+      "changePct": -0.65,
+      "downFromHighPct": -13.59,
+      "aboveLowPct": 24.71,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 43.2,
+      "signal": "Weak / Corrected",
+      "rank": 179
+    },
+    {
+      "symbol": "HYUNDAI",
+      "stockName": "Hyundai Motor India Ltd.",
+      "cmp": 1926.2,
+      "high52": 2890.0,
+      "low52": 1658.0,
+      "changePct": 0.49,
+      "downFromHighPct": -33.35,
+      "aboveLowPct": 16.18,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 43.0,
+      "signal": "Weak / Corrected",
+      "rank": 180
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "stockName": "Hero MotoCorp Ltd.",
+      "cmp": 4898.5,
+      "high52": 6388.5,
+      "low52": 4190.0,
+      "changePct": 0.12,
+      "downFromHighPct": -23.32,
+      "aboveLowPct": 16.91,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY AUTO",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 42.9,
+      "signal": "Weak / Corrected",
+      "rank": 181
+    },
+    {
+      "symbol": "PIIND",
+      "stockName": "PI Industries Ltd.",
+      "cmp": 2597.5,
+      "high52": 4330.0,
+      "low52": 2541.0,
+      "changePct": 0.98,
+      "downFromHighPct": -40.01,
+      "aboveLowPct": 2.22,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY COMMODITIES"
+      ],
+      "strengthScore": 42.9,
+      "signal": "Weak / Corrected",
+      "rank": 182
+    },
+    {
+      "symbol": "HINDZINC",
+      "stockName": "Hindustan Zinc Ltd.",
+      "cmp": 528.5,
+      "high52": 733.0,
+      "low52": 413.5,
+      "changePct": -0.34,
+      "downFromHighPct": -27.9,
+      "aboveLowPct": 27.81,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY METAL",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 42.8,
+      "signal": "Weak / Corrected",
+      "rank": 183
+    },
+    {
+      "symbol": "ASHOKLEY",
+      "stockName": "Ashok Leyland Ltd.",
+      "cmp": 155.19,
+      "high52": 215.42,
+      "low52": 114.96,
+      "changePct": -0.66,
+      "downFromHighPct": -27.96,
+      "aboveLowPct": 34.99,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY AUTO",
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 42.5,
+      "signal": "Weak / Corrected",
+      "rank": 184
+    },
+    {
+      "symbol": "JPPOWER",
+      "stockName": "Jaiprakash Power Ventures Ltd.",
+      "cmp": 17.0,
+      "high52": 27.7,
+      "low52": 13.15,
+      "changePct": 0.59,
+      "downFromHighPct": -38.63,
+      "aboveLowPct": 29.28,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 42.5,
+      "signal": "Weak / Corrected",
+      "rank": 185
+    },
+    {
+      "symbol": "UNITDSPR",
+      "stockName": "United Spirits Ltd.",
+      "cmp": 1381.2,
+      "high52": 1488.0,
+      "low52": 1210.8,
+      "changePct": -1.96,
+      "downFromHighPct": -7.18,
+      "aboveLowPct": 14.07,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
         "NIFTY FMCG",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 45.7,
+      "strengthScore": 42.3,
       "signal": "Weak / Corrected",
-      "rank": 179
+      "rank": 186
     },
     {
-      "symbol": "SIEMENS",
-      "stockName": "Siemens Ltd.",
-      "cmp": 3495.0,
-      "high52": 3937.3,
-      "low52": 2826.0,
-      "changePct": -2.14,
-      "downFromHighPct": -11.23,
-      "aboveLowPct": 23.67,
+      "symbol": "MUTHOOTFIN",
+      "stockName": "Muthoot Finance Ltd.",
+      "cmp": 3057.4,
+      "high52": 4149.5,
+      "low52": 2476.6,
+      "changePct": -0.84,
+      "downFromHighPct": -26.32,
+      "aboveLowPct": 23.45,
+      "status": "Corrected",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 42.2,
+      "signal": "Weak / Corrected",
+      "rank": 187
+    },
+    {
+      "symbol": "BEL",
+      "stockName": "Bharat Electronics Ltd.",
+      "cmp": 406.2,
+      "high52": 473.45,
+      "low52": 361.2,
+      "changePct": -0.34,
+      "downFromHighPct": -14.2,
+      "aboveLowPct": 12.46,
       "status": "Mid Range",
       "indices": [
         "NIFTY 100",
-        "NIFTY ENERGY",
+        "NIFTY 50"
+      ],
+      "strengthScore": 42.2,
+      "signal": "Weak / Corrected",
+      "rank": 188
+    },
+    {
+      "symbol": "SUNTV",
+      "stockName": "Sun TV Network Ltd.",
+      "cmp": 499.25,
+      "high52": 660.7,
+      "low52": 480.2,
+      "changePct": 0.53,
+      "downFromHighPct": -24.44,
+      "aboveLowPct": 3.97,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 42.0,
+      "signal": "Weak / Corrected",
+      "rank": 189
+    },
+    {
+      "symbol": "IRFC",
+      "stockName": "Indian Railway Finance Corporation Ltd.",
+      "cmp": 88.12,
+      "high52": 139.0,
+      "low52": 86.93,
+      "changePct": 0.71,
+      "downFromHighPct": -36.6,
+      "aboveLowPct": 1.37,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY 100",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 45.6,
+      "strengthScore": 41.7,
       "signal": "Weak / Corrected",
-      "rank": 180
+      "rank": 190
+    },
+    {
+      "symbol": "NTPC",
+      "stockName": "NTPC Ltd",
+      "cmp": 343.7,
+      "high52": 414.4,
+      "low52": 315.55,
+      "changePct": -1.43,
+      "downFromHighPct": -17.06,
+      "aboveLowPct": 8.92,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 41.4,
+      "signal": "Weak / Corrected",
+      "rank": 191
+    },
+    {
+      "symbol": "SBICARD",
+      "stockName": "SBI Cards and Payment Services Ltd.",
+      "cmp": 588.2,
+      "high52": 1004.75,
+      "low52": 565.45,
+      "changePct": 0.53,
+      "downFromHighPct": -41.46,
+      "aboveLowPct": 4.02,
+      "status": "Near 52W Low",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY FINANCIAL SERVICES",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 41.3,
+      "signal": "Weak / Corrected",
+      "rank": 192
+    },
+    {
+      "symbol": "NTPCGREEN",
+      "stockName": "NTPC Green Energy Ltd.",
+      "cmp": 92.99,
+      "high52": 119.95,
+      "low52": 84.0,
+      "changePct": 0.31,
+      "downFromHighPct": -22.48,
+      "aboveLowPct": 10.7,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 41.1,
+      "signal": "Weak / Corrected",
+      "rank": 193
+    },
+    {
+      "symbol": "MARUTI",
+      "stockName": "Maruti Suzuki India Ltd",
+      "cmp": 13728.0,
+      "high52": 17370.0,
+      "low52": 12201.0,
+      "changePct": -1.6,
+      "downFromHighPct": -20.97,
+      "aboveLowPct": 12.52,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY AUTO",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 40.5,
+      "signal": "Weak / Corrected",
+      "rank": 194
+    },
+    {
+      "symbol": "POLYCAB",
+      "stockName": "Polycab India Ltd.",
+      "cmp": 9074.0,
+      "high52": 10126.0,
+      "low52": 6620.0,
+      "changePct": -1.73,
+      "downFromHighPct": -10.39,
+      "aboveLowPct": 37.07,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 40.5,
+      "signal": "Weak / Corrected",
+      "rank": 195
+    },
+    {
+      "symbol": "ONGC",
+      "stockName": "Oil & Natural Gas Corporation Ltd.",
+      "cmp": 243.65,
+      "high52": 307.5,
+      "low52": 227.65,
+      "changePct": -1.36,
+      "downFromHighPct": -20.76,
+      "aboveLowPct": 7.03,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA"
+      ],
+      "strengthScore": 40.1,
+      "signal": "Weak / Corrected",
+      "rank": 196
+    },
+    {
+      "symbol": "DRREDDY",
+      "stockName": "Dr. Reddy's Laboratories Ltd.",
+      "cmp": 1269.5,
+      "high52": 1414.9,
+      "low52": 1148.4,
+      "changePct": -5.89,
+      "downFromHighPct": -10.28,
+      "aboveLowPct": 10.55,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY PHARMA"
+      ],
+      "strengthScore": 39.9,
+      "signal": "Weak / Corrected",
+      "rank": 197
+    },
+    {
+      "symbol": "APLAPOLLO",
+      "stockName": "APL Apollo Tubes Ltd.",
+      "cmp": 1785.9,
+      "high52": 2301.4,
+      "low52": 1492.0,
+      "changePct": -1.31,
+      "downFromHighPct": -22.4,
+      "aboveLowPct": 19.7,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY METAL",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 39.5,
+      "signal": "Weak / Corrected",
+      "rank": 198
+    },
+    {
+      "symbol": "CASTROLIND",
+      "stockName": "Castrol India Ltd.",
+      "cmp": 183.5,
+      "high52": 232.43,
+      "low52": 170.1,
+      "changePct": 0.1,
+      "downFromHighPct": -21.05,
+      "aboveLowPct": 7.88,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 39.3,
+      "signal": "Weak / Corrected",
+      "rank": 199
     },
     {
       "symbol": "PATANJALI",
       "stockName": "Patanjali Foods Ltd.",
-      "cmp": 414.5,
+      "cmp": 412.25,
       "high52": 653.93,
       "low52": 406.35,
-      "changePct": -0.24,
-      "downFromHighPct": -36.61,
-      "aboveLowPct": 2.01,
+      "changePct": 0.72,
+      "downFromHighPct": -36.96,
+      "aboveLowPct": 1.45,
       "status": "Near 52W Low",
       "indices": [
         "NIFTY FMCG"
       ],
-      "strengthScore": 45.4,
+      "strengthScore": 39.3,
       "signal": "Weak / Corrected",
-      "rank": 181
+      "rank": 200
+    },
+    {
+      "symbol": "UPL",
+      "stockName": "UPL Ltd.",
+      "cmp": 581.85,
+      "high52": 812.2,
+      "low52": 563.15,
+      "changePct": 0.03,
+      "downFromHighPct": -28.36,
+      "aboveLowPct": 3.32,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 38.4,
+      "signal": "Weak / Corrected",
+      "rank": 201
+    },
+    {
+      "symbol": "UCOBANK",
+      "stockName": "UCO Bank",
+      "cmp": 26.05,
+      "high52": 34.2,
+      "low52": 22.22,
+      "changePct": -0.23,
+      "downFromHighPct": -23.83,
+      "aboveLowPct": 17.24,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY PSU BANK"
+      ],
+      "strengthScore": 37.8,
+      "signal": "Weak / Corrected",
+      "rank": 202
     },
     {
       "symbol": "WIPRO",
       "stockName": "Wipro Ltd.",
-      "cmp": 173.0,
+      "cmp": 172.76,
       "high52": 273.1,
       "low52": 169.0,
-      "changePct": -0.76,
-      "downFromHighPct": -36.65,
-      "aboveLowPct": 2.37,
+      "changePct": 0.02,
+      "downFromHighPct": -36.74,
+      "aboveLowPct": 2.22,
       "status": "Near 52W Low",
       "indices": [
         "NIFTY 100",
         "NIFTY 50",
         "NIFTY IT"
       ],
-      "strengthScore": 45.2,
-      "signal": "Weak / Corrected",
-      "rank": 182
-    },
-    {
-      "symbol": "AMBUJACEM",
-      "stockName": "Ambuja Cements Ltd.",
-      "cmp": 435.9,
-      "high52": 624.95,
-      "low52": 394.0,
-      "changePct": -1.25,
-      "downFromHighPct": -30.25,
-      "aboveLowPct": 10.63,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 45.1,
-      "signal": "Weak / Corrected",
-      "rank": 183
-    },
-    {
-      "symbol": "BEL",
-      "stockName": "Bharat Electronics Ltd.",
-      "cmp": 419.15,
-      "high52": 473.45,
-      "low52": 361.2,
-      "changePct": -1.5,
-      "downFromHighPct": -11.47,
-      "aboveLowPct": 16.04,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50"
-      ],
-      "strengthScore": 45.0,
-      "signal": "Weak / Corrected",
-      "rank": 184
-    },
-    {
-      "symbol": "MCX",
-      "stockName": "Multi Commodity Exchange of India Ltd.",
-      "cmp": 2643.2,
-      "high52": 3480.0,
-      "low52": 1460.8,
-      "changePct": -2.93,
-      "downFromHighPct": -24.05,
-      "aboveLowPct": 80.94,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 44.6,
-      "signal": "Weak / Corrected",
-      "rank": 185
-    },
-    {
-      "symbol": "OBEROIRLTY",
-      "stockName": "Oberoi Realty Ltd.",
-      "cmp": 1906.4,
-      "high52": 1986.1,
-      "low52": 1391.2,
-      "changePct": -2.41,
-      "downFromHighPct": -4.01,
-      "aboveLowPct": 37.03,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 44.6,
-      "signal": "Weak / Corrected",
-      "rank": 186
-    },
-    {
-      "symbol": "MAHABANK",
-      "stockName": "Bank of Maharashtra",
-      "cmp": 83.19,
-      "high52": 94.5,
-      "low52": 51.71,
-      "changePct": -3.84,
-      "downFromHighPct": -11.97,
-      "aboveLowPct": 60.88,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 44.1,
-      "signal": "Weak / Corrected",
-      "rank": 187
-    },
-    {
-      "symbol": "HINDZINC",
-      "stockName": "Hindustan Zinc Ltd.",
-      "cmp": 531.1,
-      "high52": 733.0,
-      "low52": 413.5,
-      "changePct": -1.71,
-      "downFromHighPct": -27.54,
-      "aboveLowPct": 28.44,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY METAL",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 43.4,
-      "signal": "Weak / Corrected",
-      "rank": 188
-    },
-    {
-      "symbol": "JSL",
-      "stockName": "Jindal Stainless Ltd.",
-      "cmp": 695.45,
-      "high52": 884.0,
-      "low52": 652.25,
-      "changePct": -0.97,
-      "downFromHighPct": -21.33,
-      "aboveLowPct": 6.62,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 43.0,
-      "signal": "Weak / Corrected",
-      "rank": 189
-    },
-    {
-      "symbol": "WOCKPHARMA",
-      "stockName": "Wockhardt Ltd.",
-      "cmp": 1857.4,
-      "high52": 2422.3,
-      "low52": 1086.7,
-      "changePct": -3.03,
-      "downFromHighPct": -23.32,
-      "aboveLowPct": 70.92,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 42.9,
-      "signal": "Weak / Corrected",
-      "rank": 190
-    },
-    {
-      "symbol": "DLF",
-      "stockName": "DLF Ltd.",
-      "cmp": 651.1,
-      "high52": 856.45,
-      "low52": 489.4,
-      "changePct": -3.3,
-      "downFromHighPct": -23.98,
-      "aboveLowPct": 33.04,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50",
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 42.8,
-      "signal": "Weak / Corrected",
-      "rank": 191
-    },
-    {
-      "symbol": "PPLPHARMA",
-      "stockName": "Piramal Pharma Ltd.",
-      "cmp": 175.23,
-      "high52": 220.85,
-      "low52": 132.3,
-      "changePct": -1.49,
-      "downFromHighPct": -20.66,
-      "aboveLowPct": 32.45,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 42.8,
-      "signal": "Weak / Corrected",
-      "rank": 192
-    },
-    {
-      "symbol": "JINDALSTEL",
-      "stockName": "Jindal Steel Ltd.",
-      "cmp": 1035.4,
-      "high52": 1306.2,
-      "low52": 926.75,
-      "changePct": -2.27,
-      "downFromHighPct": -20.73,
-      "aboveLowPct": 11.72,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY COMMODITIES",
-        "NIFTY METAL",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 42.6,
-      "signal": "Weak / Corrected",
-      "rank": 193
-    },
-    {
-      "symbol": "HYUNDAI",
-      "stockName": "Hyundai Motor India Ltd.",
-      "cmp": 1980.5,
-      "high52": 2890.0,
-      "low52": 1658.0,
-      "changePct": -1.19,
-      "downFromHighPct": -31.47,
-      "aboveLowPct": 19.45,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 42.3,
-      "signal": "Weak / Corrected",
-      "rank": 194
-    },
-    {
-      "symbol": "PVRINOX",
-      "stockName": "PVR INOX Ltd.",
-      "cmp": 1001.95,
-      "high52": 1249.7,
-      "low52": 907.4,
-      "changePct": -1.19,
-      "downFromHighPct": -19.82,
-      "aboveLowPct": 10.42,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 42.1,
-      "signal": "Weak / Corrected",
-      "rank": 195
-    },
-    {
-      "symbol": "SUNTV",
-      "stockName": "Sun TV Network Ltd.",
-      "cmp": 507.45,
-      "high52": 660.7,
-      "low52": 480.2,
-      "changePct": -1.08,
-      "downFromHighPct": -23.2,
-      "aboveLowPct": 5.67,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 41.7,
-      "signal": "Weak / Corrected",
-      "rank": 196
-    },
-    {
-      "symbol": "SAREGAMA",
-      "stockName": "Saregama India Ltd",
-      "cmp": 460.15,
-      "high52": 520.0,
-      "low52": 307.05,
-      "changePct": -5.72,
-      "downFromHighPct": -11.51,
-      "aboveLowPct": 49.86,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 41.7,
-      "signal": "Weak / Corrected",
-      "rank": 197
-    },
-    {
-      "symbol": "CESC",
-      "stockName": "CESC Ltd.",
-      "cmp": 166.7,
-      "high52": 204.5,
-      "low52": 138.12,
-      "changePct": -1.49,
-      "downFromHighPct": -18.48,
-      "aboveLowPct": 20.69,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 41.5,
-      "signal": "Weak / Corrected",
-      "rank": 198
-    },
-    {
-      "symbol": "UBL",
-      "stockName": "United Breweries Ltd.",
-      "cmp": 1358.6,
-      "high52": 2110.0,
-      "low52": 1276.0,
-      "changePct": -0.77,
-      "downFromHighPct": -35.61,
-      "aboveLowPct": 6.47,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY FMCG"
-      ],
-      "strengthScore": 41.0,
-      "signal": "Weak / Corrected",
-      "rank": 199
-    },
-    {
-      "symbol": "NLCINDIA",
-      "stockName": "NLC India Ltd.",
-      "cmp": 302.25,
-      "high52": 387.8,
-      "low52": 220.71,
-      "changePct": -1.85,
-      "downFromHighPct": -22.06,
-      "aboveLowPct": 36.94,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 40.9,
-      "signal": "Weak / Corrected",
-      "rank": 200
-    },
-    {
-      "symbol": "WAAREEENER",
-      "stockName": "Waaree Energies Ltd.",
-      "cmp": 2841.2,
-      "high52": 3865.0,
-      "low52": 2403.0,
-      "changePct": -1.22,
-      "downFromHighPct": -26.49,
-      "aboveLowPct": 18.24,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 40.8,
-      "signal": "Weak / Corrected",
-      "rank": 201
-    },
-    {
-      "symbol": "SAIL",
-      "stockName": "Steel Authority of India Ltd.",
-      "cmp": 165.66,
-      "high52": 209.7,
-      "low52": 118.1,
-      "changePct": -2.11,
-      "downFromHighPct": -21.0,
-      "aboveLowPct": 40.27,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY METAL"
-      ],
-      "strengthScore": 40.6,
-      "signal": "Weak / Corrected",
-      "rank": 202
-    },
-    {
-      "symbol": "UPL",
-      "stockName": "UPL Ltd.",
-      "cmp": 600.85,
-      "high52": 812.2,
-      "low52": 563.15,
-      "changePct": -1.28,
-      "downFromHighPct": -26.02,
-      "aboveLowPct": 6.69,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY COMMODITIES",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 40.5,
+      "strengthScore": 37.6,
       "signal": "Weak / Corrected",
       "rank": 203
     },
     {
+      "symbol": "OIL",
+      "stockName": "Oil India Ltd.",
+      "cmp": 423.05,
+      "high52": 531.0,
+      "low52": 384.6,
+      "changePct": -1.7,
+      "downFromHighPct": -20.33,
+      "aboveLowPct": 10.0,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 37.6,
+      "signal": "Weak / Corrected",
+      "rank": 204
+    },
+    {
+      "symbol": "CESC",
+      "stockName": "CESC Ltd.",
+      "cmp": 162.88,
+      "high52": 204.5,
+      "low52": 138.12,
+      "changePct": -0.55,
+      "downFromHighPct": -20.35,
+      "aboveLowPct": 17.93,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 37.5,
+      "signal": "Weak / Corrected",
+      "rank": 205
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "stockName": "HDFC Life Insurance Company Ltd.",
+      "cmp": 551.85,
+      "high52": 815.0,
+      "low52": 543.0,
+      "changePct": -0.69,
+      "downFromHighPct": -32.29,
+      "aboveLowPct": 1.63,
+      "status": "Near 52W Low",
+      "indices": [
+        "FINNIFTY",
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FINANCIAL SERVICES"
+      ],
+      "strengthScore": 36.8,
+      "signal": "Weak / Corrected",
+      "rank": 206
+    },
+    {
+      "symbol": "TCS",
+      "stockName": "Tata Consultancy Services Ltd",
+      "cmp": 2049.5,
+      "high52": 3414.0,
+      "low52": 1976.8,
+      "changePct": -0.39,
+      "downFromHighPct": -39.97,
+      "aboveLowPct": 3.68,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY IT",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 36.3,
+      "signal": "Weak / Corrected",
+      "rank": 207
+    },
+    {
+      "symbol": "SJVN",
+      "stockName": "SJVN Ltd.",
+      "cmp": 70.07,
+      "high52": 101.45,
+      "low52": 63.02,
+      "changePct": -0.1,
+      "downFromHighPct": -30.93,
+      "aboveLowPct": 11.19,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 35.4,
+      "signal": "Weak / Corrected",
+      "rank": 208
+    },
+    {
+      "symbol": "UBL",
+      "stockName": "United Breweries Ltd.",
+      "cmp": 1328.2,
+      "high52": 2110.0,
+      "low52": 1276.0,
+      "changePct": 0.23,
+      "downFromHighPct": -37.05,
+      "aboveLowPct": 4.09,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY FMCG"
+      ],
+      "strengthScore": 34.1,
+      "signal": "High Weakness",
+      "rank": 209
+    },
+    {
+      "symbol": "RPOWER",
+      "stockName": "Reliance Power Ltd.",
+      "cmp": 24.79,
+      "high52": 66.85,
+      "low52": 20.17,
+      "changePct": 0.65,
+      "downFromHighPct": -62.92,
+      "aboveLowPct": 22.91,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 33.6,
+      "signal": "High Weakness",
+      "rank": 210
+    },
+    {
+      "symbol": "INFY",
+      "stockName": "Infosys Ltd",
+      "cmp": 1050.8,
+      "high52": 1728.0,
+      "low52": 982.4,
+      "changePct": -1.73,
+      "downFromHighPct": -39.19,
+      "aboveLowPct": 6.96,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY IT",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 32.8,
+      "signal": "High Weakness",
+      "rank": 211
+    },
+    {
       "symbol": "MAZDOCK",
       "stockName": "Mazagoan Dock Shipbuilders Ltd.",
-      "cmp": 2523.2,
+      "cmp": 2372.8,
       "high52": 3326.0,
       "low52": 2057.4,
-      "changePct": -1.97,
-      "downFromHighPct": -24.14,
-      "aboveLowPct": 22.64,
+      "changePct": -3.18,
+      "downFromHighPct": -28.66,
+      "aboveLowPct": 15.33,
       "status": "Corrected",
       "indices": [
         "NIFTY 100",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 39.1,
-      "signal": "Weak / Corrected",
-      "rank": 204
+      "strengthScore": 32.4,
+      "signal": "High Weakness",
+      "rank": 212
     },
     {
-      "symbol": "BIOCON",
-      "stockName": "Biocon Ltd.",
-      "cmp": 406.9,
-      "high52": 440.4,
-      "low52": 331.0,
-      "changePct": -4.1,
-      "downFromHighPct": -7.61,
-      "aboveLowPct": 22.93,
-      "status": "Mid Range",
+      "symbol": "TRENT",
+      "stockName": "Trent Ltd.",
+      "cmp": 2904.1,
+      "high52": 5674.0,
+      "low52": 2183.67,
+      "changePct": -0.68,
+      "downFromHighPct": -48.82,
+      "aboveLowPct": 32.99,
+      "status": "Deep Correction",
       "indices": [
-        "NIFTY PHARMA"
+        "NIFTY 100",
+        "NIFTY 50"
       ],
-      "strengthScore": 38.4,
-      "signal": "Weak / Corrected",
-      "rank": 205
-    },
-    {
-      "symbol": "CENTRALBK",
-      "stockName": "Central Bank of India",
-      "cmp": 32.13,
-      "high52": 40.92,
-      "low52": 29.32,
-      "changePct": -1.5,
-      "downFromHighPct": -21.48,
-      "aboveLowPct": 9.58,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY PSU BANK"
-      ],
-      "strengthScore": 37.9,
-      "signal": "Weak / Corrected",
-      "rank": 206
-    },
-    {
-      "symbol": "PIIND",
-      "stockName": "PI Industries Ltd.",
-      "cmp": 2652.3,
-      "high52": 4330.0,
-      "low52": 2541.0,
-      "changePct": -0.9,
-      "downFromHighPct": -38.75,
-      "aboveLowPct": 4.38,
-      "status": "Near 52W Low",
-      "indices": [
-        "NIFTY COMMODITIES"
-      ],
-      "strengthScore": 37.8,
-      "signal": "Weak / Corrected",
-      "rank": 207
-    },
-    {
-      "symbol": "NAVA",
-      "stockName": "Nava Ltd.",
-      "cmp": 603.7,
-      "high52": 739.4,
-      "low52": 501.65,
-      "changePct": -2.37,
-      "downFromHighPct": -18.35,
-      "aboveLowPct": 20.34,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 36.9,
-      "signal": "Weak / Corrected",
-      "rank": 208
-    },
-    {
-      "symbol": "ANANTRAJ",
-      "stockName": "Anant Raj Ltd.",
-      "cmp": 538.1,
-      "high52": 743.65,
-      "low52": 403.0,
-      "changePct": -2.32,
-      "downFromHighPct": -27.64,
-      "aboveLowPct": 33.52,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 36.5,
-      "signal": "Weak / Corrected",
-      "rank": 209
+      "strengthScore": 32.0,
+      "signal": "High Weakness",
+      "rank": 213
     },
     {
       "symbol": "TMPV",
       "stockName": "Tata Motors Passenger Vehicles Ltd.",
-      "cmp": 342.3,
+      "cmp": 331.5,
       "high52": 739.7,
       "low52": 294.3,
-      "changePct": -1.37,
-      "downFromHighPct": -53.72,
-      "aboveLowPct": 16.31,
+      "changePct": -0.17,
+      "downFromHighPct": -55.18,
+      "aboveLowPct": 12.64,
       "status": "Deep Correction",
       "indices": [
         "NIFTY 100",
         "NIFTY 50",
         "NIFTY AUTO"
       ],
-      "strengthScore": 34.8,
-      "signal": "High Weakness",
-      "rank": 210
-    },
-    {
-      "symbol": "INOXWIND",
-      "stockName": "Inox Wind Ltd.",
-      "cmp": 86.14,
-      "high52": 180.31,
-      "low52": 75.05,
-      "changePct": -0.93,
-      "downFromHighPct": -52.23,
-      "aboveLowPct": 14.78,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 34.7,
-      "signal": "High Weakness",
-      "rank": 211
-    },
-    {
-      "symbol": "NTPCGREEN",
-      "stockName": "NTPC Green Energy Ltd.",
-      "cmp": 92.67,
-      "high52": 119.95,
-      "low52": 84.0,
-      "changePct": -2.48,
-      "downFromHighPct": -22.74,
-      "aboveLowPct": 10.32,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 32.9,
-      "signal": "High Weakness",
-      "rank": 212
-    },
-    {
-      "symbol": "SUPREMEIND",
-      "stockName": "Supreme Industries Ltd.",
-      "cmp": 3181.4,
-      "high52": 4664.9,
-      "low52": 3141.0,
-      "changePct": -1.63,
-      "downFromHighPct": -31.8,
-      "aboveLowPct": 1.29,
-      "status": "Near 52W Low",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 32.6,
-      "signal": "High Weakness",
-      "rank": 213
-    },
-    {
-      "symbol": "RPOWER",
-      "stockName": "Reliance Power Ltd.",
-      "cmp": 24.96,
-      "high52": 66.85,
-      "low52": 20.17,
-      "changePct": -1.11,
-      "downFromHighPct": -62.66,
-      "aboveLowPct": 23.75,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY ENERGY"
-      ],
-      "strengthScore": 30.9,
+      "strengthScore": 31.5,
       "signal": "High Weakness",
       "rank": 214
     },
     {
-      "symbol": "TRENT",
-      "stockName": "Trent Ltd.",
-      "cmp": 2927.8,
-      "high52": 5674.0,
-      "low52": 2183.67,
-      "changePct": -12.44,
-      "downFromHighPct": -48.4,
-      "aboveLowPct": 34.08,
-      "status": "Deep Correction",
+      "symbol": "HAVELLS",
+      "stockName": "Havells India Ltd.",
+      "cmp": 1190.8,
+      "high52": 1621.1,
+      "low52": 1123.6,
+      "changePct": -1.41,
+      "downFromHighPct": -26.54,
+      "aboveLowPct": 5.98,
+      "status": "Corrected",
       "indices": [
-        "NIFTY 100",
-        "NIFTY 50"
+        "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 28.7,
+      "strengthScore": 30.3,
       "signal": "High Weakness",
       "rank": 215
     },
     {
-      "symbol": "NETWORK18",
-      "stockName": "Network18 Media & Investments Ltd.",
-      "cmp": 31.91,
-      "high52": 65.29,
-      "low52": 27.38,
-      "changePct": -1.69,
-      "downFromHighPct": -51.13,
-      "aboveLowPct": 16.54,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 28.4,
-      "signal": "High Weakness",
-      "rank": 216
-    },
-    {
-      "symbol": "BRIGADE",
-      "stockName": "Brigade Enterprises Ltd.",
-      "cmp": 516.4,
-      "high52": 856.5,
-      "low52": 450.75,
-      "changePct": -3.9,
-      "downFromHighPct": -39.71,
-      "aboveLowPct": 14.56,
-      "status": "Deep Correction",
-      "indices": [
-        "NIFTY REALTY"
-      ],
-      "strengthScore": 26.1,
-      "signal": "High Weakness",
-      "rank": 217
-    },
-    {
       "symbol": "VEDL",
       "stockName": "Vedanta Ltd.",
-      "cmp": 275.05,
+      "cmp": 271.35,
       "high52": 795.0,
       "low52": 268.7,
-      "changePct": -2.46,
-      "downFromHighPct": -65.4,
-      "aboveLowPct": 2.36,
+      "changePct": -0.35,
+      "downFromHighPct": -65.87,
+      "aboveLowPct": 0.99,
       "status": "Near 52W Low",
       "indices": [
         "NIFTY 100",
@@ -4033,7 +3999,41 @@
         "NIFTY METAL",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 24.6,
+      "strengthScore": 27.4,
+      "signal": "High Weakness",
+      "rank": 216
+    },
+    {
+      "symbol": "NETWORK18",
+      "stockName": "Network18 Media & Investments Ltd.",
+      "cmp": 30.75,
+      "high52": 65.29,
+      "low52": 27.38,
+      "changePct": -0.68,
+      "downFromHighPct": -52.9,
+      "aboveLowPct": 12.31,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 24.4,
+      "signal": "High Weakness",
+      "rank": 217
+    },
+    {
+      "symbol": "INOXWIND",
+      "stockName": "Inox Wind Ltd.",
+      "cmp": 82.01,
+      "high52": 180.31,
+      "low52": 75.05,
+      "changePct": -0.86,
+      "downFromHighPct": -54.52,
+      "aboveLowPct": 9.27,
+      "status": "Deep Correction",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 22.4,
       "signal": "High Weakness",
       "rank": 218
     }
