@@ -17,6 +17,7 @@ on:
           - results
           - technical-analysis
           - stock-index
+          - stock-triggers
           - sector-pages
           - corporate-actions
           - 52w
@@ -31,10 +32,11 @@ on:
   # GitHub cron uses UTC time.
   # Scheduled runs use MODE=market so stock prices/market JSON are committed
   # even if heavier research generators are not needed.
-  # Runs Monday-Friday at 4:07 PM, 7:07 PM and 11:58 PM IST.
+  # Runs Monday-Friday at 4:07 PM, 7:07 PM and 11:58 PM IST, plus a weekend 7:07 PM refresh.
   schedule:
     - cron: "37 10 * * 1-5"
     - cron: "37 13 * * 1-5"
+    - cron: "37 13 * * 0,6"
     - cron: "28 18 * * 1-5"
 
 permissions:
@@ -47,7 +49,9 @@ concurrency:
 jobs:
   update-json:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # The scripts now use a shared symbol/OHLCV cache, so normal runs should be
+    # much faster. Keep a little extra headroom for temporary NSE/Yahoo slowness.
+    timeout-minutes: 120
 
     steps:
       - name: Checkout repository
@@ -77,6 +81,9 @@ jobs:
       - name: Run one-command data update
         env:
           PYTHONUNBUFFERED: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AIT_TRIGGER_AI_ENABLED: ${{ secrets.AIT_TRIGGER_AI_ENABLED }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             MODE="market"
@@ -90,16 +97,16 @@ jobs:
 
       - name: Show changed data files
         run: |
-          git status --short market-data stock-research-data markets/sector technical-analysis sitemap.xml || true
+          git status --short market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects || true
 
       - name: Commit and push updated JSON
         run: |
           BRANCH="${GITHUB_REF_NAME:-main}"
 
-          if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis sitemap.xml)" ]; then
+          if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add market-data stock-research-data markets/sector technical-analysis sitemap.xml
+            git add market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects
             git commit -m "chore: auto-update market data"
 
             echo "Pushing generated market data to origin/${BRANCH}..."
@@ -122,8 +129,8 @@ jobs:
                 git rebase --abort 2>/dev/null || true
                 git reset --hard "origin/$BRANCH"
                 python UpdateAllData.py --mode "${MODE:-market}" --batch-size 80
-                git add market-data stock-research-data markets/sector technical-analysis sitemap.xml
-                if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis sitemap.xml)" ]; then
+                git add market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects
+                if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects)" ]; then
                   git commit -m "chore: auto-update market data"
                 else
                   echo "No JSON changes after rebuilding. Nothing to push."

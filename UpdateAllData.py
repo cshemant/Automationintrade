@@ -12,11 +12,12 @@ Most common commands:
 
 What --mode all does:
   1) Updates Daily Market / scanner JSON via GenerateMarketToolsJson.py --mode all
+     (this market step already rebuilds sector-wise JSON/pages)
   2) Generates Price Action research-card JSON via GeneratePriceActionJson.py
   3) Generates Results research-card JSON via GenerateResultsJson.py
   4) Generates Technical Analysis research-card JSON via GenerateTechnicalAnalysisJson.py
-  5) Rebuilds sector-wise stock JSON/pages via GenerateSectorWiseStocks.py
-  6) Updates corporate actions JSON via GenerateCorporateActionsJson.py
+  5) Updates corporate actions JSON via GenerateCorporateActionsJson.py
+  6) Generates Stock Trigger Intelligence JSON via GenerateStockTriggersJson.py
   7) Rebuilds homepage stock search index via GenerateStockResearchIndex.py
 
 Useful testing commands:
@@ -25,6 +26,7 @@ Useful testing commands:
   python UpdateAllData.py --mode technical-analysis --limit 20
   python UpdateAllData.py --mode price-action --symbols AXISBANK,M&M
   python UpdateAllData.py --mode results --symbols RELIANCE,TCS
+  python UpdateAllData.py --mode stock-triggers
   python UpdateAllData.py --mode stock-index
 
 Notes:
@@ -82,16 +84,18 @@ def parse_args() -> argparse.Namespace:
             "results",
             "technical-analysis",
             "stock-index",
+            "stock-triggers",
             "sector-pages",
             "corporate-actions",
             *sorted(MARKET_MODES),
         ],
         help=(
-            "all = market tools + price-action JSON + results JSON + technical-analysis JSON + stock search index. "
-            "market = only GenerateMarketToolsJson.py --mode all + stock index. "
+            "all = market tools + research JSON + corporate actions + stock triggers/pages + stock search index. "
+            "market = market tools + corporate actions + stock triggers/pages + stock index. "
             "research = price-action + results + technical-analysis + stock index. "
             "price-action/results/technical-analysis = only that research JSON + stock index. "
             "stock-index = rebuild search index only. "
+            "stock-triggers = rebuild market-data/stock-triggers.json. "
             "corporate-actions = only market-data/corporate-actions.json. Other values are passed to GenerateMarketToolsJson.py --mode."
         ),
     )
@@ -214,6 +218,14 @@ def run_corporate_actions() -> None:
     run_step("Corporate actions JSON", [sys.executable, "GenerateCorporateActionsJson.py", "--write-empty-on-fail"])
 
 
+def run_stock_triggers(args: argparse.Namespace) -> None:
+    cmd = [sys.executable, "GenerateStockTriggersJson.py", "--write-empty-on-fail"]
+    symbols = _selected_symbols(args)
+    if symbols:
+        cmd += ["--symbols", symbols]
+    run_step("AIT Stock Trigger Intelligence JSON", cmd)
+
+
 def main() -> int:
     args = parse_args()
     mode = args.mode
@@ -224,7 +236,6 @@ def main() -> int:
 
     if mode == "all":
         run_market("all", args)
-        run_sector_pages()
         if not args.skip_price_action:
             run_price_action(args)
         if not args.skip_results:
@@ -232,12 +243,13 @@ def main() -> int:
         if not args.skip_technical:
             run_technical(args)
         run_corporate_actions()
+        run_stock_triggers(args)
         run_stock_index()
 
     elif mode == "market":
         run_market("all", args)
-        run_sector_pages()
         run_corporate_actions()
+        run_stock_triggers(args)
         run_stock_index()
 
     elif mode == "research":
@@ -260,6 +272,10 @@ def main() -> int:
 
     elif mode == "corporate-actions":
         run_corporate_actions()
+        run_stock_triggers(args)
+
+    elif mode == "stock-triggers":
+        run_stock_triggers(args)
 
     elif mode == "stock-index":
         run_stock_index()
@@ -285,9 +301,17 @@ def main() -> int:
     print("  stock-research-data/")
     print("  market-data/sector-wise-stocks.json")
     print("  market-data/corporate-actions.json")
+    print("  market-data/stock-triggers.json")
+    print("  market-data/stock-trigger-pages-manifest.json")
+    print("  stock-triggers/events/")
+    print("  stock-triggers/category/")
+    print("  stocks/")
     print("  markets/sector/")
     print("  technical-analysis/")
     print("  sitemap.xml")
+    print("  sitemap-stock-triggers.xml")
+    print("  robots.txt")
+    print("  _redirects")
     print("=" * 72)
     return 0
 

@@ -10,7 +10,7 @@ What this script does:
 - Tries data sources in this order:
     1) NSE India live index API for current CMP and 52W data
     2) NSE India quote API per symbol if index API data is unavailable
-    3) Yahoo Finance using yfinance only as fallback
+    3) Yahoo Finance daily history + batched 5-minute latest-price fallback
     4) Previous JSON value as safe fallback
 - Adds validation so wrong prices like split-adjusted / bad-source values are not blindly published.
 
@@ -46,7 +46,8 @@ Recommended daily workflow:
 Important:
 - NSE may return 403 Forbidden. This is handled automatically.
 - NSE India is always tried before Yahoo Finance for stock price updates.
-- Yahoo may sometimes return delayed/bad/split-adjusted values, so it is used only as fallback and validated against previous JSON values.
+- Yahoo daily history can occasionally lag by one session, so a separate batched 5-minute feed overlays the latest completed-session CMP before JSON is written.
+- Yahoo values are still validated against previous JSON to avoid publishing split-adjusted or abnormal data.
 - If both sources fail, the script preserves the previous JSON value instead of publishing blanks.
 """
 
@@ -62,6 +63,13 @@ import requests
 import yfinance as yf
 import re
 
+from SharedMarketDataCache import (
+    ensure_latest_quote_cache,
+    ensure_ohlcv_cache,
+    load_cached_frame,
+    load_latest_quote,
+)
+
 
 # ============================================================
 # BASIC CONFIG
@@ -76,6 +84,7 @@ MOMENTUM_SCANNER_FILE = WEBSITE_ROOT / "market-data" / "bullish-bearish-momentum
 VOLUME_SURGE_FILE = WEBSITE_ROOT / "market-data" / "volume-surge-scanner.json"
 NEAR_BREAKOUT_FILE = WEBSITE_ROOT / "market-data" / "near-breakout-scanner.json"
 INDEX_PERFORMANCE_FILE = WEBSITE_ROOT / "market-data" / "index-performance.json"
+LATEST_STOCK_UNIVERSE_FILE = WEBSITE_ROOT / "market-data" / "latest-stock-universe.json"
 
 # Constituents:
 # True = try to download fresh constituent list from NiftyIndices CSV.
@@ -104,7 +113,26 @@ PREFER_PREVIOUS_WHEN_SUSPICIOUS = True
 
 DEFAULT_YAHOO_SUFFIX = ".NS"
 
-MAX_NSE_RETRIES = 2
+MAX_NSE_RETRIES = 1
+NSE_REQUEST_TIMEOUT_SECONDS = 8
+NSE_CIRCUIT_FAILURE_LIMIT = 3
+
+# NSE occasionally becomes unreachable from GitHub-hosted runners. Without a
+# circuit breaker, every stock can wait for the same timeout and a 5-minute job
+# can grow beyond the workflow limit. After a few consecutive failures, the
+# current run immediately uses the already-batched Yahoo/shared-cache fallback.
+NSE_CONSECUTIVE_FAILURES = 0
+NSE_CIRCUIT_OPEN = False
+
+CONSTITUENT_DOWNLOAD_FAILURES = 0
+CONSTITUENT_CIRCUIT_OPEN = False
+CONSTITUENT_CIRCUIT_FAILURE_LIMIT = 2
+
+# Constituents and Yahoo data are shared across every index in one run.
+# This prevents repeated CSV downloads and ensures CMP/intraday data is
+# downloaded once, then reused by all 52W files and downstream scanners.
+CONSTITUENTS_CACHE = {}
+SHARED_PREFETCHED_SYMBOLS = set()
 
 
 # ============================================================
@@ -283,15 +311,41 @@ def create_nse_session():
         "https://www.nseindia.com/market-data/live-equity-market",
     ]:
         try:
-            session.get(url, timeout=15)
-            time.sleep(0.5)
+            session.get(url, timeout=5)
+            time.sleep(0.15)
         except Exception:
             pass
 
     return session
 
 
-NSE_SESSION = create_nse_session()
+NSE_SESSION = None
+
+
+def get_nse_session():
+    global NSE_SESSION
+    if NSE_SESSION is None:
+        NSE_SESSION = create_nse_session()
+    return NSE_SESSION
+
+
+def reset_nse_circuit_on_success():
+    global NSE_CONSECUTIVE_FAILURES, NSE_CIRCUIT_OPEN
+    NSE_CONSECUTIVE_FAILURES = 0
+    NSE_CIRCUIT_OPEN = False
+
+
+def register_nse_failure(error):
+    global NSE_CONSECUTIVE_FAILURES, NSE_CIRCUIT_OPEN
+    NSE_CONSECUTIVE_FAILURES += 1
+    if NSE_CONSECUTIVE_FAILURES >= NSE_CIRCUIT_FAILURE_LIMIT:
+        if not NSE_CIRCUIT_OPEN:
+            print(
+                "NSE circuit breaker opened after repeated connection failures. "
+                "Using shared Yahoo cache/previous JSON for the rest of this run."
+            )
+        NSE_CIRCUIT_OPEN = True
+    return error
 
 
 # ============================================================
@@ -456,7 +510,12 @@ def add_calculated_fields(item):
 # ============================================================
 
 def download_constituents_from_csv(csv_url):
+    global CONSTITUENT_DOWNLOAD_FAILURES, CONSTITUENT_CIRCUIT_OPEN
+
     if not csv_url:
+        return []
+
+    if CONSTITUENT_CIRCUIT_OPEN:
         return []
 
     headers = {
@@ -466,8 +525,10 @@ def download_constituents_from_csv(csv_url):
     }
 
     try:
-        response = requests.get(csv_url, headers=headers, timeout=20)
+        response = requests.get(csv_url, headers=headers, timeout=8)
         response.raise_for_status()
+
+        CONSTITUENT_DOWNLOAD_FAILURES = 0
 
         from io import StringIO
         df = pd.read_csv(StringIO(response.text))
@@ -496,11 +557,21 @@ def download_constituents_from_csv(csv_url):
         return rows
 
     except Exception as e:
+        CONSTITUENT_DOWNLOAD_FAILURES += 1
+        if CONSTITUENT_DOWNLOAD_FAILURES >= CONSTITUENT_CIRCUIT_FAILURE_LIMIT:
+            CONSTITUENT_CIRCUIT_OPEN = True
+            print(
+                "NiftyIndices constituent download circuit opened. "
+                "Using the existing JSON symbol lists for remaining indices."
+            )
         print(f"Could not download constituents: {csv_url} -> {e}")
         return []
 
 
 def get_constituents(slug):
+    if slug in CONSTITUENTS_CACHE:
+        return [dict(row) for row in CONSTITUENTS_CACHE[slug]]
+
     config = INDEX_CONFIG[slug]
 
     rows = []
@@ -522,18 +593,72 @@ def get_constituents(slug):
                 "stockName": row.get("stockName", symbol),
             })
 
-    return unique_rows
+    CONSTITUENTS_CACHE[slug] = [dict(row) for row in unique_rows]
+    return [dict(row) for row in unique_rows]
+
+
+def prefetch_shared_market_data(slugs, label="selected indices"):
+    """Download shared daily history and latest intraday CMP once per run.
+
+    Daily history supplies 52W highs/lows and indicators. The separate 5-minute
+    intraday batch supplies the latest completed market-session CMP. This fixes
+    the common Yahoo daily-history delay where JSON files were rewritten but the
+    displayed price still belonged to the previous trading session.
+    """
+    global SHARED_PREFETCHED_SYMBOLS
+
+    ordered_symbols = []
+    seen = set()
+    for slug in slugs:
+        for row in get_constituents(slug):
+            symbol = clean_symbol(row.get("symbol", ""))
+            if symbol and symbol not in seen:
+                seen.add(symbol)
+                ordered_symbols.append(symbol)
+
+    missing_for_run = [symbol for symbol in ordered_symbols if symbol not in SHARED_PREFETCHED_SYMBOLS]
+    if not missing_for_run:
+        if ordered_symbols:
+            print(f"Shared market prefetch already available for {len(ordered_symbols)} symbols ({label}).")
+        return
+
+    print("\n" + "=" * 72)
+    print(f"One-time shared market prefetch for {label}: {len(missing_for_run)} symbols")
+    print("  1) Daily OHLCV: 52W high/low and scanners")
+    print("  2) 5-minute intraday: latest completed-session CMP")
+    print("=" * 72)
+
+    try:
+        ensure_ohlcv_cache(
+            missing_for_run,
+            period=YFINANCE_PERIOD,
+            interval=YFINANCE_INTERVAL,
+            batch_size=80,
+            sleep_seconds=0.25,
+            max_age_hours=8,
+        )
+    except Exception as exc:
+        print(f"Shared daily-history prefetch unavailable: {exc}")
+
+    try:
+        ensure_latest_quote_cache(
+            missing_for_run,
+            batch_size=40,
+            sleep_seconds=0.25,
+            max_age_minutes=30,
+        )
+    except Exception as exc:
+        print(f"Shared latest-price prefetch unavailable: {exc}")
+
+    SHARED_PREFETCHED_SYMBOLS.update(missing_for_run)
 
 
 # ============================================================
 # SOURCE 1: YAHOO FINANCE
 # ============================================================
 
-def fetch_from_yahoo(symbol, stock_name):
-    yahoo_symbol = yahoo_symbol_for_nse(symbol)
-
-    ticker = yf.Ticker(yahoo_symbol)
-    hist = ticker.history(period=YFINANCE_PERIOD, interval=YFINANCE_INTERVAL, auto_adjust=False)
+def stock_item_from_yahoo_frame(symbol, stock_name, hist):
+    """Build one stock item from the shared Yahoo OHLCV frame."""
 
     if hist is None or hist.empty:
         raise ValueError("No Yahoo history data")
@@ -552,6 +677,14 @@ def fetch_from_yahoo(symbol, stock_name):
 
     change_pct = ((cmp_price - prev_close) / prev_close) * 100 if prev_close else None
 
+    quote = load_latest_quote(symbol, max_age_minutes=360)
+    quote_close = safe_float(quote.get("close")) if quote else None
+    using_latest_quote = bool(
+        quote
+        and quote_close is not None
+        and abs(quote_close - cmp_price) <= max(0.05, abs(cmp_price) * 0.001)
+    )
+
     item = {
         "symbol": clean_symbol(symbol),
         "stockName": stock_name or symbol,
@@ -559,11 +692,36 @@ def fetch_from_yahoo(symbol, stock_name):
         "low52": round_or_none(low52),
         "cmp": round_or_none(cmp_price),
         "changePct": round_or_none(change_pct),
-        "source": "Yahoo",
+        "source": "Yahoo Latest Quote + Daily History" if using_latest_quote else "Yahoo Daily History",
         "dataQuality": "OK",
     }
+    if using_latest_quote:
+        item["marketDate"] = quote.get("marketDate")
+        item["marketTimestamp"] = quote.get("marketTimestamp")
 
     return add_calculated_fields(item)
+
+
+def fetch_from_yahoo(symbol, stock_name):
+    """Use the shared run cache first; download only when not prefetched."""
+    hist = load_cached_frame(
+        symbol,
+        period=YFINANCE_PERIOD,
+        interval=YFINANCE_INTERVAL,
+        max_age_hours=8,
+    )
+    if hist is None or hist.empty:
+        frames = ensure_ohlcv_cache(
+            [symbol],
+            period=YFINANCE_PERIOD,
+            interval=YFINANCE_INTERVAL,
+            batch_size=10,
+            sleep_seconds=0,
+            max_age_hours=8,
+        )
+        hist = frames.get(clean_symbol(symbol), pd.DataFrame())
+
+    return stock_item_from_yahoo_frame(symbol, stock_name, hist)
 
 
 # ============================================================
@@ -573,22 +731,29 @@ def fetch_from_yahoo(symbol, stock_name):
 def nse_get_json(url):
     global NSE_SESSION
 
+    if NSE_CIRCUIT_OPEN:
+        raise RuntimeError("NSE circuit breaker is open for this run")
+
     last_error = None
 
     for attempt in range(1, MAX_NSE_RETRIES + 1):
         try:
-            response = NSE_SESSION.get(url, timeout=20)
+            session = get_nse_session()
+            response = session.get(url, timeout=NSE_REQUEST_TIMEOUT_SECONDS)
 
             if response.status_code in [401, 403]:
                 NSE_SESSION = create_nse_session()
-                response = NSE_SESSION.get(url, timeout=20)
+                response = NSE_SESSION.get(url, timeout=NSE_REQUEST_TIMEOUT_SECONDS)
 
             response.raise_for_status()
-            return response.json()
+            payload = response.json()
+            reset_nse_circuit_on_success()
+            return payload
 
         except Exception as e:
-            last_error = e
-            time.sleep(1.2 * attempt)
+            last_error = register_nse_failure(e)
+            if attempt < MAX_NSE_RETRIES:
+                time.sleep(0.6 * attempt)
 
     raise RuntimeError(str(last_error))
 
@@ -776,6 +941,98 @@ def build_from_previous(symbol, stock_name, previous_item, reason):
     }
 
 
+
+# ============================================================
+# SYMBOL-LEVEL FETCH CACHE
+# ============================================================
+
+# During one script run, the same stock can appear in multiple indices
+# (for example RELIANCE can be in NIFTY 50, NIFTY 100, NIFTY 200, NIFTY 500, sector indices).
+# This cache ensures NSE/Yahoo is called only once per symbol unless a better NSE live-index row appears later.
+STOCK_FETCH_CACHE = {}
+
+SOURCE_PRIORITY = {
+    "NSE Live Index": 5,
+    "NSE Quote": 4,
+    "Yahoo Latest Quote + Daily History": 3,
+    "Yahoo Daily History": 2,
+    "Yahoo": 2,
+    "Previous JSON": 1,
+    "None": 0,
+}
+
+
+def source_priority(item):
+    if not isinstance(item, dict):
+        return 0
+    return SOURCE_PRIORITY.get(str(item.get("source", "")).strip(), 0)
+
+
+def clone_stock_item(item, symbol=None, stock_name=None):
+    cloned = dict(item or {})
+    if symbol:
+        cloned["symbol"] = clean_symbol(cloned.get("symbol") or symbol)
+    if stock_name and (not cloned.get("stockName") or clean_symbol(cloned.get("stockName")) == clean_symbol(cloned.get("symbol"))):
+        cloned["stockName"] = stock_name
+    return add_calculated_fields(cloned)
+
+
+def get_stock_data_once(symbol, stock_name, previous_item, nse_index_row=None):
+    """Fetch stock data once per symbol and reuse it across all index JSON files.
+
+    Refresh rules:
+    - If the symbol is not cached, fetch with NSE-first logic.
+    - If cached data is already NSE Live Index, always reuse it.
+    - If cached data is weaker (Yahoo/Previous) and this index gives a live NSE row,
+      refresh once using that better NSE live row and replace the cache.
+    """
+    symbol = clean_symbol(symbol)
+    cached = STOCK_FETCH_CACHE.get(symbol)
+
+    if cached is not None:
+        cached_rank = source_priority(cached)
+        has_better_live_row = bool(nse_index_row) and cached_rank < SOURCE_PRIORITY["NSE Live Index"]
+
+        if not has_better_live_row:
+            item = clone_stock_item(cached, symbol=symbol, stock_name=stock_name)
+            item["cacheStatus"] = "Reused in same run"
+            return item, True
+
+    item = choose_best_stock_data(symbol, stock_name, previous_item, nse_index_row=nse_index_row)
+    STOCK_FETCH_CACHE[symbol] = clone_stock_item(item, symbol=symbol, stock_name=stock_name)
+    return item, False
+
+
+def write_latest_stock_universe():
+    """Persist the deduplicated latest stock universe for debugging and downstream tools."""
+    if not STOCK_FETCH_CACHE:
+        return None
+
+    rows = []
+    for symbol, item in sorted(STOCK_FETCH_CACHE.items()):
+        row = clone_stock_item(item, symbol=symbol)
+        rows.append(row)
+
+    payload = {
+        "toolName": "Latest Stock Universe",
+        "updatedAt": format_timestamp(),
+        "uniqueStockCount": len(rows),
+        "sourceNote": (
+            "Deduplicated symbol-level cache generated during the latest market-data update. "
+            "Each symbol is fetched once per run and reused across index JSON/scanner generation."
+        ),
+        "stocks": rows,
+    }
+
+    LATEST_STOCK_UNIVERSE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with LATEST_STOCK_UNIVERSE_FILE.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+
+    print(f"Saved: {LATEST_STOCK_UNIVERSE_FILE}")
+    return LATEST_STOCK_UNIVERSE_FILE
+
+
+
 def choose_best_stock_data(symbol, stock_name, previous_item, nse_index_row=None):
     errors = []
     suspicious_candidates = []
@@ -848,9 +1105,40 @@ def update_index_json(slug):
         print(f"Fetched NSE live index rows for {len(nse_live_rows)} stocks: {index_name}")
     except Exception as e:
         print(f"NSE live index batch unavailable for {index_name}: {e}")
-        print("Falling back to NSE quote API per symbol, then Yahoo Finance.")
+        print("Falling back to bounded NSE quote attempts, then shared Yahoo cache.")
+
+    # Main() normally prefetches the full unique universe once. Keep this
+    # defensive targeted prefetch for direct/unit use of update_index_json().
+    fallback_symbols = [
+        clean_symbol(row.get("symbol", ""))
+        for row in constituents
+        if clean_symbol(row.get("symbol", ""))
+        and clean_symbol(row.get("symbol", "")) not in STOCK_FETCH_CACHE
+    ]
+    not_prefetched = [symbol for symbol in fallback_symbols if symbol not in SHARED_PREFETCHED_SYMBOLS]
+    if not_prefetched:
+        try:
+            ensure_ohlcv_cache(
+                not_prefetched,
+                period=YFINANCE_PERIOD,
+                interval=YFINANCE_INTERVAL,
+                batch_size=80,
+                sleep_seconds=0.25,
+                max_age_hours=8,
+            )
+            ensure_latest_quote_cache(
+                not_prefetched,
+                batch_size=40,
+                sleep_seconds=0.25,
+                max_age_minutes=30,
+            )
+            SHARED_PREFETCHED_SYMBOLS.update(not_prefetched)
+        except Exception as e:
+            print(f"Shared Yahoo prefetch unavailable for {index_name}: {e}")
 
     updated_stocks = []
+    cache_hits = 0
+    fresh_fetches = 0
 
     for i, row in enumerate(constituents, start=1):
         symbol = clean_symbol(row["symbol"])
@@ -858,15 +1146,23 @@ def update_index_json(slug):
         previous_item = previous_map.get(symbol)
         nse_index_row = nse_live_rows.get(symbol)
 
-        print(f"  {i}/{len(constituents)} {symbol}")
-
-        item = choose_best_stock_data(symbol, stock_name, previous_item, nse_index_row=nse_index_row)
+        item, from_cache = get_stock_data_once(symbol, stock_name, previous_item, nse_index_row=nse_index_row)
         updated_stocks.append(item)
 
-        # If the NSE index batch already supplied this symbol, no per-symbol network
-        # request was needed. Keep a small delay only when falling back to quote/Yahoo.
-        if not nse_index_row:
-            time.sleep(REQUEST_SLEEP_SECONDS)
+        if from_cache:
+            cache_hits += 1
+            print(f"  {i}/{len(constituents)} {symbol} [cache]")
+        else:
+            fresh_fetches += 1
+            print(f"  {i}/{len(constituents)} {symbol}")
+
+        # Yahoo fallback history is already downloaded in batches. A very small
+        # pause is kept only when an individual NSE quote actually succeeded.
+        if not from_cache and not nse_index_row and item.get("source") == "NSE Quote":
+            time.sleep(0.15)
+
+    if cache_hits:
+        print(f"Reused cached stock data for {cache_hits} duplicate symbols in {index_name}. Fresh fetches: {fresh_fetches}.")
 
     updated_stocks = [item for item in updated_stocks if is_publishable_stock_item(item)]
 
@@ -881,9 +1177,11 @@ def update_index_json(slug):
         "updatedAt": format_timestamp(),
         "sourceNote": (
             "Generated by Automation In Trade hybrid script. "
-            "Primary source: NSE India live index/quote APIs; Yahoo Finance is used only as fallback; "
-            "previous JSON is used only when all live sources fail or look suspicious. Values may be delayed. "
-            "Educational use only."
+            "Primary source: NSE India live index/quote APIs; Yahoo daily history plus a batched "
+            "5-minute latest-price feed is used as fallback. Previous JSON is used only when all "
+            "live sources fail or look suspicious. A symbol-level cache prevents repeated fetches "
+            "for stocks appearing in multiple indices. "
+            "Values may be delayed. Educational use only."
         ),
         "stocks": updated_stocks,
     }
@@ -1281,22 +1579,28 @@ def parse_nse_date(value):
 def nse_get_text(url):
     global NSE_SESSION
 
+    if NSE_CIRCUIT_OPEN:
+        raise RuntimeError("NSE circuit breaker is open for this run")
+
     last_error = None
 
     for attempt in range(1, MAX_NSE_RETRIES + 1):
         try:
-            response = NSE_SESSION.get(url, timeout=20)
+            session = get_nse_session()
+            response = session.get(url, timeout=NSE_REQUEST_TIMEOUT_SECONDS)
 
             if response.status_code in [401, 403]:
                 NSE_SESSION = create_nse_session()
-                response = NSE_SESSION.get(url, timeout=20)
+                response = NSE_SESSION.get(url, timeout=NSE_REQUEST_TIMEOUT_SECONDS)
 
             response.raise_for_status()
+            reset_nse_circuit_on_success()
             return response.text
 
         except Exception as e:
-            last_error = e
-            time.sleep(1.2 * attempt)
+            last_error = register_nse_failure(e)
+            if attempt < MAX_NSE_RETRIES:
+                time.sleep(0.6 * attempt)
 
     raise RuntimeError(str(last_error))
 
@@ -1855,13 +2159,11 @@ def update_bullish_bearish_momentum_scanner():
 # VOLUME SURGE SCANNER
 # ============================================================
 
-def fetch_volume_metrics_from_yahoo(symbol):
-    yahoo_symbol = yahoo_symbol_for_nse(symbol)
-    ticker = yf.Ticker(yahoo_symbol)
-    hist = ticker.history(period="45d", interval="1d", auto_adjust=False)
+def fetch_volume_metrics_from_frame(hist):
+    """Calculate volume metrics from the shared 1Y daily OHLCV cache."""
 
     if hist is None or hist.empty or "Volume" not in hist.columns:
-        raise ValueError("No Yahoo volume history")
+        raise ValueError("No shared Yahoo volume history")
 
     hist = hist.dropna(subset=["Close", "Volume"])
     hist = hist[hist["Volume"] > 0]
@@ -1884,7 +2186,7 @@ def fetch_volume_metrics_from_yahoo(symbol):
         "avgVolume20": round_or_none(avg_volume_20, 0),
         "volumeSurgeRatio": round_or_none(last_volume / avg_volume_20, 2),
         "changePctFromVolumeSource": round_or_none(change_pct),
-        "volumeSource": "Yahoo",
+        "volumeSource": "Yahoo Shared Cache",
     }
 
 
@@ -1917,6 +2219,24 @@ def build_volume_surge_rows_from_strength_rows(strength_rows, previous_rows=None
     previous_map = {clean_symbol(row.get("symbol", "")): row for row in previous_rows if row.get("symbol")}
     rows = []
 
+    symbols = [
+        clean_symbol(row.get("symbol", ""))
+        for row in strength_rows
+        if clean_symbol(row.get("symbol", "")) and safe_float(row.get("cmp")) is not None
+    ]
+    try:
+        shared_frames = ensure_ohlcv_cache(
+            symbols,
+            period=YFINANCE_PERIOD,
+            interval=YFINANCE_INTERVAL,
+            batch_size=80,
+            sleep_seconds=0.25,
+            max_age_hours=8,
+        )
+    except Exception as e:
+        print(f"Shared OHLCV cache unavailable for volume scanner: {e}")
+        shared_frames = {}
+
     for i, source_row in enumerate(strength_rows, start=1):
         symbol = clean_symbol(source_row.get("symbol", ""))
         if not symbol or safe_float(source_row.get("cmp")) is None:
@@ -1934,7 +2254,7 @@ def build_volume_surge_rows_from_strength_rows(strength_rows, previous_rows=None
         }
 
         try:
-            metrics = fetch_volume_metrics_from_yahoo(symbol)
+            metrics = fetch_volume_metrics_from_frame(shared_frames.get(symbol))
             row.update(metrics)
             if row.get("changePct") is None and metrics.get("changePctFromVolumeSource") is not None:
                 row["changePct"] = metrics.get("changePctFromVolumeSource")
@@ -1956,7 +2276,6 @@ def build_volume_surge_rows_from_strength_rows(strength_rows, previous_rows=None
         row["signal"] = signal
         row["volumeScore"] = volume_score
         rows.append(row)
-        time.sleep(REQUEST_SLEEP_SECONDS)
 
     signal_order = {
         "Bullish Volume Surge": 0,
@@ -2325,6 +2644,15 @@ def main():
 
     print_fast_mode_note(mode, target_slugs, args.refresh_52w)
 
+    # Prefetch one unique symbol universe before creating any 52W JSON.
+    # This is the single source reused by all index files and scanner outputs.
+    if mode in ["all", "52w"]:
+        prefetch_slugs = target_slugs or list(INDEX_CONFIG.keys())
+        prefetch_shared_market_data(prefetch_slugs, label="52W index universe")
+    elif (target_slugs or args.refresh_52w) and mode in scanner_modes:
+        prefetch_slugs = target_slugs or list(INDEX_CONFIG.keys())
+        prefetch_shared_market_data(prefetch_slugs, label="scanner CMP refresh")
+
     # Targeted CMP refresh:
     #   python GenerateMarketToolsJson.py --mode 52w --index nifty-50
     #   python GenerateMarketToolsJson.py --mode momentum-scanner --index nifty-50
@@ -2346,6 +2674,9 @@ def main():
         upload_paths.append(JSON_FOLDER)
 
     if mode == "52w":
+        universe_path = write_latest_stock_universe()
+        if universe_path:
+            upload_paths.append(universe_path)
         print_upload_paths(upload_paths)
         return
 
@@ -2390,6 +2721,10 @@ def main():
     if mode in ["all", "near-breakout"]:
         update_near_breakout_scanner()
         upload_paths.append(NEAR_BREAKOUT_FILE)
+
+    universe_path = write_latest_stock_universe()
+    if universe_path:
+        upload_paths.append(universe_path)
 
     print_upload_paths(upload_paths)
 

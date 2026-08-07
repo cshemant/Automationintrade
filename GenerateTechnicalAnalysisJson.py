@@ -33,6 +33,8 @@ from typing import Dict, Iterable, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 
+from SharedMarketDataCache import ensure_ohlcv_cache
+
 try:
     from zoneinfo import ZoneInfo
 except Exception:  # pragma: no cover
@@ -387,9 +389,13 @@ def technical_json_for_stock(meta: StockMeta, df: pd.DataFrame) -> Optional[Dict
     df["ATR14"] = compute_atr(df, 14)
     df["ADX14"] = compute_adx(df, 14)
 
-    close = float(df["Close"].iloc[-1])
+    history_close = float(df["Close"].iloc[-1])
+    latest_cmp = clean_number(meta.cmp)
+    close = latest_cmp if latest_cmp is not None else history_close
     prev_close = float(df["Close"].iloc[-2]) if len(df) > 1 else close
-    change_pct = ((close - prev_close) / prev_close * 100) if prev_close else (meta.change_pct or 0)
+    change_pct = clean_number(meta.change_pct)
+    if change_pct is None:
+        change_pct = ((history_close - prev_close) / prev_close * 100) if prev_close else 0
     ema9 = last_float(df["EMA9"])
     ema21 = last_float(df["EMA21"])
     ema50 = last_float(df["EMA50"])
@@ -439,6 +445,9 @@ def technical_json_for_stock(meta: StockMeta, df: pd.DataFrame) -> Optional[Dict
         "summary": summary,
         "symbol": meta.symbol,
         "stockName": meta.stock_name,
+        "cmp": close,
+        "changePct": change_pct,
+        "marketDataUpdatedAt": meta.updated_at,
         "updatedAt": now_ist(),
         "metrics": metrics,
         "levels": levels,
@@ -515,46 +524,29 @@ def main() -> int:
     ok = 0
     failed: List[str] = []
 
-    for batch_no, batch_symbols in enumerate(chunked(symbols, max(1, args.batch_size)), start=1):
-        tickers = [yahoo_symbol(s) for s in batch_symbols]
-        print(f"Batch {batch_no}: {len(batch_symbols)} symbols")
+    shared_frames = ensure_ohlcv_cache(
+        symbols,
+        period=args.period,
+        interval=args.interval,
+        batch_size=max(1, args.batch_size),
+        sleep_seconds=max(0, args.sleep),
+        max_age_hours=8,
+    )
+
+    for symbol in symbols:
         try:
-            batch_df = download_batch(tickers, args.period, args.interval)
-        except Exception as exc:
-            print(f"  Batch download failed: {exc}")
-            batch_df = pd.DataFrame()
-
-        for symbol, ticker in zip(batch_symbols, tickers):
-            try:
-                df = extract_ticker_frame(batch_df, ticker, single_ticker=(len(tickers) == 1))
-                # Retry single symbol if it was missing from batch.
-                if df.empty:
-                    yf = get_yfinance()
-                    single_df = yf.download(
-                        ticker,
-                        period=args.period,
-                        interval=args.interval,
-                        auto_adjust=False,
-                        progress=False,
-                        group_by="column",
-                        threads=False,
-                    )
-                    df = extract_ticker_frame(single_df, ticker, single_ticker=True)
-
-                payload = technical_json_for_stock(stocks[symbol], df)
-                if not payload:
-                    failed.append(symbol)
-                    print(f"  SKIP {symbol}: insufficient OHLCV data")
-                    continue
-                write_json(symbol, payload)
-                ok += 1
-                print(f"  OK {symbol}")
-            except Exception as exc:
+            df = shared_frames.get(symbol, pd.DataFrame())
+            payload = technical_json_for_stock(stocks[symbol], df)
+            if not payload:
                 failed.append(symbol)
-                print(f"  FAIL {symbol}: {exc}")
-
-        if args.sleep > 0 and batch_no * args.batch_size < len(symbols):
-            time.sleep(args.sleep)
+                print(f"  SKIP {symbol}: insufficient cached OHLCV data")
+                continue
+            write_json(symbol, payload)
+            ok += 1
+            print(f"  OK {symbol} [shared-cache]")
+        except Exception as exc:
+            failed.append(symbol)
+            print(f"  FAIL {symbol}: {exc}")
 
     print(f"Completed technical JSON generation. Success={ok}, Failed={len(failed)}")
     if failed:

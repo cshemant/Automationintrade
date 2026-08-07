@@ -416,6 +416,9 @@ def result_json_for_stock(meta: StockMeta, raw: Dict) -> Optional[Dict]:
         "summary": f"Quarterly result scorecard rendered from JSON values for {raw.get('latestQuarter', 'latest quarter')}: revenue, profit, margin, and reaction risk.",
         "symbol": meta.symbol,
         "stockName": meta.stock_name,
+        "cmp": meta.cmp,
+        "changePct": meta.change_pct,
+        "marketDataUpdatedAt": meta.updated_at,
         "updatedAt": now_ist(),
         "metrics": [
             {"label": "Revenue QoQ", "value": raw.get("revenueQoQ"), "type": "percent"},
