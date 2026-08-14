@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-08-14T20:06:33+05:30",
+  "updatedAt": "2026-08-15T00:58:34+05:30",
   "runs": [
+    {
+      "id": "stock-triggers-20260815T005834+0530",
+      "jobName": "stock-trigger-intelligence",
+      "status": "fallback",
+      "startedAt": "2026-08-15T00:57:35+05:30",
+      "finishedAt": "2026-08-15T00:58:34+05:30",
+      "sourceMode": "Fallback: previous data + corporate actions",
+      "sourceHealthy": false,
+      "sourceError": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18); HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18)",
+      "announcementsFetched": 0,
+      "announcementsPublished": 0,
+      "corporateActionsPublished": 29,
+      "totalTriggersPublished": 500,
+      "aiEnhancedCount": 0
+    },
     {
       "id": "stock-triggers-20260814T200633+0530",
       "jobName": "stock-trigger-intelligence",

@@ -1,7 +1,7 @@
 {
   "toolName": "AIT Stock Strength Ranker",
-  "updatedAt": "14-Aug-2026 14:35 IST",
-  "generatedAt": "14-Aug-2026 14:35 IST",
+  "updatedAt": "14-Aug-2026 19:26 IST",
+  "generatedAt": "14-Aug-2026 19:26 IST",
   "universeCount": 218,
   "sourceNote": "Generated from existing Automation In Trade 52-week high-low JSON files. Strength score combines daily move percentile, 52-week high proximity, distance from 52-week low, and index membership. Educational use only.",
   "stocks": [
@@ -1172,6 +1172,23 @@
       "rank": 63
     },
     {
+      "symbol": "RADICO",
+      "stockName": "Radico Khaitan Ltd",
+      "cmp": 4650.0,
+      "high52": 4675.2,
+      "low52": 2500.0,
+      "changePct": -0.54,
+      "downFromHighPct": -0.54,
+      "aboveLowPct": 86.0,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY FMCG"
+      ],
+      "strengthScore": 68.3,
+      "signal": "Positive Watchlist",
+      "rank": 64
+    },
+    {
       "symbol": "EICHERMOT",
       "stockName": "Eicher Motors Ltd.",
       "cmp": 8066.5,
@@ -1187,23 +1204,6 @@
         "NIFTY AUTO"
       ],
       "strengthScore": 67.3,
-      "signal": "Positive Watchlist",
-      "rank": 64
-    },
-    {
-      "symbol": "RADICO",
-      "stockName": "Radico Khaitan Ltd",
-      "cmp": 4645.0,
-      "high52": 4675.2,
-      "low52": 2500.0,
-      "changePct": -0.65,
-      "downFromHighPct": -0.65,
-      "aboveLowPct": 85.8,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY FMCG"
-      ],
-      "strengthScore": 67.0,
       "signal": "Positive Watchlist",
       "rank": 65
     },
@@ -1503,26 +1503,6 @@
       "rank": 81
     },
     {
-      "symbol": "GAIL",
-      "stockName": "GAIL (India) Ltd.",
-      "cmp": 174.9,
-      "high52": 186.87,
-      "low52": 134.36,
-      "changePct": -0.57,
-      "downFromHighPct": -6.41,
-      "aboveLowPct": 30.17,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY ENERGY",
-        "NIFTY INFRA",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 63.7,
-      "signal": "Neutral / Stable",
-      "rank": 82
-    },
-    {
       "symbol": "WIPRO",
       "stockName": "Wipro Ltd.",
       "cmp": 184.0,
@@ -1539,7 +1519,7 @@
       ],
       "strengthScore": 63.5,
       "signal": "Neutral / Stable",
-      "rank": 83
+      "rank": 82
     },
     {
       "symbol": "TATAPOWER",
@@ -1554,6 +1534,26 @@
       "indices": [
         "NIFTY 100",
         "NIFTY COMMODITIES",
+        "NIFTY ENERGY",
+        "NIFTY INFRA",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 63.5,
+      "signal": "Neutral / Stable",
+      "rank": 83
+    },
+    {
+      "symbol": "GAIL",
+      "stockName": "GAIL (India) Ltd.",
+      "cmp": 174.9,
+      "high52": 186.87,
+      "low52": 134.36,
+      "changePct": -0.57,
+      "downFromHighPct": -6.41,
+      "aboveLowPct": 30.17,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
         "NIFTY ENERGY",
         "NIFTY INFRA",
         "NIFTY NEXT 50"
@@ -1733,6 +1733,25 @@
       "rank": 93
     },
     {
+      "symbol": "BHARATFORG",
+      "stockName": "Bharat Forge Ltd.",
+      "cmp": 2065.0,
+      "high52": 2295.0,
+      "low52": 1100.5,
+      "changePct": -1.1,
+      "downFromHighPct": -10.02,
+      "aboveLowPct": 87.64,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY AUTO",
+        "NIFTY INFRA",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 62.4,
+      "signal": "Neutral / Stable",
+      "rank": 94
+    },
+    {
       "symbol": "POWERGRID",
       "stockName": "Power Grid Corporation of India Ltd.",
       "cmp": 266.05,
@@ -1751,7 +1770,7 @@
       ],
       "strengthScore": 62.3,
       "signal": "Neutral / Stable",
-      "rank": 94
+      "rank": 95
     },
     {
       "symbol": "SONACOMS",
@@ -1768,7 +1787,7 @@
       ],
       "strengthScore": 62.3,
       "signal": "Neutral / Stable",
-      "rank": 95
+      "rank": 96
     },
     {
       "symbol": "ATGL",
@@ -1785,7 +1804,7 @@
       ],
       "strengthScore": 62.3,
       "signal": "Neutral / Stable",
-      "rank": 96
+      "rank": 97
     },
     {
       "symbol": "RBLBANK",
@@ -1800,26 +1819,7 @@
       "indices": [
         "NIFTY PVT BANK"
       ],
-      "strengthScore": 62.3,
-      "signal": "Neutral / Stable",
-      "rank": 97
-    },
-    {
-      "symbol": "BHARATFORG",
-      "stockName": "Bharat Forge Ltd.",
-      "cmp": 2064.0,
-      "high52": 2295.0,
-      "low52": 1100.5,
-      "changePct": -1.15,
-      "downFromHighPct": -10.07,
-      "aboveLowPct": 87.55,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY AUTO",
-        "NIFTY INFRA",
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 62.2,
+      "strengthScore": 62.1,
       "signal": "Neutral / Stable",
       "rank": 98
     },
@@ -2100,25 +2100,6 @@
       "rank": 113
     },
     {
-      "symbol": "CIPLA",
-      "stockName": "Cipla Ltd.",
-      "cmp": 1450.0,
-      "high52": 1673.0,
-      "low52": 1165.7,
-      "changePct": -0.6,
-      "downFromHighPct": -13.33,
-      "aboveLowPct": 24.39,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY PHARMA"
-      ],
-      "strengthScore": 56.9,
-      "signal": "Neutral / Stable",
-      "rank": 114
-    },
-    {
       "symbol": "MARUTI",
       "stockName": "Maruti Suzuki India Ltd.",
       "cmp": 13834.0,
@@ -2133,6 +2114,25 @@
         "NIFTY 50",
         "NIFTY AUTO",
         "S&P BSE SENSEX"
+      ],
+      "strengthScore": 56.8,
+      "signal": "Neutral / Stable",
+      "rank": 114
+    },
+    {
+      "symbol": "CIPLA",
+      "stockName": "Cipla Ltd.",
+      "cmp": 1450.0,
+      "high52": 1673.0,
+      "low52": 1165.7,
+      "changePct": -0.6,
+      "downFromHighPct": -13.33,
+      "aboveLowPct": 24.39,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY PHARMA"
       ],
       "strengthScore": 56.8,
       "signal": "Neutral / Stable",
@@ -2195,23 +2195,6 @@
       "rank": 118
     },
     {
-      "symbol": "POLYCAB",
-      "stockName": "Polycab India Ltd.",
-      "cmp": 9240.0,
-      "high52": 10126.0,
-      "low52": 6663.0,
-      "changePct": -0.61,
-      "downFromHighPct": -8.75,
-      "aboveLowPct": 38.68,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY MIDCAP 50"
-      ],
-      "strengthScore": 55.9,
-      "signal": "Neutral / Stable",
-      "rank": 119
-    },
-    {
       "symbol": "NMDC",
       "stockName": "NMDC Ltd.",
       "cmp": 84.4,
@@ -2224,6 +2207,23 @@
       "indices": [
         "NIFTY COMMODITIES",
         "NIFTY METAL",
+        "NIFTY MIDCAP 50"
+      ],
+      "strengthScore": 55.7,
+      "signal": "Neutral / Stable",
+      "rank": 119
+    },
+    {
+      "symbol": "POLYCAB",
+      "stockName": "Polycab India Ltd.",
+      "cmp": 9240.0,
+      "high52": 10126.0,
+      "low52": 6663.0,
+      "changePct": -0.61,
+      "downFromHighPct": -8.75,
+      "aboveLowPct": 38.68,
+      "status": "Mid Range",
+      "indices": [
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 55.7,
@@ -2571,7 +2571,7 @@
         "NIFTY IT",
         "S&P BSE SENSEX"
       ],
-      "strengthScore": 53.2,
+      "strengthScore": 53.0,
       "signal": "Neutral / Stable",
       "rank": 138
     },
@@ -2793,24 +2793,6 @@
       "rank": 150
     },
     {
-      "symbol": "HDFCAMC",
-      "stockName": "HDFC Asset Management Company Ltd.",
-      "cmp": 2485.0,
-      "high52": 2967.25,
-      "low52": 2205.6,
-      "changePct": -0.58,
-      "downFromHighPct": -16.25,
-      "aboveLowPct": 12.67,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 51.7,
-      "signal": "Neutral / Stable",
-      "rank": 151
-    },
-    {
       "symbol": "HDFCLIFE",
       "stockName": "HDFC Life Insurance Company Ltd.",
       "cmp": 535.85,
@@ -2828,7 +2810,7 @@
       ],
       "strengthScore": 51.6,
       "signal": "Neutral / Stable",
-      "rank": 152
+      "rank": 151
     },
     {
       "symbol": "PFC",
@@ -2848,6 +2830,24 @@
       ],
       "strengthScore": 51.6,
       "signal": "Neutral / Stable",
+      "rank": 152
+    },
+    {
+      "symbol": "HDFCAMC",
+      "stockName": "HDFC Asset Management Company Ltd.",
+      "cmp": 2485.0,
+      "high52": 2967.25,
+      "low52": 2205.6,
+      "changePct": -0.58,
+      "downFromHighPct": -16.25,
+      "aboveLowPct": 12.67,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 51.5,
+      "signal": "Neutral / Stable",
       "rank": 153
     },
     {
@@ -2865,7 +2865,7 @@
         "NIFTY 50",
         "NIFTY INFRA"
       ],
-      "strengthScore": 51.6,
+      "strengthScore": 51.4,
       "signal": "Neutral / Stable",
       "rank": 154
     },
@@ -3943,7 +3943,7 @@
       "indices": [
         "NIFTY ENERGY"
       ],
-      "strengthScore": 34.4,
+      "strengthScore": 34.2,
       "signal": "High Weakness",
       "rank": 213
     },
