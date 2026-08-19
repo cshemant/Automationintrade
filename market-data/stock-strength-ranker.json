@@ -1,7 +1,7 @@
 {
   "toolName": "AIT Stock Strength Ranker",
-  "updatedAt": "19-Aug-2026 14:15 IST",
-  "generatedAt": "19-Aug-2026 14:15 IST",
+  "updatedAt": "19-Aug-2026 19:00 IST",
+  "generatedAt": "19-Aug-2026 19:01 IST",
   "universeCount": 218,
   "sourceNote": "Generated from existing Automation In Trade 52-week high-low JSON files. Strength score combines daily move percentile, 52-week high proximity, distance from 52-week low, and index membership. Educational use only.",
   "stocks": [
@@ -44,10 +44,10 @@
       "symbol": "OFSS",
       "stockName": "Oracle Financial Services Software Ltd.",
       "cmp": 11774.0,
-      "high52": 11979.0,
+      "high52": 11968.0,
       "low52": 6234.5,
       "changePct": 1.3,
-      "downFromHighPct": -1.71,
+      "downFromHighPct": -1.62,
       "aboveLowPct": 88.85,
       "status": "Near 52W High",
       "indices": [
@@ -304,6 +304,25 @@
       "rank": 16
     },
     {
+      "symbol": "TITAN",
+      "stockName": "Titan Company Ltd.",
+      "cmp": 5068.0,
+      "high52": 5168.0,
+      "low52": 3303.1,
+      "changePct": 0.38,
+      "downFromHighPct": -1.93,
+      "aboveLowPct": 53.43,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 80.1,
+      "signal": "Strong Momentum",
+      "rank": 17
+    },
+    {
       "symbol": "CHOLAFIN",
       "stockName": "Cholamandalam Investment and Finance Company Ltd.",
       "cmp": 1873.5,
@@ -321,7 +340,7 @@
       ],
       "strengthScore": 79.1,
       "signal": "Strong Momentum",
-      "rank": 17
+      "rank": 18
     },
     {
       "symbol": "IPCALAB",
@@ -337,25 +356,6 @@
         "NIFTY PHARMA"
       ],
       "strengthScore": 79.1,
-      "signal": "Strong Momentum",
-      "rank": 18
-    },
-    {
-      "symbol": "TITAN",
-      "stockName": "Titan Company Ltd.",
-      "cmp": 5063.0,
-      "high52": 5168.0,
-      "low52": 3303.1,
-      "changePct": 0.29,
-      "downFromHighPct": -2.03,
-      "aboveLowPct": 53.28,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 78.9,
       "signal": "Strong Momentum",
       "rank": 19
     },
@@ -431,6 +431,26 @@
       "rank": 23
     },
     {
+      "symbol": "INDUSINDBK",
+      "stockName": "IndusInd Bank Ltd.",
+      "cmp": 1016.7,
+      "high52": 1068.8,
+      "low52": 710.6,
+      "changePct": 0.17,
+      "downFromHighPct": -4.87,
+      "aboveLowPct": 43.08,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 77.8,
+      "signal": "Positive Watchlist",
+      "rank": 24
+    },
+    {
       "symbol": "LODHA",
       "stockName": "Lodha Developers Ltd.",
       "cmp": 1210.0,
@@ -444,26 +464,6 @@
         "NIFTY 100",
         "NIFTY NEXT 50",
         "NIFTY REALTY"
-      ],
-      "strengthScore": 77.5,
-      "signal": "Positive Watchlist",
-      "rank": 24
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "stockName": "IndusInd Bank Ltd.",
-      "cmp": 1016.7,
-      "high52": 1077.85,
-      "low52": 710.6,
-      "changePct": 0.17,
-      "downFromHighPct": -5.67,
-      "aboveLowPct": 43.08,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK",
-        "S&P BSE SENSEX"
       ],
       "strengthScore": 77.5,
       "signal": "Positive Watchlist",
@@ -504,7 +504,7 @@
         "NIFTY 50",
         "NIFTY AUTO"
       ],
-      "strengthScore": 76.8,
+      "strengthScore": 76.6,
       "signal": "Positive Watchlist",
       "rank": 27
     },
@@ -708,7 +708,7 @@
         "NIFTY METAL",
         "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 74.1,
+      "strengthScore": 73.9,
       "signal": "Positive Watchlist",
       "rank": 38
     },
@@ -1029,23 +1029,6 @@
       "rank": 55
     },
     {
-      "symbol": "PVRINOX",
-      "stockName": "PVR INOX Ltd.",
-      "cmp": 1202.0,
-      "high52": 1249.7,
-      "low52": 907.4,
-      "changePct": 0.33,
-      "downFromHighPct": -3.82,
-      "aboveLowPct": 32.47,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY MEDIA"
-      ],
-      "strengthScore": 70.3,
-      "signal": "Positive Watchlist",
-      "rank": 56
-    },
-    {
       "symbol": "BOSCHLTD",
       "stockName": "Bosch Ltd.",
       "cmp": 48460.0,
@@ -1062,7 +1045,7 @@
       ],
       "strengthScore": 70.2,
       "signal": "Positive Watchlist",
-      "rank": 57
+      "rank": 56
     },
     {
       "symbol": "NATIONALUM",
@@ -1079,7 +1062,7 @@
       ],
       "strengthScore": 70.2,
       "signal": "Positive Watchlist",
-      "rank": 58
+      "rank": 57
     },
     {
       "symbol": "GMRAIRPORT",
@@ -1095,6 +1078,23 @@
         "NIFTY MIDCAP 50"
       ],
       "strengthScore": 70.2,
+      "signal": "Positive Watchlist",
+      "rank": 58
+    },
+    {
+      "symbol": "PVRINOX",
+      "stockName": "PVR INOX Ltd.",
+      "cmp": 1202.0,
+      "high52": 1249.7,
+      "low52": 907.4,
+      "changePct": 0.33,
+      "downFromHighPct": -3.82,
+      "aboveLowPct": 32.47,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 70.1,
       "signal": "Positive Watchlist",
       "rank": 59
     },
@@ -1863,7 +1863,7 @@
       "indices": [
         "NIFTY REALTY"
       ],
-      "strengthScore": 60.8,
+      "strengthScore": 60.6,
       "signal": "Neutral / Stable",
       "rank": 100
     },
@@ -2070,7 +2070,7 @@
         "NIFTY 100",
         "NIFTY 50"
       ],
-      "strengthScore": 58.6,
+      "strengthScore": 58.5,
       "signal": "Neutral / Stable",
       "rank": 111
     },
