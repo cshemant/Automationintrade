@@ -1,7 +1,7 @@
 {
   "toolName": "AIT Stock Strength Ranker",
-  "updatedAt": "20-Aug-2026 11:00 IST",
-  "generatedAt": "20-Aug-2026 11:01 IST",
+  "updatedAt": "20-Aug-2026 14:18 IST",
+  "generatedAt": "20-Aug-2026 14:19 IST",
   "universeCount": 218,
   "sourceNote": "Generated from existing Automation In Trade 52-week high-low JSON files. Strength score combines daily move percentile, 52-week high proximity, distance from 52-week low, and index membership. Educational use only.",
   "stocks": [
@@ -127,7 +127,7 @@
       "indices": [
         "NIFTY METAL"
       ],
-      "strengthScore": 85.8,
+      "strengthScore": 86.0,
       "signal": "Strong Momentum",
       "rank": 7
     },
@@ -164,7 +164,7 @@
         "NIFTY INFRA",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 83.7,
+      "strengthScore": 83.9,
       "signal": "Strong Momentum",
       "rank": 9
     },
@@ -674,6 +674,23 @@
       "rank": 36
     },
     {
+      "symbol": "PVRINOX",
+      "stockName": "PVR INOX Ltd.",
+      "cmp": 1220.0,
+      "high52": 1249.7,
+      "low52": 907.4,
+      "changePct": 1.59,
+      "downFromHighPct": -2.38,
+      "aboveLowPct": 34.45,
+      "status": "Near 52W High",
+      "indices": [
+        "NIFTY MEDIA"
+      ],
+      "strengthScore": 73.6,
+      "signal": "Positive Watchlist",
+      "rank": 37
+    },
+    {
       "symbol": "ADANIGREEN",
       "stockName": "Adani Green Energy Ltd.",
       "cmp": 1301.8,
@@ -689,23 +706,6 @@
         "NIFTY ENERGY",
         "NIFTY INFRA",
         "NIFTY NEXT 50"
-      ],
-      "strengthScore": 73.4,
-      "signal": "Positive Watchlist",
-      "rank": 37
-    },
-    {
-      "symbol": "PVRINOX",
-      "stockName": "PVR INOX Ltd.",
-      "cmp": 1220.0,
-      "high52": 1249.7,
-      "low52": 907.4,
-      "changePct": 1.59,
-      "downFromHighPct": -2.38,
-      "aboveLowPct": 34.45,
-      "status": "Near 52W High",
-      "indices": [
-        "NIFTY MEDIA"
       ],
       "strengthScore": 73.4,
       "signal": "Positive Watchlist",
@@ -808,16 +808,16 @@
       "symbol": "OFSS",
       "stockName": "Oracle Financial Services Software Ltd.",
       "cmp": 11826.0,
-      "high52": 11979.0,
+      "high52": 11968.0,
       "low52": 6234.5,
       "changePct": 0.44,
-      "downFromHighPct": -1.28,
+      "downFromHighPct": -1.19,
       "aboveLowPct": 89.69,
       "status": "Near 52W High",
       "indices": [
         "NIFTY IT"
       ],
-      "strengthScore": 71.8,
+      "strengthScore": 71.9,
       "signal": "Positive Watchlist",
       "rank": 44
     },
@@ -1211,7 +1211,7 @@
         "NIFTY FMCG",
         "NIFTY NEXT 50"
       ],
-      "strengthScore": 67.8,
+      "strengthScore": 68.0,
       "signal": "Positive Watchlist",
       "rank": 65
     },
@@ -1419,26 +1419,6 @@
       "rank": 76
     },
     {
-      "symbol": "ITC",
-      "stockName": "ITC Ltd.",
-      "cmp": 271.65,
-      "high52": 427.0,
-      "low52": 265.0,
-      "changePct": 1.72,
-      "downFromHighPct": -36.38,
-      "aboveLowPct": 2.51,
-      "status": "Near 52W Low",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY 50",
-        "NIFTY FMCG",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 64.3,
-      "signal": "Neutral / Stable",
-      "rank": 77
-    },
-    {
       "symbol": "COLPAL",
       "stockName": "Colgate Palmolive (India) Ltd.",
       "cmp": 1910.0,
@@ -1452,9 +1432,9 @@
         "NIFTY FMCG",
         "NIFTY MIDCAP 50"
       ],
-      "strengthScore": 64.1,
+      "strengthScore": 64.3,
       "signal": "Neutral / Stable",
-      "rank": 78
+      "rank": 77
     },
     {
       "symbol": "ADANIPOWER",
@@ -1474,7 +1454,7 @@
       ],
       "strengthScore": 63.2,
       "signal": "Neutral / Stable",
-      "rank": 79
+      "rank": 78
     },
     {
       "symbol": "SONACOMS",
@@ -1491,7 +1471,7 @@
       ],
       "strengthScore": 63.2,
       "signal": "Neutral / Stable",
-      "rank": 80
+      "rank": 79
     },
     {
       "symbol": "TITAN",
@@ -1510,7 +1490,7 @@
       ],
       "strengthScore": 63.1,
       "signal": "Neutral / Stable",
-      "rank": 81
+      "rank": 80
     },
     {
       "symbol": "PNB",
@@ -1529,6 +1509,26 @@
         "NIFTY PSU BANK"
       ],
       "strengthScore": 62.9,
+      "signal": "Neutral / Stable",
+      "rank": 81
+    },
+    {
+      "symbol": "ITC",
+      "stockName": "ITC Ltd.",
+      "cmp": 270.8,
+      "high52": 427.0,
+      "low52": 265.0,
+      "changePct": 1.4,
+      "downFromHighPct": -36.58,
+      "aboveLowPct": 2.19,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY 50",
+        "NIFTY FMCG",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 62.8,
       "signal": "Neutral / Stable",
       "rank": 82
     },
@@ -1628,6 +1628,23 @@
       "rank": 87
     },
     {
+      "symbol": "NLCINDIA",
+      "stockName": "NLC India Ltd.",
+      "cmp": 272.05,
+      "high52": 387.8,
+      "low52": 222.0,
+      "changePct": 1.49,
+      "downFromHighPct": -29.85,
+      "aboveLowPct": 22.55,
+      "status": "Corrected",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "strengthScore": 61.4,
+      "signal": "Neutral / Stable",
+      "rank": 88
+    },
+    {
       "symbol": "BHARATFORG",
       "stockName": "Bharat Forge Ltd.",
       "cmp": 2062.0,
@@ -1644,7 +1661,7 @@
       ],
       "strengthScore": 61.3,
       "signal": "Neutral / Stable",
-      "rank": 88
+      "rank": 89
     },
     {
       "symbol": "BAJAJFINSV",
@@ -1662,23 +1679,6 @@
         "NIFTY 50",
         "NIFTY FINANCIAL SERVICES",
         "S&P BSE SENSEX"
-      ],
-      "strengthScore": 61.2,
-      "signal": "Neutral / Stable",
-      "rank": 89
-    },
-    {
-      "symbol": "NLCINDIA",
-      "stockName": "NLC India Ltd.",
-      "cmp": 272.05,
-      "high52": 387.8,
-      "low52": 222.0,
-      "changePct": 1.49,
-      "downFromHighPct": -29.85,
-      "aboveLowPct": 22.55,
-      "status": "Corrected",
-      "indices": [
-        "NIFTY ENERGY"
       ],
       "strengthScore": 61.2,
       "signal": "Neutral / Stable",
@@ -2172,6 +2172,24 @@
       "rank": 116
     },
     {
+      "symbol": "IRFC",
+      "stockName": "Indian Railway Finance Corporation Ltd.",
+      "cmp": 86.47,
+      "high52": 137.17,
+      "low52": 85.0,
+      "changePct": 1.51,
+      "downFromHighPct": -36.96,
+      "aboveLowPct": 1.73,
+      "status": "Near 52W Low",
+      "indices": [
+        "NIFTY 100",
+        "NIFTY NEXT 50"
+      ],
+      "strengthScore": 58.1,
+      "signal": "Neutral / Stable",
+      "rank": 117
+    },
+    {
       "symbol": "TORNTPHARM",
       "stockName": "Torrent Pharmaceuticals Ltd.",
       "cmp": 5005.0,
@@ -2188,24 +2206,6 @@
       ],
       "strengthScore": 58.0,
       "signal": "Neutral / Stable",
-      "rank": 117
-    },
-    {
-      "symbol": "IRFC",
-      "stockName": "Indian Railway Finance Corporation Ltd.",
-      "cmp": 86.47,
-      "high52": 137.17,
-      "low52": 85.0,
-      "changePct": 1.51,
-      "downFromHighPct": -36.96,
-      "aboveLowPct": 1.73,
-      "status": "Near 52W Low",
-      "indices": [
-        "NIFTY 100",
-        "NIFTY NEXT 50"
-      ],
-      "strengthScore": 57.9,
-      "signal": "Neutral / Stable",
       "rank": 118
     },
     {
@@ -2221,7 +2221,7 @@
       "indices": [
         "NIFTY FMCG"
       ],
-      "strengthScore": 57.9,
+      "strengthScore": 58.0,
       "signal": "Neutral / Stable",
       "rank": 119
     },
@@ -2584,6 +2584,26 @@
       "rank": 138
     },
     {
+      "symbol": "INDUSINDBK",
+      "stockName": "IndusInd Bank Ltd.",
+      "cmp": 1008.0,
+      "high52": 1068.8,
+      "low52": 710.6,
+      "changePct": -0.86,
+      "downFromHighPct": -5.69,
+      "aboveLowPct": 41.85,
+      "status": "Mid Range",
+      "indices": [
+        "NIFTY BANK",
+        "NIFTY MIDCAP 50",
+        "NIFTY PVT BANK",
+        "S&P BSE SENSEX"
+      ],
+      "strengthScore": 54.5,
+      "signal": "Neutral / Stable",
+      "rank": 139
+    },
+    {
       "symbol": "THERMAX",
       "stockName": "Thermax Ltd.",
       "cmp": 4038.0,
@@ -2597,26 +2617,6 @@
         "NIFTY ENERGY"
       ],
       "strengthScore": 54.5,
-      "signal": "Neutral / Stable",
-      "rank": 139
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "stockName": "IndusInd Bank Ltd.",
-      "cmp": 1008.0,
-      "high52": 1077.85,
-      "low52": 710.6,
-      "changePct": -0.86,
-      "downFromHighPct": -6.48,
-      "aboveLowPct": 41.85,
-      "status": "Mid Range",
-      "indices": [
-        "NIFTY BANK",
-        "NIFTY MIDCAP 50",
-        "NIFTY PVT BANK",
-        "S&P BSE SENSEX"
-      ],
-      "strengthScore": 54.2,
       "signal": "Neutral / Stable",
       "rank": 140
     },
