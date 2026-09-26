@@ -19,7 +19,7 @@ const hexToBytes=h=>Uint8Array.from(h.match(/../g)||[],x=>parseInt(x,16));
 const randomHex=n=>bytesToHex(crypto.getRandomValues(new Uint8Array(n)));
 const sha=async s=>bytesToHex(await crypto.subtle.digest('SHA-256',encoder.encode(s)));
 const j=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers}});
-async function passwordHash(password,salt){const key=await crypto.subtle.importKey('raw',encoder.encode(password),'PBKDF2',false,['deriveBits']);return bytesToHex(await crypto.subtle.deriveBits({name:'PBKDF2',salt:hexToBytes(salt),iterations:210000,hash:'SHA-256'},key,256));}
+async function passwordHash(password,salt){const key=await crypto.subtle.importKey('raw',encoder.encode(password),'PBKDF2',false,['deriveBits']);return bytesToHex(await crypto.subtle.deriveBits({name:'PBKDF2',salt:hexToBytes(salt),iterations:100000,hash:'SHA-256'},key,256));}
 function same(a,b){if(typeof a!=='string'||typeof b!=='string'||a.length!==b.length)return false;let x=0;for(let i=0;i<a.length;i++)x|=a.charCodeAt(i)^b.charCodeAt(i);return x===0;}
 function cookie(token){return `ait_session=${token}; Path=/api/account/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800`;}
 async function auth(req,db){const token=/\bait_session=([0-9a-f]{64})\b/.exec(req.headers.get('Cookie')||'')?.[1];if(!token)return null;return db.prepare('SELECT u.id,u.email,u.role,u.plan FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>CURRENT_TIMESTAMP').bind(await sha(token)).first();}
