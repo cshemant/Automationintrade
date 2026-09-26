@@ -97,10 +97,23 @@ jobs:
             MODE="${{ github.event.inputs.mode || 'all' }}"
           fi
 
+          PREMIUM_READY=true
+          if [ -z "$CF_ACCOUNT_ID" ] || [ -z "$CF_D1_DATABASE_ID" ] || [ -z "$CF_D1_API_TOKEN" ]; then PREMIUM_READY=false; fi
+          case "$MODE" in
+            research|all|price-action|results|technical-analysis)
+              if [ "$PREMIUM_READY" = false ]; then
+                if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$MODE" != "all" ]; then
+                  echo "Premium research requires all three D1 GitHub Actions secrets: CF_ACCOUNT_ID, CF_D1_DATABASE_ID, CF_D1_API_TOKEN" >&2
+                  exit 1
+                fi
+                echo "Premium D1 secrets are not configured. Running the market update only; paid research is unchanged."
+                MODE="market"
+              fi
+              ;;
+          esac
           echo "Running UpdateAllData.py with mode: $MODE"
           echo "MODE=$MODE" >> "$GITHUB_ENV"
           if [ "$MODE" = "research" ] || [ "$MODE" = "all" ] || [ "$MODE" = "price-action" ] || [ "$MODE" = "results" ] || [ "$MODE" = "technical-analysis" ]; then
-            if [ -z "$CF_ACCOUNT_ID" ] || [ -z "$CF_D1_DATABASE_ID" ] || [ -z "$CF_D1_API_TOKEN" ]; then echo "Configure CF_ACCOUNT_ID, CF_D1_DATABASE_ID and CF_D1_API_TOKEN first"; exit 1; fi
             python UpdateAllData.py --mode "$MODE" --batch-size 80 --include-premium
             python SyncPremiumResearchD1.py
           else
@@ -137,10 +150,14 @@ jobs:
               if git rebase -X theirs "origin/$BRANCH"; then
                 echo "Rebase successful. Retrying push..."
               else
-                echo "Rebase failed. Rebuilding market data on latest origin/${BRANCH}..."
                 git rebase --abort 2>/dev/null || true
+                if [ "${MODE:-market}" != "market" ]; then
+                  echo "Research push conflicted; run this workflow again so paid assets are resynced before publication." >&2
+                  exit 1
+                fi
+                echo "Rebase failed. Rebuilding market data on latest origin/${BRANCH}..."
                 git reset --hard "origin/$BRANCH"
-                python UpdateAllData.py --mode "${MODE:-market}" --batch-size 80
+                python UpdateAllData.py --mode market --batch-size 80
                 git add market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects
                 if [ -n "$(git status --porcelain market-data stock-research-data markets/sector technical-analysis stock-triggers/events stock-triggers/category stock-triggers/methodology stocks sitemap.xml sitemap-stock-triggers.xml robots.txt _redirects)" ]; then
                   git commit -m "chore: auto-update market data"
