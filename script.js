@@ -903,6 +903,7 @@ if (fullscreenBtn && demoVideoFrame) {
   // Read the current entitlement from the server, including D1 admin promotions.
   let researchAccessReady = false;
   let hasResearchAccess = false;
+  const premiumDataCache = new Map();
   fetch('/api/account/me', {credentials: 'same-origin', cache: 'no-store'})
     .then(response => response.ok ? response.json() : null)
     .then(user => {
@@ -1035,7 +1036,20 @@ if (fullscreenBtn && demoVideoFrame) {
 
   function getToolData(stock, tool) {
     const info = stock[tool.key] || {};
-    return info.data || info.htmlData || null;
+    return info.data || info.htmlData || premiumDataCache.get(stock.symbol + ':' + select.value) || null;
+  }
+
+  async function loadPremiumResearch(stock, toolId) {
+    // The public index intentionally omits premium details; fetch the separate generated JSON.
+    // This is display logic only: these legacy URLs remain public until moved behind authenticated APIs.
+    const cacheKey = stock.symbol + ':' + toolId;
+    if (premiumDataCache.has(cacheKey)) return;
+    const folder = {'price-action':'price-action', results:'results', 'technical-analysis':'technical-analysis'}[toolId];
+    if (!folder || !/^[A-Z0-9&._-]+$/.test(stock.symbol)) return;
+    const response = await fetch('/stock-research-data/' + folder + '/' + encodeURIComponent(stock.symbol) + '.json', {cache:'no-store'});
+    if (!response.ok) return;
+    const data = await response.json();
+    if (data && typeof data === 'object' && !Array.isArray(data)) premiumDataCache.set(cacheKey, data);
   }
 
   function kv(label, value, tone, type) {
@@ -1077,12 +1091,16 @@ if (fullscreenBtn && demoVideoFrame) {
   }
 
   function renderHtmlResearchCard(stock, tool, info) {
-    const data = getToolData(stock, tool) || buildFallbackData(stock, select.value);
-    const metrics = Array.isArray(data.metrics) ? data.metrics : [];
-    const rows = Array.isArray(data.rows) ? data.rows : [];
-    const levels = Array.isArray(data.levels) ? data.levels : [];
-    const note = data.note || info.note || '';
-    const view = data.view || data.signal || data.grade || tool.badge;
+    const data = getToolData(stock, tool);
+    if (!data && !isFreeResearchStock(stock)) {
+      return `<article class="research-html-card"><div class="research-card-head"><span>${escapeHtml(tool.label)}</span></div><p>Detailed research data is not available for ${escapeHtml(stock.symbol)} in this view yet. Try Technical Analysis or another stock.</p></article>`;
+    }
+    const visibleData = data || buildFallbackData(stock, select.value);
+    const metrics = Array.isArray(visibleData.metrics) ? visibleData.metrics : [];
+    const rows = Array.isArray(visibleData.rows) ? visibleData.rows : [];
+    const levels = Array.isArray(visibleData.levels) ? visibleData.levels : [];
+    const note = visibleData.note || info.note || '';
+    const view = visibleData.view || visibleData.signal || visibleData.grade || tool.badge;
 
     if (select.value === 'results') {
       return `
@@ -1091,10 +1109,10 @@ if (fullscreenBtn && demoVideoFrame) {
             <span>${escapeHtml(tool.label)}</span>
             <strong class="${toneClass(view)}">${escapeHtml(view)}</strong>
           </div>
-          <div class="research-score-band ${toneClass(data.score || view)}">
-            <div><span>Result Score</span><strong>${data.score ?? '—'}</strong></div>
-            <div><span>Grade</span><strong>${escapeHtml(data.grade || view)}</strong></div>
-            <div><span>Confidence</span><strong>${displayValue(data.confidence, 'percent')}</strong></div>
+          <div class="research-score-band ${toneClass(visibleData.score || view)}">
+            <div><span>Result Score</span><strong>${visibleData.score ?? '—'}</strong></div>
+            <div><span>Grade</span><strong>${escapeHtml(visibleData.grade || view)}</strong></div>
+            <div><span>Confidence</span><strong>${displayValue(visibleData.confidence, 'percent')}</strong></div>
           </div>
           <div class="research-metrics-grid">
             ${metrics.map(item => metric(item.label, item.value, item.tone ? toneClass(item.tone) : '', item.type)).join('')}
@@ -1160,10 +1178,27 @@ if (fullscreenBtn && demoVideoFrame) {
       return;
     }
 
+    if (!isFreeResearchStock(stock) && hasResearchAccess) {
+      const cacheKey = stock.symbol + ':' + select.value;
+      if (!premiumDataCache.has(cacheKey)) {
+        card.innerHTML = '<p role="status">Loading your research data…</p>';
+        loadPremiumResearch(stock, select.value).catch(() => {}).finally(() => {
+          // A different stock or tool may have been selected while loading.
+          if (findStock(input.value)?.symbol === stock.symbol && (toolMap[select.value] || toolMap['price-action']) === tool) {
+            premiumDataCache.set(cacheKey, premiumDataCache.get(cacheKey) || null);
+            renderResult(stock);
+          }
+        });
+        return;
+      }
+    }
     const info = stock[tool.key] || {};
     const data = getToolData(stock, tool);
     updateResearchSeoDescription(stock, tool, info, data);
     const indices = Array.isArray(stock.indices) && stock.indices.length ? stock.indices.slice(0, 3).join(', ') : 'Stock universe';
+    const cmp = stock.cmp ?? data?.cmp;
+    const changePct = stock.changePct ?? data?.changePct;
+    const researchedAt = stock.updatedAt || data?.updatedAt;
 
     card.innerHTML = `
       <div class="stock-result-loaded stock-result-two-boxes stock-result-html-mode">
@@ -1172,10 +1207,10 @@ if (fullscreenBtn && demoVideoFrame) {
           <h2>${escapeHtml(stock.symbol)}</h2>
           <h3>${escapeHtml(stock.stockName || '')}</h3>
           <div class="stock-result-meta compact-meta">
-            <span>CMP: ${formatNumber(stock.cmp)}</span>
-            <span>1D: <strong class="stock-one-day-value ${oneDayMoveClass(stock.changePct)}">${formatPct(stock.changePct)}</strong></span>
+            <span>CMP: ${formatNumber(cmp)}</span>
+            <span>1D: <strong class="stock-one-day-value ${oneDayMoveClass(changePct)}">${formatPct(changePct)}</strong></span>
             <span>${escapeHtml(indices)}</span>
-            <span>Updated: ${escapeHtml(updatedAt || stock.updatedAt || 'Latest')}</span>
+            <span>Updated: ${escapeHtml(updatedAt || researchedAt || 'Latest')}</span>
           </div>
           <div class="stock-result-actions">
             <a href="${(select.value === 'technical-analysis' && info.profilePath) ? info.profilePath : tool.page}">${select.value === 'technical-analysis' && info.profilePath ? 'Open Full Technical Profile' : 'Open ' + tool.label + ' Tool'}</a>
