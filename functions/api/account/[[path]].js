@@ -21,8 +21,10 @@ const sha=async s=>bytesToHex(await crypto.subtle.digest('SHA-256',encoder.encod
 const j=(data,status=200,headers={})=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers}});
 async function passwordHash(password,salt){const key=await crypto.subtle.importKey('raw',encoder.encode(password),'PBKDF2',false,['deriveBits']);return bytesToHex(await crypto.subtle.deriveBits({name:'PBKDF2',salt:hexToBytes(salt),iterations:100000,hash:'SHA-256'},key,256));}
 function same(a,b){if(typeof a!=='string'||typeof b!=='string'||a.length!==b.length)return false;let x=0;for(let i=0;i<a.length;i++)x|=a.charCodeAt(i)^b.charCodeAt(i);return x===0;}
-function cookie(token){return `ait_session=${token}; Path=/api/account/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800`;}
-async function auth(req,db){const token=/\bait_session=([0-9a-f]{64})\b/.exec(req.headers.get('Cookie')||'')?.[1];if(!token)return null;return db.prepare('SELECT u.id,u.email,u.role,u.plan FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>CURRENT_TIMESTAMP').bind(await sha(token)).first();}
+function cookie(token){return `ait_session=${token}; Path=/api/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800`;}
+const clearLegacyCookie = 'ait_session=; Path=/api/account/; HttpOnly; Secure; SameSite=Strict; Max-Age=0';
+function sessionResponse(user,status,newCookie){const response=j(account(user),status,{'Set-Cookie':newCookie});response.headers.append('Set-Cookie',clearLegacyCookie);return response;}
+export async function auth(req,db){const token=/\bait_session=([0-9a-f]{64})\b/.exec(req.headers.get('Cookie')||'')?.[1];if(!token)return null;return db.prepare('SELECT u.id,u.email,u.role,u.plan FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>CURRENT_TIMESTAMP').bind(await sha(token)).first();}
 async function newSession(db,user){const token=randomHex(32),hash=await sha(token);await db.prepare("INSERT INTO sessions(token_hash,user_id,expires_at) VALUES(?,?,datetime('now','+7 days'))").bind(hash,user.id).run();return cookie(token);}
 function account(u){return {email:u.email,role:u.role,plan:u.role==='admin'?'pro':u.plan,features:FEATURES.filter(f=>u.role==='admin'||ranks[f.tier]<=ranks[u.plan])};}
 async function razor(path,env,options={}){const response=await fetch('https://api.razorpay.com/v1/'+path,{...options,headers:{Authorization:'Basic '+btoa(env.RAZORPAY_KEY_ID+':'+env.RAZORPAY_KEY_SECRET),'Content-Type':'application/json'}});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error('Payment provider rejected the request');return data;}
@@ -41,16 +43,16 @@ export async function onRequest({request,env}){
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||password.length<12||password.length>128)return j({error:'Use a valid email and a password of 12–128 characters'},400);
     const salt=randomHex(16),hash=await passwordHash(password,salt);
     try{await db.prepare("INSERT INTO users(email,password_salt,password_hash,role,plan) VALUES(?,?,?,'customer','free')").bind(email,salt,hash).run()}catch{return j({error:'Account already exists'},409)}
-    const user=await db.prepare('SELECT id,email,role,plan FROM users WHERE email=?').bind(email).first();return j(account(user),201,{'Set-Cookie':await newSession(db,user)});
+    const user=await db.prepare('SELECT id,email,role,plan FROM users WHERE email=?').bind(email).first();return sessionResponse(user,201,await newSession(db,user));
   }
   if(action==='login'||action==='admin-login'){
     const email=String(body.email||'').trim().toLowerCase(),user=await db.prepare('SELECT * FROM users WHERE email=?').bind(email).first();
     // Spend comparable work even for absent accounts.
     const salt=user?.password_salt||'00000000000000000000000000000000';const candidate=await passwordHash(String(body.password||''),salt);
     if(!user||!same(candidate,user.password_hash)||Boolean(user.role==='admin')!==Boolean(action==='admin-login'))return j({error:'Invalid credentials'},401);
-    return j(account(user),200,{'Set-Cookie':await newSession(db,user)});
+    return sessionResponse(user,200,await newSession(db,user));
   }
-  if(action==='logout'){const token=/\bait_session=([0-9a-f]{64})\b/.exec(request.headers.get('Cookie')||'')?.[1];if(token)await db.prepare('DELETE FROM sessions WHERE token_hash=?').bind(await sha(token)).run();return j({ok:true},200,{'Set-Cookie':'ait_session=; Path=/api/account/; HttpOnly; Secure; SameSite=Strict; Max-Age=0'});}
+  if(action==='logout'){const token=/\bait_session=([0-9a-f]{64})\b/.exec(request.headers.get('Cookie')||'')?.[1];if(token)await db.prepare('DELETE FROM sessions WHERE token_hash=?').bind(await sha(token)).run();const response=j({ok:true},200,{'Set-Cookie':'ait_session=; Path=/api/; HttpOnly; Secure; SameSite=Strict; Max-Age=0'});response.headers.append('Set-Cookie',clearLegacyCookie);return response;}
   if(!u)return j({error:'Sign in required'},401);
   if(action==='order'){
     if(u.role!=='customer')return j({error:'Use a customer account for purchases'},403);

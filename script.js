@@ -1040,13 +1040,12 @@ if (fullscreenBtn && demoVideoFrame) {
   }
 
   async function loadPremiumResearch(stock, toolId) {
-    // The public index intentionally omits premium details; fetch the separate generated JSON.
-    // This is display logic only: these legacy URLs remain public until moved behind authenticated APIs.
+    // Premium research is served from D1 only after server-side entitlement checks.
     const cacheKey = stock.symbol + ':' + toolId;
     if (premiumDataCache.has(cacheKey)) return;
     const folder = {'price-action':'price-action', results:'results', 'technical-analysis':'technical-analysis'}[toolId];
     if (!folder || !/^[A-Z0-9&._-]+$/.test(stock.symbol)) return;
-    const response = await fetch('/stock-research-data/' + folder + '/' + encodeURIComponent(stock.symbol) + '.json', {cache:'no-store'});
+    const response = await fetch('/api/research/' + folder + '/' + encodeURIComponent(stock.symbol), {credentials:'same-origin', cache:'no-store'});
     if (!response.ok) return;
     const data = await response.json();
     if (data && typeof data === 'object' && !Array.isArray(data)) premiumDataCache.set(cacheKey, data);

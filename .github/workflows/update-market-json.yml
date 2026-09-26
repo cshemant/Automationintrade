@@ -38,6 +38,8 @@ on:
     - cron: "37 13 * * 1-5"
     - cron: "37 13 * * 0,6"
     - cron: "28 18 * * 1-5"
+    # One daily research refresh after the market close (20:19 IST).
+    - cron: "49 14 * * 1-5"
 
 permissions:
   contents: write
@@ -83,17 +85,27 @@ jobs:
           PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           AIT_TRIGGER_AI_ENABLED: ${{ secrets.AIT_TRIGGER_AI_ENABLED }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_D1_DATABASE_ID: ${{ secrets.CF_D1_DATABASE_ID }}
+          CF_D1_API_TOKEN: ${{ secrets.CF_D1_API_TOKEN }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             MODE="market"
+            if [ "${{ github.event.schedule }}" = "49 14 * * 1-5" ]; then MODE="research"; fi
           else
             MODE="${{ github.event.inputs.mode || 'all' }}"
           fi
 
           echo "Running UpdateAllData.py with mode: $MODE"
           echo "MODE=$MODE" >> "$GITHUB_ENV"
-          python UpdateAllData.py --mode "$MODE" --batch-size 80
+          if [ "$MODE" = "research" ] || [ "$MODE" = "all" ] || [ "$MODE" = "price-action" ] || [ "$MODE" = "results" ] || [ "$MODE" = "technical-analysis" ]; then
+            if [ -z "$CF_ACCOUNT_ID" ] || [ -z "$CF_D1_DATABASE_ID" ] || [ -z "$CF_D1_API_TOKEN" ]; then echo "Configure CF_ACCOUNT_ID, CF_D1_DATABASE_ID and CF_D1_API_TOKEN first"; exit 1; fi
+            python UpdateAllData.py --mode "$MODE" --batch-size 80 --include-premium
+            python SyncPremiumResearchD1.py
+          else
+            python UpdateAllData.py --mode "$MODE" --batch-size 80
+          fi
 
       - name: Show changed data files
         run: |

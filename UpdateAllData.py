@@ -137,6 +137,7 @@ def parse_args() -> argparse.Namespace:
         default=0,
         help="Optional symbol limit for research JSON testing.",
     )
+    parser.add_argument("--include-premium", action="store_true", help="Generate paid research JSON (requires authenticated asset route in production).")
     parser.add_argument(
         "--skip-technical",
         action="store_true",
@@ -178,6 +179,8 @@ def run_price_action(args: argparse.Namespace) -> None:
         cmd += ["--symbols", symbols]
     if args.limit and args.limit > 0:
         cmd += ["--limit", str(args.limit)]
+    if args.include_premium:
+        cmd += ["--include-premium"]
     run_step("Price Action research JSON", cmd)
 
 
@@ -188,6 +191,8 @@ def run_results(args: argparse.Namespace) -> None:
         cmd += ["--symbols", symbols]
     if args.limit and args.limit > 0:
         cmd += ["--limit", str(args.limit)]
+    if args.include_premium:
+        cmd += ["--include-premium"]
     run_step("Results research JSON", cmd)
 
 
