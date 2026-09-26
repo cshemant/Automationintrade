@@ -900,6 +900,20 @@ if (fullscreenBtn && demoVideoFrame) {
   };
 
   const FREE_RESEARCH_INDICES = new Set(['NIFTY 50', 'NIFTY BANK', 'BANK NIFTY']);
+  // Read the current entitlement from the server, including D1 admin promotions.
+  let researchAccessReady = false;
+  let hasResearchAccess = false;
+  fetch('/api/account/me', {credentials: 'same-origin', cache: 'no-store'})
+    .then(response => response.ok ? response.json() : null)
+    .then(user => {
+      hasResearchAccess = !!user && (user.role === 'admin' || ['research', 'pro'].includes(user.plan));
+    })
+    .catch(() => {})
+    .finally(() => {
+      researchAccessReady = true;
+      const selected = findStock(input.value);
+      if (selected) renderResult(selected);
+    });
   const PREMIUM_RESEARCH_TOOL = 'Stock Research Premium';
   const PREMIUM_TRIAL_AMOUNT = 499;
   const PREMIUM_FULL_AMOUNT = 9999;
@@ -1137,7 +1151,11 @@ if (fullscreenBtn && demoVideoFrame) {
     }
 
     const tool = toolMap[select.value] || toolMap['price-action'];
-    if (!isFreeResearchStock(stock)) {
+    if (!isFreeResearchStock(stock) && !researchAccessReady) {
+      card.innerHTML = '<p role="status">Checking your account access…</p>';
+      return;
+    }
+    if (!isFreeResearchStock(stock) && !hasResearchAccess) {
       renderPremiumResult(stock, tool);
       return;
     }
@@ -1389,26 +1407,41 @@ if (fullscreenBtn && demoVideoFrame) {
 })();
 
 
-/* AIT account navigation state. Append to the site's existing script.js. */
+/* AIT account navigation on every page that loads /script.js. */
 (function () {
-  function updateAccountLinks() {
-    const links = [...document.querySelectorAll('a[href="/account/"], a[href="/account"]')]
-      .filter(link => link.textContent.trim() === 'Login');
-    if (!links.length) return;
-    fetch('/api/account/me', { credentials: 'same-origin', cache: 'no-store' })
-      .then(response => response.ok ? response.json() : null)
+  function ready() {
+    const headers = [...document.querySelectorAll('.site-header .nav-links, .site-header nav .nav-links')];
+    const accountLinks = [...document.querySelectorAll('a[href="/account/"], a[href="/account"], a[href="/admin/"], a[href="/admin"]')];
+    fetch('/api/account/me', {credentials: 'same-origin', cache: 'no-store'})
+      .then(r => r.ok ? r.json() : null)
       .then(user => {
-        if (!user || !user.email) return;
-        for (const link of links) {
-          link.textContent = user.role === 'admin' ? 'Admin account' : 'My Account';
-          link.href = user.role === 'admin' ? '/admin/' : '/account/';
+        const signedIn = !!(user && user.email);
+        const destination = user?.role === 'admin' ? '/admin/' : '/account/';
+        const label = signedIn ? 'My Account' : 'Login';
+        // Header-only plan links move to the footer after sign-in.
+        if (signedIn) document.querySelectorAll('.site-header a[href="/plans/"]').forEach(a => { a.hidden = true; a.style.display = 'none'; });
+        for (const link of accountLinks) {
+          if (!link.closest('.site-header') && !link.closest('.site-footer')) continue;
+          link.href = signedIn ? destination : '/account/';
+          link.textContent = label;
         }
+        for (const nav of headers) {
+          if (nav.querySelector('a[href="/account/"], a[href="/admin/"]')) continue;
+          const a = document.createElement('a');
+          a.href = signedIn ? destination : '/account/';
+          a.textContent = label;
+          const contact = nav.querySelector('a[href="/contact/"]');
+          nav.insertBefore(a, contact || null);
+        }
+        const footer = document.querySelector('.site-footer');
+        if (footer && !footer.querySelector('a[href="/plans/"]')) {
+          const column = footer.querySelector('.footer-column') || footer;
+          const a = document.createElement('a'); a.href = '/plans/'; a.textContent = 'Plans & Pricing'; column.append(a);
+        }
+        if (signedIn) document.querySelectorAll('.plans-login').forEach(el => { el.hidden = true; });
       })
       .catch(() => {});
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', updateAccountLinks, { once: true });
-  } else {
-    updateAccountLinks();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready, {once:true});
+  else ready();
 })();
