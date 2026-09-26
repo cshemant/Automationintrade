@@ -1388,3 +1388,27 @@ if (fullscreenBtn && demoVideoFrame) {
   else initTicketForms();
 })();
 
+
+/* AIT account navigation state. Append to the site's existing script.js. */
+(function () {
+  function updateAccountLinks() {
+    const links = [...document.querySelectorAll('a[href="/account/"], a[href="/account"]')]
+      .filter(link => link.textContent.trim() === 'Login');
+    if (!links.length) return;
+    fetch('/api/account/me', { credentials: 'same-origin', cache: 'no-store' })
+      .then(response => response.ok ? response.json() : null)
+      .then(user => {
+        if (!user || !user.email) return;
+        for (const link of links) {
+          link.textContent = user.role === 'admin' ? 'Admin account' : 'My Account';
+          link.href = user.role === 'admin' ? '/admin/' : '/account/';
+        }
+      })
+      .catch(() => {});
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateAccountLinks, { once: true });
+  } else {
+    updateAccountLinks();
+  }
+})();
