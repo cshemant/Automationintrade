@@ -1457,14 +1457,20 @@ if (fullscreenBtn && demoVideoFrame) {
   function ready() {
     const headers = [...document.querySelectorAll('.site-header .nav-links, .site-header nav .nav-links')];
     const accountLinks = [...document.querySelectorAll('a[href="/account/"], a[href="/account"], a[href="/admin/"], a[href="/admin"]')];
+    // Pricing belongs in the footer for visitors and account holders alike.
+    document.querySelectorAll('.site-header a[href="/plans/"], .site-header a[href="/plans"]')
+      .forEach(a => { a.hidden = true; a.style.display = 'none'; });
+    const footer = document.querySelector('.site-footer');
+    if (footer && !footer.querySelector('a[href="/plans/"], a[href="/plans"]')) {
+      const column = footer.querySelector('.footer-column') || footer;
+      const a = document.createElement('a'); a.href = '/plans/'; a.textContent = 'Plans'; column.append(a);
+    }
     fetch('/api/account/me', {credentials: 'same-origin', cache: 'no-store'})
       .then(r => r.ok ? r.json() : null)
       .then(user => {
         const signedIn = !!(user && user.email);
         const destination = user?.role === 'admin' ? '/admin/' : '/account/';
         const label = signedIn ? 'My Account' : 'Login';
-        // Header-only plan links move to the footer after sign-in.
-        if (signedIn) document.querySelectorAll('.site-header a[href="/plans/"]').forEach(a => { a.hidden = true; a.style.display = 'none'; });
         for (const link of accountLinks) {
           if (!link.closest('.site-header') && !link.closest('.site-footer')) continue;
           link.href = signedIn ? destination : '/account/';
@@ -1477,11 +1483,6 @@ if (fullscreenBtn && demoVideoFrame) {
           a.textContent = label;
           const contact = nav.querySelector('a[href="/contact/"]');
           nav.insertBefore(a, contact || null);
-        }
-        const footer = document.querySelector('.site-footer');
-        if (footer && !footer.querySelector('a[href="/plans/"]')) {
-          const column = footer.querySelector('.footer-column') || footer;
-          const a = document.createElement('a'); a.href = '/plans/'; a.textContent = 'Plans & Pricing'; column.append(a);
         }
         if (signedIn) document.querySelectorAll('.plans-login').forEach(el => { el.hidden = true; });
       })
