@@ -208,6 +208,9 @@ def run_technical(args: argparse.Namespace) -> None:
         cmd += ["--symbols", symbols]
     if args.limit and args.limit > 0:
         cmd += ["--limit", str(args.limit)]
+    # Public profiles are rebuilt only after paid JSON has been stored in D1
+    # and removed from the deploy tree by SyncPremiumResearchD1.py.
+    cmd += ["--skip-pages"]
     run_step("Technical Analysis research JSON", cmd)
 
 

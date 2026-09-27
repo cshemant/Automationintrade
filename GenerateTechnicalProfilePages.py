@@ -33,6 +33,7 @@ OUT_DIR = ROOT / "technical-analysis"
 SITEMAP = ROOT / "sitemap.xml"
 STYLE_VERSION = "155"
 SITE_URL = "https://automationintrade.com"
+FREE_RESEARCH_INDICES = {"NIFTY 50", "NIFTY BANK", "BANK NIFTY"}
 
 INDEX_SLUG_MAP = {
     "NIFTY 50": "nifty-50",
@@ -585,8 +586,25 @@ def collect_profiles(symbols_filter: set[str]) -> List[Tuple[str, Dict[str, Any]
     profiles = []
     used_slugs = set()
     index_map = load_symbol_index_map()
+    # Only free stocks belong on public profile pages, even if a paid JSON
+    # file is still on disk during generation or was left by an old run.
+    research_index = ROOT / "market-data" / "stock-research-index.json"
+    public_symbols = set()
+    if research_index.exists():
+        content = load_json(research_index)
+        if isinstance(content, dict):
+            public_symbols = {
+                str(item.get("symbol", "")).upper()
+                for item in content.get("stocks", []) if isinstance(item, dict)
+                and item.get("accessTier") == "free"
+                and bool({str(x).strip().upper() for x in item.get("indices", [])} & FREE_RESEARCH_INDICES)
+            }
+    if not public_symbols:
+        raise RuntimeError("No verified free stocks in research index; refusing to publish profiles")
     for path in sorted(DATA_DIR.glob("*.json")):
         symbol = path.stem.upper()
+        if symbol not in public_symbols:
+            continue
         if symbols_filter and symbol not in symbols_filter:
             continue
         data = load_json(path)

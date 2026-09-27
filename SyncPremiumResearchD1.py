@@ -4,6 +4,8 @@ Run after UpdateAllData.py --include-premium. Never put these secrets in the rep
 """
 import json
 import os
+import subprocess
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -76,6 +78,15 @@ def main():
                 path = ROOT / 'stock-research-data' / folder / f'{symbol}.{suffix}'
                 if path.exists():
                     path.unlink()
+    # Rebuild hub, sitemap and profiles using free cards only. --clean also
+    # removes old paid profile pages committed by previous workflow versions.
+    subprocess.run([sys.executable, str(ROOT / 'GenerateTechnicalProfilePages.py'), '--clean'],
+                   check=True, cwd=ROOT)
+    for folder in FOLDERS:
+        base = ROOT / 'stock-research-data' / folder
+        for symbol in premium:
+            if any((base / f'{symbol}.{ext}').exists() for ext in ('json', 'webp', 'png', 'jpg', 'jpeg')):
+                raise RuntimeError(f'Public paid research asset remains: {folder}/{symbol}')
     print(f'Synced {len(rows)} paid research cards to D1; removed public paid research assets from deploy tree')
 
 
