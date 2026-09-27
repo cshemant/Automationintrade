@@ -26,6 +26,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "stock-research-data" / "technical-analysis"
@@ -345,6 +346,8 @@ def render_action_rows(rows: Iterable[Dict[str, Any]]) -> str:
 
 
 def render_profile_page(data: Dict[str, Any], slug: str, header: str, footer: str) -> str:
+    if data.get("accessTier") == "premium":
+        return render_public_premium_profile(data, slug, header, footer)
     symbol = text_value(data.get("symbol"))
     stock_name = text_value(data.get("stockName")) or symbol
     view = text_value(data.get("view") or data.get("signal") or "Technical View")
@@ -580,6 +583,33 @@ def load_symbol_index_map() -> Dict[str, Dict[str, Any]]:
                 item["marketUpdatedAt"] = payload.get("updatedAt")
     return out
 
+def render_public_premium_profile(data: Dict[str, Any], slug: str, header: str, footer: str) -> str:
+    """Public landing page with no paid JSON, calculated values, or embedded API data."""
+    symbol = text_value(data.get("symbol"))
+    name = text_value(data.get("stockName")) or symbol
+    destination = "/?stock=" + quote(symbol, safe="") + "&amp;research=technical-analysis"
+    return f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{esc(name)} Technical Analysis | {esc(symbol)} Research | Automation In Trade</title>
+<meta name="description" content="Explore {esc(name)} ({esc(symbol)}) technical analysis on Automation In Trade. Learn what to review before accessing the detailed research card."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="{SITE_URL}/technical-analysis/{esc(slug)}/"/>
+<link rel="stylesheet" href="/style.css?v={STYLE_VERSION}"/></head><body>
+{header}
+<main class="container" style="max-width:1000px;margin:0 auto;padding:60px 20px;min-height:60vh">
+<nav><a href="/">Home</a> › <a href="/technical-analysis/">Technical Analysis</a> › {esc(name)}</nav>
+<h1>{esc(name)} ({esc(symbol)}) Technical Analysis</h1>
+<p>Review the trend, price action, volume and support or resistance levels together when researching {esc(name)}. A single indicator cannot describe every market condition.</p>
+<h2>What the detailed research covers</h2>
+<p>The research card brings together trend measures, momentum indicators and important price levels. Compare the current reading with recent price movement, volume and your own risk limits before making a decision.</p>
+<p>The latest stock-specific readings are available to eligible signed-in accounts. This public page does not display paid research values.</p>
+<p><a class="btn btn-primary" href="{destination}">View {esc(symbol)} research card</a> <a href="/account/">Sign in</a></p>
+<p>Market research is educational and does not constitute investment advice.</p>
+</main>
+{footer}'''
+
+
 def collect_profiles(symbols_filter: set[str]) -> List[Tuple[str, Dict[str, Any], Path]]:
     if not DATA_DIR.exists():
         return []
@@ -590,6 +620,7 @@ def collect_profiles(symbols_filter: set[str]) -> List[Tuple[str, Dict[str, Any]
     # file is still on disk during generation or was left by an old run.
     research_index = ROOT / "market-data" / "stock-research-index.json"
     public_symbols = set()
+    premium_stocks = []
     if research_index.exists():
         content = load_json(research_index)
         if isinstance(content, dict):
@@ -599,6 +630,8 @@ def collect_profiles(symbols_filter: set[str]) -> List[Tuple[str, Dict[str, Any]
                 and item.get("accessTier") == "free"
                 and bool({str(x).strip().upper() for x in item.get("indices", [])} & FREE_RESEARCH_INDICES)
             }
+            premium_stocks = [item for item in content.get("stocks", [])
+                              if isinstance(item, dict) and item.get("accessTier") == "premium"]
     if not public_symbols:
         raise RuntimeError("No verified free stocks in research index; refusing to publish profiles")
     for path in sorted(DATA_DIR.glob("*.json")):
@@ -628,6 +661,18 @@ def collect_profiles(symbols_filter: set[str]) -> List[Tuple[str, Dict[str, Any]
             slug = slugify_stock_name(f"{data.get('stockName') or symbol} {symbol}", symbol)
         used_slugs.add(slug)
         profiles.append((slug, data, path))
+    # Keep the established profile URL for each paid stock. Only public name
+    # and symbol from the deliberately redacted search index are used here.
+    for item in premium_stocks:
+        symbol = text_value(item.get("symbol")).upper()
+        if not symbol or (symbols_filter and symbol not in symbols_filter):
+            continue
+        name = text_value(item.get("stockName")) or symbol
+        slug = slugify_stock_name(name, symbol)
+        if slug in used_slugs:
+            slug = slugify_stock_name(f"{name} {symbol}", symbol)
+        used_slugs.add(slug)
+        profiles.append((slug, {"symbol": symbol, "stockName": name, "accessTier": "premium"}, None))
     return profiles
 
 def render_hub_page(profiles: List[Tuple[str, Dict[str, Any], Path]], header: str, footer: str) -> str:
@@ -635,6 +680,12 @@ def render_hub_page(profiles: List[Tuple[str, Dict[str, Any], Path]], header: st
     for slug, data, _ in profiles:
         stock_name = text_value(data.get("stockName")) or text_value(data.get("symbol"))
         symbol = text_value(data.get("symbol"))
+        if data.get("accessTier") == "premium":
+            cards.append(f'''      <a class="technical-profile-hub-card" href="/technical-analysis/{esc(slug)}/">
+        <span>{esc(symbol)}</span><h2>{esc(stock_name)} Technical Analysis</h2>
+        <p>Explore this stock's research overview</p><small>Detailed analysis requires an eligible account</small>
+      </a>''')
+            continue
         view = text_value(data.get("view") or "Technical View")
         rsi = metric_lookup(data, "RSI")
         support = metric_lookup(data, "Support")
