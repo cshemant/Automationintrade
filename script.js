@@ -1168,6 +1168,10 @@ if (fullscreenBtn && demoVideoFrame) {
     }
 
     const tool = toolMap[select.value] || toolMap['price-action'];
+    if (!isFreeResearchStock(stock) && input.value.includes('|') && findExactStock(input.value)?.symbol === stock.symbol) {
+      input.value = researchSuggestionLabel(stock);
+      populateDatalist(input.value);
+    }
     if (!isFreeResearchStock(stock) && !researchAccessReady) {
       card.innerHTML = '<p role="status">Checking your account access…</p>';
       return;
@@ -1233,6 +1237,13 @@ if (fullscreenBtn && demoVideoFrame) {
       .replace(/>/g, '&gt;');
   }
 
+  function researchSuggestionLabel(stock) {
+    const base = `${stock.symbol} | ${stock.stockName || stock.symbol}`;
+    if (isFreeResearchStock(stock)) return base;
+    const loaded = hasResearchAccess && !!premiumDataCache.get(stock.symbol + ':' + select.value);
+    return base + (loaded ? ' 🔓 Premium access' : ' 🔒 Premium');
+  }
+
   function clearSuggestions() {
     if (datalist) datalist.innerHTML = '';
     input.removeAttribute('list');
@@ -1258,7 +1269,7 @@ if (fullscreenBtn && demoVideoFrame) {
       .sort((a, b) => a.score - b.score || normalize(a.stock.symbol).localeCompare(normalize(b.stock.symbol)))
       .slice(0, MAX_SUGGESTIONS)
       .map(item => {
-        const label = `${item.stock.symbol} | ${item.stock.stockName || item.stock.symbol}${isFreeResearchStock(item.stock) ? '' : ' 🔒 Premium'}`;
+        const label = researchSuggestionLabel(item.stock);
         return `<option value="${escapeAttr(label)}"></option>`;
       })
       .join('');
