@@ -1,8 +1,8 @@
 {
   "toolName": "AIT Stock Trigger Intelligence",
-  "jobRunId": "stock-triggers-20260929T014456+0530",
-  "updatedAt": "29-Sep-2026 01:44 IST",
-  "generatedAt": "2026-09-29T01:44:56+05:30",
+  "jobRunId": "stock-triggers-20260929T045629+0530",
+  "updatedAt": "29-Sep-2026 04:56 IST",
+  "generatedAt": "2026-09-29T04:56:29+05:30",
   "fromDate": "22-Sep-2026",
   "toDate": "29-Sep-2026",
   "lookbackDays": 7,
@@ -13,7 +13,7 @@
   "sourceError": "",
   "aiEnabled": false,
   "aiEnhancedCount": 0,
-  "filingExtractedCount": 55,
+  "filingExtractedCount": 80,
   "filingExtractionAvailable": true,
   "sourceNote": "Fresh NSE corporate announcements are classified into business triggers and merged with upcoming corporate actions. Short transformed summaries are provided for discovery; always open the original filing.",
   "scoringModel": {
@@ -70,19 +70,19 @@
     "totalTriggers": 500,
     "trackedStocks": 416,
     "highImpactCount": 2,
-    "informationalCount": 225,
-    "averageMaterialityScore": 35.6,
-    "averageDataConfidence": 57.6,
-    "positiveCount": 16,
-    "cautionCount": 21,
+    "informationalCount": 213,
+    "averageMaterialityScore": 36.2,
+    "averageDataConfidence": 58.4,
+    "positiveCount": 19,
+    "cautionCount": 27,
     "latestPublishedAt": "2026-09-29T00:46:59+05:30",
     "categoryCounts": {
-      "Promoter / Insider Activity": 185,
-      "Other Material Update": 183,
-      "Management / Auditor Change": 55,
+      "Promoter / Insider Activity": 179,
+      "Other Material Update": 174,
+      "Management / Auditor Change": 65,
       "Investor Meeting / Conference Call": 29,
+      "Quarterly / Financial Results": 15,
       "Acquisition / Partnership": 14,
-      "Quarterly / Financial Results": 10,
       "Regulatory / Legal Development": 6,
       "Corporate Action": 6,
       "Credit Rating Change": 4,
@@ -91,9 +91,9 @@
       "Guidance / Business Outlook": 2
     },
     "sentimentCounts": {
-      "Neutral": 462,
-      "Caution": 21,
-      "Positive": 16,
+      "Neutral": 453,
+      "Caution": 27,
+      "Positive": 19,
       "Mixed": 1
     }
   },
@@ -263,9 +263,11 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/prime-focus-ltd-2026-09-29-4836866c3e94/"
+      ],
       "eventSlug": "prime-focus-ltd-2026-09-29-4836866c3e94",
       "eventUrl": "/stock-triggers/events/prime-focus-ltd-2026-09-29-4836866c3e94/",
       "stockHubUrl": "/stocks/pfocus/",
@@ -384,7 +386,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "adani-ports-and-special-economic-zone-ltd-2026-09-29-8ac08cf12949",
@@ -1096,7 +1098,7 @@
         "momentumScore": 86.4,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/inox-wind-ltd-2026-09-28-90ab99cf475d/"
@@ -2277,7 +2279,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "federal-bank-ltd-2026-09-28-e6a628ecfa20",
@@ -3235,7 +3237,7 @@
         "momentumScore": 58.9,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tata-motors-ltd-2026-09-28-085ca12479b6",
@@ -3353,7 +3355,7 @@
         "momentumScore": 58.2,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "mankind-pharma-ltd-2026-09-28-99739d5e883a",
@@ -3696,7 +3698,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "coforge-ltd-2026-09-28-096bad76c5bc",
@@ -4044,7 +4046,7 @@
         "momentumScore": 57.6,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/phoenix-mills-ltd-2026-09-28-ff27e170b739/"
@@ -4404,7 +4406,7 @@
         "momentumScore": 57.6,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "phoenix-mills-ltd-2026-09-28-4256390d4153",
@@ -4639,7 +4641,7 @@
         "momentumScore": 64.8,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "united-breweries-ltd-2026-09-28-48b5963aa213",
@@ -6843,7 +6845,7 @@
         "momentumScore": 62.9,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ambuja-cements-ltd-2026-09-28-da0551d08137/"
@@ -7201,7 +7203,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/jsw-energy-ltd-2026-09-28-cd10c7146766/"
@@ -9320,7 +9322,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/itc-ltd-2026-09-28-03acf5bab8bf/"
@@ -9572,20 +9574,28 @@
       "symbol": "AKSHOPTFBR",
       "stockName": "Aksh Optifibre Limited",
       "companyName": "Aksh Optifibre Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
+      "sentiment": "Caution",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Aksh Optifibre Limited filed an official update titled ‘voting results of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Aksh Optifibre Limited has informed the Exchange regarding voting results of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI…",
+      "detailsText": "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find…",
+        "Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law…"
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "company secretary",
+        "insolvency"
+      ],
       "publishedAt": "2026-09-28T20:25:27+05:30",
       "publishedDisplay": "28-Sep-2026 20:25 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -9601,24 +9611,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/akshoptfbr/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9642,13 +9652,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9657,7 +9666,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -9674,7 +9683,7 @@
       "eventSlug": "aksh-optifibre-limited-2026-09-28-221b0c60758c",
       "eventUrl": "/stock-triggers/events/aksh-optifibre-limited-2026-09-28-221b0c60758c/",
       "stockHubUrl": "/stocks/akshoptfbr/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "ce3b3212a67bd98070",
@@ -9688,14 +9697,19 @@
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "Arvind SmartSpaces Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "Arvind SmartSpaces Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "of Corporate Services, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001. Pursuant to the Securi Ɵes and Exchange Board of India (Prohibi Ɵon of Insider Trading) RegulaƟons, 2015 and in terms of Company’s Code of Conduct for Prohibi Ɵon of Insider Trading, the Trading Window for dealing in the securiƟes of the Company will remain closed from 1st October, 2026 Ɵll 48 hours aŌer announcement/declaraƟon of Unaudited Financial…",
+      "detailsText": "of Corporate Services, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001. Pursuant to the Securi Ɵes and Exchange Board of India (Prohibi Ɵon of Insider Trading) RegulaƟons, 2015 and in terms of Company’s Code of Conduct for Prohibi Ɵon of Insider Trading, the Trading Window for dealing in the securiƟes of the Company will remain closed from 1st October, 2026 Ɵll 48 hours aŌer announcement/declaraƟon of Unaudited Financial…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "of Corporate Services, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001.",
+        "Pursuant to the Securi Ɵes and Exchange Board of India (Prohibi Ɵon of Insider Trading) RegulaƟons, 2015 and in terms of Company’s Code of Conduct for Prohibi Ɵon of Insider Trading, the Trading Window for dealing in the securiƟes of the Company will remain closed from 1st October, 2026 Ɵll 48 hours aŌer announcement/declaraƟon of Unaudited Financial…"
+      ],
       "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
       "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
         "insider trading"
       ],
@@ -9714,9 +9728,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/arvsmart/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 44,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -9729,9 +9743,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 15,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9755,13 +9769,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 19/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9770,7 +9783,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -9796,20 +9809,26 @@
       "symbol": "BRITANNIA",
       "stockName": "Britannia Industries Ltd.",
       "companyName": "Britannia Industries Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "Britannia Industries Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "Britannia Industries Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
-      "highlights": [],
+      "summary": "The Trading Window will open after 48 hours of the declaration of Unaudited Consolidated and Standalone Financial Results of the Company for the quarter and half year ending 30 September 2026. Thanking you, Yours faithfully, For Britannia Industries Limited Sona Rajora Company Secretary & Compliance Officer ICSI Membership No: A35468 To, The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Fort, Mumbai - 400 001 Scrip…",
+      "detailsText": "The Trading Window will open after 48 hours of the declaration of Unaudited Consolidated and Standalone Financial Results of the Company for the quarter and half year ending 30 September 2026. Thanking you, Yours faithfully, For Britannia Industries Limited Sona Rajora Company Secretary & Compliance Officer ICSI Membership No: A35468 To, The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Fort, Mumbai - 400 001 Scrip Code: 500825 The Listing Department, National Stock Exchange of India Limited, Exchange…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The Trading Window will open after 48 hours of the declaration of Unaudited Consolidated and Standalone Financial Results of the Company for the quarter and half year ending 30 September 2026.",
+        "Thanking you, Yours faithfully, For Britannia Industries Limited Sona Rajora Company Secretary & Compliance Officer ICSI Membership No: A35468 To, The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Fort, Mumbai - 400 001 Scrip Code: 500825 The Listing Department, National Stock Exchange of India Limited, Exchange…"
+      ],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
+        "financial results",
         "insider trading"
       ],
       "publishedAt": "2026-09-28T20:23:51+05:30",
@@ -9831,24 +9850,24 @@
       "profileUrl": "/technical-analysis/britannia-industries-technical-analysis/",
       "triggerUrl": "/stocks/britannia/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 53,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 28,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 15,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9872,13 +9891,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 28/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9887,7 +9905,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": -0.46,
@@ -9896,7 +9914,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/britannia-industries-ltd-2026-09-28-427c9215deeb/"
@@ -9904,7 +9922,7 @@
       "eventSlug": "britannia-industries-ltd-2026-09-28-427c9215deeb",
       "eventUrl": "/stock-triggers/events/britannia-industries-ltd-2026-09-28-427c9215deeb/",
       "stockHubUrl": "/stocks/britannia/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/results/"
     },
     {
       "id": "27325efcfd933e8dee",
@@ -9913,20 +9931,28 @@
       "symbol": "AKSHOPTFBR",
       "stockName": "Aksh Optifibre Limited",
       "companyName": "Aksh Optifibre Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
+      "sentiment": "Caution",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Aksh Optifibre Limited: Aksh Optifibre Limited has submitted the Exchange a copy Srutinizers report of Annual General Meeting held on September 28, 2026",
-      "detailsText": "Aksh Optifibre Limited has submitted the Exchange a copy Srutinizers report of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI…",
+      "detailsText": "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "General Manager BSE Limited Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Disclosure pursuant to Regulation 44 of the SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015 Dear Sir/Ma’am, Pursuant to Regulation 44 of SEBI (Listing Obligations and Disclosure Requirements) Regulation, 2015, please find…",
+        "Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law…"
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "company secretary",
+        "insolvency"
+      ],
       "publishedAt": "2026-09-28T20:23:43+05:30",
       "publishedDisplay": "28-Sep-2026 20:23 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -9942,24 +9968,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/akshoptfbr/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9983,13 +10009,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9998,7 +10023,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10015,7 +10040,7 @@
       "eventSlug": "aksh-optifibre-limited-2026-09-28-ab4acd212cf6",
       "eventUrl": "/stock-triggers/events/aksh-optifibre-limited-2026-09-28-ab4acd212cf6/",
       "stockHubUrl": "/stocks/akshoptfbr/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "a77fb51205048970ac",
@@ -10135,20 +10160,29 @@
       "symbol": "FMNL",
       "stockName": "Future Market Networks Limited",
       "companyName": "Future Market Networks Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Future Market Networks Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Future Market Networks Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "The requisite quorum being present, Chairman called the meeting to order. Subsequently, Chairman requested the Members, who had not cast their vote through remote e-voting, to do electronic voting on all the above resolutions set out in the Notice of AGM. Thereafter, Chairman thanked all the Members, Statutory Auditors, Secretarial Auditor, representatives of NSDL, Registrar and Share Transfer Agents and Directors for attending and participating in the…",
+      "detailsText": "The requisite quorum being present, Chairman called the meeting to order. Subsequently, Chairman requested the Members, who had not cast their vote through remote e-voting, to do electronic voting on all the above resolutions set out in the Notice of AGM. Thereafter, Chairman thanked all the Members, Statutory Auditors, Secretarial Auditor, representatives of NSDL, Registrar and Share Transfer Agents and Directors for attending and participating in the AGM through VC / OAVM.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The requisite quorum being present, Chairman called the meeting to order.",
+        "Subsequently, Chairman requested the Members, who had not cast their vote through remote e-voting, to do electronic voting on all the above resolutions set out in the Notice of AGM.",
+        "Thereafter, Chairman thanked all the Members, Statutory Auditors, Secretarial Auditor, representatives of NSDL, Registrar and Share Transfer Agents and Directors for attending and participating in the AGM through VC / OAVM."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "auditor",
+        "director"
+      ],
       "publishedAt": "2026-09-28T20:22:25+05:30",
       "publishedDisplay": "28-Sep-2026 20:22 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -10164,24 +10198,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/fmnl/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10205,13 +10239,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10220,7 +10253,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10237,7 +10270,7 @@
       "eventSlug": "future-market-networks-limited-2026-09-28-ee7a7d7bab4f",
       "eventUrl": "/stock-triggers/events/future-market-networks-limited-2026-09-28-ee7a7d7bab4f/",
       "stockHubUrl": "/stocks/fmnl/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "84434edc67a4005106",
@@ -10468,20 +10501,29 @@
       "symbol": "AKSHOPTFBR",
       "stockName": "Aksh Optifibre Limited",
       "companyName": "Aksh Optifibre Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
+      "sentiment": "Caution",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Aksh Optifibre Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Aksh Optifibre Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "General Manager BSE Ltd Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Proceedings of the 39th Annual General Meeting of the Company Dear Sir/Ma’am, Pursuant to Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find enclosed herewith the proceedings of the 39 th Annual… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI…",
+      "detailsText": "General Manager BSE Ltd Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Proceedings of the 39th Annual General Meeting of the Company Dear Sir/Ma’am, Pursuant to Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find enclosed herewith the proceedings of the 39 th Annual… Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No: F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law… It was further informed that Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law Tribunal, Jaipur Bench, whereby Mr Praveen Kumar Singhal was appointed as the Interim…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "General Manager BSE Ltd Phirozee Jeejeebhoy Towers, Dalal Street, Mumbai400 001 BSE Scrip Code: 532351 Sub: Proceedings of the 39th Annual General Meeting of the Company Dear Sir/Ma’am, Pursuant to Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find enclosed herewith the proceedings of the 39 th Annual…",
+        "Thanking you, For Aksh Optifibre Limited Mayank Chadha Company Secretary & Compliance Officer ICSI Membership No: F13404 (Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law…",
+        "It was further informed that Aksh Optifibre Limited is undergoing Corporate Insolvency Resolution Process (\"CIRP\") under the provisions of the Insolvency and Bankruptcy Code, 2016, pursuant to the order dated June 19, 2026 passed by the Hon'ble National Company Law Tribunal, Jaipur Bench, whereby Mr Praveen Kumar Singhal was appointed as the Interim…"
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "company secretary",
+        "insolvency"
+      ],
       "publishedAt": "2026-09-28T20:21:56+05:30",
       "publishedDisplay": "28-Sep-2026 20:21 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -10497,24 +10539,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/akshoptfbr/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10538,13 +10580,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10553,7 +10594,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10570,7 +10611,7 @@
       "eventSlug": "aksh-optifibre-limited-2026-09-28-e2eda986dd3b",
       "eventUrl": "/stock-triggers/events/aksh-optifibre-limited-2026-09-28-e2eda986dd3b/",
       "stockHubUrl": "/stocks/akshoptfbr/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "f85d9bb1cdbb15fc63",
@@ -10694,18 +10735,26 @@
       "companyName": "Williamson Magor & Company Limited",
       "category": "MANAGEMENT_CHANGE",
       "categoryLabel": "Management / Auditor Change",
-      "sentiment": "Neutral",
+      "sentiment": "Caution",
       "subject": "Change in Director(s)",
       "rawSubject": "Change in Director(s)",
-      "summary": "Williamson Magor & Company Limited filed an official update titled ‘Change in Director(s) of the company’.",
-      "detailsText": "Williamson Magor & Company Limited has informed the Exchange regarding Change in Director(s) of the company.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Towers, Dalal Street, of India Ltd, Exchange Ltd, MUMBAI-400 001. appointment, resignation, removal, death or otherwise Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company. Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company.",
+      "detailsText": "Towers, Dalal Street, of India Ltd, Exchange Ltd, MUMBAI-400 001. appointment, resignation, removal, death or otherwise Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company. Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Towers, Dalal Street, of India Ltd, Exchange Ltd, MUMBAI-400 001.",
+        "appointment, resignation, removal, death or otherwise Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company.",
+        "Appointed by the members of the Company as a Director (Non – Executive & Non - Independent) of the Company."
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
+        "resignation",
+        "appointment",
         "director"
       ],
       "publishedAt": "2026-09-28T20:18:55+05:30",
@@ -10723,24 +10772,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/willamagor/",
       "aiEnhanced": false,
-      "impactScore": 34,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 42,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 15,
+          "score": 17,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10764,13 +10813,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 34/100 from business materiality 15/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 17/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10779,7 +10827,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10805,20 +10853,30 @@
       "symbol": "GRAVITA",
       "stockName": "Gravita India Limited",
       "companyName": "Gravita India Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Gravita India Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Gravita India Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "(“IST”) THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS (“OAVM”) The Company Secretary welcomed the shareholders, Directors, Scrutinizer and Auditors at the 34\" Annual General Meeting of the company and explained the guidelines to shareholders for attending the Annual general Meeting THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS… He further informed about the availability of requisite Registers, Documents, Auditor’s Report…",
+      "detailsText": "(“IST”) THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS (“OAVM”) The Company Secretary welcomed the shareholders, Directors, Scrutinizer and Auditors at the 34\" Annual General Meeting of the company and explained the guidelines to shareholders for attending the Annual general Meeting THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS… He further informed about the availability of requisite Registers, Documents, Auditor’s Report, Secretarial Audit Report and documents referred in the notice for inspection clectronically during the meeting. With the permission of Chairman, the company secretary proceeded with the agenda of meeting and considering the Notice of Annual General Meeting being already circulated to all the shareholders, it was taken as read.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "(“IST”) THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS (“OAVM”) The Company Secretary welcomed the shareholders, Directors, Scrutinizer and Auditors at the 34\" Annual General Meeting of the company and explained the guidelines to shareholders for attending the Annual general Meeting THROUGH VIDEO CONFERENCING (“VC”)/ OTHER AUDIO-VISUAL MEANS…",
+        "He further informed about the availability of requisite Registers, Documents, Auditor’s Report, Secretarial Audit Report and documents referred in the notice for inspection clectronically during the meeting.",
+        "With the permission of Chairman, the company secretary proceeded with the agenda of meeting and considering the Notice of Annual General Meeting being already circulated to all the shareholders, it was taken as read."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "company secretary",
+        "auditor",
+        "director"
+      ],
       "publishedAt": "2026-09-28T20:17:27+05:30",
       "publishedDisplay": "28-Sep-2026 20:17 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -10834,24 +10892,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/gravita/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 42,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 17,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10875,13 +10933,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 17/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10890,7 +10947,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10907,7 +10964,7 @@
       "eventSlug": "gravita-india-limited-2026-09-28-71ac727961ba",
       "eventUrl": "/stock-triggers/events/gravita-india-limited-2026-09-28-71ac727961ba/",
       "stockHubUrl": "/stocks/gravita/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "02dbb5153f65c15a91",
@@ -11140,20 +11197,23 @@
       "symbol": "BLUSPRING",
       "stockName": "Bluspring Enterprises Limited",
       "companyName": "Bluspring Enterprises Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "Bluspring Enterprises Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "Bluspring Enterprises Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
+      "summary": "The trading window shall open on the completion of 48 hours after the declaration of the UnAudited Financial Results (Standalone and Consolidated) of the Company for the Second Quarter (Q2) and Half Year (H1) ending on September 30, 2026, to the Stock Exchange(s).",
+      "detailsText": "The trading window shall open on the completion of 48 hours after the declaration of the UnAudited Financial Results (Standalone and Consolidated) of the Company for the Second Quarter (Q2) and Half Year (H1) ending on September 30, 2026, to the Stock Exchange(s).",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The trading window shall open on the completion of 48 hours after the declaration of the UnAudited Financial Results (Standalone and Consolidated) of the Company for the Second Quarter (Q2) and Half Year (H1) ending on September 30, 2026, to the Stock Exchange(s)."
+      ],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
       "highlights": [],
       "matchedSignals": [
+        "financial results",
         "insider trading"
       ],
       "publishedAt": "2026-09-28T20:12:16+05:30",
@@ -11171,17 +11231,17 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/bluspring/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 49,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 28,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
@@ -11212,10 +11272,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 49/100 from business materiality 28/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -11244,7 +11304,7 @@
       "eventSlug": "bluspring-enterprises-limited-2026-09-28-e648a6dce8e5",
       "eventUrl": "/stock-triggers/events/bluspring-enterprises-limited-2026-09-28-e648a6dce8e5/",
       "stockHubUrl": "/stocks/bluspring/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/results/"
     },
     {
       "id": "a05164ab7b4e130ec7",
@@ -11258,16 +11318,24 @@
       "sentiment": "Neutral",
       "subject": "Change in Management",
       "rawSubject": "Change in Management",
-      "summary": "Euro Panel Products Limited has informed the Exchange about change in Management",
-      "detailsText": "Euro Panel Products Limited has informed the Exchange about change in Management",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Ritesh Jayswal & Associates, Cost Accountants (Firm Registration Number: 101681) ), who was appointed as the Cost Auditor in the Board Meeting held on May 22, 2026, and is hereby appointed as Cost Auditor of the Company by way of receiving member’s approval. Re-Appointment of Mr Rajesh Nana lal Shah, who was appointed as a Managing Director in the Board Meeting held on August 26, 2026, and is hereby app ointed as a Managing Director of the Company by way…",
+      "detailsText": "Ritesh Jayswal & Associates, Cost Accountants (Firm Registration Number: 101681) ), who was appointed as the Cost Auditor in the Board Meeting held on May 22, 2026, and is hereby appointed as Cost Auditor of the Company by way of receiving member’s approval. Re-Appointment of Mr Rajesh Nana lal Shah, who was appointed as a Managing Director in the Board Meeting held on August 26, 2026, and is hereby app ointed as a Managing Director of the Company by way of receiving member’s approval. Re-Appointment of Mr Divyam Rajesh Shah, who was appointed as a Whole Time Director in the Board Meeting held on August 26, 2026, and is hereby app ointed as a Whole Time Director of the Company by way of receiving member’s approval.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Ritesh Jayswal & Associates, Cost Accountants (Firm Registration Number: 101681) ), who was appointed as the Cost Auditor in the Board Meeting held on May 22, 2026, and is hereby appointed as Cost Auditor of the Company by way of receiving member’s approval.",
+        "Re-Appointment of Mr Rajesh Nana lal Shah, who was appointed as a Managing Director in the Board Meeting held on August 26, 2026, and is hereby app ointed as a Managing Director of the Company by way of receiving member’s approval.",
+        "Re-Appointment of Mr Divyam Rajesh Shah, who was appointed as a Whole Time Director in the Board Meeting held on August 26, 2026, and is hereby app ointed as a Whole Time Director of the Company by way of receiving member’s approval."
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
       "highlights": [],
       "matchedSignals": [
-        "change in management"
+        "appointment",
+        "change in management",
+        "managing director",
+        "auditor",
+        "director"
       ],
       "publishedAt": "2026-09-28T20:11:01+05:30",
       "publishedDisplay": "28-Sep-2026 20:11 IST",
@@ -11284,24 +11352,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/eurobond/",
       "aiEnhanced": false,
-      "impactScore": 34,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 42,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 15,
+          "score": 19,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -11325,10 +11393,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 34/100 from business materiality 15/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 19/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -11366,20 +11434,23 @@
       "symbol": "FMNL",
       "stockName": "Future Market Networks Limited",
       "companyName": "Future Market Networks Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "Future Market Networks Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "Future Market Networks Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
+      "summary": "The date of Board Meeting for consideration and declaration of the Unaudited Financial results (Standalone & Consolidated) for the quarter and half year ending on September 30, 2026, shall be intimated in due course.",
+      "detailsText": "The date of Board Meeting for consideration and declaration of the Unaudited Financial results (Standalone & Consolidated) for the quarter and half year ending on September 30, 2026, shall be intimated in due course.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The date of Board Meeting for consideration and declaration of the Unaudited Financial results (Standalone & Consolidated) for the quarter and half year ending on September 30, 2026, shall be intimated in due course."
+      ],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
       "highlights": [],
       "matchedSignals": [
+        "financial results",
         "insider trading"
       ],
       "publishedAt": "2026-09-28T20:09:58+05:30",
@@ -11397,7 +11468,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/fmnl/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 49,
       "materialityBand": "Low materiality",
       "dataConfidence": 57,
       "scoreVersion": "2.0",
@@ -11405,9 +11476,9 @@
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 28,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
@@ -11438,10 +11509,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 49/100 from business materiality 28/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -11470,7 +11541,7 @@
       "eventSlug": "future-market-networks-limited-2026-09-28-644e2bc53ec6",
       "eventUrl": "/stock-triggers/events/future-market-networks-limited-2026-09-28-644e2bc53ec6/",
       "stockHubUrl": "/stocks/fmnl/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/results/"
     },
     {
       "id": "52147f9467d9e3b333",
@@ -11578,7 +11649,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/sun-pharmaceutical-industries-ltd-2026-09-28-c80f14b69230/"
@@ -11595,19 +11666,24 @@
       "symbol": "ESDS",
       "stockName": "ESDS Software Solution Limited",
       "companyName": "ESDS Software Solution Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "OTHER_MATERIAL",
+      "categoryLabel": "Other Material Update",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "ESDS Software Solution Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "ESDS Software Solution Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
-      "highlights": [],
+      "summary": "No ESDS / 2026-27 / 9 Date: September 28, 2026 To To Department of Corporate Services Listing Department BSE Limited National Stock Exchange of India Limited Phiroze Jeejeebhoy Towers, C-1, G-Block, Bandra-Kurla Complex Dalal Street, Mumbai, MH – 400001 Bandra (E), Mumbai, MH – 400051 Scrip Code: 544898 Scrip Symbol: ESDS Sub: Intimation of closure of…",
+      "detailsText": "No ESDS / 2026-27 / 9 Date: September 28, 2026 To To Department of Corporate Services Listing Department BSE Limited National Stock Exchange of India Limited Phiroze Jeejeebhoy Towers, C-1, G-Block, Bandra-Kurla Complex Dalal Street, Mumbai, MH – 400001 Bandra (E), Mumbai, MH – 400051 Scrip Code: 544898 Scrip Symbol: ESDS Sub: Intimation of closure of…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "No ESDS / 2026-27 / 9 Date: September 28, 2026 To To Department of Corporate Services Listing Department BSE Limited National Stock Exchange of India Limited Phiroze Jeejeebhoy Towers, C-1, G-Block, Bandra-Kurla Complex Dalal Street, Mumbai, MH – 400001 Bandra (E), Mumbai, MH – 400051 Scrip Code: 544898 Scrip Symbol: ESDS Sub: Intimation of closure of…"
+      ],
+      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
+      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
+      "highlights": [
+        "rs,",
+        "27 / 9"
+      ],
       "matchedSignals": [
         "insider trading"
       ],
@@ -11626,31 +11702,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/esds/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 36,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 9,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "The filing requires additional facts before its business impact can be judged."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 17,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 27:9"
         },
         {
           "id": "marketConfirmation",
@@ -11667,13 +11743,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 36/100 from business materiality 9/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -11681,8 +11756,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "27:9"
+        ],
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -11699,7 +11776,7 @@
       "eventSlug": "esds-software-solution-limited-2026-09-28-8a436350424d",
       "eventUrl": "/stock-triggers/events/esds-software-solution-limited-2026-09-28-8a436350424d/",
       "stockHubUrl": "/stocks/esds/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/other-material/"
     },
     {
       "id": "779ebb618f5f54a337",
@@ -11819,20 +11896,31 @@
       "symbol": "EUROBOND",
       "stockName": "Euro Panel Products Limited",
       "companyName": "Euro Panel Products Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Euro Panel Products Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Euro Panel Products Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "NSE Symbol: EUROBOND To, The Manager, Listing Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001. All the other Directors, Chief Financial Officer, Company Secre tary and Auditors were also present at the AGM. Thereafter, Mr Divyam Rajesh Shah apprised the members, inter alia, on Performance and highlights of FY 2025-26, opportunity and market dynamics, cust omer dynamics, future readiness, Environmental Social & Governance…",
+      "detailsText": "NSE Symbol: EUROBOND To, The Manager, Listing Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001. All the other Directors, Chief Financial Officer, Company Secre tary and Auditors were also present at the AGM. Thereafter, Mr Divyam Rajesh Shah apprised the members, inter alia, on Performance and highlights of FY 2025-26, opportunity and market dynamics, cust omer dynamics, future readiness, Environmental Social & Governance initiatives and the path ahead.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "NSE Symbol: EUROBOND To, The Manager, Listing Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001.",
+        "All the other Directors, Chief Financial Officer, Company Secre tary and Auditors were also present at the AGM.",
+        "Thereafter, Mr Divyam Rajesh Shah apprised the members, inter alia, on Performance and highlights of FY 2025-26, opportunity and market dynamics, cust omer dynamics, future readiness, Environmental Social & Governance initiatives and the path ahead."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,",
+        "FY 2025-26"
+      ],
+      "matchedSignals": [
+        "chief financial officer",
+        "auditor",
+        "director"
+      ],
       "publishedAt": "2026-09-28T20:06:58+05:30",
       "publishedDisplay": "28-Sep-2026 20:06 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -11848,24 +11936,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/eurobond/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 44,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 17,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -11889,13 +11977,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 17/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -11904,7 +11991,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -11921,7 +12008,7 @@
       "eventSlug": "euro-panel-products-limited-2026-09-28-fa36c83a0f3c",
       "eventUrl": "/stock-triggers/events/euro-panel-products-limited-2026-09-28-fa36c83a0f3c/",
       "stockHubUrl": "/stocks/eurobond/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "6068648bde9c15b41d",
@@ -11930,20 +12017,30 @@
       "symbol": "RELTD",
       "stockName": "Ravindra Energy Limited",
       "companyName": "Ravindra Energy Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Ravindra Energy Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "Ravindra Energy Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "of Corporate Services, BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001, Maharashtra, India. Mr Vikas Pawar - Chief Financial Officer  AUDITORS 1. With the concurrence of the members, the Audited Standalone and Consolidated Financial Statements for the financial year ended March 31, 2026, together with the Reports of the Statutory Auditors and the Secretarial Auditors, were taken as read.",
+      "detailsText": "of Corporate Services, BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001, Maharashtra, India. Mr Vikas Pawar - Chief Financial Officer  AUDITORS 1. With the concurrence of the members, the Audited Standalone and Consolidated Financial Statements for the financial year ended March 31, 2026, together with the Reports of the Statutory Auditors and the Secretarial Auditors, were taken as read.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "of Corporate Services, BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai400001, Maharashtra, India.",
+        "Mr Vikas Pawar - Chief Financial Officer  AUDITORS 1.",
+        "With the concurrence of the members, the Audited Standalone and Consolidated Financial Statements for the financial year ended March 31, 2026, together with the Reports of the Statutory Auditors and the Secretarial Auditors, were taken as read."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,",
+        "RS 1"
+      ],
+      "matchedSignals": [
+        "chief financial officer",
+        "auditor"
+      ],
       "publishedAt": "2026-09-28T20:06:18+05:30",
       "publishedDisplay": "28-Sep-2026 20:06 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -11959,24 +12056,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/reltd/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 43,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12000,13 +12097,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 43/100 from business materiality 16/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -12015,7 +12111,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -12032,7 +12128,7 @@
       "eventSlug": "ravindra-energy-limited-2026-09-28-6fd05b6e6f7a",
       "eventUrl": "/stock-triggers/events/ravindra-energy-limited-2026-09-28-6fd05b6e6f7a/",
       "stockHubUrl": "/stocks/reltd/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "dfe686711c4feaa29f",
@@ -12043,19 +12139,25 @@
       "companyName": "Saksoft Limited",
       "category": "CREDIT_RATING",
       "categoryLabel": "Credit Rating Change",
-      "sentiment": "Neutral",
+      "sentiment": "Positive",
       "subject": "Credit Rating- Revision",
       "rawSubject": "Credit Rating- Revision",
-      "summary": "Saksoft Limited has informed the Exchange about Credit Rating- Revision",
-      "detailsText": "Saksoft Limited has informed the Exchange about Credit Rating- Revision",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Care Ratings Limited, a credit rating agency registered with the Securities and Exchange Board of India, has revised and upgraded the credit rating of the Company for availing credit facilities vide its letter dated September 28, 2026. Details of the revised and upgraded Credit Ratings are presented as below: Facilities Amount (₹ crore) Rating Rating Action Long Term Bank Facilities 40.00 (Enhanced from 12.00) CARE A+; Stable Upgraded from CARE A; Stable…",
+      "detailsText": "Care Ratings Limited, a credit rating agency registered with the Securities and Exchange Board of India, has revised and upgraded the credit rating of the Company for availing credit facilities vide its letter dated September 28, 2026. Details of the revised and upgraded Credit Ratings are presented as below: Facilities Amount (₹ crore) Rating Rating Action Long Term Bank Facilities 40.00 (Enhanced from 12.00) CARE A+; Stable Upgraded from CARE A; Stable Short Term Bank Facilities 3.00 CARE A1 Reaffirmed A copy of the communication received from M/s. Care Ratings Limited is attached to this letter.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Care Ratings Limited, a credit rating agency registered with the Securities and Exchange Board of India, has revised and upgraded the credit rating of the Company for availing credit facilities vide its letter dated September 28, 2026.",
+        "Details of the revised and upgraded Credit Ratings are presented as below: Facilities Amount (₹ crore) Rating Rating Action Long Term Bank Facilities 40.00 (Enhanced from 12.00) CARE A+; Stable Upgraded from CARE A; Stable Short Term Bank Facilities 3.00 CARE A1 Reaffirmed A copy of the communication received from M/s.",
+        "Care Ratings Limited is attached to this letter."
+      ],
       "whyItMatters": "A rating change can affect borrowing cost, lender confidence and refinancing ability. Read the rating rationale and outlook.",
       "riskNote": "Read the complete rating rationale; reaffirmation may still include a negative outlook or elevated leverage.",
       "highlights": [],
       "matchedSignals": [
-        "credit rating"
+        "credit rating",
+        "credit ratings",
+        "upgrade"
       ],
       "publishedAt": "2026-09-28T20:05:04+05:30",
       "publishedDisplay": "28-Sep-2026 20:05 IST",
@@ -12072,24 +12174,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/saksoft/",
       "aiEnhanced": false,
-      "impactScore": 38,
+      "impactScore": 44,
       "materialityBand": "Low materiality",
-      "dataConfidence": 47,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 21,
           "max": 35,
           "reason": "Ratings can influence borrowing cost and refinancing access."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12113,10 +12215,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 19/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 21/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Ratings can influence borrowing cost and refinancing access."
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -12270,20 +12372,24 @@
       "symbol": "INTLCONV",
       "stockName": "International Conveyors Limited",
       "companyName": "International Conveyors Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "International Conveyors Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "International Conveyors Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
+      "summary": "The date of the Board Meeting to be held for the consideration a nd approval of un-audited financial results for the quarter & half-year ended September 30, 2026 will be communicated in due course of time.",
+      "detailsText": "The date of the Board Meeting to be held for the consideration a nd approval of un-audited financial results for the quarter & half-year ended September 30, 2026 will be communicated in due course of time.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The date of the Board Meeting to be held for the consideration a nd approval of un-audited financial results for the quarter & half-year ended September 30, 2026 will be communicated in due course of time."
+      ],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
       "highlights": [],
       "matchedSignals": [
+        "financial results",
+        "results for the quarter",
         "insider trading"
       ],
       "publishedAt": "2026-09-28T20:01:44+05:30",
@@ -12301,7 +12407,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/intlconv/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 50,
       "materialityBand": "Low materiality",
       "dataConfidence": 57,
       "scoreVersion": "2.0",
@@ -12309,9 +12415,9 @@
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 29,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
@@ -12342,10 +12448,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 29/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -12374,7 +12480,7 @@
       "eventSlug": "international-conveyors-limited-2026-09-28-168bd8b3edd7",
       "eventUrl": "/stock-triggers/events/international-conveyors-limited-2026-09-28-168bd8b3edd7/",
       "stockHubUrl": "/stocks/intlconv/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/results/"
     },
     {
       "id": "3adba80363315c4e2e",
@@ -12593,7 +12699,7 @@
         "momentumScore": 58.6,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cummins-india-ltd-2026-09-28-a23b80e8bf25/"
@@ -12612,21 +12718,28 @@
       "companyName": "Creative Eye Limited",
       "category": "MANAGEMENT_CHANGE",
       "categoryLabel": "Management / Auditor Change",
-      "sentiment": "Neutral",
+      "sentiment": "Caution",
       "subject": "Appointment of M/s. STDJ & Co Statutory Auditors as Other of the company w.e.f. September 28, 2026",
       "rawSubject": "Appointment",
-      "summary": "Creative Eye Limited filed an official update titled ‘Appointment of M/s. STDJ & Co Statutory Auditors as Other of the company w.e.f. September 28, 2026’.",
-      "detailsText": "Creative Eye Limited has informed the Exchange regarding Appointment of M/s. STDJ & Co Statutory Auditors as Other of the company w.e.f. September 28, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with… Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company…",
+      "detailsText": "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with… Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company Secretary and Compliance Officer ACS No 11983 Creative Eye Limited Regd office: \"Kailash Plaza\", Plot No 12-A, New Link Road, Opp. Reason for change (viz., appointment, resignation, removal, death or otherwise) Appointment of M/s STDJ & Co., Chartered Accountants (Firm Registration No 136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, to hold office from the conclusion of this Annual General Meeting (AGM) until the conclusion of the Annual…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with…",
+        "Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company Secretary and Compliance Officer ACS No 11983 Creative Eye Limited Regd office: \"Kailash Plaza\", Plot No 12-A, New Link Road, Opp.",
+        "Reason for change (viz., appointment, resignation, removal, death or otherwise) Appointment of M/s STDJ & Co., Chartered Accountants (Firm Registration No 136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, to hold office from the conclusion of this Annual General Meeting (AGM) until the conclusion of the Annual…"
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
       "highlights": [
-        "2026 Cr"
+        "rs,",
+        "11983 Cr"
       ],
       "matchedSignals": [
+        "resignation",
         "appointment",
+        "company secretary",
         "auditor"
       ],
       "publishedAt": "2026-09-28T19:58:19+05:30",
@@ -12644,24 +12757,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/creativeye/",
       "aiEnhanced": false,
-      "impactScore": 39,
+      "impactScore": 45,
       "materialityBand": "Low materiality",
-      "dataConfidence": 63,
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 16,
+          "score": 18,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 13,
+          "score": 17,
           "max": 20,
-          "reason": "adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12685,10 +12798,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 39/100 from business materiality 16/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 18/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -12699,7 +12812,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 1
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -12727,21 +12840,29 @@
       "companyName": "Creative Eye Limited",
       "category": "MANAGEMENT_CHANGE",
       "categoryLabel": "Management / Auditor Change",
-      "sentiment": "Neutral",
+      "sentiment": "Caution",
       "subject": "Appointment of M/s. Kirty Vaidya & Associates as Other of the company w.e.f. September 28, 2026",
       "rawSubject": "Appointment",
-      "summary": "Creative Eye Limited filed an official update titled ‘Appointment of M/s. Kirty Vaidya & Associates as Other of the company w.e.f. September 28, 2026’.",
-      "detailsText": "Creative Eye Limited has informed the Exchange regarding Appointment of M/s. Kirty Vaidya & Associates as Other of the company w.e.f. September 28, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with… Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company…",
+      "detailsText": "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with… Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company Secretary and Compliance Officer ACS No 11983 Creative Eye Limited Regd office: \"Kailash Plaza\", Plot No 12-A, New Link Road, Opp. Reason for change (viz., appointment, resignation, removal, death or otherwise) Appointment of M/s STDJ & Co., Chartered Accountants (Firm Registration No 136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, to hold office from the conclusion of this Annual General Meeting (AGM) until the conclusion of the Annual…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "STDJ & Co., Chartered Accountants (Firm Registration No136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, commencing from Financial Year 2026-2027 upto Financial Year 2030-2031, subject to the approval of the members The details of the Auditor as required in terms of Regulation 30 of Listing Regulations read with…",
+        "Thanking You, Yours faithfully, For Creative Eye Limited Mr Manoj Ramesh Kalgutkar Company Secretary and Compliance Officer ACS No 11983 Creative Eye Limited Regd office: \"Kailash Plaza\", Plot No 12-A, New Link Road, Opp.",
+        "Reason for change (viz., appointment, resignation, removal, death or otherwise) Appointment of M/s STDJ & Co., Chartered Accountants (Firm Registration No 136551W), as the Statutory Auditors of the Company for a period of 5 (five) consecutive years, to hold office from the conclusion of this Annual General Meeting (AGM) until the conclusion of the Annual…"
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
       "highlights": [
-        "2026 Cr"
+        "rs,",
+        "11983 Cr"
       ],
       "matchedSignals": [
-        "appointment"
+        "resignation",
+        "appointment",
+        "company secretary",
+        "auditor"
       ],
       "publishedAt": "2026-09-28T19:58:19+05:30",
       "publishedDisplay": "28-Sep-2026 19:58 IST",
@@ -12758,24 +12879,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/creativeye/",
       "aiEnhanced": false,
-      "impactScore": 38,
+      "impactScore": 45,
       "materialityBand": "Low materiality",
-      "dataConfidence": 63,
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 15,
+          "score": 18,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 13,
+          "score": 17,
           "max": 20,
-          "reason": "adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12799,10 +12920,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 15/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 18/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -12813,7 +12934,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 1
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -12955,16 +13076,25 @@
       "sentiment": "Positive",
       "subject": "Anupam Rasayan Concludes Acquisition of Bliss GVS Pharma, Marks Third Strategic Step Towards Building an Integrated Global Pharma Platform",
       "rawSubject": "Press Release",
-      "summary": "Anupam Rasayan India Limited filed an official update titled ‘Anupam Rasayan Concludes Acquisition of Bliss GVS Pharma, Marks Third Strategic Step Towards Building an Integrated Global Pharma Platform’.",
-      "detailsText": "Anupam Rasayan India Limited has informed the Exchange regarding a press release titled \"Anupam Rasayan Concludes Acquisition of Bliss GVS Pharma, Marks Third Strategic Step Towards Building an Integrated Global Pharma Platform\".",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "We believe this integration will strengthen our capabilities, unlock meaningful operational and commercial synergies, and support sustainable, long-term value creation for all our stakeholders.” Building a ₹4,000+ crore integrated platform The acquisition of Bliss GVS Pharma marks the latest step in Anupam Rasayan’s broader inorganic growth strategy, with… The company acquired a 24.96% stake and management control in Tanfac, a leading manufacturer of…",
+      "detailsText": "We believe this integration will strengthen our capabilities, unlock meaningful operational and commercial synergies, and support sustainable, long-term value creation for all our stakeholders.” Building a ₹4,000+ crore integrated platform The acquisition of Bliss GVS Pharma marks the latest step in Anupam Rasayan’s broader inorganic growth strategy, with… The company acquired a 24.96% stake and management control in Tanfac, a leading manufacturer of specialty fluorides, and subsequently participated in an open offer for an additional stake. Jayhawk Fine Chemicals – Global Manufacturing & Nearshoring: In February 2026, Anupam Rasayan completed the acquisition of 100% of Jayhawk Fine Chemicals Corporation, a specialty chemicals manufacturer based in Galena, Kansas, for an enterprise value of approximately US$134 million.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "We believe this integration will strengthen our capabilities, unlock meaningful operational and commercial synergies, and support sustainable, long-term value creation for all our stakeholders.” Building a ₹4,000+ crore integrated platform The acquisition of Bliss GVS Pharma marks the latest step in Anupam Rasayan’s broader inorganic growth strategy, with…",
+        "The company acquired a 24.96% stake and management control in Tanfac, a leading manufacturer of specialty fluorides, and subsequently participated in an open offer for an additional stake.",
+        "Jayhawk Fine Chemicals – Global Manufacturing & Nearshoring: In February 2026, Anupam Rasayan completed the acquisition of 100% of Jayhawk Fine Chemicals Corporation, a specialty chemicals manufacturer based in Galena, Kansas, for an enterprise value of approximately US$134 million."
+      ],
       "whyItMatters": "The transaction may expand products, customers or geography. Valuation, integration and execution risks should be checked.",
       "riskNote": "Strategic announcements may take time to close and may not produce the expected synergies.",
-      "highlights": [],
+      "highlights": [
+        "₹4,000",
+        "134 million"
+      ],
       "matchedSignals": [
-        "acquisition"
+        "acquisition",
+        "acquire",
+        "growth"
       ],
       "publishedAt": "2026-09-28T19:58:18+05:30",
       "publishedDisplay": "28-Sep-2026 19:58 IST",
@@ -12981,31 +13111,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/anuras/",
       "aiEnhanced": false,
-      "impactScore": 46,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "impactScore": 59,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 25,
+          "score": 27,
           "max": 35,
           "reason": "Transactions can alter business scale, products or geography."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 17,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 5,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹13.40 crore"
         },
         {
           "id": "marketConfirmation",
@@ -13022,22 +13152,26 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 25/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 59/100 from business materiality 27/35, evidence 17/20, financial magnitude 5/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Transactions can alter business scale, products or geography."
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          13.4
+        ],
+        "largestAmountCrore": 13.4,
+        "percentages": [
+          100.0,
+          24.96
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -13181,15 +13315,23 @@
       "sentiment": "Neutral",
       "subject": "Issue of Securities",
       "rawSubject": "Issue of Securities",
-      "summary": "Ola Electric Mobility Limited: issue of equity shares on rights basis",
-      "detailsText": "Ola Electric Mobility Limited has informed the Exchange about issue of equity shares on rights basis",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Further, for the purposes of giving effect to the rights issue, the specific and detailed terms in relation to the rights issue, including but not limited to the determination of the rights issue price, rights entitlement ratio, record date, timing of the rights issue and terms of payment and other related matters will be determined by the Board and… Type of issuance (further public offering, rights issue, depository receipts (ADR/GDR), qualified…",
+      "detailsText": "Further, for the purposes of giving effect to the rights issue, the specific and detailed terms in relation to the rights issue, including but not limited to the determination of the rights issue price, rights entitlement ratio, record date, timing of the rights issue and terms of payment and other related matters will be determined by the Board and… Type of issuance (further public offering, rights issue, depository receipts (ADR/GDR), qualified institutions placement, preferential allotment etc.) Rights issue to the eligible equity shareholders of the Company as on the record date III. Total number of securities proposed to be issued or the total amount for which the securities will be issued (approximately) Total amount not exceeding ₹ 1,000 (Rupees One Thousand Crore only).",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Further, for the purposes of giving effect to the rights issue, the specific and detailed terms in relation to the rights issue, including but not limited to the determination of the rights issue price, rights entitlement ratio, record date, timing of the rights issue and terms of payment and other related matters will be determined by the Board and…",
+        "Type of issuance (further public offering, rights issue, depository receipts (ADR/GDR), qualified institutions placement, preferential allotment etc.) Rights issue to the eligible equity shareholders of the Company as on the record date III.",
+        "Total number of securities proposed to be issued or the total amount for which the securities will be issued (approximately) Total amount not exceeding ₹ 1,000 (Rupees One Thousand Crore only)."
+      ],
       "whyItMatters": "Fresh capital can fund growth or reduce debt, while equity issuance may dilute existing shareholders. Check price, size and purpose.",
       "riskNote": "Review dilution, issue price, end use, debt obligations and shareholder approvals.",
-      "highlights": [],
+      "highlights": [
+        "₹ 1,000"
+      ],
       "matchedSignals": [
+        "qualified institutions placement",
+        "rights issue",
         "issue of securities"
       ],
       "publishedAt": "2026-09-28T19:56:48+05:30",
@@ -13207,24 +13349,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/olaelec/",
       "aiEnhanced": false,
-      "impactScore": 41,
+      "impactScore": 49,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 22,
+          "score": 24,
           "max": 35,
           "reason": "Capital raising affects funding capacity and may dilute shareholders."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -13248,13 +13390,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 22/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 49/100 from business materiality 24/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Capital raising affects funding capacity and may dilute shareholders."
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -13263,7 +13404,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -13389,7 +13530,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/icici-lombard-general-insurance-company-ltd-2026-09-28-1b52ef93173c/"
@@ -13406,20 +13547,32 @@
       "symbol": "NSLNISP",
       "stockName": "NMDC Steel Limited",
       "companyName": "NMDC Steel Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
+      "sentiment": "Positive",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "NMDC Steel Limited filed an official update titled ‘Proceedings of Annual General Meeting held on September 28, 2026’.",
-      "detailsText": "NMDC Steel Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "No 18(2)/2026/78 28.09.2026 BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001 Scrip ID: 543768 National Stock Exchange of India Limited Exchange Plaza, C1, Block G, Bandra-Kurla Complex, Bandra (East), Mumbai – 400051 Scrip ID: NSLNISP Calcutta Stock Exchange Limited 7, Lyons Range, Murgighata, Dalhousie, Kolkata, West Bengal – 700001… Thereafter, the Chairman addressed the shareholders, reporting on the Company's strong operational…",
+      "detailsText": "No 18(2)/2026/78 28.09.2026 BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001 Scrip ID: 543768 National Stock Exchange of India Limited Exchange Plaza, C1, Block G, Bandra-Kurla Complex, Bandra (East), Mumbai – 400051 Scrip ID: NSLNISP Calcutta Stock Exchange Limited 7, Lyons Range, Murgighata, Dalhousie, Kolkata, West Bengal – 700001… Thereafter, the Chairman addressed the shareholders, reporting on the Company's strong operational performance, financial growth, and profitability for FY 2025-26. With the permission of the Members, Annual Report including Notice of 11 th AGM of the Company, the Reports of Board of Directors' along with annexures, Financial Statements for the financial year ended 31 st March 2026, Statutory Auditors' Report, C&AG Report and Secretarial Auditors' Report were taken as read.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "No 18(2)/2026/78 28.09.2026 BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001 Scrip ID: 543768 National Stock Exchange of India Limited Exchange Plaza, C1, Block G, Bandra-Kurla Complex, Bandra (East), Mumbai – 400051 Scrip ID: NSLNISP Calcutta Stock Exchange Limited 7, Lyons Range, Murgighata, Dalhousie, Kolkata, West Bengal – 700001…",
+        "Thereafter, the Chairman addressed the shareholders, reporting on the Company's strong operational performance, financial growth, and profitability for FY 2025-26.",
+        "With the permission of the Members, Annual Report including Notice of 11 th AGM of the Company, the Reports of Board of Directors' along with annexures, Financial Statements for the financial year ended 31 st March 2026, Statutory Auditors' Report, C&AG Report and Secretarial Auditors' Report were taken as read."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,",
+        "2026/78",
+        "FY 2025-26"
+      ],
+      "matchedSignals": [
+        "auditor",
+        "director",
+        "growth"
+      ],
       "publishedAt": "2026-09-28T19:52:34+05:30",
       "publishedDisplay": "28-Sep-2026 19:52 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -13435,31 +13588,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/nslnisp/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 46,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 83,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 17,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 19,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 2026:78"
         },
         {
           "id": "marketConfirmation",
@@ -13476,13 +13629,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 17/35, evidence 19/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -13490,8 +13642,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "2026:78"
+        ],
+        "highlightCount": 3
       },
       "marketContext": {
         "changePct": null,
@@ -13508,7 +13662,7 @@
       "eventSlug": "nmdc-steel-limited-2026-09-28-789631512349",
       "eventUrl": "/stock-triggers/events/nmdc-steel-limited-2026-09-28-789631512349/",
       "stockHubUrl": "/stocks/nslnisp/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "caea921495a923984d",
@@ -13631,20 +13785,26 @@
       "symbol": "CYBERTECH",
       "stockName": "Cybertech Systems And Software Limited",
       "companyName": "Cybertech Systems And Software Limited",
-      "category": "PROMOTER_ACTIVITY",
-      "categoryLabel": "Promoter / Insider Activity",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
       "sentiment": "Neutral",
       "subject": "Trading Window",
       "rawSubject": "Trading Window",
-      "summary": "Cybertech Systems And Software Limited filed an official update titled ‘Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015’.",
-      "detailsText": "Cybertech Systems And Software Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Promoter and insider transactions can change ownership signals. The size, route and reason are more important than the headline alone.",
-      "riskNote": "Small transactions can be immaterial; verify quantity, percentage holding and whether shares are pledged.",
-      "highlights": [],
+      "summary": "Notice is hereby given that pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015, as amended from time to time, and Code of Conduct to Regulate, Monitor and Report Trading by Insiders, the Trading Window for dealing in the securities of our Company will be closed for all Designated Persons of the Company with effect from October 01, 2026… The Board Meeting date to consider, approve and take on record the Un-audited Financial Results…",
+      "detailsText": "Notice is hereby given that pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015, as amended from time to time, and Code of Conduct to Regulate, Monitor and Report Trading by Insiders, the Trading Window for dealing in the securities of our Company will be closed for all Designated Persons of the Company with effect from October 01, 2026… The Board Meeting date to consider, approve and take on record the Un-audited Financial Results (Standalone & Consolidated) of the Company for the quarter and half year ending September 30 , 2026, along with the Limited Review Report issued by the Statutory Auditors of the Company including other matters, if any, shall be intimated to the Stock Exchanges…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Notice is hereby given that pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015, as amended from time to time, and Code of Conduct to Regulate, Monitor and Report Trading by Insiders, the Trading Window for dealing in the securities of our Company will be closed for all Designated Persons of the Company with effect from October 01, 2026…",
+        "The Board Meeting date to consider, approve and take on record the Un-audited Financial Results (Standalone & Consolidated) of the Company for the quarter and half year ending September 30 , 2026, along with the Limited Review Report issued by the Statutory Auditors of the Company including other matters, if any, shall be intimated to the Stock Exchanges…"
+      ],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
+        "financial results",
         "insider trading"
       ],
       "publishedAt": "2026-09-28T19:52:16+05:30",
@@ -13662,24 +13822,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/cybertech/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 53,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 19,
+          "score": 28,
           "max": 35,
-          "reason": "Ownership changes matter only when transaction size and intent are meaningful."
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 15,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -13703,13 +13863,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 28/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -13718,7 +13877,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -13735,7 +13894,7 @@
       "eventSlug": "cybertech-systems-and-software-limited-2026-09-28-7123cd3b1cb6",
       "eventUrl": "/stock-triggers/events/cybertech-systems-and-software-limited-2026-09-28-7123cd3b1cb6/",
       "stockHubUrl": "/stocks/cybertech/",
-      "categoryUrl": "/stock-triggers/category/promoter-activity/"
+      "categoryUrl": "/stock-triggers/category/results/"
     },
     {
       "id": "fe11cc43538e88e680",
@@ -13744,20 +13903,29 @@
       "symbol": "AGASTYAEN",
       "stockName": "Agastya Energy and Infrastructure Limited",
       "companyName": "Agastya Energy and Infrastructure Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Sale or disposal",
       "rawSubject": "Sale or disposal",
-      "summary": "Agastya Energy and Infrastructure Limited has informed the Exchange about Sale or disposal",
-      "detailsText": "Agastya Energy and Infrastructure Limited has informed the Exchange about Sale or disposal",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e. Date of Appointment Appointed with effect from 13th August, 2026. Declaration pursuant to BSE Circular No LIST/COMP/14/201819 dated June 20, 2018, and NSE Circular No NSE/ CML/2018/24 dated June 20, 2018 Mr Alok Jain is not debarred from holding office of the…",
+      "detailsText": "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e. Date of Appointment Appointed with effect from 13th August, 2026. Declaration pursuant to BSE Circular No LIST/COMP/14/201819 dated June 20, 2018, and NSE Circular No NSE/ CML/2018/24 dated June 20, 2018 Mr Alok Jain is not debarred from holding office of the Director by virtue of any order passed by the Securities and Exchange Board of India or any other such authority.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e.",
+        "Date of Appointment Appointed with effect from 13th August, 2026.",
+        "Declaration pursuant to BSE Circular No LIST/COMP/14/201819 dated June 20, 2018, and NSE Circular No NSE/ CML/2018/24 dated June 20, 2018 Mr Alok Jain is not debarred from holding office of the Director by virtue of any order passed by the Securities and Exchange Board of India or any other such authority."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "2018/24"
+      ],
+      "matchedSignals": [
+        "appointment",
+        "director"
+      ],
       "publishedAt": "2026-09-28T19:51:39+05:30",
       "publishedDisplay": "28-Sep-2026 19:51 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -13773,31 +13941,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/agastyaen/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 2018:24"
         },
         {
           "id": "marketConfirmation",
@@ -13814,13 +13982,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -13828,8 +13995,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "2018:24"
+        ],
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -13846,7 +14015,7 @@
       "eventSlug": "agastya-energy-and-infrastructure-limited-2026-09-28-108a99d6ffde",
       "eventUrl": "/stock-triggers/events/agastya-energy-and-infrastructure-limited-2026-09-28-108a99d6ffde/",
       "stockHubUrl": "/stocks/agastyaen/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "cd0f736ec90deb5b21",
@@ -13966,20 +14135,32 @@
       "symbol": "APOLSINHOT",
       "stockName": "Apollo Sindoori Hotels Limited",
       "companyName": "Apollo Sindoori Hotels Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
+      "sentiment": "Positive",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Apollo Sindoori Hotels Limited filed an official update titled ‘Proceedings of undefined held on September 28, 2026’.",
-      "detailsText": "Apollo Sindoori Hotels Limited has informed the Exchange regarding Proceedings of undefined held on September 28, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "Rangarajan, Partner of M/s BP & Associates, Company Secretaries - Secretarial Auditor and Scrutinizer Mr Shammi Prakash, Company Secretary & Compliance Officer, welcomed all the members, Directors, Auditors and other participants present at the 28th Annual General Meeting (“AGM”) of the Company through Video Conferencing. The Chairperson thereafter introduced the Directors, officers and attendees to the meeting. |Declaration of Final Dividend of Rs3.00…",
+      "detailsText": "Rangarajan, Partner of M/s BP & Associates, Company Secretaries - Secretarial Auditor and Scrutinizer Mr Shammi Prakash, Company Secretary & Compliance Officer, welcomed all the members, Directors, Auditors and other participants present at the 28th Annual General Meeting (“AGM”) of the Company through Video Conferencing. The Chairperson thereafter introduced the Directors, officers and attendees to the meeting. |Declaration of Final Dividend of Rs3.00 per Equity Share for the Ordinary | financial year ended 315t March, 2026.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Rangarajan, Partner of M/s BP & Associates, Company Secretaries - Secretarial Auditor and Scrutinizer Mr Shammi Prakash, Company Secretary & Compliance Officer, welcomed all the members, Directors, Auditors and other participants present at the 28th Annual General Meeting (“AGM”) of the Company through Video Conferencing.",
+        "The Chairperson thereafter introduced the Directors, officers and attendees to the meeting.",
+        "|Declaration of Final Dividend of Rs3.00 per Equity Share for the Ordinary | financial year ended 315t March, 2026."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
+      "highlights": [
+        "rs,",
+        "Rs3.00"
+      ],
+      "matchedSignals": [
+        "company secretary",
+        "auditor",
+        "director",
+        "dividend"
+      ],
       "publishedAt": "2026-09-28T19:50:31+05:30",
       "publishedDisplay": "28-Sep-2026 19:50 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -13995,31 +14176,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/apolsinhot/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 45,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 18,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action value is ₹3.00 per share"
         },
         {
           "id": "marketConfirmation",
@@ -14036,22 +14217,23 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 18/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
         "percentages": [],
-        "perShareRupees": [],
+        "perShareRupees": [
+          3.0
+        ],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -14068,7 +14250,7 @@
       "eventSlug": "apollo-sindoori-hotels-limited-2026-09-28-e253c989ca65",
       "eventUrl": "/stock-triggers/events/apollo-sindoori-hotels-limited-2026-09-28-e253c989ca65/",
       "stockHubUrl": "/stocks/apolsinhot/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "a777e2c58b77aae0ce",
@@ -14195,11 +14377,15 @@
       "sentiment": "Neutral",
       "subject": "Appointment of Mr Alok Jain as Independent Director of the company w.e.f. August 13, 2026",
       "rawSubject": "Appointment",
-      "summary": "Agastya Energy and Infrastructure Limited filed an official update titled ‘Appointment of Mr Alok Jain as Independent Director of the company w.e.f. August 13, 2026’.",
-      "detailsText": "Agastya Energy and Infrastructure Limited has informed the Exchange regarding Appointment of Mr Alok Jain as Independent Director of the company w.e.f. August 13, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e. Appointment of Non-Executive Independent Director: Sr. Name of the Director Mr Alok Jain 2.",
+      "detailsText": "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e. Appointment of Non-Executive Independent Director: Sr. Name of the Director Mr Alok Jain 2.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Mr Alok Jain (DIN: 01892711 ) was appointed as Non-executive Independent Director of the Company with effect from 13th August 2026, to hold office for a first term of 5 (five) consecutive years i.e.",
+        "Appointment of Non-Executive Independent Director: Sr.",
+        "Name of the Director Mr Alok Jain 2."
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
       "highlights": [],
@@ -14224,7 +14410,7 @@
       "aiEnhanced": false,
       "impactScore": 37,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -15188,7 +15374,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/persistent-systems-ltd-2026-09-28-489441c8e66f/"
@@ -15635,7 +15821,7 @@
         "momentumScore": 76.5,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/petronet-lng-ltd-2026-09-28-ef0975d00a7b/"
@@ -16654,7 +16840,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/max-financial-services-ltd-2026-09-28-cda8dfebb4b5/"
@@ -16768,7 +16954,7 @@
         "momentumScore": 65.3,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/nmdc-ltd-2026-09-28-ebd7cc40fe6c/"
@@ -17109,7 +17295,7 @@
         "momentumScore": 81.9,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bank-of-india-2026-09-28-d27f522870cf/"
@@ -18340,7 +18526,7 @@
         "momentumScore": 70.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/gmr-airports-ltd-2026-09-28-eee4defafa5f/"
@@ -18676,7 +18862,7 @@
         "momentumScore": 77.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dixon-technologies-india-ltd-2026-09-28-74a1bd38b33e/"
@@ -19802,7 +19988,7 @@
         "momentumScore": 57.4,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finance-ltd-2026-09-28-a9fd6e95c950/"
@@ -20366,7 +20552,7 @@
         "momentumScore": 60.5,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/welspun-corp-ltd-2026-09-28-a331e4c8b361/"
@@ -22960,7 +23146,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/national-aluminium-co-ltd-2026-09-28-6e8d8f10ab92/"
@@ -23416,7 +23602,7 @@
         "momentumScore": 74.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/sbi-cards-and-payment-services-ltd-2026-09-28-ea73553fa071/"
@@ -23758,7 +23944,7 @@
         "momentumScore": 63.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/punjab-national-bank-2026-09-28-6cf6b248c8cc/"
@@ -23989,7 +24175,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hcl-technologies-ltd-2026-09-28-789540121eda/"
@@ -24661,7 +24847,7 @@
         "momentumScore": 89.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/pb-fintech-ltd-2026-09-28-27ef7c0e64c0/"
@@ -24781,7 +24967,7 @@
         "momentumScore": 63.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/punjab-national-bank-2026-09-28-3a256962e8c3/"
@@ -25232,7 +25418,7 @@
         "momentumScore": 57.6,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-holdings-investment-ltd-2026-09-28-d54cd720c1cb/"
@@ -25905,7 +26091,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/prestige-estates-projects-ltd-2026-09-28-aefcdbadff0f/"
@@ -27704,7 +27890,7 @@
         "momentumScore": 74.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/sbi-cards-and-payment-services-ltd-2026-09-28-15a71591daa1/"
@@ -28381,7 +28567,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hcl-technologies-ltd-2026-09-28-5692167d9eb9/"
@@ -28495,7 +28681,7 @@
         "momentumScore": 68.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bandhan-bank-ltd-2026-09-28-ed91bbc7e5de/"
@@ -29288,7 +29474,7 @@
         "momentumScore": 58.1,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-09-28-1f89ce672fb7/"
@@ -29858,7 +30044,7 @@
         "momentumScore": 57.1,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finserv-ltd-2026-09-28-677092e65b2b/"
@@ -30991,7 +31177,7 @@
         "momentumScore": 68.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bandhan-bank-ltd-2026-09-28-d6b01defe395/"
@@ -32689,7 +32875,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tube-investments-of-india-ltd-2026-09-28-d16f29f2e19c/"
@@ -35059,7 +35245,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/avenue-supermarts-ltd-2026-09-28-8de08213db57/"
@@ -36415,7 +36601,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/central-bank-of-india-2026-09-28-3f06c9cdf27e/"
@@ -36983,7 +37169,7 @@
         "momentumScore": 68.7,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/canara-bank-2026-09-28-60020cae1587/"
@@ -39117,7 +39303,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/glenmark-pharmaceuticals-ltd-2026-09-28-6ca00690ea99/"
@@ -40358,7 +40544,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hcl-technologies-ltd-2026-09-28-09d1dce2da22/"
@@ -42828,7 +43014,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/colgate-palmolive-india-ltd-2026-09-28-e3ad986e3626/"
@@ -43281,7 +43467,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/zydus-lifesciences-ltd-2026-09-28-b1c5fc0d4ba9/"
@@ -44074,7 +44260,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-09-28-5d3c8818067c/"
@@ -44528,7 +44714,7 @@
         "momentumScore": 58.1,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/shree-cement-ltd-2026-09-28-e0b2f5c185ee/"
@@ -46783,7 +46969,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/steel-authority-of-india-ltd-2026-09-28-ae989cf65796/"
@@ -46899,7 +47085,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/colgate-palmolive-india-ltd-2026-09-28-16727d429288/"
@@ -47015,7 +47201,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/colgate-palmolive-india-ltd-2026-09-28-ba2b0d4d06b8/"
@@ -47805,7 +47991,7 @@
         "momentumScore": 59.7,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cg-power-and-industrial-solutions-ltd-2026-09-28-2705b30ad4c7/"
@@ -48033,7 +48219,7 @@
         "momentumScore": 72.4,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indian-bank-2026-09-28-5444d4d17480/"
@@ -49491,7 +49677,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-09-28-b14e7e3053ad/"
@@ -50737,7 +50923,7 @@
         "momentumScore": 57.0,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/jsw-steel-ltd-2026-09-28-9a9f5ec0c06e/"
@@ -52884,7 +53070,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/adani-power-ltd-2026-09-28-23bcff2c1ad8/"
@@ -53001,7 +53187,7 @@
         "momentumScore": 58.6,
         "momentumBias": "Pullback Watch",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/shriram-finance-ltd-2026-09-28-e8345e099493/"
@@ -53682,7 +53868,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/adani-power-ltd-2026-09-28-d2b3d47b87b6/"
@@ -55260,7 +55446,7 @@
         "momentumScore": 62.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/polycab-india-ltd-2026-09-28-ef1277e51d8e/"
@@ -55938,7 +56124,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "28-Sep-2026 20:14 IST"
+        "updatedAt": "28-Sep-2026 23:25 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hindustan-zinc-ltd-2026-09-28-26de7ce13f5b/"
