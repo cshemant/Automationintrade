@@ -1,11 +1,29 @@
 {
   "toolName": "Near Breakout Scanner",
-  "updatedAt": "04-Oct-2026 17:49 IST",
-  "generatedAt": "04-Oct-2026 17:50 IST",
+  "updatedAt": "05-Oct-2026 19:23 IST",
+  "generatedAt": "05-Oct-2026 19:24 IST",
   "universeCount": 217,
-  "signalCount": 2,
+  "signalCount": 5,
   "sourceNote": "Generated from AIT Stock Strength Ranker and existing 52-week high-low JSON files. Breakout score uses 52-week high proximity, daily move and strength score. Educational use only.",
   "stocks": [
+    {
+      "symbol": "NYKAA",
+      "stockName": "FSN E-Commerce Ventures Ltd.",
+      "indices": [
+        "NIFTY MIDCAP 50"
+      ],
+      "cmp": 339.55,
+      "high52": 349.55,
+      "low52": 232.0,
+      "changePct": 4.49,
+      "downFromHighPct": -2.86,
+      "aboveLowPct": 46.36,
+      "strengthScore": 81.5,
+      "signal": "Breakout Watch",
+      "breakoutGapPct": 2.86,
+      "breakoutScore": 89.0,
+      "rank": 1
+    },
     {
       "symbol": "POLICYBZR",
       "stockName": "PB Fintech Ltd.",
@@ -18,11 +36,30 @@
       "changePct": 4.5,
       "downFromHighPct": -3.97,
       "aboveLowPct": 38.29,
-      "strengthScore": 80.0,
+      "strengthScore": 79.9,
       "signal": "Breakout Watch",
       "breakoutGapPct": 3.97,
-      "breakoutScore": 82.8,
-      "rank": 1
+      "breakoutScore": 82.7,
+      "rank": 2
+    },
+    {
+      "symbol": "BHEL",
+      "stockName": "Bharat Heavy Electricals Ltd.",
+      "indices": [
+        "NIFTY ENERGY",
+        "NIFTY MIDCAP 50"
+      ],
+      "cmp": 429.0,
+      "high52": 446.5,
+      "low52": 229.54,
+      "changePct": 1.9,
+      "downFromHighPct": -3.92,
+      "aboveLowPct": 86.9,
+      "strengthScore": 84.8,
+      "signal": "Breakout Watch",
+      "breakoutGapPct": 3.92,
+      "breakoutScore": 78.6,
+      "rank": 3
     },
     {
       "symbol": "RBLBANK",
@@ -30,17 +67,35 @@
       "indices": [
         "NIFTY PVT BANK"
       ],
-      "cmp": 411.4,
+      "cmp": 416.55,
       "high52": 429.6,
       "low52": 272.1,
-      "changePct": 2.0,
-      "downFromHighPct": -4.24,
-      "aboveLowPct": 51.19,
-      "strengthScore": 80.2,
+      "changePct": 1.25,
+      "downFromHighPct": -3.04,
+      "aboveLowPct": 53.09,
+      "strengthScore": 71.8,
+      "signal": "Breakout Watch",
+      "breakoutGapPct": 3.04,
+      "breakoutScore": 72.4,
+      "rank": 4
+    },
+    {
+      "symbol": "TDPOWERSYS",
+      "stockName": "TD Power Systems Ltd.",
+      "indices": [
+        "NIFTY ENERGY"
+      ],
+      "cmp": 814.3,
+      "high52": 855.4,
+      "low52": 291.35,
+      "changePct": 2.8,
+      "downFromHighPct": -4.8,
+      "aboveLowPct": 179.49,
+      "strengthScore": 88.4,
       "signal": "Momentum Breakout Watch",
-      "breakoutGapPct": 4.24,
-      "breakoutScore": 76.4,
-      "rank": 2
+      "breakoutGapPct": 4.8,
+      "breakoutScore": 81.2,
+      "rank": 5
     }
   ]
 }
