@@ -1,21 +1,21 @@
 {
   "toolName": "AIT Stock Trigger Intelligence",
-  "jobRunId": "stock-triggers-20261009T224130+0530",
-  "updatedAt": "09-Oct-2026 22:41 IST",
-  "generatedAt": "2026-10-09T22:41:30+05:30",
-  "fromDate": "02-Oct-2026",
-  "toDate": "09-Oct-2026",
+  "jobRunId": "stock-triggers-20261010T003128+0530",
+  "updatedAt": "10-Oct-2026 00:31 IST",
+  "generatedAt": "2026-10-10T00:31:28+05:30",
+  "fromDate": "03-Oct-2026",
+  "toDate": "10-Oct-2026",
   "lookbackDays": 7,
   "retentionDays": 120,
-  "sourceMode": "NSE Corporate Announcements API",
-  "sourceUrl": "https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=02-10-2026&to_date=09-10-2026",
-  "sourceHealthy": true,
-  "sourceError": "",
+  "sourceMode": "Fallback: previous data + corporate actions",
+  "sourceUrl": "https://www.nseindia.com/api/corporate-announcements",
+  "sourceHealthy": false,
+  "sourceError": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18); HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18)",
   "aiEnabled": false,
   "aiEnhancedCount": 0,
-  "filingExtractedCount": 32,
+  "filingExtractedCount": 0,
   "filingExtractionAvailable": true,
-  "sourceNote": "Fresh NSE corporate announcements are classified into business triggers and merged with upcoming corporate actions. Short transformed summaries are provided for discovery; always open the original filing.",
+  "sourceNote": "The latest NSE request failed, so recent previously generated triggers were preserved and local corporate-action data was rebuilt.",
   "scoringModel": {
     "version": "2.0",
     "name": "AIT five-factor materiality model",
@@ -71,7 +71,7 @@
     "trackedStocks": 412,
     "highImpactCount": 0,
     "informationalCount": 370,
-    "averageMaterialityScore": 31.8,
+    "averageMaterialityScore": 31.7,
     "averageDataConfidence": 56.5,
     "positiveCount": 27,
     "cautionCount": 34,
@@ -394,7 +394,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "jsw-steel-ltd-2026-10-09-b2f36c867ea2",
@@ -512,7 +512,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tech-mahindra-ltd-2026-10-09-df6ef699a831",
@@ -741,7 +741,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "max-healthcare-institute-ltd-2026-10-09-0e0dd670d152",
@@ -1799,7 +1799,7 @@
         "momentumScore": 67.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "punjab-national-bank-2026-10-09-08bf2cdcf860",
@@ -3072,7 +3072,7 @@
         "momentumScore": 90.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "persistent-systems-ltd-2026-10-09-b93ef9fad853",
@@ -3888,7 +3888,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "lodha-developers-ltd-2026-10-09-4e01f9a243bf",
@@ -4119,7 +4119,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "lodha-developers-ltd-2026-10-09-99f8f5ef3865",
@@ -4343,7 +4343,7 @@
         "momentumScore": 87.3,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "laurus-labs-ltd-2026-10-09-6f9113cca36d",
@@ -4457,7 +4457,7 @@
         "momentumScore": 90.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "persistent-systems-ltd-2026-10-09-98037247cb62",
@@ -4936,7 +4936,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "polycab-india-ltd-2026-10-09-c139909c163f",
@@ -5717,7 +5717,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "oil-natural-gas-corporation-ltd-2026-10-09-3e4c44cfb9f8",
@@ -6500,7 +6500,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "jsw-energy-ltd-2026-10-09-3ced8d48a710",
@@ -7723,7 +7723,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "High Weakness",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "swiggy-ltd-2026-10-09-6128057277bd",
@@ -8168,7 +8168,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "yes-bank-ltd-2026-10-09-43988a1f4032",
@@ -10276,7 +10276,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "indian-hotels-co-ltd-2026-10-09-824568f05168",
@@ -10716,7 +10716,7 @@
         "momentumScore": 76.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tata-consultancy-services-ltd-2026-10-09-0b52f0f2b43b",
@@ -10941,7 +10941,7 @@
         "momentumScore": 72.1,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "avenue-supermarts-ltd-2026-10-09-61924d6ec795",
@@ -13593,7 +13593,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "dixon-technologies-india-ltd-2026-10-09-ee5aae0beee7",
@@ -14142,7 +14142,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "one-97-communications-ltd-2026-10-09-c5ccf615475b",
@@ -14364,7 +14364,7 @@
         "momentumScore": 68.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "idfc-first-bank-ltd-2026-10-09-33e2b800a54f",
@@ -17682,7 +17682,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "canara-bank-2026-10-09-69c7c45b51ac",
@@ -19778,7 +19778,7 @@
         "momentumScore": 90.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "persistent-systems-ltd-2026-10-09-7f3131b492ea",
@@ -20436,7 +20436,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "nazara-technologies-ltd-2026-10-09-39627c462ab2",
@@ -22085,7 +22085,7 @@
         "momentumScore": 58.8,
         "momentumBias": "Reversal Watch",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "uco-bank-2026-10-09-dbc5e04bc28c",
@@ -22195,7 +22195,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "thermax-ltd-2026-10-09-6760439f106a",
@@ -23078,7 +23078,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "mankind-pharma-ltd-2026-10-09-0278e9ee1dcf",
@@ -23300,7 +23300,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "hitachi-energy-india-ltd-2026-10-09-d137538b85bb",
@@ -24072,7 +24072,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "hindustan-copper-ltd-2026-10-09-1e8d38bbf3fb",
@@ -24945,7 +24945,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "bank-of-india-2026-10-09-4a007d29bd69",
@@ -25057,7 +25057,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "indian-hotels-co-ltd-2026-10-09-ec89efb7b888",
@@ -26503,7 +26503,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "bharat-petroleum-corporation-ltd-2026-10-09-a60b7d537b9c",
@@ -27497,7 +27497,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "ambuja-cements-ltd-2026-10-09-06ffc37c64c8",
@@ -28602,7 +28602,7 @@
         "momentumScore": 88.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "pb-fintech-ltd-2026-10-09-b20b15bf6c20",
@@ -29703,7 +29703,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "solar-industries-india-ltd-2026-10-09-d4ce92d10291",
@@ -32006,7 +32006,7 @@
         "momentumScore": 85.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "fsn-e-commerce-ventures-ltd-2026-10-09-00f5c7c8c623",
@@ -32231,7 +32231,7 @@
         "momentumScore": 70.1,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "state-bank-of-india-2026-10-09-178c7fa47007",
@@ -33004,7 +33004,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "coal-india-ltd-2026-10-09-6598b52c007e",
@@ -33119,7 +33119,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "ashok-leyland-ltd-2026-10-09-56302351cf36",
@@ -34333,7 +34333,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "mphasis-ltd-2026-10-09-35b4b5e509dc",
@@ -35656,7 +35656,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "marico-ltd-2026-10-09-5d72caa4b835",
@@ -37090,7 +37090,7 @@
         "momentumScore": 84.8,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "sun-tv-network-ltd-2026-10-09-e8704b27950a",
@@ -37971,7 +37971,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "suzlon-energy-ltd-2026-10-09-a9bd34f82857",
@@ -38525,7 +38525,7 @@
         "momentumScore": 79.5,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "united-spirits-ltd-2026-10-09-601a937ba9e4",
@@ -39082,7 +39082,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "mahindra-mahindra-ltd-2026-10-09-d76585425ae9",
@@ -39520,7 +39520,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "wockhardt-ltd-2026-10-09-e3a348f3dbd8",
@@ -42042,7 +42042,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "castrol-india-ltd-2026-10-09-7afd026f19d9",
@@ -45114,7 +45114,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "d-b-corp-ltd-2026-10-09-cd27261d94f1",
@@ -45555,7 +45555,7 @@
         "momentumScore": 62.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "siemens-energy-india-ltd-2026-10-09-7038c60655a4",
@@ -45777,7 +45777,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "canara-bank-2026-10-09-8824b20bfc0a",
@@ -48639,7 +48639,7 @@
         "momentumScore": 58.0,
         "momentumBias": "Reversal Watch",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "lupin-ltd-2026-10-09-b8dc9f102428",
@@ -49192,7 +49192,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "bajaj-finance-ltd-2026-10-09-43c423428191",
@@ -49635,7 +49635,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "sona-blw-precision-forgings-ltd-2026-10-09-3d4753102123",
@@ -50189,7 +50189,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "max-healthcare-institute-ltd-2026-10-09-37ae64f29945",
@@ -51184,7 +51184,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "torrent-pharmaceuticals-ltd-2026-10-09-4f7fef5c7250",
@@ -51845,7 +51845,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "pidilite-industries-ltd-2026-10-09-a6a73ea27815",
@@ -53927,7 +53927,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "bosch-ltd-2026-10-09-522049f1f02e",
@@ -55141,7 +55141,7 @@
         "momentumScore": 76.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tata-consultancy-services-ltd-2026-10-09-33c2c48859a4",
@@ -55411,7 +55411,7 @@
       "profileUrl": "/technical-analysis/gmr-airports-technical-analysis/",
       "triggerUrl": "/stocks/gmrairport/",
       "aiEnhanced": false,
-      "impactScore": 48,
+      "impactScore": 46,
       "materialityBand": "Low materiality",
       "dataConfidence": 57,
       "scoreVersion": "2.0",
@@ -55447,14 +55447,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 48/100 from business materiality 16/35, evidence 11/20, financial magnitude 0/20, market confirmation 11/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 16/35, evidence 11/20, financial magnitude 0/20, market confirmation 11/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Market confirmation: daily move +5.17%; volume 4.27× 20-day average"
       ],
       "scoreLimitations": [
@@ -55475,7 +55475,7 @@
         "momentumScore": 79.3,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "09-Oct-2026 17:10 IST"
+        "updatedAt": "09-Oct-2026 18:59 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/gmr-airports-ltd-2026-10-08-55a89c9e44d4/"
@@ -55531,7 +55531,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/gravita/",
       "aiEnhanced": false,
-      "impactScore": 53,
+      "impactScore": 51,
       "materialityBand": "Low materiality",
       "dataConfidence": 77,
       "scoreVersion": "2.0",
@@ -55567,15 +55567,15 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 26/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 51/100 from business materiality 26/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available",
+        "Recency / urgency: published 1.1 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
