@@ -1,19 +1,19 @@
 {
   "toolName": "AIT Stock Trigger Intelligence",
-  "jobRunId": "stock-triggers-20261016T231259+0530",
-  "updatedAt": "16-Oct-2026 23:12 IST",
-  "generatedAt": "2026-10-16T23:12:59+05:30",
-  "fromDate": "09-Oct-2026",
-  "toDate": "16-Oct-2026",
+  "jobRunId": "stock-triggers-20261017T025856+0530",
+  "updatedAt": "17-Oct-2026 02:58 IST",
+  "generatedAt": "2026-10-17T02:58:56+05:30",
+  "fromDate": "10-Oct-2026",
+  "toDate": "17-Oct-2026",
   "lookbackDays": 7,
   "retentionDays": 120,
   "sourceMode": "NSE Corporate Announcements API",
-  "sourceUrl": "https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=09-10-2026&to_date=16-10-2026",
+  "sourceUrl": "https://www.nseindia.com/api/corporate-announcements?index=equities&from_date=10-10-2026&to_date=17-10-2026",
   "sourceHealthy": true,
   "sourceError": "",
   "aiEnabled": false,
   "aiEnhancedCount": 0,
-  "filingExtractedCount": 50,
+  "filingExtractedCount": 63,
   "filingExtractionAvailable": true,
   "sourceNote": "Fresh NSE corporate announcements are classified into business triggers and merged with upcoming corporate actions. Short transformed summaries are provided for discovery; always open the original filing.",
   "scoringModel": {
@@ -68,21 +68,21 @@
   },
   "summary": {
     "totalTriggers": 500,
-    "trackedStocks": 349,
-    "highImpactCount": 1,
-    "informationalCount": 302,
-    "averageMaterialityScore": 35.0,
-    "averageDataConfidence": 56.9,
-    "positiveCount": 33,
-    "cautionCount": 29,
-    "latestPublishedAt": "2026-10-16T23:10:01+05:30",
+    "trackedStocks": 348,
+    "highImpactCount": 2,
+    "informationalCount": 300,
+    "averageMaterialityScore": 35.2,
+    "averageDataConfidence": 57.4,
+    "positiveCount": 35,
+    "cautionCount": 28,
+    "latestPublishedAt": "2026-10-16T23:59:31+05:30",
     "categoryCounts": {
-      "Other Material Update": 214,
-      "Investor Meeting / Conference Call": 95,
+      "Other Material Update": 215,
+      "Investor Meeting / Conference Call": 94,
       "Quarterly / Financial Results": 44,
-      "Management / Auditor Change": 44,
-      "Acquisition / Partnership": 24,
-      "Guidance / Business Outlook": 16,
+      "Management / Auditor Change": 43,
+      "Acquisition / Partnership": 26,
+      "Guidance / Business Outlook": 15,
       "Regulatory / Legal Development": 12,
       "Credit Rating Change": 11,
       "Corporate Action": 10,
@@ -92,9 +92,9 @@
       "Capacity Expansion / New Facility": 3
     },
     "sentimentCounts": {
-      "Neutral": 437,
-      "Positive": 33,
-      "Caution": 29,
+      "Positive": 35,
+      "Neutral": 436,
+      "Caution": 28,
       "Mixed": 1
     }
   },
@@ -157,6 +157,351 @@
     }
   ],
   "triggers": [
+    {
+      "id": "ef110d6d81d1b25085",
+      "exchangeEventId": "106820889",
+      "stableEventId": "e16cf4037bba",
+      "symbol": "SIS",
+      "stockName": "SIS LIMITED",
+      "companyName": "SIS LIMITED",
+      "category": "ACQUISITION_PARTNERSHIP",
+      "categoryLabel": "Acquisition / Partnership",
+      "sentiment": "Positive",
+      "subject": "Closure of Buy Back",
+      "rawSubject": "Closure of Buy Back",
+      "summary": "Pursuant to the resolution passed by the Board of Directors on August 5, 2026, the Company was authorised to buy back its equity shares from the open market, for an aggregate amount not exceeding ₹106.00 Crores (Rupees One Hundred and Six Crores only) (“ Maximum Buyback Size”) and at a price not exceeding ₹478 .50/- (Rupees Four Hundred and Seventy Eight… The Company commenced the Buyback on August 13, 2026 , to buy back its equity shares from its…",
+      "detailsText": "Pursuant to the resolution passed by the Board of Directors on August 5, 2026, the Company was authorised to buy back its equity shares from the open market, for an aggregate amount not exceeding ₹106.00 Crores (Rupees One Hundred and Six Crores only) (“ Maximum Buyback Size”) and at a price not exceeding ₹478 .50/- (Rupees Four Hundred and Seventy Eight… The Company commenced the Buyback on August 13, 2026 , to buy back its equity shares from its shareholders/ beneficial owners (other than those who are promoters, members of the promoter group or persons in control), through the open market using the electronic trading facilities of BSE Limited and National Stock Exchange of India Limited, in accordance… In this regard, please be informed that, as on October 16, 2026, the Company has bought back 25,02,674 Equity Shares at a volume weighted average price of ₹ 423.55/- (Rupees Four Hundred Twenty-Three Rupees and Fifty-Five Paise only) per Equity Share.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Pursuant to the resolution passed by the Board of Directors on August 5, 2026, the Company was authorised to buy back its equity shares from the open market, for an aggregate amount not exceeding ₹106.00 Crores (Rupees One Hundred and Six Crores only) (“ Maximum Buyback Size”) and at a price not exceeding ₹478 .50/- (Rupees Four Hundred and Seventy Eight…",
+        "The Company commenced the Buyback on August 13, 2026 , to buy back its equity shares from its shareholders/ beneficial owners (other than those who are promoters, members of the promoter group or persons in control), through the open market using the electronic trading facilities of BSE Limited and National Stock Exchange of India Limited, in accordance…",
+        "In this regard, please be informed that, as on October 16, 2026, the Company has bought back 25,02,674 Equity Shares at a volume weighted average price of ₹ 423.55/- (Rupees Four Hundred Twenty-Three Rupees and Fifty-Five Paise only) per Equity Share."
+      ],
+      "whyItMatters": "The transaction may expand products, customers or geography. Valuation, integration and execution risks should be checked.",
+      "riskNote": "Strategic announcements may take time to close and may not produce the expected synergies.",
+      "highlights": [
+        "₹106.00 Crore",
+        "₹478",
+        "rs,",
+        "₹ 423.55"
+      ],
+      "matchedSignals": [
+        "mou",
+        "buyback"
+      ],
+      "publishedAt": "2026-10-16T23:59:31+05:30",
+      "publishedDisplay": "16-Oct-2026 23:59 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/SIS_16102026235821_Intimation.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=SIS&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/SIS_16102026235821_Intimation.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/sis/",
+      "aiEnhanced": false,
+      "impactScore": 67,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 89,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 26,
+          "max": 35,
+          "reason": "Transactions can alter business scale, products or geography."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 20,
+          "max": 20,
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 11,
+          "max": 20,
+          "reason": "largest extracted monetary value is approximately ₹106.00 crore"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Moderate materiality. The score is 67/100 from business materiality 26/35, evidence 20/20, financial magnitude 11/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available",
+        "Recency / urgency: published within the last 24 hours"
+      ],
+      "scoreLimitations": [
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [
+          106.0
+        ],
+        "largestAmountCrore": 106.0,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 4
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "sis-limited-2026-10-16-e16cf4037bba",
+      "eventUrl": "/stock-triggers/events/sis-limited-2026-10-16-e16cf4037bba/",
+      "stockHubUrl": "/stocks/sis/",
+      "categoryUrl": "/stock-triggers/category/acquisition-partnership/"
+    },
+    {
+      "id": "6b6bc1f53ea74f2102",
+      "exchangeEventId": "106820888",
+      "stableEventId": "8766f18c5ad7",
+      "symbol": "FIRSTCRY",
+      "stockName": "Brainbees Solutions Limited",
+      "companyName": "Brainbees Solutions Limited",
+      "category": "ACQUISITION_PARTNERSHIP",
+      "categoryLabel": "Acquisition / Partnership",
+      "sentiment": "Neutral",
+      "subject": "Sale or disposal",
+      "rawSubject": "Sale or disposal",
+      "summary": "In this regard, we hereby further wish to inform you that the Company has received an e-mail communication of even date from Globalbees informing that, the parties to the aforesaid transaction have, at the request of the Purchasers, executed an addendum to the MoU on today i.e., October 16, 2026, pursuant to which the parties have mutually agreed to extend…",
+      "detailsText": "In this regard, we hereby further wish to inform you that the Company has received an e-mail communication of even date from Globalbees informing that, the parties to the aforesaid transaction have, at the request of the Purchasers, executed an addendum to the MoU on today i.e., October 16, 2026, pursuant to which the parties have mutually agreed to extend…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "In this regard, we hereby further wish to inform you that the Company has received an e-mail communication of even date from Globalbees informing that, the parties to the aforesaid transaction have, at the request of the Purchasers, executed an addendum to the MoU on today i.e., October 16, 2026, pursuant to which the parties have mutually agreed to extend…"
+      ],
+      "whyItMatters": "The transaction may expand products, customers or geography. Valuation, integration and execution risks should be checked.",
+      "riskNote": "Strategic announcements may take time to close and may not produce the expected synergies.",
+      "highlights": [
+        "rs,"
+      ],
+      "matchedSignals": [
+        "mou"
+      ],
+      "publishedAt": "2026-10-16T23:50:24+05:30",
+      "publishedDisplay": "16-Oct-2026 23:50 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BRAINBEES_16102026234953_Disclosureunderregulation30_MushExtentionsd.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=FIRSTCRY&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/BRAINBEES_16102026234953_Disclosureunderregulation30_MushExtentionsd.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/firstcry/",
+      "aiEnhanced": false,
+      "impactScore": 50,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 25,
+          "max": 35,
+          "reason": "Transactions can alter business scale, products or geography."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 15,
+          "max": 20,
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 25/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
+      ],
+      "scoreLimitations": [
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 1
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "brainbees-solutions-limited-2026-10-16-8766f18c5ad7",
+      "eventUrl": "/stock-triggers/events/brainbees-solutions-limited-2026-10-16-8766f18c5ad7/",
+      "stockHubUrl": "/stocks/firstcry/",
+      "categoryUrl": "/stock-triggers/category/acquisition-partnership/"
+    },
+    {
+      "id": "a28eb1096c7ff56ec2",
+      "exchangeEventId": "106820809",
+      "stableEventId": "8f69a1f84e7c",
+      "symbol": "QPOWER",
+      "stockName": "Quality Power Electrical Equipments Limited",
+      "companyName": "Quality Power Electrical Equipments Limited",
+      "category": "OTHER_MATERIAL",
+      "categoryLabel": "Other Material Update",
+      "sentiment": "Neutral",
+      "subject": "Copy of Newspaper Publication",
+      "rawSubject": "Copy of Newspaper Publication",
+      "summary": "Quality Power Electrical Equipments Limited: Copy of the newspaper publication informing shareholders about the dispatch of a corrigendum to Notice of EGM to be held on 19th October 2026",
+      "detailsText": "Quality Power Electrical Equipments Limited has informed the Exchange about Copy of the newspaper publication informing shareholders about the dispatch of a corrigendum to Notice of EGM to be held on 19th October 2026",
+      "summaryBasis": "Exchange announcement text",
+      "filingExtracted": false,
+      "filingKeyFacts": [],
+      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
+      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
+      "highlights": [],
+      "matchedSignals": [],
+      "publishedAt": "2026-10-16T23:30:06+05:30",
+      "publishedDisplay": "16-Oct-2026 23:30 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/QPOWER1234_16102026232948_Intimation_newspaper_advertisiment-Corrigendum_to_EGM_Notice.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=QPOWER&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/QPOWER1234_16102026232948_Intimation_newspaper_advertisiment-Corrigendum_to_EGM_Notice.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/qpower/",
+      "aiEnhanced": false,
+      "impactScore": 29,
+      "materialityBand": "Informational",
+      "dataConfidence": 57,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 8,
+          "max": 35,
+          "reason": "The filing requires additional facts before its business impact can be judged."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 11,
+          "max": 20,
+          "reason": "adequate disclosure detail; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Informational. The score is 29/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Evidence specificity: adequate disclosure detail; direct source filing available"
+      ],
+      "scoreLimitations": [
+        "No reliable amount, percentage or reporting period was extracted.",
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 0
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "quality-power-electrical-equipments-limited-2026-10-16-8f69a1f84e7c",
+      "eventUrl": "/stock-triggers/events/quality-power-electrical-equipments-limited-2026-10-16-8f69a1f84e7c/",
+      "stockHubUrl": "/stocks/qpower/",
+      "categoryUrl": "/stock-triggers/category/other-material/"
+    },
     {
       "id": "8f2c911574b2509b71",
       "exchangeEventId": "106820790",
@@ -263,9 +608,11 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-94973bde9cf0/"
+      ],
       "eventSlug": "oberoi-realty-ltd-2026-10-16-94973bde9cf0",
       "eventUrl": "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-94973bde9cf0/",
       "stockHubUrl": "/stocks/oberoirlty/",
@@ -502,7 +849,7 @@
         "momentumScore": 93.3,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "cg-power-and-industrial-solutions-ltd-2026-10-16-b5087d162d9c",
@@ -615,7 +962,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/ramco-systems-limited-2026-10-16-ae054a75ea47/"
+      ],
       "eventSlug": "ramco-systems-limited-2026-10-16-ae054a75ea47",
       "eventUrl": "/stock-triggers/events/ramco-systems-limited-2026-10-16-ae054a75ea47/",
       "stockHubUrl": "/stocks/ramcosys/",
@@ -734,7 +1083,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/crompton-greaves-consumer-electricals-limited-2026-10-16-bad63c836c61/"
+      ],
       "eventSlug": "crompton-greaves-consumer-electricals-limited-2026-10-16-bad63c836c61",
       "eventUrl": "/stock-triggers/events/crompton-greaves-consumer-electricals-limited-2026-10-16-bad63c836c61/",
       "stockHubUrl": "/stocks/crompton/",
@@ -843,9 +1194,11 @@
         "momentumScore": 60.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/persistent-systems-ltd-2026-10-16-674ac45d6f63/"
+      ],
       "eventSlug": "persistent-systems-ltd-2026-10-16-674ac45d6f63",
       "eventUrl": "/stock-triggers/events/persistent-systems-ltd-2026-10-16-674ac45d6f63/",
       "stockHubUrl": "/stocks/persistent/",
@@ -1084,9 +1437,11 @@
         "momentumScore": 73.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/punjab-national-bank-2026-10-16-b01470fc1a7f/"
+      ],
       "eventSlug": "punjab-national-bank-2026-10-16-b01470fc1a7f",
       "eventUrl": "/stock-triggers/events/punjab-national-bank-2026-10-16-b01470fc1a7f/",
       "stockHubUrl": "/stocks/pnb/",
@@ -1430,7 +1785,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/lloyds-engineering-works-limited-2026-10-16-0b78175a2bd6/"
+      ],
       "eventSlug": "lloyds-engineering-works-limited-2026-10-16-0b78175a2bd6",
       "eventUrl": "/stock-triggers/events/lloyds-engineering-works-limited-2026-10-16-0b78175a2bd6/",
       "stockHubUrl": "/stocks/lloydsengg/",
@@ -1658,9 +2015,11 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/dlf-ltd-2026-10-16-44dd63f845a3/"
+      ],
       "eventSlug": "dlf-ltd-2026-10-16-44dd63f845a3",
       "eventUrl": "/stock-triggers/events/dlf-ltd-2026-10-16-44dd63f845a3/",
       "stockHubUrl": "/stocks/dlf/",
@@ -1769,7 +2128,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/rossell-techsys-limited-2026-10-16-63a1cfe06461/"
+      ],
       "eventSlug": "rossell-techsys-limited-2026-10-16-63a1cfe06461",
       "eventUrl": "/stock-triggers/events/rossell-techsys-limited-2026-10-16-63a1cfe06461/",
       "stockHubUrl": "/stocks/rosstech/",
@@ -1895,7 +2256,7 @@
         "momentumScore": 66.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "gmr-airports-ltd-2026-10-16-993959c6bc4f",
@@ -2013,7 +2374,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "aegis-logistics-ltd-2026-10-16-60ad292b67bd",
@@ -2131,7 +2492,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/bajaj-housing-finance-limited-2026-10-16-34094c64b55e/"
+      ],
       "eventSlug": "bajaj-housing-finance-limited-2026-10-16-34094c64b55e",
       "eventUrl": "/stock-triggers/events/bajaj-housing-finance-limited-2026-10-16-34094c64b55e/",
       "stockHubUrl": "/stocks/bajajhfl/",
@@ -2245,9 +2608,11 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/reliance-industries-ltd-2026-10-16-ce066bb36d84/"
+      ],
       "eventSlug": "reliance-industries-ltd-2026-10-16-ce066bb36d84",
       "eventUrl": "/stock-triggers/events/reliance-industries-ltd-2026-10-16-ce066bb36d84/",
       "stockHubUrl": "/stocks/reliance/",
@@ -3316,7 +3681,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "oberoi-realty-ltd-2026-10-16-1a54549021c7",
@@ -4022,7 +4387,7 @@
         "momentumScore": 69.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "jindal-stainless-ltd-2026-10-16-20aedc5efb26",
@@ -4258,7 +4623,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "federal-bank-ltd-2026-10-16-60368d088472",
@@ -4985,7 +5350,7 @@
         "momentumScore": 69.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "jindal-stainless-ltd-2026-10-16-3cb3125dd0ff",
@@ -5104,7 +5469,7 @@
         "momentumScore": 69.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "rbl-bank-ltd-2026-10-16-c243e0959295",
@@ -5217,7 +5582,7 @@
         "momentumScore": 90.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "prime-focus-ltd-2026-10-16-5f712f438af6",
@@ -5335,7 +5700,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indus-towers-ltd-2026-10-16-1018d1072b56/"
@@ -5579,7 +5944,7 @@
         "momentumScore": 69.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "rbl-bank-ltd-2026-10-16-65393e6ad70e",
@@ -7091,7 +7456,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/d-b-corp-ltd-2026-10-16-76d7d6ee92d7/"
@@ -7442,7 +7807,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/federal-bank-ltd-2026-10-16-04d805b11222/"
@@ -8747,7 +9112,7 @@
       "category": "ACQUISITION_PARTNERSHIP",
       "categoryLabel": "Acquisition / Partnership",
       "sentiment": "Positive",
-      "subject": "Agreements",
+      "subject": "Acquisition / Partnership Update",
       "rawSubject": "Agreements",
       "summary": "16th October, 2026 successfully completed the transaction with MetLife International Holdings, LLC , Barclays Securities (India) Private Limited, Barclays Wealth Trustees (India) Private Limited and Barclays Bank PLC, for the sale of shares of PNB Metlife India Insurance Company Limited, at a price of ₹117.20 per equity share, aggregating to… Purpose of entering into the agreement Jammu and Kashmir Bank Limited – the Seller, and MetLife International…",
       "detailsText": "16th October, 2026 successfully completed the transaction with MetLife International Holdings, LLC , Barclays Securities (India) Private Limited, Barclays Wealth Trustees (India) Private Limited and Barclays Bank PLC, for the sale of shares of PNB Metlife India Insurance Company Limited, at a price of ₹117.20 per equity share, aggregating to… Purpose of entering into the agreement Jammu and Kashmir Bank Limited – the Seller, and MetLife International Holdings, LLC – the Purchaser, have entered into a Share Purchase Agreement dated 17th July, 2026, for the acquisition of 0.5% stake in PNB Metlife India Insurance Company Limited. Significant terms of the agreement (in brief) special rights like right to appoint directors, first right to share subscription in case of issuance of shares, right to restrict any change in capital structure etc.",
@@ -8765,7 +9130,8 @@
         "rs,"
       ],
       "matchedSignals": [
-        "acquisition"
+        "acquisition",
+        "partnership"
       ],
       "publishedAt": "2026-10-16T18:59:12+05:30",
       "publishedDisplay": "16-Oct-2026 18:59 IST",
@@ -8782,7 +9148,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/j-kbank/",
       "aiEnhanced": false,
-      "impactScore": 52,
+      "impactScore": 53,
       "materialityBand": "Low materiality",
       "dataConfidence": 77,
       "scoreVersion": "2.0",
@@ -8790,7 +9156,7 @@
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 25,
+          "score": 26,
           "max": 35,
           "reason": "Transactions can alter business scale, products or geography."
         },
@@ -8823,7 +9189,7 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 52/100 from business materiality 25/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 26/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
@@ -8868,7 +9234,7 @@
       "category": "MANAGEMENT_CHANGE",
       "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
-      "subject": "Agreements",
+      "subject": "Management / Governance Update",
       "rawSubject": "Agreements",
       "summary": "The transaction is expected to strengthen the Company's production capacity and market presence in manufacturing quality API’s and Intermediates. Agreed value of assets purchase is Rs 72.90 Crore. e) Significant terms of the agreement (in brief) special rights like right to appoint directors, first right to share subscription in case of issuance of shares, right to restrict any change in capital structure etc.",
       "detailsText": "The transaction is expected to strengthen the Company's production capacity and market presence in manufacturing quality API’s and Intermediates. Agreed value of assets purchase is Rs 72.90 Crore. e) Significant terms of the agreement (in brief) special rights like right to appoint directors, first right to share subscription in case of issuance of shares, right to restrict any change in capital structure etc.",
@@ -9452,14 +9818,18 @@
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Kirloskar Brothers Limited: Kirloskar Brothers Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot",
-      "detailsText": "Kirloskar Brothers Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001.",
+      "detailsText": "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001."
+      ],
       "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
       "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [],
       "publishedAt": "2026-10-16T18:49:51+05:30",
       "publishedDisplay": "16-Oct-2026 18:49 IST",
@@ -9476,9 +9846,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/kirlosbros/",
       "aiEnhanced": false,
-      "impactScore": 27,
+      "impactScore": 31,
       "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -9491,9 +9861,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9517,13 +9887,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9532,7 +9901,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10019,18 +10388,24 @@
       "companyName": "EPL Limited",
       "category": "OTHER_MATERIAL",
       "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
+      "sentiment": "Caution",
       "subject": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
       "rawSubject": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
-      "summary": "EPL Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
-      "detailsText": "EPL Limited has informed the Exchange about Certificate under SEBI (Depositories and Participants) Regulations, 2018",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": ": Certificate in terms of Regulation 74(5) of the Securities and Exchange Board of India (Depository and Participants) Regulations, 2018 (as amended) (“SEBI DP Regulations”), for the quarter ended September 30, 2026 on behalf of EPL Limited (“Company”) Ref. : ISIN - INE255A01020 Dear Sir/ Madam, This is to certify that the securities comprised in the certificates received by the Company for dematerialisation during the quarter ended September 30, 2026…",
+      "detailsText": ": Certificate in terms of Regulation 74(5) of the Securities and Exchange Board of India (Depository and Participants) Regulations, 2018 (as amended) (“SEBI DP Regulations”), for the quarter ended September 30, 2026 on behalf of EPL Limited (“Company”) Ref. : ISIN - INE255A01020 Dear Sir/ Madam, This is to certify that the securities comprised in the certificates received by the Company for dematerialisation during the quarter ended September 30, 2026, have been listed on the Stock Exchanges and after due verification, such certificates have been mutilated/ cancelled. Marg, Lower Parel (W), Mumbai - 400013 Dear Sir/Madam, Sub: Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September 2026.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        ": Certificate in terms of Regulation 74(5) of the Securities and Exchange Board of India (Depository and Participants) Regulations, 2018 (as amended) (“SEBI DP Regulations”), for the quarter ended September 30, 2026 on behalf of EPL Limited (“Company”) Ref.",
+        ": ISIN - INE255A01020 Dear Sir/ Madam, This is to certify that the securities comprised in the certificates received by the Company for dematerialisation during the quarter ended September 30, 2026, have been listed on the Stock Exchanges and after due verification, such certificates have been mutilated/ cancelled.",
+        "Marg, Lower Parel (W), Mumbai - 400013 Dear Sir/Madam, Sub: Certificate under Regulation 74(5) of the SEBI (Depositories and Participants) Regulations, 2018 for the quarter ended 30th September 2026."
+      ],
       "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
       "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
       "highlights": [],
-      "matchedSignals": [],
+      "matchedSignals": [
+        "cancelled"
+      ],
       "publishedAt": "2026-10-16T18:41:09+05:30",
       "publishedDisplay": "16-Oct-2026 18:41 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -10046,24 +10421,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/epl/",
       "aiEnhanced": false,
-      "impactScore": 27,
+      "impactScore": 32,
       "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 9,
           "max": 35,
           "reason": "The filing requires additional facts before its business impact can be judged."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10087,10 +10462,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 32/100 from business materiality 9/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -10133,14 +10508,18 @@
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Kirloskar Brothers Limited filed an official update titled ‘voting results of Postal Ballot’.",
-      "detailsText": "Kirloskar Brothers Limited has informed the Exchange regarding voting results of Postal Ballot",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001.",
+      "detailsText": "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "KIRLOSKAR BROTHERS LIMITED A Kirloskar Group Company SEC/ F:26 October 16, 2026 BSE Limited Corporate Relationship Department, 2nd Floor, New Trading Ring, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400 001."
+      ],
       "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
       "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [],
       "publishedAt": "2026-10-16T18:40:27+05:30",
       "publishedDisplay": "16-Oct-2026 18:40 IST",
@@ -10157,9 +10536,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/kirlosbros/",
       "aiEnhanced": false,
-      "impactScore": 27,
+      "impactScore": 31,
       "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10172,9 +10551,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10198,13 +10577,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10213,7 +10591,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10335,7 +10713,7 @@
         "momentumScore": 90.5,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indian-hotels-co-ltd-2026-10-16-ca137561449e/"
@@ -10357,14 +10735,18 @@
       "sentiment": "Caution",
       "subject": "Resignation of Director/KMP/SMP",
       "rawSubject": "Resignation of Director/KMP/SMP",
-      "summary": "Torrent Pharmaceuticals Limited has informed the Exchange about Resignation of Director/KMP/SMP",
-      "detailsText": "Torrent Pharmaceuticals Limited has informed the Exchange about Resignation of Director/KMP/SMP",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "If you face this issue for more than 24 hrs, kindly write to us at: nsewebmaster@nse.co.in",
+      "detailsText": "If you face this issue for more than 24 hrs, kindly write to us at: nsewebmaster@nse.co.in",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "If you face this issue for more than 24 hrs, kindly write to us at: nsewebmaster@nse.co.in"
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
         "resignation",
         "director"
@@ -10388,9 +10770,9 @@
       "profileUrl": "/technical-analysis/torrent-pharmaceuticals-technical-analysis/",
       "triggerUrl": "/stocks/torntpharm/",
       "aiEnhanced": false,
-      "impactScore": 35,
+      "impactScore": 37,
       "materialityBand": "Low materiality",
-      "dataConfidence": 47,
+      "dataConfidence": 53,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10403,9 +10785,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 11,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10429,13 +10811,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 35/100 from business materiality 16/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 37/100 from business materiality 16/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Leadership or auditor changes may affect governance and execution."
+        "Evidence specificity: some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10444,7 +10825,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": -0.55,
@@ -10453,7 +10834,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/torrent-pharmaceuticals-ltd-2026-10-16-caec59cab739/"
@@ -10475,11 +10856,15 @@
       "sentiment": "Neutral",
       "subject": "Credit Rating",
       "rawSubject": "Credit Rating",
-      "summary": "PNC Infratech Limited has informed the Exchange about Credit Rating",
-      "detailsText": "PNC Infratech Limited has informed the Exchange about Credit Rating",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "This rating reflects the Company's performance on Environmental, Social and Governance parameters as assessed by the rating agency. Please note that the Company has not engaged any Rating Agency for ESG Rating. Rating Agency has independently prepared the report based on data available in public domain.",
+      "detailsText": "This rating reflects the Company's performance on Environmental, Social and Governance parameters as assessed by the rating agency. Please note that the Company has not engaged any Rating Agency for ESG Rating. Rating Agency has independently prepared the report based on data available in public domain.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "This rating reflects the Company's performance on Environmental, Social and Governance parameters as assessed by the rating agency.",
+        "Please note that the Company has not engaged any Rating Agency for ESG Rating.",
+        "Rating Agency has independently prepared the report based on data available in public domain."
+      ],
       "whyItMatters": "A rating change can affect borrowing cost, lender confidence and refinancing ability. Read the rating rationale and outlook.",
       "riskNote": "Read the complete rating rationale; reaffirmation may still include a negative outlook or elevated leverage.",
       "highlights": [],
@@ -10501,9 +10886,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/pncinfra/",
       "aiEnhanced": false,
-      "impactScore": 36,
+      "impactScore": 42,
       "materialityBand": "Low materiality",
-      "dataConfidence": 47,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10516,9 +10901,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 13,
           "max": 20,
-          "reason": "limited supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10542,10 +10927,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 36/100 from business materiality 19/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 19/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Ratings can influence borrowing cost and refinancing access."
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -10705,14 +11090,19 @@
       "sentiment": "Neutral",
       "subject": "Shareholders meeting",
       "rawSubject": "Shareholders meeting",
-      "summary": "Cummins India Limited filed an official update titled ‘voting results’.",
-      "detailsText": "Cummins India Limited has submitted the Exchange a copy Srutinizer's report of Postal Ballot. Further, the company has informed the Exchange regarding voting results.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "The Company had appointed MUFG I ntime India Private Limited (“M UFG Intime”) (Formerly known as Link Intime India Private Limited) for provi ding remote e-voting facility. The register, in accordance with Rule 20 (4) (xiv) and Rule 22 (10) of the Companies (Management & Administration) Rules, 2015, has been maintained electronically to record the assent or dissent received, mentioning the particula rs of name, address, folio number or client ID of the…",
+      "detailsText": "The Company had appointed MUFG I ntime India Private Limited (“M UFG Intime”) (Formerly known as Link Intime India Private Limited) for provi ding remote e-voting facility. The register, in accordance with Rule 20 (4) (xiv) and Rule 22 (10) of the Companies (Management & Administration) Rules, 2015, has been maintained electronically to record the assent or dissent received, mentioning the particula rs of name, address, folio number or client ID of the shareholders, number of shares held by them.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The Company had appointed MUFG I ntime India Private Limited (“M UFG Intime”) (Formerly known as Link Intime India Private Limited) for provi ding remote e-voting facility.",
+        "The register, in accordance with Rule 20 (4) (xiv) and Rule 22 (10) of the Companies (Management & Administration) Rules, 2015, has been maintained electronically to record the assent or dissent received, mentioning the particula rs of name, address, folio number or client ID of the shareholders, number of shares held by them."
+      ],
       "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
       "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [],
       "publishedAt": "2026-10-16T18:38:30+05:30",
       "publishedDisplay": "16-Oct-2026 18:38 IST",
@@ -10733,9 +11123,9 @@
       "profileUrl": "/technical-analysis/cummins-india-technical-analysis/",
       "triggerUrl": "/stocks/cumminsind/",
       "aiEnhanced": false,
-      "impactScore": 29,
+      "impactScore": 33,
       "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10748,9 +11138,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 15,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -10774,13 +11164,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 29/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 33/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10789,7 +11178,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": -0.67,
@@ -10798,7 +11187,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cummins-india-ltd-2026-10-16-5843a4125319/"
@@ -11142,7 +11531,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dlf-ltd-2026-10-16-ca9e6d8dc4f9/"
@@ -11829,7 +12218,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/vedanta-ltd-2026-10-16-5b9ac70a60ba/"
@@ -11848,20 +12237,31 @@
       "companyName": "DLF Limited",
       "category": "RESULTS",
       "categoryLabel": "Quarterly / Financial Results",
-      "sentiment": "Neutral",
+      "sentiment": "Positive",
       "subject": "Financial Results / Earnings Update",
       "rawSubject": "Press Release",
-      "summary": "DLF Limited: DLF announces financial results for Q2FY27",
-      "detailsText": "DLF announces financial results for Q2FY27",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Punjani Company Secretary Encl.: As above PRESS RELEASE DLF announces Financial Results for Q2FY27 Operating Cash ﬂow of Rs 1,858 crore further reinforces underlying business strength Net proﬁt at Rs 1,301 crore, y-o-y growth of 11% New Delhi, October 16, 2026 DLF Limited delivered a strong Q2FY27 performance, combining resilient demand, disciplined… Operating cash flow was Rs 1,858 crore, marked yet another quarter of sustained cash generation in the…",
+      "detailsText": "Punjani Company Secretary Encl.: As above PRESS RELEASE DLF announces Financial Results for Q2FY27 Operating Cash ﬂow of Rs 1,858 crore further reinforces underlying business strength Net proﬁt at Rs 1,301 crore, y-o-y growth of 11% New Delhi, October 16, 2026 DLF Limited delivered a strong Q2FY27 performance, combining resilient demand, disciplined… Operating cash flow was Rs 1,858 crore, marked yet another quarter of sustained cash generation in the business. The net cash position stood at Rs 15,084 crore despite a significant dividend outflow of Rs 1,980 crore Our rental portfolio, spanning approximately 50 msf, continues to demonstrate robust operating strength with industry -leading occupancy.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Punjani Company Secretary Encl.: As above PRESS RELEASE DLF announces Financial Results for Q2FY27 Operating Cash ﬂow of Rs 1,858 crore further reinforces underlying business strength Net proﬁt at Rs 1,301 crore, y-o-y growth of 11% New Delhi, October 16, 2026 DLF Limited delivered a strong Q2FY27 performance, combining resilient demand, disciplined…",
+        "Operating cash flow was Rs 1,858 crore, marked yet another quarter of sustained cash generation in the business.",
+        "The net cash position stood at Rs 15,084 crore despite a significant dividend outflow of Rs 1,980 crore Our rental portfolio, spanning approximately 50 msf, continues to demonstrate robust operating strength with industry -leading occupancy."
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "Rs 1,858 crore",
+        "Rs 1,301 crore",
+        "Rs 15,084 crore",
+        "Rs 1,980 crore"
+      ],
       "matchedSignals": [
         "financial results",
-        "earnings"
+        "earnings",
+        "growth",
+        "dividend"
       ],
       "publishedAt": "2026-10-16T18:25:59+05:30",
       "publishedDisplay": "16-Oct-2026 18:25 IST",
@@ -11883,31 +12283,31 @@
       "profileUrl": "/technical-analysis/dlf-technical-analysis/",
       "triggerUrl": "/stocks/dlf/",
       "aiEnhanced": false,
-      "impactScore": 45,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 47,
+      "impactScore": 80,
+      "materialityBand": "High materiality",
+      "dataConfidence": 89,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 28,
+          "score": 30,
           "max": 35,
           "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 20,
           "max": 20,
-          "reason": "limited supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 20,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹15,084.00 crore"
         },
         {
           "id": "marketConfirmation",
@@ -11924,22 +12324,28 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 28/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "High materiality. The score is 80/100 from business materiality 30/35, evidence 20/20, financial magnitude 20/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available",
+        "Financial magnitude: largest extracted monetary value is approximately ₹15,084.00 crore"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          15084.0,
+          1980.0,
+          1858.0,
+          1301.0
+        ],
+        "largestAmountCrore": 15084.0,
+        "percentages": [
+          11.0
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": 0.67,
@@ -11948,7 +12354,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dlf-ltd-2026-10-16-cfc7ef701cbe/"
@@ -11970,15 +12376,20 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "Bandhan Bank Limited: Details of the Bandhan Bank Earnings Call with analysts and investors, on the performance of Bandhan Bank Limited, for the quarter (Q2) and half-year ended September 30, 2026.",
-      "detailsText": "Details of the Bandhan Bank Earnings Call with analysts and investors, on the performance of Bandhan Bank Limited, for the quarter (Q2) and half-year ended September 30, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "of Corporate Services Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 BSE Scrip Code: 541153 National Stock Exchange of India Limited The Listing Department Exchange Plaza, C-1, Block G, Bandra Kurla Complex, Bandra (E), Mumbai - 400 051 NSE Symbol: BANDHANBNK Dear Sir/Madam, Sub.: Intimation under Regulation 30 of the SEBI (Listing Obligations… No: BBL/SEC/183/2026-27 dated October 15, 2026, please find enclosed, details of the ‘Bandhan Bank…",
+      "detailsText": "of Corporate Services Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 BSE Scrip Code: 541153 National Stock Exchange of India Limited The Listing Department Exchange Plaza, C-1, Block G, Bandra Kurla Complex, Bandra (E), Mumbai - 400 051 NSE Symbol: BANDHANBNK Dear Sir/Madam, Sub.: Intimation under Regulation 30 of the SEBI (Listing Obligations… No: BBL/SEC/183/2026-27 dated October 15, 2026, please find enclosed, details of the ‘Bandhan Bank Earnings Call’ with analysts and investors, on the performance of Bandhan Bank Limited (the ‘Bank’), for the quarter (Q2) and half-year ended September 30, 2026, to be hosted by the Bank on Wednesday, October 28, 2026. When using dial-in numbers, mentioned below, please do so 10 minutes prior to the conference schedule to ensure that you are connected to your call in time.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "of Corporate Services Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 BSE Scrip Code: 541153 National Stock Exchange of India Limited The Listing Department Exchange Plaza, C-1, Block G, Bandra Kurla Complex, Bandra (E), Mumbai - 400 051 NSE Symbol: BANDHANBNK Dear Sir/Madam, Sub.: Intimation under Regulation 30 of the SEBI (Listing Obligations…",
+        "No: BBL/SEC/183/2026-27 dated October 15, 2026, please find enclosed, details of the ‘Bandhan Bank Earnings Call’ with analysts and investors, on the performance of Bandhan Bank Limited (the ‘Bank’), for the quarter (Q2) and half-year ended September 30, 2026, to be hosted by the Bank on Wednesday, October 28, 2026.",
+        "When using dial-in numbers, mentioned below, please do so 10 minutes prior to the conference schedule to ensure that you are connected to your call in time."
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
       "highlights": [
-        "rs,"
+        "rs,",
+        "183/2026"
       ],
       "matchedSignals": [
         "analysts/institutional investor meet",
@@ -12003,9 +12414,9 @@
       "profileUrl": "/technical-analysis/bandhan-bank-technical-analysis/",
       "triggerUrl": "/stocks/bandhanbnk/",
       "aiEnhanced": false,
-      "impactScore": 34,
-      "materialityBand": "Informational",
-      "dataConfidence": 63,
+      "impactScore": 38,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -12018,16 +12429,16 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 13,
+          "score": 17,
           "max": 20,
-          "reason": "adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 183:2026"
         },
         {
           "id": "marketConfirmation",
@@ -12044,10 +12455,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 34/100 from business materiality 9/35, evidence 13/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 9/35, evidence 17/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; 1 concrete fact(s) extracted; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals."
@@ -12057,8 +12468,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 1
+        "actionRatios": [
+          "183:2026"
+        ],
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": -1.67,
@@ -12067,7 +12480,7 @@
         "momentumScore": 67.9,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bandhan-bank-ltd-2026-10-16-10866d73e471/"
@@ -12089,14 +12502,18 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "CCL Products (India) Limited: Link of Recording",
-      "detailsText": "CCL Products (India) Limited has informed the Exchange about Link of Recording",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Scrip Code: CCL To The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001.",
+      "detailsText": "Scrip Code: CCL To The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Scrip Code: CCL To The Corporate Relations Department, BSE Limited, Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai – 400001."
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
@@ -12118,9 +12535,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/ccl/",
       "aiEnhanced": false,
-      "impactScore": 28,
+      "impactScore": 30,
       "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -12133,9 +12550,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 11,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12159,14 +12576,13 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 30/100 from business materiality 9/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -12175,7 +12591,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -12297,7 +12713,7 @@
         "momentumScore": 80.7,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/inox-wind-ltd-2026-10-16-acdba6275404/"
@@ -12319,18 +12735,22 @@
       "sentiment": "Neutral",
       "subject": "Financial Results / Earnings Update",
       "rawSubject": "Outcome of Board Meeting",
-      "summary": "Tejas Networks Limited: Tejas Networks Limited has submitted to the Exchange, the unaudited financial results for the quarter and six months ended September 30, 2026.",
-      "detailsText": "Tejas Networks Limited has submitted to the Exchange, the unaudited financial results for the quarter and six months ended September 30, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "The Financial Results together with the Limited Review Report issued by the Statutory Auditors, are attached.",
+      "detailsText": "The Financial Results together with the Limited Review Report issued by the Statutory Auditors, are attached.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "The Financial Results together with the Limited Review Report issued by the Statutory Auditors, are attached."
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
         "financial results",
-        "results for the quarter",
-        "earnings"
+        "earnings",
+        "results for the quarter"
       ],
       "publishedAt": "2026-10-16T18:24:32+05:30",
       "publishedDisplay": "16-Oct-2026 18:24 IST",
@@ -12347,9 +12767,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/tejasnet/",
       "aiEnhanced": false,
-      "impactScore": 48,
+      "impactScore": 50,
       "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -12362,9 +12782,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 11,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -12388,13 +12808,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 48/100 from business materiality 29/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 29/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -12403,7 +12822,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -12549,14 +12968,20 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "PNB Housing Finance Limited: Earnings Call Invite for quarter and half year ended September 30, 2026",
-      "detailsText": "PNB Housing Finance Limited has informed the Exchange about Earnings Call Invite for quarter and half year ended September 30, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "(IST) i.e., post disclosure of un-audited financial results (Standalone and Consolidated) of the Company for the 2 nd quarter and half year ended September 30, 2026. Internal Date: Wednesday, 28th October 2026 Time: 7:30 PM IST Invitation for Q2 & H1 FY2026-27 Earnings Call The management team of PNB Housing Finance will be present during the call.",
+      "detailsText": "(IST) i.e., post disclosure of un-audited financial results (Standalone and Consolidated) of the Company for the 2 nd quarter and half year ended September 30, 2026. Internal Date: Wednesday, 28th October 2026 Time: 7:30 PM IST Invitation for Q2 & H1 FY2026-27 Earnings Call The management team of PNB Housing Finance will be present during the call.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "(IST) i.e., post disclosure of un-audited financial results (Standalone and Consolidated) of the Company for the 2 nd quarter and half year ended September 30, 2026.",
+        "Internal Date: Wednesday, 28th October 2026 Time: 7:30 PM IST Invitation for Q2 & H1 FY2026-27 Earnings Call The management team of PNB Housing Finance will be present during the call."
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "7:30",
+        "FY2026-27"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
@@ -12578,9 +13003,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/pnbhousing/",
       "aiEnhanced": false,
-      "impactScore": 28,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 36,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -12593,16 +13018,16 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 7:30"
         },
         {
           "id": "marketConfirmation",
@@ -12619,14 +13044,13 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 36/100 from business materiality 9/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -12634,8 +13058,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "7:30"
+        ],
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -12761,7 +13187,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finserv-ltd-2026-10-16-b2571e77f69f/"
@@ -13441,7 +13867,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-78f0440ae5ad/"
@@ -14122,7 +14548,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-da85473e3c73/"
@@ -14803,7 +15229,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/torrent-pharmaceuticals-ltd-2026-10-16-dd79d83efeff/"
@@ -14919,7 +15345,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/vodafone-idea-ltd-2026-10-16-16b212d56845/"
@@ -15038,7 +15464,7 @@
         "momentumScore": 79.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ltm-ltd-2026-10-16-2b198a743c71/"
@@ -15825,7 +16251,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/aditya-birla-real-estate-ltd-2026-10-16-bffcd5ae0d26/"
@@ -15941,7 +16367,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-3fe313b2fbf8/"
@@ -16058,7 +16484,7 @@
         "momentumScore": 79.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ltm-ltd-2026-10-16-cc7b3fab5c59/"
@@ -17531,7 +17957,7 @@
         "momentumScore": 79.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ltm-ltd-2026-10-16-99324cebbe9f/"
@@ -18779,7 +19205,7 @@
         "momentumScore": 79.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ltm-ltd-2026-10-16-96a72a9455d2/"
@@ -19006,7 +19432,7 @@
         "momentumScore": 65.8,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/nhpc-ltd-2026-10-16-20e943754197/"
@@ -19239,7 +19665,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/srf-ltd-2026-10-16-c1b8fd28be93/"
@@ -19358,7 +19784,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-edf8e0281ffd/"
@@ -19479,7 +19905,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/larsen-toubro-ltd-2026-10-16-960a3f02a6bd/"
@@ -19709,7 +20135,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dlf-ltd-2026-10-16-a6227cd3c006/"
@@ -19826,7 +20252,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bharat-forge-ltd-2026-10-16-d9c3566352cc/"
@@ -20620,7 +21046,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/zydus-lifesciences-ltd-2026-10-16-c034cd503acf/"
@@ -20960,7 +21386,7 @@
         "momentumScore": 79.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/ltm-ltd-2026-10-16-8a0fb3bd2e77/"
@@ -21082,7 +21508,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/gail-india-ltd-2026-10-16-b2fc232298d9/"
@@ -21425,7 +21851,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/uco-bank-2026-10-16-9b5afaadef08/"
@@ -21881,7 +22307,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/oberoi-realty-ltd-2026-10-16-2fbec82f4944/"
@@ -22106,7 +22532,7 @@
         "momentumScore": 67.7,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "High Weakness",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/upl-ltd-2026-10-16-cd7579ca485a/"
@@ -22218,7 +22644,7 @@
         "momentumScore": 96.3,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tips-music-ltd-2026-10-16-7cd8d07f5b1c/"
@@ -22561,7 +22987,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/aegis-logistics-ltd-2026-10-16-3a873ce7ea28/"
@@ -23022,7 +23448,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hdfc-bank-ltd-2026-10-16-659e52c378ab/"
@@ -23255,7 +23681,7 @@
         "momentumScore": 83.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/wipro-ltd-2026-10-16-6b3cddae2559/"
@@ -23372,7 +23798,7 @@
         "momentumScore": 74.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hindalco-industries-ltd-2026-10-16-7636ca183541/"
@@ -23603,7 +24029,7 @@
         "momentumScore": 86.7,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tata-consultancy-services-ltd-2026-10-16-1b9e50e7adc4/"
@@ -23833,7 +24259,7 @@
         "momentumScore": 73.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/punjab-national-bank-2026-10-16-203988759987/"
@@ -24063,7 +24489,7 @@
         "momentumScore": 73.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/punjab-national-bank-2026-10-16-a1199dfa509f/"
@@ -24399,7 +24825,7 @@
         "momentumScore": 83.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/wipro-ltd-2026-10-16-60f26de3c7b9/"
@@ -24966,7 +25392,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/patanjali-foods-ltd-2026-10-16-be4eb1f657ab/"
@@ -25081,7 +25507,7 @@
         "momentumScore": 75.5,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/yes-bank-ltd-2026-10-16-823ec08cc6d1/"
@@ -25754,7 +26180,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/max-financial-services-ltd-2026-10-16-57cada91a212/"
@@ -26215,7 +26641,7 @@
         "momentumScore": 79.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finance-ltd-2026-10-16-ba81cddefab4/"
@@ -26336,7 +26762,7 @@
         "momentumScore": 79.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finance-ltd-2026-10-16-579fb3b4180a/"
@@ -28375,7 +28801,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/radico-khaitan-ltd-2026-10-16-a43db500d0ae/"
@@ -29050,7 +29476,7 @@
         "momentumScore": 68.1,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/britannia-industries-ltd-2026-10-16-34581effb968/"
@@ -30285,7 +30711,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indian-railway-finance-corporation-ltd-2026-10-16-8eea65db339b/"
@@ -30624,7 +31050,7 @@
         "momentumScore": 75.6,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/mahindra-mahindra-ltd-2026-10-16-d68339649318/"
@@ -31428,7 +31854,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hdfc-asset-management-company-ltd-2026-10-16-1c47233f0699/"
@@ -31543,7 +31969,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tube-investments-of-india-ltd-2026-10-16-541f4b7272da/"
@@ -33244,7 +33670,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cummins-india-ltd-2026-10-16-537c648bf822/"
@@ -34492,7 +34918,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indian-railway-finance-corporation-ltd-2026-10-16-a41c02d8319e/"
@@ -35402,7 +35828,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/radico-khaitan-ltd-2026-10-16-3aa5cf42c39c/"
@@ -35631,7 +36057,7 @@
         "momentumScore": 99.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tech-mahindra-ltd-2026-10-16-3e009b1099f6/"
@@ -37555,7 +37981,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/federal-bank-ltd-2026-10-16-b344a425a1b0/"
@@ -38010,7 +38436,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/federal-bank-ltd-2026-10-16-4d8d136a9336/"
@@ -38467,7 +38893,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/federal-bank-ltd-2026-10-16-928313ed9df6/"
@@ -39261,7 +39687,7 @@
         "momentumScore": 72.1,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hindustan-zinc-ltd-2026-10-16-5347fd28b600/"
@@ -39714,7 +40140,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/eicher-motors-ltd-2026-10-16-90c2ffbba4ac/"
@@ -39947,7 +40373,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bank-of-india-2026-10-16-4270b074519e/"
@@ -41643,7 +42069,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hdfc-asset-management-company-ltd-2026-10-16-d5780da89817/"
@@ -42448,7 +42874,7 @@
         "momentumScore": 76.7,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/piramal-pharma-ltd-2026-10-16-e415b3664133/"
@@ -43800,7 +44226,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bse-ltd-2026-10-16-f7c986bd8270/"
@@ -44479,7 +44905,7 @@
         "momentumScore": 99.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tech-mahindra-ltd-2026-10-16-1b83658549f6/"
@@ -45158,7 +45584,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/shriram-finance-ltd-2026-10-16-29a54fe1b56a/"
@@ -45608,7 +46034,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/federal-bank-ltd-2026-10-16-3d90e995c59c/"
@@ -45950,7 +46376,7 @@
         "momentumScore": 60.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/persistent-systems-ltd-2026-10-16-9ae33337322e/"
@@ -46511,7 +46937,7 @@
         "momentumScore": 60.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/persistent-systems-ltd-2026-10-16-0e15745c6660/"
@@ -47184,7 +47610,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/havells-india-ltd-2026-10-16-b407290e4d55/"
@@ -47859,7 +48285,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/polycab-india-ltd-2026-10-16-4352afbd662b/"
@@ -47981,7 +48407,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/axis-bank-ltd-2026-10-16-b459458c5b96/"
@@ -48440,7 +48866,7 @@
         "momentumScore": 76.7,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/hcl-technologies-ltd-2026-10-16-15912326b54f/"
@@ -48554,7 +48980,7 @@
         "momentumScore": 75.5,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/yes-bank-ltd-2026-10-16-3c9d718fab8b/"
@@ -48791,7 +49217,7 @@
         "momentumScore": 83.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/wipro-ltd-2026-10-16-50b67d80136f/"
@@ -49078,7 +49504,7 @@
       "profileUrl": "/technical-analysis/aegis-logistics-technical-analysis/",
       "triggerUrl": "/stocks/aegislog/",
       "aiEnhanced": false,
-      "impactScore": 68,
+      "impactScore": 66,
       "materialityBand": "Moderate materiality",
       "dataConfidence": 69,
       "scoreVersion": "2.0",
@@ -49114,15 +49540,15 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Moderate materiality. The score is 68/100 from business materiality 23/35, evidence 15/20, financial magnitude 17/20, market confirmation 3/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 66/100 from business materiality 23/35, evidence 15/20, financial magnitude 17/20, market confirmation 3/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Financial magnitude: largest extracted monetary value is approximately ₹1,599.00 crore"
+        "Financial magnitude: largest extracted monetary value is approximately ₹1,599.00 crore",
+        "Recency / urgency: published 1.1 days ago"
       ],
       "scoreLimitations": [
         "The subject is generic and may omit the actual business impact."
@@ -49146,7 +49572,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "aegis-logistics-ltd-2026-10-16-68e930bfc857",
@@ -49199,7 +49625,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/5paisa/",
       "aiEnhanced": false,
-      "impactScore": 59,
+      "impactScore": 57,
       "materialityBand": "Moderate materiality",
       "dataConfidence": 69,
       "scoreVersion": "2.0",
@@ -49235,15 +49661,15 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Moderate materiality. The score is 59/100 from business materiality 28/35, evidence 15/20, financial magnitude 6/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 57/100 from business materiality 28/35, evidence 15/20, financial magnitude 6/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality.",
+        "Recency / urgency: published 1.1 days ago"
       ],
       "scoreLimitations": [
         "The subject is generic and may omit the actual business impact.",
@@ -49319,7 +49745,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/malupaper/",
       "aiEnhanced": false,
-      "impactScore": 33,
+      "impactScore": 31,
       "materialityBand": "Informational",
       "dataConfidence": 71,
       "scoreVersion": "2.0",
@@ -49355,14 +49781,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Informational. The score is 33/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -49435,7 +49861,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/texmopipes/",
       "aiEnhanced": false,
-      "impactScore": 50,
+      "impactScore": 48,
       "materialityBand": "Low materiality",
       "dataConfidence": 71,
       "scoreVersion": "2.0",
@@ -49471,14 +49897,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 25/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 48/100 from business materiality 25/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -49551,7 +49977,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/texmopipes/",
       "aiEnhanced": false,
-      "impactScore": 50,
+      "impactScore": 48,
       "materialityBand": "Low materiality",
       "dataConfidence": 71,
       "scoreVersion": "2.0",
@@ -49587,14 +50013,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 25/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 48/100 from business materiality 25/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -49663,7 +50089,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/cgcl/",
       "aiEnhanced": false,
-      "impactScore": 33,
+      "impactScore": 31,
       "materialityBand": "Informational",
       "dataConfidence": 71,
       "scoreVersion": "2.0",
@@ -49699,14 +50125,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Informational. The score is 33/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -49778,7 +50204,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/aye/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 38,
       "materialityBand": "Low materiality",
       "dataConfidence": 71,
       "scoreVersion": "2.0",
@@ -49814,14 +50240,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.1 days ago"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 15/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 15/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.1 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -49888,7 +50314,7 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/tirumalchm/",
       "aiEnhanced": false,
-      "impactScore": 31,
+      "impactScore": 29,
       "materialityBand": "Informational",
       "dataConfidence": 65,
       "scoreVersion": "2.0",
@@ -49924,14 +50350,14 @@
         {
           "id": "recencyUrgency",
           "label": "Recency / urgency",
-          "score": 10,
+          "score": 8,
           "max": 10,
-          "reason": "published within the last 24 hours"
+          "reason": "published 1.2 days ago"
         }
       ],
-      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 29/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50035,12 +50461,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 25/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50154,12 +50580,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 10/35, evidence 15/20, financial magnitude 11/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: adequate disclosure detail; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50268,12 +50694,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 2/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50294,7 +50720,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/asian-paints-ltd-2026-10-15-00d567fc3fb7/"
@@ -50385,12 +50811,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 29/100 from business materiality 10/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50508,12 +50934,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 25/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Business materiality: Legal or regulatory developments can create financial and reputational risk."
       ],
       "scoreLimitations": [
@@ -50636,12 +51062,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 9/35, evidence 15/20, financial magnitude 8/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: adequate disclosure detail; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50670,7 +51096,7 @@
         "momentumScore": 76.7,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "hcl-technologies-ltd-2026-10-15-7bb3ee4fbf5b",
@@ -50760,12 +51186,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 27/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Business materiality: Transactions can alter business scale, products or geography."
       ],
       "scoreLimitations": [
@@ -50787,7 +51213,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/rec-ltd-2026-10-15-4a3a62a050bb/"
@@ -50871,12 +51297,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 23/100 from business materiality 8/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -50983,12 +51409,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 25/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.0 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -51101,13 +51527,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 33/100 from business materiality 8/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.0 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -51220,13 +51646,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 34/100 from business materiality 8/35, evidence 18/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: adequate disclosure detail; 4 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.0 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -51337,7 +51763,7 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 28/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
@@ -51458,13 +51884,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.0 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 57/100 from business materiality 23/35, evidence 18/20, financial magnitude 8/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.0 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "The subject is generic and may omit the actual business impact.",
@@ -51574,12 +52000,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 25/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -51698,7 +52124,7 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 74/100 from business materiality 26/35, evidence 20/20, financial magnitude 20/20, market confirmation 0/15 and recency 8/10.",
@@ -51820,13 +52246,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 30/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality.",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -51932,12 +52358,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52054,13 +52480,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 55/100 from business materiality 25/35, evidence 19/20, financial magnitude 3/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -52174,12 +52600,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 25/35, evidence 13/20, financial magnitude 0/20, market confirmation 4/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Business materiality: Transactions can alter business scale, products or geography."
       ],
       "scoreLimitations": [
@@ -52200,7 +52626,7 @@
         "momentumScore": 70.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/power-finance-corporation-ltd-2026-10-15-7f425a4c289f/"
@@ -52291,12 +52717,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52402,12 +52828,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52516,12 +52942,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 25/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52635,12 +53061,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 31/100 from business materiality 10/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52752,12 +53178,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 26/100 from business materiality 9/35, evidence 7/20, financial magnitude 0/20, market confirmation 2/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: limited supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52779,7 +53205,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/uco-bank-2026-10-15-13e534154ef8/"
@@ -52866,12 +53292,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 29/100 from business materiality 8/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -52983,12 +53409,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 32/100 from business materiality 9/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -53099,12 +53525,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 11/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Market confirmation: daily move +5.95%; volume 3.02× 20-day average"
       ],
       "scoreLimitations": [
@@ -53126,7 +53552,7 @@
         "momentumScore": 83.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/wipro-ltd-2026-10-15-4cd17c4fe440/"
@@ -53217,13 +53643,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 17/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -53342,12 +53768,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 9/35, evidence 13/20, financial magnitude 0/20, market confirmation 8/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -53369,7 +53795,7 @@
         "momentumScore": 60.2,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "persistent-systems-ltd-2026-10-15-c24e8ad0f5ee",
@@ -53458,13 +53884,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 42/100 from business materiality 17/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.2 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -53580,12 +54006,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -53608,7 +54034,7 @@
         "momentumScore": 64.1,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/jio-financial-services-ltd-2026-10-15-7b4c3608c815/"
@@ -53695,12 +54121,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 39/100 from business materiality 20/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Business materiality: Ownership changes matter only when transaction size and intent are meaningful."
       ],
       "scoreLimitations": [
@@ -53809,12 +54235,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 39/100 from business materiality 20/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Business materiality: Ownership changes matter only when transaction size and intent are meaningful."
       ],
       "scoreLimitations": [
@@ -53928,12 +54354,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 15/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.2 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -54049,7 +54475,7 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.2 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 54/100 from business materiality 29/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
@@ -54159,12 +54585,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -54272,12 +54698,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 34/100 from business materiality 19/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Business materiality: Ratings can influence borrowing cost and refinancing access."
       ],
       "scoreLimitations": [
@@ -54396,7 +54822,7 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 68/100 from business materiality 25/35, evidence 18/20, financial magnitude 17/20, market confirmation 0/15 and recency 8/10.",
@@ -54517,12 +54943,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -54633,12 +55059,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 26/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -54756,12 +55182,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 18/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -54878,13 +55304,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 10/35, evidence 13/20, financial magnitude 0/20, market confirmation 15/15 and recency 8/10.",
       "scoreDrivers": [
         "Market confirmation: daily move +8.48%; volume 7.12× 20-day average; strength score 87.4",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
@@ -54905,7 +55331,7 @@
         "momentumScore": 99.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tech-mahindra-ltd-2026-10-15-a8b47b15bd97",
@@ -54998,12 +55424,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 31/100 from business materiality 10/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
@@ -55026,7 +55452,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/polycab-india-ltd-2026-10-15-01c04edfba05/"
@@ -55113,13 +55539,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 33/100 from business materiality 8/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -55233,12 +55659,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 19/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -55346,13 +55772,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 48/100 from business materiality 29/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality.",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -55460,12 +55886,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 24/100 from business materiality 7/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -55575,13 +56001,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality.",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -55695,12 +56121,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 49/100 from business materiality 26/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -55808,12 +56234,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 43/100 from business materiality 24/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Business materiality: Guidance can change future expectations but remains forward-looking."
       ],
       "scoreLimitations": [
@@ -55931,12 +56357,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 16/35, evidence 15/20, financial magnitude 0/20, market confirmation 11/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [],
@@ -55955,7 +56381,7 @@
         "momentumScore": 83.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "wipro-ltd-2026-10-15-99428d96dc53",
@@ -56043,12 +56469,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
@@ -56154,13 +56580,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality.",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -56270,12 +56696,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 26/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -56388,12 +56814,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 6/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -56415,7 +56841,7 @@
         "momentumScore": 73.1,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indian-bank-2026-10-15-77e93bb6542d/"
@@ -56506,12 +56932,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Informational. The score is 26/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: some supporting detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -56629,13 +57055,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 43/100 from business materiality 9/35, evidence 11/20, financial magnitude 0/20, market confirmation 15/15 and recency 8/10.",
       "scoreDrivers": [
         "Market confirmation: daily move +9.73%; volume 10.37× 20-day average; strength score 84.3",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals."
@@ -56655,7 +57081,7 @@
         "momentumScore": 96.3,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "tips-music-ltd-2026-10-15-c5445c4e179c",
@@ -56741,12 +57167,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 25/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Business materiality: Legal or regulatory developments can create financial and reputational risk."
       ],
       "scoreLimitations": [
@@ -56865,13 +57291,13 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 66/100 from business materiality 27/35, evidence 20/20, financial magnitude 11/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
         "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available",
-        "Recency / urgency: published 1.1 days ago"
+        "Recency / urgency: published 1.3 days ago"
       ],
       "scoreLimitations": [
         "No unusual price or volume confirmation was available in the latest scanner data."
@@ -56987,7 +57413,7 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Moderate materiality. The score is 70/100 from business materiality 26/35, evidence 19/20, financial magnitude 17/20, market confirmation 0/15 and recency 8/10.",
@@ -57108,12 +57534,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 27/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Business materiality: Transactions can alter business scale, products or geography."
       ],
       "scoreLimitations": [
@@ -57134,7 +57560,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "16-Oct-2026 17:41 IST"
+        "updatedAt": "16-Oct-2026 21:28 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/prestige-estates-projects-ltd-2026-10-15-969e3a64db1c/"
@@ -57228,12 +57654,12 @@
           "label": "Recency / urgency",
           "score": 8,
           "max": 10,
-          "reason": "published 1.1 days ago"
+          "reason": "published 1.3 days ago"
         }
       ],
       "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 19/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
       "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
+        "Recency / urgency: published 1.3 days ago",
         "Evidence specificity: adequate disclosure detail; direct source filing available"
       ],
       "scoreLimitations": [
@@ -57264,354 +57690,6 @@
       "eventUrl": "/stock-triggers/events/5paisa-capital-limited-2026-10-15-823a5efe481a/",
       "stockHubUrl": "/stocks/5paisa/",
       "categoryUrl": "/stock-triggers/category/management-change/"
-    },
-    {
-      "id": "cc21739454148af541",
-      "exchangeEventId": "106819241",
-      "stableEventId": "02ebca9fb72b",
-      "symbol": "LTF",
-      "stockName": "L&T Finance Limited",
-      "companyName": "L&T Finance Limited",
-      "category": "GUIDANCE",
-      "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Caution",
-      "subject": "Investor Presentation",
-      "rawSubject": "Investor Presentation",
-      "summary": "Towers, Dalal Street, Mumbai - 400 001. Neither the Company nor any of its affiliates, its board of directors, its management, advisers or representatives, or any other persons that may participate in any offering of securities of the Company, shall have any responsibility or liability whatsoever (in negligence or otherwise) for any loss (direct or indirect) howsoever arising from any use of… These statements can be recognized by the use of words such as…",
-      "detailsText": "Towers, Dalal Street, Mumbai - 400 001. Neither the Company nor any of its affiliates, its board of directors, its management, advisers or representatives, or any other persons that may participate in any offering of securities of the Company, shall have any responsibility or liability whatsoever (in negligence or otherwise) for any loss (direct or indirect) howsoever arising from any use of… These statements can be recognized by the use of words such as “expects,” “plans,” “will,” “estimates,” “projects,” or other words of similar meaning.",
-      "summaryBasis": "Official filing text",
-      "filingExtracted": true,
-      "filingKeyFacts": [
-        "Towers, Dalal Street, Mumbai - 400 001.",
-        "Neither the Company nor any of its affiliates, its board of directors, its management, advisers or representatives, or any other persons that may participate in any offering of securities of the Company, shall have any responsibility or liability whatsoever (in negligence or otherwise) for any loss (direct or indirect) howsoever arising from any use of…",
-        "These statements can be recognized by the use of words such as “expects,” “plans,” “will,” “estimates,” “projects,” or other words of similar meaning."
-      ],
-      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
-      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [
-        "rs,"
-      ],
-      "matchedSignals": [
-        "investor presentation",
-        "loss"
-      ],
-      "publishedAt": "2026-10-15T20:06:58+05:30",
-      "publishedDisplay": "15-Oct-2026 20:06 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/ltfinance_15102026200642_NSEBSEINTIMATION.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=LTF&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/ltfinance_15102026200642_NSEBSEINTIMATION.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/ltf/",
-      "aiEnhanced": false,
-      "impactScore": 45,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 63,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 24,
-          "max": 35,
-          "reason": "Guidance can change future expectations but remains forward-looking."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 13,
-          "max": 20,
-          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 8,
-          "max": 10,
-          "reason": "published 1.1 days ago"
-        }
-      ],
-      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 24/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
-      ],
-      "scoreLimitations": [
-        "The subject is generic and may omit the actual business impact.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 1
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [],
-      "eventSlug": "l-t-finance-limited-2026-10-15-02ebca9fb72b",
-      "eventUrl": "/stock-triggers/events/l-t-finance-limited-2026-10-15-02ebca9fb72b/",
-      "stockHubUrl": "/stocks/ltf/",
-      "categoryUrl": "/stock-triggers/category/guidance/"
-    },
-    {
-      "id": "7b6ee9a2087db9c155",
-      "exchangeEventId": "106819237",
-      "stableEventId": "54558a1d88cc",
-      "symbol": "MHRIL",
-      "stockName": "Mahindra Holidays & Resorts India Limited",
-      "companyName": "Mahindra Holidays & Resorts India Limited",
-      "category": "MANAGEMENT_CHANGE",
-      "categoryLabel": "Management / Auditor Change",
-      "sentiment": "Caution",
-      "subject": "Resignation of Director/KMP/SMP",
-      "rawSubject": "Resignation of Director/KMP/SMP",
-      "summary": "QSS}C :\\\u000epV\\O HT3^\u0012xZk\"\u0005-8sD\"\b+6rެ\b=̜\u0015 'x\u0006j1\u0013~Zg^qKn\u0014\"\u0018gG\u001apu\u0003VdDK&=( \u0015u\u0013\u0017C_y/ym~ɳ9Wu\u0018P\u001al\u0015@c;nF9R-% .\u0005] q4\u0001 Yޑ\u0014e\u0007]\u001aMl ORߥ Goq\u0012=KH\u0007[\u0011i\u0018\u0010\\wd M ))_Τꮆ\u0001k:\u000f \u0003^9B\u001b\u000f\u0001&~?n=0,Y-J\u0012\b I3 h3 #0П_g\"bot1 \u0005w'|\u0011\u000ekdFtLY+ /C9 m \u0014X\u0018gr$Lك>S zH\u0004`b /\u0019\u001a^zR-ʠ\u0018c\u0011\u001b> \u0006ZbcM}2t\u0004kU]=U& = Au\u0019Dփ:KbI7m\u0011 qӇ|yw\u0003E[۷#Ek\u0002\\\u0004\u0015\u000f1 F|jCsI #r Zτ횝\u0015Z-h\u0013L 6N0B\u0014d+HYa\u00075Z\u0005sIȁ_\u0004…",
-      "detailsText": "QSS}C :\\\u000epV\\O HT3^\u0012xZk\"\u0005-8sD\"\b+6rެ\b=̜\u0015 'x\u0006j1\u0013~Zg^qKn\u0014\"\u0018gG\u001apu\u0003VdDK&=( \u0015u\u0013\u0017C_y/ym~ɳ9Wu\u0018P\u001al\u0015@c;nF9R-% .\u0005] q4\u0001 Yޑ\u0014e\u0007]\u001aMl ORߥ Goq\u0012=KH\u0007[\u0011i\u0018\u0010\\wd M ))_Τꮆ\u0001k:\u000f \u0003^9B\u001b\u000f\u0001&~?n=0,Y-J\u0012\b I3 h3 #0П_g\"bot1 \u0005w'|\u0011\u000ekdFtLY+ /C9 m \u0014X\u0018gr$Lك>S zH\u0004`b /\u0019\u001a^zR-ʠ\u0018c\u0011\u001b> \u0006ZbcM}2t\u0004kU]=U& = Au\u0019Dփ:KbI7m\u0011 qӇ|yw\u0003E[۷#Ek\u0002\\\u0004\u0015\u000f1 F|jCsI #r Zτ횝\u0015Z-h\u0013L 6N0B\u0014d+HYa\u00075Z\u0005sIȁ_\u0004…",
-      "summaryBasis": "Official filing text",
-      "filingExtracted": true,
-      "filingKeyFacts": [
-        "QSS}C :\\\u000epV\\O HT3^\u0012xZk\"\u0005-8sD\"\b+6rެ\b=̜\u0015 'x\u0006j1\u0013~Zg^qKn\u0014\"\u0018gG\u001apu\u0003VdDK&=( \u0015u\u0013\u0017C_y/ym~ɳ9Wu\u0018P\u001al\u0015@c;nF9R-% .\u0005] q4\u0001 Yޑ\u0014e\u0007]\u001aMl ORߥ Goq\u0012=KH\u0007[\u0011i\u0018\u0010\\wd M ))_Τꮆ\u0001k:\u000f \u0003^9B\u001b\u000f\u0001&~?n=0,Y-J\u0012\b I3 h3 #0П_g\"bot1 \u0005w'|\u0011\u000ekdFtLY+ /C9 m \u0014X\u0018gr$Lك>S zH\u0004`b /\u0019\u001a^zR-ʠ\u0018c\u0011\u001b> \u0006ZbcM}2t\u0004kU]=U& = Au\u0019Dփ:KbI7m\u0011 qӇ|yw\u0003E[۷#Ek\u0002\\\u0004\u0015\u000f1 F|jCsI #r Zτ횝\u0015Z-h\u0013L 6N0B\u0014d+HYa\u00075Z\u0005sIȁ_\u0004…"
-      ],
-      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
-      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
-      "highlights": [],
-      "matchedSignals": [
-        "resignation",
-        "director"
-      ],
-      "publishedAt": "2026-10-15T19:57:02+05:30",
-      "publishedDisplay": "15-Oct-2026 19:57 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/MHRIL_ROID_100595_KMP_Doc.zip",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=MHRIL&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/MHRIL_ROID_100595_KMP_Doc.zip",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/mhril/",
-      "aiEnhanced": false,
-      "impactScore": 37,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 65,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 16,
-          "max": 35,
-          "reason": "Leadership or auditor changes may affect governance and execution."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 13,
-          "max": 20,
-          "reason": "detailed disclosure text; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 8,
-          "max": 10,
-          "reason": "published 1.1 days ago"
-        }
-      ],
-      "scoreExplanation": "Low materiality. The score is 37/100 from business materiality 16/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
-        "Evidence specificity: detailed disclosure text; direct source filing available"
-      ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [],
-      "eventSlug": "mahindra-holidays-resorts-india-limited-2026-10-15-54558a1d88cc",
-      "eventUrl": "/stock-triggers/events/mahindra-holidays-resorts-india-limited-2026-10-15-54558a1d88cc/",
-      "stockHubUrl": "/stocks/mhril/",
-      "categoryUrl": "/stock-triggers/category/management-change/"
-    },
-    {
-      "id": "6d75a47dbfef56aa06",
-      "exchangeEventId": "106819235",
-      "stableEventId": "f8f273bc1300",
-      "symbol": "MAHLIFE",
-      "stockName": "Mahindra Lifespace Developers Limited",
-      "companyName": "Mahindra Lifespace Developers Limited",
-      "category": "INVESTOR_MEETING",
-      "categoryLabel": "Investor Meeting / Conference Call",
-      "sentiment": "Neutral",
-      "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "Mahindra Lifespace Developers Limited: Schedule of meet",
-      "detailsText": "Mahindra Lifespace Developers Limited has informed the Exchange about Schedule of meet",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
-      "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
-      "matchedSignals": [
-        "analysts/institutional investor meet",
-        "investor meet",
-        "con. call"
-      ],
-      "publishedAt": "2026-10-15T19:56:13+05:30",
-      "publishedDisplay": "15-Oct-2026 19:56 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/MAHLIFE1_15102026195541_EarningsCallIntimation_sgd.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=MAHLIFE&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/MAHLIFE1_15102026195541_EarningsCallIntimation_sgd.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/mahlife/",
-      "aiEnhanced": false,
-      "impactScore": 25,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 8,
-          "max": 35,
-          "reason": "A meeting, call or recording is informational until it contains a new material disclosure."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 9,
-          "max": 20,
-          "reason": "some supporting detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 8,
-          "max": 10,
-          "reason": "published 1.1 days ago"
-        }
-      ],
-      "scoreExplanation": "Informational. The score is 25/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 8/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published 1.1 days ago",
-        "Evidence specificity: some supporting detail; direct source filing available"
-      ],
-      "scoreLimitations": [
-        "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/mahindra-lifespace-developers-limited-2026-10-15-f8f273bc1300/"
-      ],
-      "eventSlug": "mahindra-lifespace-developers-limited-2026-10-15-f8f273bc1300",
-      "eventUrl": "/stock-triggers/events/mahindra-lifespace-developers-limited-2026-10-15-f8f273bc1300/",
-      "stockHubUrl": "/stocks/mahlife/",
-      "categoryUrl": "/stock-triggers/category/investor-meeting/"
     }
   ]
 }
