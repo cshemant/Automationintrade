@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-10-27T01:03:31+05:30",
+  "updatedAt": "2026-10-27T04:19:44+05:30",
   "runs": [
+    {
+      "id": "stock-triggers-20261027T041944+0530",
+      "jobName": "stock-trigger-intelligence",
+      "status": "healthy",
+      "startedAt": "2026-10-27T04:19:15+05:30",
+      "finishedAt": "2026-10-27T04:19:44+05:30",
+      "sourceMode": "NSE Corporate Announcements API",
+      "sourceHealthy": true,
+      "sourceError": "",
+      "announcementsFetched": 2363,
+      "announcementsPublished": 1952,
+      "corporateActionsPublished": 4,
+      "totalTriggersPublished": 500,
+      "aiEnhancedCount": 0
+    },
     {
       "id": "stock-triggers-20261027T010331+0530",
       "jobName": "stock-trigger-intelligence",
@@ -883,21 +898,6 @@
       "announcementsFetched": 5772,
       "announcementsPublished": 5140,
       "corporateActionsPublished": 7,
-      "totalTriggersPublished": 500,
-      "aiEnhancedCount": 0
-    },
-    {
-      "id": "stock-triggers-20261002T003435+0530",
-      "jobName": "stock-trigger-intelligence",
-      "status": "fallback",
-      "startedAt": "2026-10-02T00:33:39+05:30",
-      "finishedAt": "2026-10-02T00:34:35+05:30",
-      "sourceMode": "Fallback: previous data + corporate actions",
-      "sourceHealthy": false,
-      "sourceError": "HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18); HTTPSConnectionPool(host='www.nseindia.com', port=443): Read timed out. (read timeout=18)",
-      "announcementsFetched": 0,
-      "announcementsPublished": 0,
-      "corporateActionsPublished": 4,
       "totalTriggersPublished": 500,
       "aiEnhancedCount": 0
     }
