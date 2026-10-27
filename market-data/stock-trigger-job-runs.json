@@ -1,6 +1,21 @@
 {
-  "updatedAt": "2026-10-28T00:27:58+05:30",
+  "updatedAt": "2026-10-28T03:59:01+05:30",
   "runs": [
+    {
+      "id": "stock-triggers-20261028T035901+0530",
+      "jobName": "stock-trigger-intelligence",
+      "status": "healthy",
+      "startedAt": "2026-10-28T03:58:29+05:30",
+      "finishedAt": "2026-10-28T03:59:01+05:30",
+      "sourceMode": "NSE Corporate Announcements API",
+      "sourceHealthy": true,
+      "sourceError": "",
+      "announcementsFetched": 2974,
+      "announcementsPublished": 2483,
+      "corporateActionsPublished": 20,
+      "totalTriggersPublished": 500,
+      "aiEnhancedCount": 0
+    },
     {
       "id": "stock-triggers-20261028T002758+0530",
       "jobName": "stock-trigger-intelligence",
@@ -877,21 +892,6 @@
       "status": "healthy",
       "startedAt": "2026-10-03T03:54:53+05:30",
       "finishedAt": "2026-10-03T03:55:24+05:30",
-      "sourceMode": "NSE Corporate Announcements API",
-      "sourceHealthy": true,
-      "sourceError": "",
-      "announcementsFetched": 4803,
-      "announcementsPublished": 4234,
-      "corporateActionsPublished": 7,
-      "totalTriggersPublished": 500,
-      "aiEnhancedCount": 0
-    },
-    {
-      "id": "stock-triggers-20261003T001205+0530",
-      "jobName": "stock-trigger-intelligence",
-      "status": "healthy",
-      "startedAt": "2026-10-03T00:11:28+05:30",
-      "finishedAt": "2026-10-03T00:12:05+05:30",
       "sourceMode": "NSE Corporate Announcements API",
       "sourceHealthy": true,
       "sourceError": "",
