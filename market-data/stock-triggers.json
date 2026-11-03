@@ -1,8 +1,8 @@
 {
   "toolName": "AIT Stock Trigger Intelligence",
-  "jobRunId": "stock-triggers-20261104T014837+0530",
-  "updatedAt": "04-Nov-2026 01:48 IST",
-  "generatedAt": "2026-11-04T01:48:37+05:30",
+  "jobRunId": "stock-triggers-20261104T050349+0530",
+  "updatedAt": "04-Nov-2026 05:03 IST",
+  "generatedAt": "2026-11-04T05:03:49+05:30",
   "fromDate": "28-Oct-2026",
   "toDate": "04-Nov-2026",
   "lookbackDays": 7,
@@ -13,7 +13,7 @@
   "sourceError": "",
   "aiEnabled": false,
   "aiEnhancedCount": 0,
-  "filingExtractedCount": 45,
+  "filingExtractedCount": 65,
   "filingExtractionAvailable": true,
   "sourceNote": "Fresh NSE corporate announcements are classified into business triggers and merged with upcoming corporate actions. Short transformed summaries are provided for discovery; always open the original filing.",
   "scoringModel": {
@@ -68,33 +68,34 @@
   },
   "summary": {
     "totalTriggers": 500,
-    "trackedStocks": 304,
+    "trackedStocks": 301,
     "highImpactCount": 0,
-    "informationalCount": 221,
-    "averageMaterialityScore": 37.6,
-    "averageDataConfidence": 54.8,
-    "positiveCount": 33,
-    "cautionCount": 21,
-    "latestPublishedAt": "2026-11-04T01:24:12+05:30",
+    "informationalCount": 211,
+    "averageMaterialityScore": 38.3,
+    "averageDataConfidence": 55.8,
+    "positiveCount": 38,
+    "cautionCount": 22,
+    "latestPublishedAt": "2026-11-04T03:43:07+05:30",
     "categoryCounts": {
-      "Investor Meeting / Conference Call": 128,
+      "Investor Meeting / Conference Call": 127,
       "Quarterly / Financial Results": 113,
-      "Other Material Update": 85,
-      "Management / Auditor Change": 66,
-      "Guidance / Business Outlook": 57,
-      "Acquisition / Partnership": 17,
+      "Other Material Update": 82,
+      "Management / Auditor Change": 67,
+      "Guidance / Business Outlook": 56,
+      "Acquisition / Partnership": 19,
       "Corporate Action": 8,
       "Fund Raise / Dilution": 7,
       "Promoter / Insider Activity": 6,
       "Regulatory / Legal Development": 5,
+      "Capacity Expansion / New Facility": 4,
       "Credit Rating Change": 4,
-      "Large Order / Contract": 2,
-      "Capacity Expansion / New Facility": 2
+      "Large Order / Contract": 2
     },
     "sentimentCounts": {
-      "Neutral": 446,
-      "Positive": 33,
-      "Caution": 21
+      "Neutral": 438,
+      "Positive": 38,
+      "Caution": 22,
+      "Mixed": 2
     }
   },
   "categories": [
@@ -156,6 +157,581 @@
     }
   ],
   "triggers": [
+    {
+      "id": "7b644623f6b5125db5",
+      "exchangeEventId": "106843311",
+      "stableEventId": "d97945bb803f",
+      "symbol": "BELDING",
+      "stockName": "Belding India Limited",
+      "companyName": "Belding India Limited",
+      "category": "GUIDANCE",
+      "categoryLabel": "Guidance / Business Outlook",
+      "sentiment": "Neutral",
+      "subject": "Investor Presentation",
+      "rawSubject": "Investor Presentation",
+      "summary": "Belding India Limited has informed the Exchange about Investor Presentation",
+      "detailsText": "Belding India Limited has informed the Exchange about Investor Presentation",
+      "summaryBasis": "Exchange announcement text",
+      "filingExtracted": false,
+      "filingKeyFacts": [],
+      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
+      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
+      "highlights": [],
+      "matchedSignals": [
+        "investor presentation"
+      ],
+      "publishedAt": "2026-11-04T03:43:07+05:30",
+      "publishedDisplay": "04-Nov-2026 03:43 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026034258_Final_Intimation_and_Investor_Presentation_with_OCR.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=BELDING&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026034258_Final_Intimation_and_Investor_Presentation_with_OCR.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/belding/",
+      "aiEnhanced": false,
+      "impactScore": 40,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 39,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 23,
+          "max": 35,
+          "reason": "Guidance can change future expectations but remains forward-looking."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 7,
+          "max": 20,
+          "reason": "some supporting detail; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Business materiality: Guidance can change future expectations but remains forward-looking."
+      ],
+      "scoreLimitations": [
+        "No reliable amount, percentage or reporting period was extracted.",
+        "The subject is generic and may omit the actual business impact.",
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 0
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "belding-india-limited-2026-11-04-d97945bb803f",
+      "eventUrl": "/stock-triggers/events/belding-india-limited-2026-11-04-d97945bb803f/",
+      "stockHubUrl": "/stocks/belding/",
+      "categoryUrl": "/stock-triggers/category/guidance/"
+    },
+    {
+      "id": "f84cb62e90b1f03185",
+      "exchangeEventId": "106843310",
+      "stableEventId": "cdf7885babfe",
+      "symbol": "BELDING",
+      "stockName": "Belding India Limited",
+      "companyName": "Belding India Limited",
+      "category": "ACQUISITION_PARTNERSHIP",
+      "categoryLabel": "Acquisition / Partnership",
+      "sentiment": "Neutral",
+      "subject": "Amalgamation/Merger",
+      "rawSubject": "Amalgamation/Merger",
+      "summary": "Belding India Limited has informed the Exchange about Amalgamation/Merger",
+      "detailsText": "Belding India Limited has informed the Exchange about Amalgamation/Merger",
+      "summaryBasis": "Exchange announcement text",
+      "filingExtracted": false,
+      "filingKeyFacts": [],
+      "whyItMatters": "The transaction may expand products, customers or geography. Valuation, integration and execution risks should be checked.",
+      "riskNote": "Strategic announcements may take time to close and may not produce the expected synergies.",
+      "highlights": [],
+      "matchedSignals": [
+        "merger"
+      ],
+      "publishedAt": "2026-11-04T03:39:46+05:30",
+      "publishedDisplay": "04-Nov-2026 03:39 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033929_Abeyance_of_Scheme_Covering_Page.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=BELDING&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033929_Abeyance_of_Scheme_Covering_Page.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/belding/",
+      "aiEnhanced": false,
+      "impactScore": 44,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 47,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 25,
+          "max": 35,
+          "reason": "Transactions can alter business scale, products or geography."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 9,
+          "max": 20,
+          "reason": "some supporting detail; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Low materiality. The score is 44/100 from business materiality 25/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Business materiality: Transactions can alter business scale, products or geography."
+      ],
+      "scoreLimitations": [
+        "No reliable amount, percentage or reporting period was extracted.",
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 0
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "belding-india-limited-2026-11-04-cdf7885babfe",
+      "eventUrl": "/stock-triggers/events/belding-india-limited-2026-11-04-cdf7885babfe/",
+      "stockHubUrl": "/stocks/belding/",
+      "categoryUrl": "/stock-triggers/category/acquisition-partnership/"
+    },
+    {
+      "id": "32733a9873fc054882",
+      "exchangeEventId": "106843309",
+      "stableEventId": "ca0ac0340ff1",
+      "symbol": "BELDING",
+      "stockName": "Belding India Limited",
+      "companyName": "Belding India Limited",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
+      "sentiment": "Neutral",
+      "subject": "Financial Results / Earnings Update",
+      "rawSubject": "General Updates",
+      "summary": "Belding India Limited: Unaudited Standalone and Consolidated Financial Results for the Quarter and Half Year ended September 30, 2026",
+      "detailsText": "Belding India Limited has informed the Exchange about Unaudited Standalone and Consolidated Financial Results for the Quarter and Half Year ended September 30, 2026",
+      "summaryBasis": "Exchange announcement text",
+      "filingExtracted": false,
+      "filingKeyFacts": [],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
+      "highlights": [],
+      "matchedSignals": [
+        "financial results",
+        "results for the quarter",
+        "earnings"
+      ],
+      "publishedAt": "2026-11-04T03:37:13+05:30",
+      "publishedDisplay": "04-Nov-2026 03:37 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033651_SE_Intimation.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=BELDING&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033651_SE_Intimation.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/belding/",
+      "aiEnhanced": false,
+      "impactScore": 50,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 57,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 29,
+          "max": 35,
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 11,
+          "max": 20,
+          "reason": "adequate disclosure detail; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 29/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
+      ],
+      "scoreLimitations": [
+        "No reliable amount, percentage or reporting period was extracted.",
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 0
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "belding-india-limited-2026-11-04-ca0ac0340ff1",
+      "eventUrl": "/stock-triggers/events/belding-india-limited-2026-11-04-ca0ac0340ff1/",
+      "stockHubUrl": "/stocks/belding/",
+      "categoryUrl": "/stock-triggers/category/results/"
+    },
+    {
+      "id": "ee2df7e0330d2a35d0",
+      "exchangeEventId": "106843308",
+      "stableEventId": "56e502ceafff",
+      "symbol": "BELDING",
+      "stockName": "Belding India Limited",
+      "companyName": "Belding India Limited",
+      "category": "RESULTS",
+      "categoryLabel": "Quarterly / Financial Results",
+      "sentiment": "Neutral",
+      "subject": "Financial Results / Earnings Update",
+      "rawSubject": "Outcome of Board Meeting",
+      "summary": "Belding India Limited: Belding India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+      "detailsText": "Belding India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+      "summaryBasis": "Exchange announcement text",
+      "filingExtracted": false,
+      "filingKeyFacts": [],
+      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
+      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
+      "highlights": [],
+      "matchedSignals": [
+        "financial results",
+        "earnings"
+      ],
+      "publishedAt": "2026-11-04T03:31:51+05:30",
+      "publishedDisplay": "04-Nov-2026 03:31 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033012_SE_Intimation.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=BELDING&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/BELDING_04112026033012_SE_Intimation.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": null,
+      "changePct": null,
+      "indices": [],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/",
+      "triggerUrl": "/stocks/belding/",
+      "aiEnhanced": false,
+      "impactScore": 47,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 57,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 28,
+          "max": 35,
+          "reason": "Quarterly results directly reveal growth, margin and profit quality."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 9,
+          "max": 20,
+          "reason": "some supporting detail; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 0,
+          "max": 20,
+          "reason": "no reliable monetary or percentage magnitude was disclosed"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 0,
+          "max": 15,
+          "reason": "no current price/volume confirmation available"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Low materiality. The score is 47/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
+      ],
+      "scoreLimitations": [
+        "No reliable amount, percentage or reporting period was extracted.",
+        "No unusual price or volume confirmation was available in the latest scanner data."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 0
+      },
+      "marketContext": {
+        "changePct": null,
+        "volumeSurgeRatio": null,
+        "strengthScore": null,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "",
+        "updatedAt": ""
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "belding-india-limited-2026-11-04-56e502ceafff",
+      "eventUrl": "/stock-triggers/events/belding-india-limited-2026-11-04-56e502ceafff/",
+      "stockHubUrl": "/stocks/belding/",
+      "categoryUrl": "/stock-triggers/category/results/"
+    },
+    {
+      "id": "5ea1315c4a74e32c08",
+      "exchangeEventId": "106843302",
+      "stableEventId": "706df8534097",
+      "symbol": "LUPIN",
+      "stockName": "Lupin Ltd.",
+      "companyName": "Lupin Limited",
+      "category": "GUIDANCE",
+      "categoryLabel": "Guidance / Business Outlook",
+      "sentiment": "Positive",
+      "subject": "Investor Presentation",
+      "rawSubject": "Investor Presentation",
+      "summary": "Net income is after adjusting NCI stake from PAT 19,574 mn EBITDA1 11,553 mn Net Income2 77,855 mn Sales 14% YoY 22% YoY 8 % YoY Margin 14.8% 25.1% Values in INR unless indicated otherwise India 23,836 mn | 15% YoY LATAM 2,427 mn | 30% YoY ROW 2,624 mn | 4% YoY Margin EMEA 9,913 mn | 40% YoY APAC 4,273 mn | 43% YoY North America 31,696 mn | 10% YoY API… Tarapur : WHO3 approval received 68,314 71,005 73,919 82,172 77,855 31.3% 31.1% 29.4% 30.0% 25.1%…",
+      "detailsText": "Net income is after adjusting NCI stake from PAT 19,574 mn EBITDA1 11,553 mn Net Income2 77,855 mn Sales 14% YoY 22% YoY 8 % YoY Margin 14.8% 25.1% Values in INR unless indicated otherwise India 23,836 mn | 15% YoY LATAM 2,427 mn | 30% YoY ROW 2,624 mn | 4% YoY Margin EMEA 9,913 mn | 40% YoY APAC 4,273 mn | 43% YoY North America 31,696 mn | 10% YoY API… Tarapur : WHO3 approval received 68,314 71,005 73,919 82,172 77,855 31.3% 31.1% 29.4% 30.0% 25.1% 12.0% 17.0% 22.0% 27.0% 32.0% 37.0% 0 10,000 20,000 30,000 40,000 50,000 60,000 70,000 80,000 Q2 FY26 Q3 FY26 Q4 FY26 Q1 FY27 Q2 FY27 Sales* EBITDA margin** Compliance Q2 FY27 - Key Developments Steady Revenue Growth with Healthy EBITDA Margins Net income is after adjusting NCI stake from PAT Key Financials INR mnSales Mix India, 23,836 31% United States, 30,2021 39% Emerging Markets2, 8,908 11%Other Developed Markets3, 11,823 15% API, 3,086 4% Revenue (In INR mn and %) 14,779 21,376 68,314 82,172 24,635 14,15011,553 19,574 77,855 Q2 FY27 Sales EBITDA3 Net Income4 Q2 FY26 Q1 FY27 7 India: Focus…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Net income is after adjusting NCI stake from PAT 19,574 mn EBITDA1 11,553 mn Net Income2 77,855 mn Sales 14% YoY 22% YoY 8 % YoY Margin 14.8% 25.1% Values in INR unless indicated otherwise India 23,836 mn | 15% YoY LATAM 2,427 mn | 30% YoY ROW 2,624 mn | 4% YoY Margin EMEA 9,913 mn | 40% YoY APAC 4,273 mn | 43% YoY North America 31,696 mn | 10% YoY API…",
+        "Tarapur : WHO3 approval received 68,314 71,005 73,919 82,172 77,855 31.3% 31.1% 29.4% 30.0% 25.1% 12.0% 17.0% 22.0% 27.0% 32.0% 37.0% 0 10,000 20,000 30,000 40,000 50,000 60,000 70,000 80,000 Q2 FY26 Q3 FY26 Q4 FY26 Q1 FY27 Q2 FY27 Sales* EBITDA margin** Compliance Q2 FY27 - Key Developments Steady Revenue Growth with Healthy EBITDA Margins",
+        "Net income is after adjusting NCI stake from PAT Key Financials INR mnSales Mix India, 23,836 31% United States, 30,2021 39% Emerging Markets2, 8,908 11%Other Developed Markets3, 11,823 15% API, 3,086 4% Revenue (In INR mn and %) 14,779 21,376 68,314 82,172 24,635 14,15011,553 19,574 77,855 Q2 FY27 Sales EBITDA3 Net Income4 Q2 FY26 Q1 FY27 7 India: Focus…"
+      ],
+      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
+      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
+      "highlights": [
+        "11%"
+      ],
+      "matchedSignals": [
+        "investor presentation",
+        "growth"
+      ],
+      "publishedAt": "2026-11-04T01:49:55+05:30",
+      "publishedDisplay": "04-Nov-2026 01:49 IST",
+      "sourceType": "NSE Corporate Announcement",
+      "sourceUrl": "https://nsearchives.nseindia.com/corporate/Lupin2_04112026014841_SE_Intimation_Investor_Presentation_04112026.pdf",
+      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=LUPIN&tabIndex=equity",
+      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/Lupin2_04112026014841_SE_Intimation_Investor_Presentation_04112026.pdf",
+      "sourceLinkType": "original-filing",
+      "cmp": 2015.9,
+      "changePct": 0.97,
+      "indices": [
+        "NIFTY MIDCAP 50",
+        "NIFTY PHARMA"
+      ],
+      "isFree": false,
+      "accessTier": "premium",
+      "profileUrl": "/technical-analysis/lupin-technical-analysis/",
+      "triggerUrl": "/stocks/lupin/",
+      "aiEnhanced": false,
+      "impactScore": 61,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 63,
+      "scoreVersion": "2.0",
+      "scoreBreakdown": [
+        {
+          "id": "businessMateriality",
+          "label": "Business materiality",
+          "score": 24,
+          "max": 35,
+          "reason": "Guidance can change future expectations but remains forward-looking."
+        },
+        {
+          "id": "evidenceSpecificity",
+          "label": "Evidence specificity",
+          "score": 13,
+          "max": 20,
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
+        },
+        {
+          "id": "financialMagnitude",
+          "label": "Financial magnitude",
+          "score": 12,
+          "max": 20,
+          "reason": "6 percentage metric(s) extracted, but no reliable rupee magnitude"
+        },
+        {
+          "id": "marketConfirmation",
+          "label": "Market confirmation",
+          "score": 2,
+          "max": 15,
+          "reason": "daily move +0.97%; volume 1.52× 20-day average"
+        },
+        {
+          "id": "recencyUrgency",
+          "label": "Recency / urgency",
+          "score": 10,
+          "max": 10,
+          "reason": "published within the last 24 hours"
+        }
+      ],
+      "scoreExplanation": "Moderate materiality. The score is 61/100 from business materiality 24/35, evidence 13/20, financial magnitude 12/20, market confirmation 2/15 and recency 10/10.",
+      "scoreDrivers": [
+        "Recency / urgency: published within the last 24 hours",
+        "Business materiality: Guidance can change future expectations but remains forward-looking."
+      ],
+      "scoreLimitations": [
+        "The subject is generic and may omit the actual business impact."
+      ],
+      "extractedFacts": {
+        "amountsCrore": [],
+        "largestAmountCrore": null,
+        "percentages": [
+          43.0,
+          40.0,
+          39.0,
+          37.0,
+          32.0,
+          31.3
+        ],
+        "perShareRupees": [],
+        "actionRatios": [],
+        "highlightCount": 1
+      },
+      "marketContext": {
+        "changePct": 0.97,
+        "volumeSurgeRatio": 1.52,
+        "strengthScore": 54.4,
+        "momentumScore": null,
+        "momentumBias": "",
+        "strengthSignal": "Bullish Volume Surge",
+        "updatedAt": "03-Nov-2026 23:32 IST"
+      },
+      "legacyEventUrls": [],
+      "eventSlug": "lupin-ltd-2026-11-04-706df8534097",
+      "eventUrl": "/stock-triggers/events/lupin-ltd-2026-11-04-706df8534097/",
+      "stockHubUrl": "/stocks/lupin/",
+      "categoryUrl": "/stock-triggers/category/guidance/"
+    },
     {
       "id": "9a86ed94123f947446",
       "exchangeEventId": "106843299",
@@ -264,7 +840,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/parag-milk-foods-limited-2026-11-04-11bf790d298d/"
+      ],
       "eventSlug": "parag-milk-foods-limited-2026-11-04-11bf790d298d",
       "eventUrl": "/stock-triggers/events/parag-milk-foods-limited-2026-11-04-11bf790d298d/",
       "stockHubUrl": "/stocks/paragmilk/",
@@ -380,7 +958,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "lupin-ltd-2026-11-04-a4fb66587371",
@@ -625,7 +1203,7 @@
         "momentumScore": 67.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "power-grid-corporation-of-india-ltd-2026-11-04-62a2ce45e0d2",
@@ -753,7 +1331,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "lupin-ltd-2026-11-04-a8144cbfe319",
@@ -1613,7 +2191,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/clean-max-enviro-energy-solutions-limited-2026-11-03-53ca953a210e/"
+      ],
       "eventSlug": "clean-max-enviro-energy-solutions-limited-2026-11-03-53ca953a210e",
       "eventUrl": "/stock-triggers/events/clean-max-enviro-energy-solutions-limited-2026-11-03-53ca953a210e/",
       "stockHubUrl": "/stocks/cleanmax/",
@@ -1731,7 +2311,9 @@
         "strengthSignal": "",
         "updatedAt": ""
       },
-      "legacyEventUrls": [],
+      "legacyEventUrls": [
+        "/stock-triggers/events/anupam-rasayan-india-limited-2026-11-03-5a0781a82a3e/"
+      ],
       "eventSlug": "anupam-rasayan-india-limited-2026-11-03-5a0781a82a3e",
       "eventUrl": "/stock-triggers/events/anupam-rasayan-india-limited-2026-11-03-5a0781a82a3e/",
       "stockHubUrl": "/stocks/anuras/",
@@ -4101,7 +4683,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "sbi-life-insurance-company-ltd-2026-11-03-381bd332091d",
@@ -4807,7 +5389,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/max-healthcare-institute-ltd-2026-11-03-f6bc4f7c064b/"
@@ -4943,7 +5525,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "sbi-life-insurance-company-ltd-2026-11-03-b4aee510d44b",
@@ -5670,7 +6252,7 @@
         "momentumScore": 61.4,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "mps-ltd-2026-11-03-b52016cf23e1",
@@ -5790,7 +6372,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [],
       "eventSlug": "max-healthcare-institute-ltd-2026-11-03-bbd15431a9bc",
@@ -6021,7 +6603,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bajaj-finserv-ltd-2026-11-03-fe839ff8f8f4/"
@@ -6364,7 +6946,7 @@
         "momentumScore": 72.5,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cholamandalam-investment-and-finance-company-ltd-2026-11-03-c5b8ad19fc68/"
@@ -6729,7 +7311,7 @@
         "momentumScore": 61.4,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/mps-ltd-2026-11-03-61ca9c6094be/"
@@ -7940,7 +8522,7 @@
         "momentumScore": 67.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/power-grid-corporation-of-india-ltd-2026-11-03-f8fa3fdaff12/"
@@ -8172,7 +8754,7 @@
         "momentumScore": 67.0,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/power-grid-corporation-of-india-ltd-2026-11-03-2820d8e45181/"
@@ -8308,21 +8890,29 @@
       "companyName": "MPS Limited",
       "category": "RESULTS",
       "categoryLabel": "Quarterly / Financial Results",
-      "sentiment": "Neutral",
+      "sentiment": "Caution",
       "subject": "Financial Results / Earnings Update",
       "rawSubject": "Outcome of Board Meeting",
-      "summary": "MPS Limited: MPS Limited has submitted to the Exchange the financial results for the quarter and half year ended 30 September 2026.",
-      "detailsText": "MPS Limited has submitted to the Exchange the financial results for the quarter and half year ended 30 September 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Un-Audited Financial Results (Standalone and Consolidated) for the Quarter and Half Year ended 30 September 2026: Upon the recommendation of the Audit Committee, the Board of Directors of the Company approved the Un-Audited Financial Results (Standalone & Consolidated) of the Company for the quarter and half year ended 30 September 2026, in the format… j Income tax relating to items that will not be : reclassified to profit or loss . the period/year…",
+      "detailsText": "Un-Audited Financial Results (Standalone and Consolidated) for the Quarter and Half Year ended 30 September 2026: Upon the recommendation of the Audit Committee, the Board of Directors of the Company approved the Un-Audited Financial Results (Standalone & Consolidated) of the Company for the quarter and half year ended 30 September 2026, in the format… j Income tax relating to items that will not be : reclassified to profit or loss . the period/year Total comprehensive Income for the period/year (IX+X) Paid-up equity share capital (face value -INR 1 O per equity share) Other equity Earnings per equity share (not annualised for the period) 373 j 5,583 j 1,711 (Face value -INR 10 per equity share) .",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Un-Audited Financial Results (Standalone and Consolidated) for the Quarter and Half Year ended 30 September 2026: Upon the recommendation of the Audit Committee, the Board of Directors of the Company approved the Un-Audited Financial Results (Standalone & Consolidated) of the Company for the quarter and half year ended 30 September 2026, in the format…",
+        "j Income tax relating to items that will not be : reclassified to profit or loss .",
+        "the period/year Total comprehensive Income for the period/year (IX+X) Paid-up equity share capital (face value -INR 1 O per equity share) Other equity Earnings per equity share (not annualised for the period) 373 j 5,583 j 1,711 (Face value -INR 10 per equity share) ."
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "INR 1",
+        "INR 10"
+      ],
       "matchedSignals": [
         "financial results",
-        "results for the quarter",
-        "earnings"
+        "earnings",
+        "loss",
+        "results for the quarter"
       ],
       "publishedAt": "2026-11-03T21:54:37+05:30",
       "publishedDisplay": "03-Nov-2026 21:54 IST",
@@ -8341,24 +8931,24 @@
       "profileUrl": "/technical-analysis/mps-technical-analysis/",
       "triggerUrl": "/stocks/mpsltd/",
       "aiEnhanced": false,
-      "impactScore": 50,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "impactScore": 59,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 29,
+          "score": 30,
           "max": 35,
           "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -8382,21 +8972,19 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 50/100 from business materiality 29/35, evidence 9/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 59/100 from business materiality 30/35, evidence 17/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted."
-      ],
+      "scoreLimitations": [],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": -2.77,
@@ -8405,7 +8993,7 @@
         "momentumScore": 61.4,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/mps-ltd-2026-11-03-1b561832efeb/"
@@ -8424,19 +9012,26 @@
       "companyName": "Monte Carlo Fashions Limited",
       "category": "GUIDANCE",
       "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
+      "sentiment": "Positive",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Monte Carlo Fashions Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Monte Carlo Fashions Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Over the years, we’ve built on the trust people place in our brand, our textile expertise and our long-standing retail relationships to grow into new categories. This transition has widened our addressable market and created multiple avenues for long-term growth. ~55% Cotton share Cotton has been the largest reported product category since FY 22.",
+      "detailsText": "Over the years, we’ve built on the trust people place in our brand, our textile expertise and our long-standing retail relationships to grow into new categories. This transition has widened our addressable market and created multiple avenues for long-term growth. ~55% Cotton share Cotton has been the largest reported product category since FY 22.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Over the years, we’ve built on the trust people place in our brand, our textile expertise and our long-standing retail relationships to grow into new categories.",
+        "This transition has widened our addressable market and created multiple avenues for long-term growth.",
+        "~55% Cotton share Cotton has been the largest reported product category since FY 22."
+      ],
       "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
       "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
-        "investor presentation"
+        "investor presentation",
+        "growth"
       ],
       "publishedAt": "2026-11-03T21:52:29+05:30",
       "publishedDisplay": "03-Nov-2026 21:52 IST",
@@ -8453,31 +9048,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/montecarlo/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 53,
       "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 24,
           "max": 35,
           "reason": "Guidance can change future expectations but remains forward-looking."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 6,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "1 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -8494,23 +9089,24 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 53/100 from business materiality 24/35, evidence 13/20, financial magnitude 6/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Guidance can change future expectations but remains forward-looking."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          55.0
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -8538,19 +9134,26 @@
       "companyName": "Clean Max Enviro Energy Solutions Limited",
       "category": "GUIDANCE",
       "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
+      "sentiment": "Positive",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Clean Max Enviro Energy Solutions Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Clean Max Enviro Energy Solutions Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Neither our Company nor any of its directors, officers, employees, agents or advisers, or any of their respective affiliates, advisers or representatives, undertake to update or revise any forward-looking statements, whether as a result of new information, future events or otherwise and none of them shall have any liability (in negligence or otherwise) for… 3,638 MW as of September 30, 2026 comprises 2,899 MWp solar (80%) (DC Cap acity) and 739 MW wind…",
+      "detailsText": "Neither our Company nor any of its directors, officers, employees, agents or advisers, or any of their respective affiliates, advisers or representatives, undertake to update or revise any forward-looking statements, whether as a result of new information, future events or otherwise and none of them shall have any liability (in negligence or otherwise) for… 3,638 MW as of September 30, 2026 comprises 2,899 MWp solar (80%) (DC Cap acity) and 739 MW wind (20%) 7 6.3 GW RE Power Sales contracted capacity; Overall portfolio grows to 13.2 GW Particulars As on March 31, 2025 As on March 31, 2026 As on Sept 30, 2026 Comments A) RE Power Sales Operational capacity1 1,712 3,088 3,638 Operational Capacity• ~57% growth… 1.7x growth in portfolio capacity (~ 2 years) ;",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Neither our Company nor any of its directors, officers, employees, agents or advisers, or any of their respective affiliates, advisers or representatives, undertake to update or revise any forward-looking statements, whether as a result of new information, future events or otherwise and none of them shall have any liability (in negligence or otherwise) for…",
+        "3,638 MW as of September 30, 2026 comprises 2,899 MWp solar (80%) (DC Cap acity) and 739 MW wind (20%) 7 6.3 GW RE Power Sales contracted capacity; Overall portfolio grows to 13.2 GW Particulars As on March 31, 2025 As on March 31, 2026 As on Sept 30, 2026 Comments A) RE Power Sales Operational capacity1 1,712 3,088 3,638 Operational Capacity• ~57% growth…",
+        "1.7x growth in portfolio capacity (~ 2 years) ;"
+      ],
       "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
       "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
-        "investor presentation"
+        "investor presentation",
+        "growth"
       ],
       "publishedAt": "2026-11-03T21:48:56+05:30",
       "publishedDisplay": "03-Nov-2026 21:48 IST",
@@ -8567,31 +9170,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/cleanmax/",
       "aiEnhanced": false,
-      "impactScore": 40,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "impactScore": 57,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 24,
           "max": 35,
           "reason": "Guidance can change future expectations but remains forward-looking."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 10,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "3 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -8608,23 +9211,26 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 57/100 from business materiality 24/35, evidence 13/20, financial magnitude 10/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Guidance can change future expectations but remains forward-looking."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          80.0,
+          57.0,
+          20.0
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -8655,18 +9261,25 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "Bharat Electronics Limited: Link of Recording",
-      "detailsText": "Bharat Electronics Limited has informed the Exchange about Link of Recording",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "T « i 4 , wm P J Towers , Dalai Street , ^ rf - 400001 , 4 $ klg Mumbai - 400001 , Maharashtra . Mt ( T ^ r # # | - 3 TR ) RR 4 4 , 2015 % RR 4 4 30 sfk 46 % sf ^ TR , 30 RICRR , 2026 47 T Wm fcPRTtft % HRull + Ti 4 T 4 + 14 3 fl ^ fi ' 3 fT = Rft ' 3 Trt f + l = + 41 Ril ^ ^ TRT * FRRR , 03 4 44 + , 2026 Tt $ TFT 4.00 ^ jf SfRYf ^ RT [ 441 R sin ^ Tis f | - Pursuant to Regulation 30 and 46 of SEBI ( LODR ) Regulations , 2015 , the audio recording of… m…",
+      "detailsText": "T « i 4 , wm P J Towers , Dalai Street , ^ rf - 400001 , 4 $ klg Mumbai - 400001 , Maharashtra . Mt ( T ^ r # # | - 3 TR ) RR 4 4 , 2015 % RR 4 4 30 sfk 46 % sf ^ TR , 30 RICRR , 2026 47 T Wm fcPRTtft % HRull + Ti 4 T 4 + 14 3 fl ^ fi ' 3 fT = Rft ' 3 Trt f + l = + 41 Ril ^ ^ TRT * FRRR , 03 4 44 + , 2026 Tt $ TFT 4.00 ^ jf SfRYf ^ RT [ 441 R sin ^ Tis f | - Pursuant to Regulation 30 and 46 of SEBI ( LODR ) Regulations , 2015 , the audio recording of… m for discussion oh Financial Results for the quarter ended 30 th September , 2026 has been uploaded on the below mentioned web - link : # sffftrf % r - ^ 3 Tf ^ w ^ g ; i This is for your information and record .",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "T « i 4 , wm P J Towers , Dalai Street , ^ rf - 400001 , 4 $ klg Mumbai - 400001 , Maharashtra .",
+        "Mt ( T ^ r # # | - 3 TR ) RR 4 4 , 2015 % RR 4 4 30 sfk 46 % sf ^ TR , 30 RICRR , 2026 47 T Wm fcPRTtft % HRull + Ti 4 T 4 + 14 3 fl ^ fi ' 3 fT = Rft ' 3 Trt f + l = + 41 Ril ^ ^ TRT * FRRR , 03 4 44 + , 2026 Tt $ TFT 4.00 ^ jf SfRYf ^ RT [ 441 R sin ^ Tis f | - Pursuant to Regulation 30 and 46 of SEBI ( LODR ) Regulations , 2015 , the audio recording of…",
+        "m for discussion oh Financial Results for the quarter ended 30 th September , 2026 has been uploaded on the below mentioned web - link : # sffftrf % r - ^ 3 Tf ^ w ^ g ; i This is for your information and record ."
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "rs ,"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
         "con. call",
+        "audio recording",
         "link of recording"
       ],
       "publishedAt": "2026-11-03T21:48:24+05:30",
@@ -8687,31 +9300,31 @@
       "profileUrl": "/technical-analysis/bharat-electronics-technical-analysis/",
       "triggerUrl": "/stocks/bel/",
       "aiEnhanced": false,
-      "impactScore": 28,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 35,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 9,
+          "score": 10,
           "max": 35,
           "reason": "A meeting, call or recording is informational until it contains a new material disclosure."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "1 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -8728,23 +9341,24 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 35/100 from business materiality 10/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          46.0
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": 0.96,
@@ -8753,7 +9367,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bharat-electronics-ltd-2026-11-03-8e453047eef1/"
@@ -8770,20 +9384,27 @@
       "symbol": "CHOLAFIN",
       "stockName": "Cholamandalam Investment and Finance Company Ltd.",
       "companyName": "Cholamandalam Investment and Finance Company Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "MANAGEMENT_CHANGE",
+      "categoryLabel": "Management / Auditor Change",
       "sentiment": "Neutral",
       "subject": "Intimation of change in Corporate Office Address of RTA of the Company",
       "rawSubject": "Updates",
-      "summary": "Cholamandalam Investment and Finance Company Limited filed an official update titled ‘Intimation of change in Corporate Office Address of RTA of the Company’.",
-      "detailsText": "Cholamandalam Investment and Finance Company Limited has informed the Exchange regarding Intimation of change in Corporate Office Address of RTA of the Company.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
+      "summary": "Thanking you, Yours faithfully, For Cholamandalam Investment and Finance Company Limited P Sujatha Company Secretary October 12, 2026 The Secretary National Stock Exchange of India Limited Trade World, 4th Floor, Kamala Mills Compound, Senapati Bapat Marg, Lower Parel, Mumbai 400 013 The Secretary BSE Ltd 1st Floor, P.J. Towers Dalal Street, Fort, Mumbai 400 001 Dear Sir / Madam, Sub: Complianc e under Regulation 6(1) of SEBI (Listing Obligations and Dis…",
+      "detailsText": "Thanking you, Yours faithfully, For Cholamandalam Investment and Finance Company Limited P Sujatha Company Secretary October 12, 2026 The Secretary National Stock Exchange of India Limited Trade World, 4th Floor, Kamala Mills Compound, Senapati Bapat Marg, Lower Parel, Mumbai 400 013 The Secretary BSE Ltd 1st Floor, P.J. Towers Dalal Street, Fort, Mumbai 400 001 Dear Sir / Madam, Sub: Complianc e under Regulation 6(1) of SEBI (Listing Obligations and Dis closure Requirements) Regulations, 2015 for the quarter ended 30 September, 2026. We hereby confirm that the Company is in complianc e with the requirements o f Regulation 6(1) o f the SEBI (Listing Obli gations and Disclosure Requir ements) Regulations, 2015, pertaining to the appointment of a Compliance officer for the quarter e nded 30 September , 2026.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Thanking you, Yours faithfully, For Cholamandalam Investment and Finance Company Limited P Sujatha Company Secretary October 12, 2026 The Secretary National Stock Exchange of India Limited Trade World, 4th Floor, Kamala Mills Compound, Senapati Bapat Marg, Lower Parel, Mumbai 400 013 The Secretary BSE Ltd 1st Floor, P.J.",
+        "Towers Dalal Street, Fort, Mumbai 400 001 Dear Sir / Madam, Sub: Complianc e under Regulation 6(1) of SEBI (Listing Obligations and Dis closure Requirements) Regulations, 2015 for the quarter ended 30 September, 2026.",
+        "We hereby confirm that the Company is in complianc e with the requirements o f Regulation 6(1) o f the SEBI (Listing Obli gations and Disclosure Requir ements) Regulations, 2015, pertaining to the appointment of a Compliance officer for the quarter e nded 30 September , 2026."
+      ],
+      "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
+      "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
       "highlights": [],
-      "matchedSignals": [],
+      "matchedSignals": [
+        "appointment",
+        "company secretary"
+      ],
       "publishedAt": "2026-11-03T21:48:04+05:30",
       "publishedDisplay": "03-Nov-2026 21:48 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -8804,24 +9425,24 @@
       "profileUrl": "/technical-analysis/cholamandalam-investment-and-finance-technical-analysis/",
       "triggerUrl": "/stocks/cholafin/",
       "aiEnhanced": false,
-      "impactScore": 31,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 41,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 16,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 11,
+          "score": 13,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -8845,10 +9466,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 31/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 41/100 from business materiality 16/35, evidence 13/20, financial magnitude 0/20, market confirmation 2/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted."
@@ -8868,7 +9489,7 @@
         "momentumScore": 72.5,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cholamandalam-investment-and-finance-company-ltd-2026-11-03-bf4c715aaeb8/"
@@ -8876,7 +9497,7 @@
       "eventSlug": "cholamandalam-investment-and-finance-company-ltd-2026-11-03-bf4c715aaeb8",
       "eventUrl": "/stock-triggers/events/cholamandalam-investment-and-finance-company-ltd-2026-11-03-bf4c715aaeb8/",
       "stockHubUrl": "/stocks/cholafin/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/management-change/"
     },
     {
       "id": "7276bfaad3eaedf71d",
@@ -9001,20 +9622,31 @@
       "companyName": "R Systems International Limited",
       "category": "RESULTS",
       "categoryLabel": "Quarterly / Financial Results",
-      "sentiment": "Neutral",
+      "sentiment": "Mixed",
       "subject": "Financial Results / Earnings Update",
       "rawSubject": "Press Release",
-      "summary": "R Systems International Limited: \"PRESS RELEASE ON THE FINANCIAL RESULTS OF THE COMPANY FOR THE QUARTER AND NINE MONTHS ENDED SEPTEMBER 30, 2026.\".",
-      "detailsText": "\"PRESS RELEASE ON THE FINANCIAL RESULTS OF THE COMPANY FOR THE QUARTER AND NINE MONTHS ENDED SEPTEMBER 30, 2026.\".",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Highlights Consolidated results for the quarter ended September 30, 2026  Revenue Rs 6,152 mn (US$ 64.4 mn); YoY Growth of 23.4% in INR terms and 12.5% in US$ terms  Adj. Supported by continued investments in talent, innovation, and AI capabilities, we remain well-positioned to drive sustainable long-term growth.\" Nand Sardana, Chief Financial Officer said, “During Q3 2026, the Company delivered profitable growth with an Adjusted EBITDA margin of 20.2…",
+      "detailsText": "Highlights Consolidated results for the quarter ended September 30, 2026  Revenue Rs 6,152 mn (US$ 64.4 mn); YoY Growth of 23.4% in INR terms and 12.5% in US$ terms  Adj. Supported by continued investments in talent, innovation, and AI capabilities, we remain well-positioned to drive sustainable long-term growth.\" Nand Sardana, Chief Financial Officer said, “During Q3 2026, the Company delivered profitable growth with an Adjusted EBITDA margin of 20.2 %, while revenue increased 12.5% year-on-year in R Systems– Earnings… R Systems– Earnings Press Release September 30, 2026 6 Financial Performance Consolidated Profit & Loss Statement (Un-audited) for the Nine Months Ended September 30, 2026 (Contribution Analysis Format – Non-GAAP) (Figures in mn) Particulars Jan to Sep 2026 Jan to Sep 2025 INR US$ INR US$ Revenues 17,916.69 190.74 14,030.97 162.27 Cost of revenues…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Highlights Consolidated results for the quarter ended September 30, 2026  Revenue Rs 6,152 mn (US$ 64.4 mn); YoY Growth of 23.4% in INR terms and 12.5% in US$ terms  Adj.",
+        "Supported by continued investments in talent, innovation, and AI capabilities, we remain well-positioned to drive sustainable long-term growth.\" Nand Sardana, Chief Financial Officer said, “During Q3 2026, the Company delivered profitable growth with an Adjusted EBITDA margin of 20.2 %, while revenue increased 12.5% year-on-year in R Systems– Earnings…",
+        "R Systems– Earnings Press Release September 30, 2026 6 Financial Performance Consolidated Profit & Loss Statement (Un-audited) for the Nine Months Ended September 30, 2026 (Contribution Analysis Format – Non-GAAP) (Figures in mn) Particulars Jan to Sep 2026 Jan to Sep 2025 INR US$ INR US$ Revenues 17,916.69 190.74 14,030.97 162.27 Cost of revenues…"
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "Rs 6,152",
+        "Q3 2026"
+      ],
       "matchedSignals": [
         "financial results",
-        "earnings"
+        "results for the quarter",
+        "earnings",
+        "growth",
+        "revenue increase",
+        "loss"
       ],
       "publishedAt": "2026-11-03T21:38:38+05:30",
       "publishedDisplay": "03-Nov-2026 21:38 IST",
@@ -9031,31 +9663,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/rsystems/",
       "aiEnhanced": false,
-      "impactScore": 47,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 57,
+      "impactScore": 68,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 28,
+          "score": 31,
           "max": 35,
           "reason": "Quarterly results directly reveal growth, margin and profit quality."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 10,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "3 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -9072,22 +9704,25 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 47/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 68/100 from business materiality 31/35, evidence 17/20, financial magnitude 10/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          23.4,
+          20.2,
+          12.5
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -9118,18 +9753,24 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "Viviana Power Tech Limited: Schedule of meet on Friday, 06th November, 2026 at 04.00 PM IST.",
-      "detailsText": "Viviana Power Tech Limited has informed the Exchange about Schedule of meet on Friday, 06th November, 2026 at 04.00 PM IST.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "No A53248 Enclosed: As above 6th November, 2026 Friday 4:00 PM Universal Dial -in: +91 22 6280 1296 +91 22 7115 8207 Diamond Pass Login: Click Here To Register H1 & Q2 FY27 EARNINGS CALL ORIM CONNECT Viviana Power Tech Ltd EARNINGS CONFERENCE CALL INVITE CONNECT Speakers From The Management Joining Details",
+      "detailsText": "No A53248 Enclosed: As above 6th November, 2026 Friday 4:00 PM Universal Dial -in: +91 22 6280 1296 +91 22 7115 8207 Diamond Pass Login: Click Here To Register H1 & Q2 FY27 EARNINGS CALL ORIM CONNECT Viviana Power Tech Ltd EARNINGS CONFERENCE CALL INVITE CONNECT Speakers From The Management Joining Details",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "No A53248 Enclosed: As above 6th November, 2026 Friday 4:00 PM Universal Dial -in: +91 22 6280 1296 +91 22 7115 8207 Diamond Pass Login: Click Here To Register H1 & Q2 FY27 EARNINGS CALL ORIM CONNECT Viviana Power Tech Ltd EARNINGS CONFERENCE CALL INVITE CONNECT Speakers From The Management Joining Details"
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "4:00"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
-        "con. call"
+        "conference call",
+        "con. call",
+        "earnings call"
       ],
       "publishedAt": "2026-11-03T21:38:01+05:30",
       "publishedDisplay": "03-Nov-2026 21:38 IST",
@@ -9146,31 +9787,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/viviana/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 35,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 71,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 10,
           "max": 35,
           "reason": "A meeting, call or recording is informational until it contains a new material disclosure."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 15,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 4:0"
         },
         {
           "id": "marketConfirmation",
@@ -9187,14 +9828,13 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 35/100 from business materiality 10/35, evidence 15/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9202,8 +9842,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "4:0"
+        ],
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -9234,18 +9876,27 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "RBZ Jewellers Limited: Link of Recording",
-      "detailsText": "Rbz Jewellers Limited has informed the Exchange about Link of Recording",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "03rd November 2026 To, Department of Corporate Services BSE Limited, P J Towers, Dalal Street, Mumbai - 400 001 Security Code: 544060 Security ID: RBZJEWEL To, Listing Department National Stock Exchange of India Limited, Exchange Plaza, 5th Floor Plot No C/1, G. Block Bandra-Kurla Complex, Bandra (E), Mumbai - 400 051 Symbol: RBZJEWEL Dear Sir/Madam Sub: Earning Call Audio recording with Analysts and Investors for the Quarter ended as on 30th September…",
+      "detailsText": "03rd November 2026 To, Department of Corporate Services BSE Limited, P J Towers, Dalal Street, Mumbai - 400 001 Security Code: 544060 Security ID: RBZJEWEL To, Listing Department National Stock Exchange of India Limited, Exchange Plaza, 5th Floor Plot No C/1, G. Block Bandra-Kurla Complex, Bandra (E), Mumbai - 400 051 Symbol: RBZJEWEL Dear Sir/Madam Sub: Earning Call Audio recording with Analysts and Investors for the Quarter ended as on 30th September 2026. Pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find below the link of audio recording of conference call arranged by the company for Analysts and Investors held on Tuesday, 03rd November 2026 at 16:00 hrs for discussion on the financial performance of the Company for the quarter ended as on…",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "03rd November 2026 To, Department of Corporate Services BSE Limited, P J Towers, Dalal Street, Mumbai - 400 001 Security Code: 544060 Security ID: RBZJEWEL To, Listing Department National Stock Exchange of India Limited, Exchange Plaza, 5th Floor Plot No C/1, G.",
+        "Block Bandra-Kurla Complex, Bandra (E), Mumbai - 400 051 Symbol: RBZJEWEL Dear Sir/Madam Sub: Earning Call Audio recording with Analysts and Investors for the Quarter ended as on 30th September 2026.",
+        "Pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find below the link of audio recording of conference call arranged by the company for Analysts and Investors held on Tuesday, 03rd November 2026 at 16:00 hrs for discussion on the financial performance of the Company for the quarter ended as on…"
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "rs,",
+        "16:00"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
+        "conference call",
         "con. call",
+        "audio recording",
         "link of recording"
       ],
       "publishedAt": "2026-11-03T21:37:55+05:30",
@@ -9263,31 +9914,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/rbzjewel/",
       "aiEnhanced": false,
-      "impactScore": 28,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 37,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 77,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 9,
+          "score": 10,
           "max": 35,
           "reason": "A meeting, call or recording is informational until it contains a new material disclosure."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 16:0"
         },
         {
           "id": "marketConfirmation",
@@ -9304,14 +9955,13 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 28/100 from business materiality 9/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 37/100 from business materiality 10/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 2 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9319,8 +9969,10 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "16:0"
+        ],
+        "highlightCount": 2
       },
       "marketContext": {
         "changePct": null,
@@ -9351,14 +10003,23 @@
       "sentiment": "Neutral",
       "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "Indegene Limited: Transcript",
-      "detailsText": "Indegene Limited has informed the Exchange about Transcript",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "At the same time, more than $400 billion worth of revenue faces patent expiry over the next decade. Revenues came in at INR11,223 million, up 39.5% year -on-year and 5.6% sequentially. Revenue for the second quarter was INR11,223 million or US$117.5 million.",
+      "detailsText": "At the same time, more than $400 billion worth of revenue faces patent expiry over the next decade. Revenues came in at INR11,223 million, up 39.5% year -on-year and 5.6% sequentially. Revenue for the second quarter was INR11,223 million or US$117.5 million.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "At the same time, more than $400 billion worth of revenue faces patent expiry over the next decade.",
+        "Revenues came in at INR11,223 million, up 39.5% year -on-year and 5.6% sequentially.",
+        "Revenue for the second quarter was INR11,223 million or US$117.5 million."
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
+      "highlights": [
+        "INR11,223 million",
+        "400 billion",
+        "11,223 million",
+        "117.5 million"
+      ],
       "matchedSignals": [
         "analysts/institutional investor meet",
         "investor meet",
@@ -9380,9 +10041,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/indgn/",
       "aiEnhanced": false,
-      "impactScore": 26,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 57,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 89,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -9395,16 +10056,16 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 18,
           "max": 20,
-          "reason": "limited supporting detail; direct source filing available"
+          "reason": "adequate disclosure detail; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 20,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹40,000.00 crore"
         },
         {
           "id": "marketConfirmation",
@@ -9421,23 +10082,28 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 26/100 from business materiality 9/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 57/100 from business materiality 9/35, evidence 18/20, financial magnitude 20/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: limited supporting detail; direct source filing available"
+        "Financial magnitude: largest extracted monetary value is approximately ₹40,000.00 crore",
+        "Recency / urgency: published within the last 24 hours"
       ],
       "scoreLimitations": [
-        "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          40000.0,
+          1122.3,
+          11.75
+        ],
+        "largestAmountCrore": 40000.0,
+        "percentages": [
+          39.5,
+          5.6
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": null,
@@ -9579,20 +10245,30 @@
       "symbol": "GLASSWALL",
       "stockName": "Glass Wall Systems (India) Limited",
       "companyName": "Glass Wall Systems (India) Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
+      "category": "ACQUISITION_PARTNERSHIP",
+      "categoryLabel": "Acquisition / Partnership",
       "sentiment": "Neutral",
       "subject": "Statement of deviation(s) or variation(s) under Reg. 32",
       "rawSubject": "Statement of deviation(s) or variation(s) under Reg. 32",
-      "summary": "Glass Wall Systems (India) Limited has informed the Exchange about statement of deviation(s) or variation(s) under Reg. 32",
-      "detailsText": "Glass Wall Systems (India) Limited has informed the Exchange about statement of deviation(s) or variation(s) under Reg. 32",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
+      "summary": "Amount raised Fresh Issue of X 600 Millions (i.e. If yes, whether the same is pursuant to change in terms of contract or objects which was approved by | Not Applicable shareholders 10. Comments of the auditors, if any None a.",
+      "detailsText": "Amount raised Fresh Issue of X 600 Millions (i.e. If yes, whether the same is pursuant to change in terms of contract or objects which was approved by | Not Applicable shareholders 10. Comments of the auditors, if any None a.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Amount raised Fresh Issue of X 600 Millions (i.e.",
+        "If yes, whether the same is pursuant to change in terms of contract or objects which was approved by | Not Applicable shareholders 10.",
+        "Comments of the auditors, if any None a."
+      ],
+      "whyItMatters": "The transaction may expand products, customers or geography. Valuation, integration and execution risks should be checked.",
+      "riskNote": "Strategic announcements may take time to close and may not produce the expected synergies.",
+      "highlights": [
+        "rs 10",
+        "rs,",
+        "600 Million"
+      ],
+      "matchedSignals": [
+        "mou"
+      ],
       "publishedAt": "2026-11-03T21:36:18+05:30",
       "publishedDisplay": "03-Nov-2026 21:36 IST",
       "sourceType": "NSE Corporate Announcement",
@@ -9608,24 +10284,24 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/glasswall/",
       "aiEnhanced": false,
-      "impactScore": 27,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "impactScore": 52,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 75,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 8,
+          "score": 25,
           "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
+          "reason": "Transactions can alter business scale, products or geography."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 17,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "adequate disclosure detail; 3 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9649,13 +10325,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 27/100 from business materiality 8/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 52/100 from business materiality 25/35, evidence 17/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: adequate disclosure detail; 3 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -9664,7 +10339,7 @@
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 3
       },
       "marketContext": {
         "changePct": null,
@@ -9681,7 +10356,7 @@
       "eventSlug": "glass-wall-systems-india-limited-2026-11-03-8011a6d65db7",
       "eventUrl": "/stock-triggers/events/glass-wall-systems-india-limited-2026-11-03-8011a6d65db7/",
       "stockHubUrl": "/stocks/glasswall/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
+      "categoryUrl": "/stock-triggers/category/acquisition-partnership/"
     },
     {
       "id": "c58231d1e7e593fdd0",
@@ -9692,19 +10367,30 @@
       "companyName": "Subex Limited",
       "category": "GUIDANCE",
       "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
+      "sentiment": "Mixed",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Subex Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Subex Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Normalized EBITDA improved to ₹1,777 lakhs in Q2FY27 as compared to ₹1,687 lakhs in Q1FY27, reflecting a growth of 5.3%, primarily supported by ongoing operational efficiencies and driven by accelerated execution of order backlog and achievement of key billing milestones. Normalized EBITDA margin stood at 20.8% in Q2FY27 as compared to 21.2% in Q1FY27, a decline of 40bps on QoQ basis. Normalised PAT % stood at 16.7% in Q2 FY27 vs 20.3% in Q1 FY27.",
+      "detailsText": "Normalized EBITDA improved to ₹1,777 lakhs in Q2FY27 as compared to ₹1,687 lakhs in Q1FY27, reflecting a growth of 5.3%, primarily supported by ongoing operational efficiencies and driven by accelerated execution of order backlog and achievement of key billing milestones. Normalized EBITDA margin stood at 20.8% in Q2FY27 as compared to 21.2% in Q1FY27, a decline of 40bps on QoQ basis. Normalised PAT % stood at 16.7% in Q2 FY27 vs 20.3% in Q1 FY27.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Normalized EBITDA improved to ₹1,777 lakhs in Q2FY27 as compared to ₹1,687 lakhs in Q1FY27, reflecting a growth of 5.3%, primarily supported by ongoing operational efficiencies and driven by accelerated execution of order backlog and achievement of key billing milestones.",
+        "Normalized EBITDA margin stood at 20.8% in Q2FY27 as compared to 21.2% in Q1FY27, a decline of 40bps on QoQ basis.",
+        "Normalised PAT % stood at 16.7% in Q2 FY27 vs 20.3% in Q1 FY27."
+      ],
       "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
       "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
+      "highlights": [
+        "₹1,777 lakh",
+        "₹1,687 lakh",
+        "1,777 lakh",
+        "1,687 lakh"
+      ],
       "matchedSignals": [
-        "investor presentation"
+        "investor presentation",
+        "growth",
+        "decline"
       ],
       "publishedAt": "2026-11-03T21:35:19+05:30",
       "publishedDisplay": "03-Nov-2026 21:35 IST",
@@ -9721,31 +10407,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/subexltd/",
       "aiEnhanced": false,
-      "impactScore": 38,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "impactScore": 65,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 81,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 25,
           "max": 35,
           "reason": "Guidance can change future expectations but remains forward-looking."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 5,
+          "score": 18,
           "max": 20,
-          "reason": "limited supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 12,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹17.77 crore"
         },
         {
           "id": "marketConfirmation",
@@ -9762,23 +10448,31 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 38/100 from business materiality 23/35, evidence 5/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 65/100 from business materiality 25/35, evidence 18/20, financial magnitude 12/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          17.77,
+          16.87
+        ],
+        "largestAmountCrore": 17.77,
+        "percentages": [
+          21.2,
+          20.8,
+          20.3,
+          16.7,
+          5.3
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": null,
@@ -9809,11 +10503,14 @@
       "sentiment": "Neutral",
       "subject": "Update on Post-Results Conference Call",
       "rawSubject": "Updates",
-      "summary": "Kolte - Patil Developers Limited filed an official update titled ‘Update on Post-Results Conference Call’.",
-      "detailsText": "Kolte - Patil Developers Limited has informed the Exchange regarding 'Update on Post-Results Conference Call'.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Ref: NSE Symbol and Series: KOLTEPATIL and EQ BSE Code and Scrip Code - Equity: 9624 and 532924 BSE Security Code and Security Name – Debt: 974771 and KPDLZC33 BSE Security Code and Security Name – Debt: 976030 and 0KPDL34 BSE Security Code and Security Name – Debt: 977231 and KPDL161025 BSE Security Code and Security Name – Debt: 977351 and 0KPDL35 Dear… Stakeholders and investors can access the Q2 & H1 FY27 investor presentation and results release at…",
+      "detailsText": "Ref: NSE Symbol and Series: KOLTEPATIL and EQ BSE Code and Scrip Code - Equity: 9624 and 532924 BSE Security Code and Security Name – Debt: 974771 and KPDLZC33 BSE Security Code and Security Name – Debt: 976030 and 0KPDL34 BSE Security Code and Security Name – Debt: 977231 and KPDL161025 BSE Security Code and Security Name – Debt: 977351 and 0KPDL35 Dear… Stakeholders and investors can access the Q2 & H1 FY27 investor presentation and results release at the links below:",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Ref: NSE Symbol and Series: KOLTEPATIL and EQ BSE Code and Scrip Code - Equity: 9624 and 532924 BSE Security Code and Security Name – Debt: 974771 and KPDLZC33 BSE Security Code and Security Name – Debt: 976030 and 0KPDL34 BSE Security Code and Security Name – Debt: 977231 and KPDL161025 BSE Security Code and Security Name – Debt: 977351 and 0KPDL35 Dear…",
+        "Stakeholders and investors can access the Q2 & H1 FY27 investor presentation and results release at the links below:"
+      ],
       "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
       "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
       "highlights": [],
@@ -9835,9 +10532,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/koltepatil/",
       "aiEnhanced": false,
-      "impactScore": 25,
+      "impactScore": 29,
       "materialityBand": "Informational",
-      "dataConfidence": 57,
+      "dataConfidence": 65,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -9850,9 +10547,9 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; direct source filing available"
         },
         {
           "id": "financialMagnitude",
@@ -9876,10 +10573,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 25/100 from business materiality 6/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Informational. The score is 29/100 from business materiality 6/35, evidence 13/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; direct source filing available"
       ],
       "scoreLimitations": [
         "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
@@ -9918,20 +10615,32 @@
       "symbol": "WINDMACHIN",
       "stockName": "Windsor Machines Limited",
       "companyName": "Windsor Machines Limited",
-      "category": "GUIDANCE",
-      "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
+      "category": "EXPANSION",
+      "categoryLabel": "Capacity Expansion / New Facility",
+      "sentiment": "Positive",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Windsor Machines Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Windsor Machines Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
-      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
+      "summary": "Management Insights Q2FY27 has been a quarter of strong topline momentum for Windsor, with Revenue growing 33.8% YoY to ₹183 Cr, led by a robust performance from the Injection Moulding division. Built Area Key Industries Served Integrated Facility at Rajkot (Chibhada) 100 97 76 ₹273 Cr CNC Injection Moulding Extrusion Capacity 3,600 Machines p.a. Chibhada, Rajkot New Integrated Plant New plant fully operational Current Capacity Break-up (Machines p.a.)…",
+      "detailsText": "Management Insights Q2FY27 has been a quarter of strong topline momentum for Windsor, with Revenue growing 33.8% YoY to ₹183 Cr, led by a robust performance from the Injection Moulding division. Built Area Key Industries Served Integrated Facility at Rajkot (Chibhada) 100 97 76 ₹273 Cr CNC Injection Moulding Extrusion Capacity 3,600 Machines p.a. Chibhada, Rajkot New Integrated Plant New plant fully operational Current Capacity Break-up (Machines p.a.) CNC 1,800 IMM 1,500 11 Lakh+ 36+ 800+ 3,600 7 New Rajkot Plant Multi-fold expansion in capacities Business Overview EMD 300 1,500 3,600 8,400 Legacy Current Expandable Capacity Expansion (Machines p.a.)",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Management Insights Q2FY27 has been a quarter of strong topline momentum for Windsor, with Revenue growing 33.8% YoY to ₹183 Cr, led by a robust performance from the Injection Moulding division.",
+        "Built Area Key Industries Served Integrated Facility at Rajkot (Chibhada) 100 97 76 ₹273 Cr CNC Injection Moulding Extrusion Capacity 3,600 Machines p.a.",
+        "Chibhada, Rajkot New Integrated Plant New plant fully operational Current Capacity Break-up (Machines p.a.) CNC 1,800 IMM 1,500 11 Lakh+ 36+ 800+ 3,600 7 New Rajkot Plant Multi-fold expansion in capacities Business Overview EMD 300 1,500 3,600 8,400 Legacy Current Expandable Capacity Expansion (Machines p.a.)"
+      ],
+      "whyItMatters": "New capacity may support future growth, but utilisation, funding, commissioning delays and demand determine the real benefit.",
+      "riskNote": "Project delays, cost overruns, low utilisation and debt-funded capex can reduce the expected benefit.",
+      "highlights": [
+        "₹183 Cr",
+        "₹273 Cr",
+        "183 Cr",
+        "273 Cr"
+      ],
       "matchedSignals": [
+        "capacity expansion",
+        "new plant",
+        "expansion",
         "investor presentation"
       ],
       "publishedAt": "2026-11-03T21:28:27+05:30",
@@ -9949,31 +10658,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/windmachin/",
       "aiEnhanced": false,
-      "impactScore": 40,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "impactScore": 65,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 81,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 26,
           "max": 35,
-          "reason": "Guidance can change future expectations but remains forward-looking."
+          "reason": "Capacity additions can affect future growth after commissioning and utilisation."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 18,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 11,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹273.00 crore"
         },
         {
           "id": "marketConfirmation",
@@ -9990,23 +10699,28 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 65/100 from business materiality 26/35, evidence 18/20, financial magnitude 11/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          273.0,
+          183.0,
+          0.11
+        ],
+        "largestAmountCrore": 273.0,
+        "percentages": [
+          33.8
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": null,
@@ -10023,7 +10737,7 @@
       "eventSlug": "windsor-machines-limited-2026-11-03-8a8f4b315b76",
       "eventUrl": "/stock-triggers/events/windsor-machines-limited-2026-11-03-8a8f4b315b76/",
       "stockHubUrl": "/stocks/windmachin/",
-      "categoryUrl": "/stock-triggers/category/guidance/"
+      "categoryUrl": "/stock-triggers/category/expansion/"
     },
     {
       "id": "4316cc69c38f4d0013",
@@ -10034,19 +10748,30 @@
       "companyName": "Shanti Gold International Limited",
       "category": "GUIDANCE",
       "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
+      "sentiment": "Positive",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Shanti Gold International Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Shanti Gold International Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "01 Shanti Gold: At A Glance Manufacturing Facility & Process08 03 Key Milestones Product Offerings10 04 Vision & Mission Clientele11 05 Experienced Board of Directors Growth Drivers12 06 Strong Management Team Financial Overview13 07 Value Proposition Industry Overview14 Table of Content 02 Strong Foundations Rigorous Quality Control09 Business at a Glance… Shanti Gold International” Converted partnership firm into a public limited company on November 1…",
+      "detailsText": "01 Shanti Gold: At A Glance Manufacturing Facility & Process08 03 Key Milestones Product Offerings10 04 Vision & Mission Clientele11 05 Experienced Board of Directors Growth Drivers12 06 Strong Management Team Financial Overview13 07 Value Proposition Industry Overview14 Table of Content 02 Strong Foundations Rigorous Quality Control09 Business at a Glance… Shanti Gold International” Converted partnership firm into a public limited company on November 1, 2013 under the name and style of ‘Shanti Gold International Limited’ 2013 2013 Acquired a land space of 3 acres at Mahindra World City, Jaipur 2018 Crossed Annual Turnover of ₹1,100 Cr. capacity at Mumbai facility in June 2026 Raise ₹100 Cr via rights issue Established wholly owned subsidiary, Shanti Gold Jewellery Trading L.L.C.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "01 Shanti Gold: At A Glance Manufacturing Facility & Process08 03 Key Milestones Product Offerings10 04 Vision & Mission Clientele11 05 Experienced Board of Directors Growth Drivers12 06 Strong Management Team Financial Overview13 07 Value Proposition Industry Overview14 Table of Content 02 Strong Foundations Rigorous Quality Control09 Business at a Glance…",
+        "Shanti Gold International” Converted partnership firm into a public limited company on November 1, 2013 under the name and style of ‘Shanti Gold International Limited’ 2013 2013 Acquired a land space of 3 acres at Mahindra World City, Jaipur 2018 Crossed Annual Turnover of ₹1,100 Cr.",
+        "capacity at Mumbai facility in June 2026 Raise ₹100 Cr via rights issue Established wholly owned subsidiary, Shanti Gold Jewellery Trading L.L.C."
+      ],
       "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
       "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
+      "highlights": [
+        "rs12",
+        "₹1,100 Cr",
+        "₹100 Cr",
+        "2018 Cr"
+      ],
       "matchedSignals": [
-        "investor presentation"
+        "investor presentation",
+        "growth",
+        "partnership"
       ],
       "publishedAt": "2026-11-03T21:27:55+05:30",
       "publishedDisplay": "03-Nov-2026 21:27 IST",
@@ -10063,31 +10788,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/shantigold/",
       "aiEnhanced": false,
-      "impactScore": 40,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "impactScore": 70,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 81,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 25,
           "max": 35,
           "reason": "Guidance can change future expectations but remains forward-looking."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 18,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 17,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹1,100.00 crore"
         },
         {
           "id": "marketConfirmation",
@@ -10104,23 +10829,25 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 70/100 from business materiality 25/35, evidence 18/20, financial magnitude 17/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
+        "amountsCrore": [
+          1100.0,
+          100.0
+        ],
+        "largestAmountCrore": 1100.0,
         "percentages": [],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": null,
@@ -10151,14 +10878,23 @@
       "sentiment": "Neutral",
       "subject": "Press Release for Unaudited Standalone and Consolidated Financial Results for the quarter ended September 30, 2026",
       "rawSubject": "Press Release",
-      "summary": "Shanti Gold International Limited filed an official update titled ‘Press Release for Unaudited Standalone and Consolidated Financial Results for the quarter ended September 30, 2026’.",
-      "detailsText": "Shanti Gold International Limited has informed the Exchange regarding a press release dated November 03, 2026, titled \"Press Release for Unaudited Standalone and Consolidated Financial Results for the quarter ended September 30, 2026\".",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Financial Highlights: Particular (In Rs Cr) Q2 FY27 Q2 FY26 YoY% Q1 FY27 H1 FY27 H1 FY26 YoY% Revenue from Operations 745.95 430.08 73.45% 716.38 1,462.33 722.85 102.30% EBITDA (Excl OI) 42.52 36.79 15.56% 71.45 113.97 88.20 29.22% EBITDA Margin % 5.70% 8.55% 9.97% 7.79% 12.20% PAT 29.56 26.04 13.50% 50.48 80.04 60.40 32.52% PAT Margin % 3.96% 6.06% 7.05%… EBITDA for the quarter grew by 15.6%, reaching Rs 42.5 crore in Q2 FY27, compared to Rs 36.8 crore…",
+      "detailsText": "Financial Highlights: Particular (In Rs Cr) Q2 FY27 Q2 FY26 YoY% Q1 FY27 H1 FY27 H1 FY26 YoY% Revenue from Operations 745.95 430.08 73.45% 716.38 1,462.33 722.85 102.30% EBITDA (Excl OI) 42.52 36.79 15.56% 71.45 113.97 88.20 29.22% EBITDA Margin % 5.70% 8.55% 9.97% 7.79% 12.20% PAT 29.56 26.04 13.50% 50.48 80.04 60.40 32.52% PAT Margin % 3.96% 6.06% 7.05%… EBITDA for the quarter grew by 15.6%, reaching Rs 42.5 crore in Q2 FY27, compared to Rs 36.8 crore in Q2 FY26. EBITDA margin for the quarter stood at 5.7%, compared to 8.6% in Q2 FY26.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Financial Highlights: Particular (In Rs Cr) Q2 FY27 Q2 FY26 YoY% Q1 FY27 H1 FY27 H1 FY26 YoY% Revenue from Operations 745.95 430.08 73.45% 716.38 1,462.33 722.85 102.30% EBITDA (Excl OI) 42.52 36.79 15.56% 71.45 113.97 88.20 29.22% EBITDA Margin % 5.70% 8.55% 9.97% 7.79% 12.20% PAT 29.56 26.04 13.50% 50.48 80.04 60.40 32.52% PAT Margin % 3.96% 6.06% 7.05%…",
+        "EBITDA for the quarter grew by 15.6%, reaching Rs 42.5 crore in Q2 FY27, compared to Rs 36.8 crore in Q2 FY26.",
+        "EBITDA margin for the quarter stood at 5.7%, compared to 8.6% in Q2 FY26."
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "Rs 42.5 crore",
+        "Rs 36.8 crore",
+        "42.5 crore",
+        "36.8 crore"
+      ],
       "matchedSignals": [
         "financial results",
         "results for the quarter"
@@ -10178,9 +10914,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/shantigold/",
       "aiEnhanced": false,
-      "impactScore": 47,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 49,
+      "impactScore": 68,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 81,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10193,16 +10929,16 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 18,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 12,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "largest extracted monetary value is approximately ₹42.50 crore"
         },
         {
           "id": "marketConfirmation",
@@ -10219,23 +10955,32 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 47/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 68/100 from business materiality 28/35, evidence 18/20, financial magnitude 12/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
+        "Evidence specificity: detailed disclosure text; 4 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
+        "amountsCrore": [
+          42.5,
+          36.8
+        ],
+        "largestAmountCrore": 42.5,
+        "percentages": [
+          102.3,
+          73.45,
+          32.52,
+          29.22,
+          15.6,
+          15.56
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 4
       },
       "marketContext": {
         "changePct": null,
@@ -10266,16 +11011,26 @@
       "sentiment": "Neutral",
       "subject": "Change in Management",
       "rawSubject": "Change in Management",
-      "summary": "Shalimar Paints Limited has informed the Exchange about change in Management",
-      "detailsText": "Shalimar Paints Limited has informed the Exchange about change in Management",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J. Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E)…",
+      "detailsText": "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J. Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E), Mumbai – 400051 NSE Symbol: SHALPAINTS Annexure A The requisite details in terms of SEBI Master Circular No HO/49/14/14(7)2025-CFD-POD2/I/3762/2026… No Particulars Details 1 Name of Director Mr Abhijeet Jhawar (DIN: 11536278) 2 Reason for change viz.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J.",
+        "Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E), Mumbai – 400051 NSE Symbol: SHALPAINTS Annexure A The requisite details in terms of SEBI Master Circular No HO/49/14/14(7)2025-CFD-POD2/I/3762/2026…",
+        "No Particulars Details 1 Name of Director Mr Abhijeet Jhawar (DIN: 11536278) 2 Reason for change viz."
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
-      "highlights": [],
+      "highlights": [
+        "rs,",
+        "49/14",
+        "3762/2026"
+      ],
       "matchedSignals": [
-        "change in management"
+        "change in management",
+        "company secretary",
+        "director"
       ],
       "publishedAt": "2026-11-03T21:25:57+05:30",
       "publishedDisplay": "03-Nov-2026 21:25 IST",
@@ -10292,31 +11047,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/shalpaints/",
       "aiEnhanced": false,
-      "impactScore": 34,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 46,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 83,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 15,
+          "score": 17,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 19,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 49:14, 3762:2026"
         },
         {
           "id": "marketConfirmation",
@@ -10333,13 +11088,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 34/100 from business materiality 15/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 17/35, evidence 19/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10347,8 +11101,11 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "49:14",
+          "3762:2026"
+        ],
+        "highlightCount": 3
       },
       "marketContext": {
         "changePct": null,
@@ -10379,15 +11136,24 @@
       "sentiment": "Neutral",
       "subject": "Change in Director(s)",
       "rawSubject": "Change in Director(s)",
-      "summary": "Shalimar Paints Limited filed an official update titled ‘Change in Director(s) of the company’.",
-      "detailsText": "Shalimar Paints Limited has informed the Exchange regarding Change in Director(s) of the company.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J. Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E)…",
+      "detailsText": "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J. Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E), Mumbai – 400051 NSE Symbol: SHALPAINTS Annexure A The requisite details in terms of SEBI Master Circular No HO/49/14/14(7)2025-CFD-POD2/I/3762/2026… No Particulars Details 1 Name of Director Mr Abhijeet Jhawar (DIN: 11536278) 2 Reason for change viz.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Thanking You, Yours faithfully, For Shalimar Paints Limited Snehal Saboo Company Secretary & Compliance Officer Membership No A49811 Encl.: As above BSE Limited Corporate Relationship Department, 1st Floor, New Trading Ring, Rotunda Building, P.J.",
+        "Towers, Dalal Street, Fort, Mumbai - 400 001 BSE Scrip Code: 509874 ISIN: INE849C01026 National Stock Exchange of India Limited Exchange Plaza, 5th Floor, Plot No C/1, GBlock Bandra Kurla Complex, Bandra (E), Mumbai – 400051 NSE Symbol: SHALPAINTS Annexure A The requisite details in terms of SEBI Master Circular No HO/49/14/14(7)2025-CFD-POD2/I/3762/2026…",
+        "No Particulars Details 1 Name of Director Mr Abhijeet Jhawar (DIN: 11536278) 2 Reason for change viz."
+      ],
       "whyItMatters": "Leadership or auditor changes can affect governance and execution. Review the reason, replacement and transition timeline.",
       "riskNote": "Unexpected resignations can be a warning, but routine appointments may have limited financial impact.",
-      "highlights": [],
+      "highlights": [
+        "rs,",
+        "49/14",
+        "3762/2026"
+      ],
       "matchedSignals": [
+        "company secretary",
         "director"
       ],
       "publishedAt": "2026-11-03T21:23:45+05:30",
@@ -10405,31 +11171,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/shalpaints/",
       "aiEnhanced": false,
-      "impactScore": 34,
-      "materialityBand": "Informational",
-      "dataConfidence": 47,
+      "impactScore": 45,
+      "materialityBand": "Low materiality",
+      "dataConfidence": 83,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 15,
+          "score": 16,
           "max": 35,
           "reason": "Leadership or auditor changes may affect governance and execution."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 19,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "corporate action ratio extracted: 49:14, 3762:2026"
         },
         {
           "id": "marketConfirmation",
@@ -10446,13 +11212,12 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Informational. The score is 34/100 from business materiality 15/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 45/100 from business materiality 16/35, evidence 19/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: some supporting detail; direct source filing available"
+        "Evidence specificity: detailed disclosure text; 3 concrete fact(s) extracted; direct source filing available"
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
@@ -10460,8 +11225,11 @@
         "largestAmountCrore": null,
         "percentages": [],
         "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
+        "actionRatios": [
+          "49:14",
+          "3762:2026"
+        ],
+        "highlightCount": 3
       },
       "marketContext": {
         "changePct": null,
@@ -10492,14 +11260,20 @@
       "sentiment": "Neutral",
       "subject": "Press release on the unaudited financial results of the Company for the quarter and half year ended September 30, 2026",
       "rawSubject": "Press Release",
-      "summary": "Fine Organic Industries Limited filed an official update titled ‘Press release on the unaudited financial results of the Company for the quarter and half year ended September 30, 2026’.",
-      "detailsText": "Fine Organic Industries Limited has informed the Exchange regarding a press release dated November 03, 2026, titled \"Press release on the unaudited financial results of the Company for the quarter and half year ended September 30, 2026\".",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
+      "summary": "Date: November 3, 2026 To BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 To National Stock Exchange of India Limited Plot No C/1, \"6\" Block, Exchange Plaza Bandra Kurla Complex, Bandra (East) Mumbai - 400 051 Security Code: 541557 Symbol: FINEORG Dear Sir / Madam, Subject: Press release on the unaudited financial results of the… Consolidated Performance Highlights Particulars (₹ in Crs) Q2FY27 Q2FY26 YoY H1FY27 H1FY26 YoY FY26…",
+      "detailsText": "Date: November 3, 2026 To BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 To National Stock Exchange of India Limited Plot No C/1, \"6\" Block, Exchange Plaza Bandra Kurla Complex, Bandra (East) Mumbai - 400 051 Security Code: 541557 Symbol: FINEORG Dear Sir / Madam, Subject: Press release on the unaudited financial results of the… Consolidated Performance Highlights Particulars (₹ in Crs) Q2FY27 Q2FY26 YoY H1FY27 H1FY26 YoY FY26 Revenue from Operations 729.4 597.3 22.1% 1,423.6 1,185.7 20.1% 2,365.8 EBITDA 184.9 135.2 36.8% 360.9 258.8 39.5% 483.0 EBITDA Margin 25.4% 22.6% 25.4% 21.8% 20.4% PAT 152.1 108.6 40.1% 290.3 225.7 28.6% 417.1 PAT Margin % 20.9% 18.2% 20.4% 19.0% 17.6% H1 &… o Exports accounted for ~58% and 56% of total revenue in H1 FY27 and Q2 FY27 respectively while domestic demand accounted for 42% and 44% in H1 FY27 and Q2 FY27 respectively",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Date: November 3, 2026 To BSE Limited Phiroze Jeejeebhoy Towers, Dalal Street, Mumbai - 400 001 To National Stock Exchange of India Limited Plot No C/1, \"6\" Block, Exchange Plaza Bandra Kurla Complex, Bandra (East) Mumbai - 400 051 Security Code: 541557 Symbol: FINEORG Dear Sir / Madam, Subject: Press release on the unaudited financial results of the…",
+        "Consolidated Performance Highlights Particulars (₹ in Crs) Q2FY27 Q2FY26 YoY H1FY27 H1FY26 YoY FY26 Revenue from Operations 729.4 597.3 22.1% 1,423.6 1,185.7 20.1% 2,365.8 EBITDA 184.9 135.2 36.8% 360.9 258.8 39.5% 483.0 EBITDA Margin 25.4% 22.6% 25.4% 21.8% 20.4% PAT 152.1 108.6 40.1% 290.3 225.7 28.6% 417.1 PAT Margin % 20.9% 18.2% 20.4% 19.0% 17.6% H1 &…",
+        "o Exports accounted for ~58% and 56% of total revenue in H1 FY27 and Q2 FY27 respectively while domestic demand accounted for 42% and 44% in H1 FY27 and Q2 FY27 respectively"
+      ],
       "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
       "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
+      "highlights": [
+        "rs,"
+      ],
       "matchedSignals": [
         "financial results"
       ],
@@ -10518,9 +11292,9 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/fineorg/",
       "aiEnhanced": false,
-      "impactScore": 46,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 49,
+      "impactScore": 62,
+      "materialityBand": "Moderate materiality",
+      "dataConfidence": 63,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
@@ -10533,16 +11307,16 @@
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 9,
+          "score": 13,
           "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
+          "reason": "detailed disclosure text; 1 concrete fact(s) extracted; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
-          "score": 0,
+          "score": 12,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "6 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -10559,23 +11333,29 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 46/100 from business materiality 27/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Moderate materiality. The score is 62/100 from business materiality 27/35, evidence 13/20, financial magnitude 12/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
         "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
       ],
       "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
         "The subject is generic and may omit the actual business impact.",
         "No unusual price or volume confirmation was available in the latest scanner data."
       ],
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          58.0,
+          56.0,
+          44.0,
+          42.0,
+          40.1,
+          39.5
+        ],
         "perShareRupees": [],
         "actionRatios": [],
-        "highlightCount": 0
+        "highlightCount": 1
       },
       "marketContext": {
         "changePct": null,
@@ -10601,20 +11381,24 @@
       "symbol": "FINEORG",
       "stockName": "Fine Organic Industries Limited",
       "companyName": "Fine Organic Industries Limited",
-      "category": "GUIDANCE",
-      "categoryLabel": "Guidance / Business Outlook",
+      "category": "EXPANSION",
+      "categoryLabel": "Capacity Expansion / New Facility",
       "sentiment": "Neutral",
       "subject": "Investor Presentation",
       "rawSubject": "Investor Presentation",
-      "summary": "Fine Organic Industries Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Fine Organic Industries Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
-      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
+      "summary": "Ltd Expanded capacity addition phase wise in Ambernath Amalgamated Fine Research and Development Centre Pvt Ltd and Fine Specialty Surfactants Pvt. Ltd Incorporated WOS - Fine Organics Americas LLC Incorporated WOS, Fine Organics FZE,UAE Acquired an 80% equity stake in Oleofine Organics SDN.",
+      "detailsText": "Ltd Expanded capacity addition phase wise in Ambernath Amalgamated Fine Research and Development Centre Pvt Ltd and Fine Specialty Surfactants Pvt. Ltd Incorporated WOS - Fine Organics Americas LLC Incorporated WOS, Fine Organics FZE,UAE Acquired an 80% equity stake in Oleofine Organics SDN.",
+      "summaryBasis": "Official filing text",
+      "filingExtracted": true,
+      "filingKeyFacts": [
+        "Ltd Expanded capacity addition phase wise in Ambernath Amalgamated Fine Research and Development Centre Pvt Ltd and Fine Specialty Surfactants Pvt.",
+        "Ltd Incorporated WOS - Fine Organics Americas LLC Incorporated WOS, Fine Organics FZE,UAE Acquired an 80% equity stake in Oleofine Organics SDN."
+      ],
+      "whyItMatters": "New capacity may support future growth, but utilisation, funding, commissioning delays and demand determine the real benefit.",
+      "riskNote": "Project delays, cost overruns, low utilisation and debt-funded capex can reduce the expected benefit.",
       "highlights": [],
       "matchedSignals": [
+        "capacity addition",
         "investor presentation"
       ],
       "publishedAt": "2026-11-03T21:19:02+05:30",
@@ -10632,31 +11416,31 @@
       "profileUrl": "/technical-analysis/",
       "triggerUrl": "/stocks/fineorg/",
       "aiEnhanced": false,
-      "impactScore": 40,
+      "impactScore": 43,
       "materialityBand": "Low materiality",
-      "dataConfidence": 39,
+      "dataConfidence": 57,
       "scoreVersion": "2.0",
       "scoreBreakdown": [
         {
           "id": "businessMateriality",
           "label": "Business materiality",
-          "score": 23,
+          "score": 24,
           "max": 35,
-          "reason": "Guidance can change future expectations but remains forward-looking."
+          "reason": "Capacity additions can affect future growth after commissioning and utilisation."
         },
         {
           "id": "evidenceSpecificity",
           "label": "Evidence specificity",
-          "score": 7,
+          "score": 9,
           "max": 20,
-          "reason": "some supporting detail; direct source filing available"
+          "reason": "adequate disclosure detail; direct source filing available"
         },
         {
           "id": "financialMagnitude",
           "label": "Financial magnitude",
           "score": 0,
           "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
+          "reason": "1 percentage metric(s) extracted, but no reliable rupee magnitude"
         },
         {
           "id": "marketConfirmation",
@@ -10673,10 +11457,10 @@
           "reason": "published within the last 24 hours"
         }
       ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
+      "scoreExplanation": "Low materiality. The score is 43/100 from business materiality 24/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
       "scoreDrivers": [
         "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
+        "Business materiality: Capacity additions can affect future growth after commissioning and utilisation."
       ],
       "scoreLimitations": [
         "No reliable amount, percentage or reporting period was extracted.",
@@ -10686,7 +11470,9 @@
       "extractedFacts": {
         "amountsCrore": [],
         "largestAmountCrore": null,
-        "percentages": [],
+        "percentages": [
+          80.0
+        ],
         "perShareRupees": [],
         "actionRatios": [],
         "highlightCount": 0
@@ -10706,7 +11492,7 @@
       "eventSlug": "fine-organic-industries-limited-2026-11-03-0d7f7c7c4270",
       "eventUrl": "/stock-triggers/events/fine-organic-industries-limited-2026-11-03-0d7f7c7c4270/",
       "stockHubUrl": "/stocks/fineorg/",
-      "categoryUrl": "/stock-triggers/category/guidance/"
+      "categoryUrl": "/stock-triggers/category/expansion/"
     },
     {
       "id": "9d4a11be87e00a45f2",
@@ -13907,7 +14693,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/indraprastha-gas-ltd-2026-11-03-f981bde1cf13/"
@@ -14479,7 +15265,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/petronet-lng-ltd-2026-11-03-d9e0e5f87334/"
@@ -14832,7 +15618,7 @@
         "momentumScore": 63.3,
         "momentumBias": "Bearish Momentum",
         "strengthSignal": "Bearish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/state-bank-of-india-2026-11-03-8b3c6f2d5b7b/"
@@ -16441,7 +17227,7 @@
         "momentumScore": 77.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/kotak-mahindra-bank-ltd-2026-11-03-c1a5ddb5f04b/"
@@ -16898,7 +17684,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-df0893fbce5d/"
@@ -17012,7 +17798,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-2bb587044e1c/"
@@ -17126,7 +17912,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-46f5b1eb7546/"
@@ -17238,7 +18024,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-ac31fb85f8d4/"
@@ -17350,7 +18136,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-cb3b11133cff/"
@@ -17462,7 +18248,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-6edcf9f3a5df/"
@@ -21695,7 +22481,7 @@
         "momentumScore": 85.0,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/prestige-estates-projects-ltd-2026-11-03-74b7dde4ec69/"
@@ -22046,7 +22832,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/lloyds-metals-and-energy-ltd-2026-11-03-a9a8c501e5df/"
@@ -23308,7 +24094,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bandhan-bank-ltd-2026-11-03-98134917b523/"
@@ -29268,7 +30054,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/rbl-bank-ltd-2026-11-03-da2a469551e1/"
@@ -29496,7 +30282,7 @@
         "momentumScore": 71.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/icici-lombard-general-insurance-company-ltd-2026-11-03-dfeba4d1002f/"
@@ -33743,7 +34529,7 @@
         "momentumScore": 72.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/axis-bank-ltd-2026-11-03-3570d57c4696/"
@@ -34427,7 +35213,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/tata-consultancy-services-ltd-2026-11-03-b2c97d027e61/"
@@ -35232,7 +36018,7 @@
         "momentumScore": 71.4,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/icici-lombard-general-insurance-company-ltd-2026-11-03-837196ab75a8/"
@@ -40365,7 +41151,7 @@
         "momentumScore": 95.9,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/aegis-logistics-ltd-2026-11-03-111828a6329d/"
@@ -41163,7 +41949,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/bank-of-baroda-2026-11-03-82c74f1c92a0/"
@@ -41511,7 +42297,7 @@
         "momentumScore": 82.1,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Bullish Volume Surge",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/asian-paints-ltd-2026-11-03-ef8d9a842223/"
@@ -41971,7 +42757,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/waaree-energies-ltd-2026-11-03-c04e05805124/"
@@ -43691,7 +44477,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/pvr-inox-ltd-2026-11-03-532dc958cc1a/"
@@ -44154,7 +44940,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/adani-enterprises-ltd-2026-11-03-11b6608eeaa3/"
@@ -50455,7 +51241,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Weak / Corrected",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/d-b-corp-ltd-2026-11-03-43320d0f70d8/"
@@ -53642,7 +54428,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cipla-ltd-2026-11-03-3fd8833392d8/"
@@ -53882,7 +54668,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/mankind-pharma-ltd-2026-11-03-794826c0a3d4/"
@@ -54227,7 +55013,7 @@
         "momentumScore": 94.2,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Strong Momentum",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/one-97-communications-ltd-2026-11-03-f53e905f5aae/"
@@ -55028,7 +55814,7 @@
         "momentumScore": 75.1,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/avenue-supermarts-ltd-2026-11-03-f0c55e407f69/"
@@ -55709,7 +56495,7 @@
         "momentumScore": 76.8,
         "momentumBias": "Bullish Momentum",
         "strengthSignal": "Positive Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dr-reddy-s-laboratories-ltd-2026-11-03-e897ee772ecc/"
@@ -56165,7 +56951,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Volume Watchlist",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/dixon-technologies-india-ltd-2026-11-03-10e931bbfc03/"
@@ -56737,7 +57523,7 @@
         "momentumScore": null,
         "momentumBias": "",
         "strengthSignal": "Neutral / Stable",
-        "updatedAt": "03-Nov-2026 20:17 IST"
+        "updatedAt": "03-Nov-2026 23:32 IST"
       },
       "legacyEventUrls": [
         "/stock-triggers/events/cg-power-and-industrial-solutions-ltd-2026-11-03-a965b059efce/"
@@ -57201,576 +57987,6 @@
       "eventUrl": "/stock-triggers/events/religare-enterprises-limited-2026-11-03-df034c8e28ee/",
       "stockHubUrl": "/stocks/religare/",
       "categoryUrl": "/stock-triggers/category/management-change/"
-    },
-    {
-      "id": "54e1d477d9f4523261",
-      "exchangeEventId": "106842216",
-      "stableEventId": "d30fe933d6c6",
-      "symbol": "GANDHITUBE",
-      "stockName": "Gandhi Special Tubes Limited",
-      "companyName": "Gandhi Special Tubes Limited",
-      "category": "RESULTS",
-      "categoryLabel": "Quarterly / Financial Results",
-      "sentiment": "Neutral",
-      "subject": "Financial Results / Earnings Update",
-      "rawSubject": "Outcome of Board Meeting",
-      "summary": "Gandhi Special Tubes Limited: Gandhi Special Tubes Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-      "detailsText": "Gandhi Special Tubes Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
-      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
-      "matchedSignals": [
-        "financial results",
-        "earnings"
-      ],
-      "publishedAt": "2026-11-03T17:26:32+05:30",
-      "publishedDisplay": "03-Nov-2026 17:26 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/GANDHITUBE_03112026172354_Outcome_of_BM_signed.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=GANDHITUBE&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/GANDHITUBE_03112026172354_Outcome_of_BM_signed.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/gandhitube/",
-      "aiEnhanced": false,
-      "impactScore": 47,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 57,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 28,
-          "max": 35,
-          "reason": "Quarterly results directly reveal growth, margin and profit quality."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 9,
-          "max": 20,
-          "reason": "some supporting detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 10,
-          "max": 10,
-          "reason": "published within the last 24 hours"
-        }
-      ],
-      "scoreExplanation": "Low materiality. The score is 47/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
-      ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/gandhi-special-tubes-limited-2026-11-03-d30fe933d6c6/"
-      ],
-      "eventSlug": "gandhi-special-tubes-limited-2026-11-03-d30fe933d6c6",
-      "eventUrl": "/stock-triggers/events/gandhi-special-tubes-limited-2026-11-03-d30fe933d6c6/",
-      "stockHubUrl": "/stocks/gandhitube/",
-      "categoryUrl": "/stock-triggers/category/results/"
-    },
-    {
-      "id": "40417ee1e05193331c",
-      "exchangeEventId": "106842214",
-      "stableEventId": "73de24b6ae07",
-      "symbol": "GAMMONIND",
-      "stockName": "Gammon India Limited",
-      "companyName": "Gammon India Limited",
-      "category": "OTHER_MATERIAL",
-      "categoryLabel": "Other Material Update",
-      "sentiment": "Neutral",
-      "subject": "In&#1048991;ma&#1048991;on of Board Mee&#1048991;ng of Gammon India Limited ( the Company ) to be held on Friday,6th November, 2026",
-      "rawSubject": "Updates",
-      "summary": "Gammon India Limited filed an official update titled ‘In&#1048991;ma&#1048991;on of Board Mee&#1048991;ng of Gammon India Limited ( the Company ) to be held on Friday,6th November, 2026’.",
-      "detailsText": "Gammon India Limited has informed the Exchange regarding 'In&#1048991;ma&#1048991;on of Board Mee&#1048991;ng of Gammon India Limited ( the Company ) to be held on Friday,6th November, 2026.'.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The filing may affect business expectations or governance. Read the original disclosure before drawing a conclusion.",
-      "riskNote": "The headline may omit conditions or limitations contained in the attached filing.",
-      "highlights": [],
-      "matchedSignals": [],
-      "publishedAt": "2026-11-03T17:25:43+05:30",
-      "publishedDisplay": "03-Nov-2026 17:25 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/GAMMONIND_03112026172405_Prior_Intimation_of_Board_Meeting.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=GAMMONIND&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/GAMMONIND_03112026172405_Prior_Intimation_of_Board_Meeting.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/gammonind/",
-      "aiEnhanced": false,
-      "impactScore": 29,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 8,
-          "max": 35,
-          "reason": "The filing requires additional facts before its business impact can be judged."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 11,
-          "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 10,
-          "max": 10,
-          "reason": "published within the last 24 hours"
-        }
-      ],
-      "scoreExplanation": "Informational. The score is 29/100 from business materiality 8/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
-      ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/gammon-india-limited-2026-11-03-73de24b6ae07/"
-      ],
-      "eventSlug": "gammon-india-limited-2026-11-03-73de24b6ae07",
-      "eventUrl": "/stock-triggers/events/gammon-india-limited-2026-11-03-73de24b6ae07/",
-      "stockHubUrl": "/stocks/gammonind/",
-      "categoryUrl": "/stock-triggers/category/other-material/"
-    },
-    {
-      "id": "57cd201c57429bd172",
-      "exchangeEventId": "106842209",
-      "stableEventId": "18fdd22b07a3",
-      "symbol": "AWFIS",
-      "stockName": "Awfis Space Solutions Limited",
-      "companyName": "Awfis Space Solutions Limited",
-      "category": "RESULTS",
-      "categoryLabel": "Quarterly / Financial Results",
-      "sentiment": "Neutral",
-      "subject": "Financial Results / Earnings Update",
-      "rawSubject": "Outcome of Board Meeting",
-      "summary": "Awfis Space Solutions Limited: Awfis Space Solutions Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-      "detailsText": "Awfis Space Solutions Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Financial results reveal current growth, profitability, margins and balance-sheet trends. Compare the numbers with prior periods and expectations.",
-      "riskNote": "One quarter may be affected by seasonality or one-off items; inspect cash flow, margins and management commentary.",
-      "highlights": [],
-      "matchedSignals": [
-        "financial results",
-        "earnings"
-      ],
-      "publishedAt": "2026-11-03T17:24:33+05:30",
-      "publishedDisplay": "03-Nov-2026 17:24 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/AWFIS2014_03112026172224_BM_outcome_Signed.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=AWFIS&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/AWFIS2014_03112026172224_BM_outcome_Signed.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/awfis/",
-      "aiEnhanced": false,
-      "impactScore": 47,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 57,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 28,
-          "max": 35,
-          "reason": "Quarterly results directly reveal growth, margin and profit quality."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 9,
-          "max": 20,
-          "reason": "some supporting detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 10,
-          "max": 10,
-          "reason": "published within the last 24 hours"
-        }
-      ],
-      "scoreExplanation": "Low materiality. The score is 47/100 from business materiality 28/35, evidence 9/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Quarterly results directly reveal growth, margin and profit quality."
-      ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/awfis-space-solutions-limited-2026-11-03-18fdd22b07a3/"
-      ],
-      "eventSlug": "awfis-space-solutions-limited-2026-11-03-18fdd22b07a3",
-      "eventUrl": "/stock-triggers/events/awfis-space-solutions-limited-2026-11-03-18fdd22b07a3/",
-      "stockHubUrl": "/stocks/awfis/",
-      "categoryUrl": "/stock-triggers/category/results/"
-    },
-    {
-      "id": "c52add733609088b0c",
-      "exchangeEventId": "106842208",
-      "stableEventId": "ea53cd293e47",
-      "symbol": "ACC",
-      "stockName": "ACC Limited",
-      "companyName": "ACC Limited",
-      "category": "INVESTOR_MEETING",
-      "categoryLabel": "Investor Meeting / Conference Call",
-      "sentiment": "Neutral",
-      "subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "rawSubject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "summary": "ACC Limited: Transcript of earning call held on October 29, 2026, pertaining to Unaudited financial results of the company for quarter and half year ended September 30, 2026",
-      "detailsText": "ACC Limited has informed the Exchange about Transcript of earning call held on October 29, 2026, pertaining to Unaudited financial results of the company for quarter and half year ended September 30, 2026",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "The meeting or recording can contain useful management commentary, but scheduling or publishing a call is not itself a business event or proof of institutional buying.",
-      "riskNote": "Check the transcript or recording for genuinely new guidance, order-book information, capital-allocation changes or risks. A recording link alone has low materiality.",
-      "highlights": [],
-      "matchedSignals": [
-        "analysts/institutional investor meet",
-        "investor meet",
-        "con. call",
-        "transcript"
-      ],
-      "publishedAt": "2026-11-03T17:24:15+05:30",
-      "publishedDisplay": "03-Nov-2026 17:24 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/ACC_1_03112026172336_ACC_Transcript_03112026.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=ACC&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/ACC_1_03112026172336_ACC_Transcript_03112026.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/acc/",
-      "aiEnhanced": false,
-      "impactScore": 30,
-      "materialityBand": "Informational",
-      "dataConfidence": 57,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 9,
-          "max": 35,
-          "reason": "A meeting, call or recording is informational until it contains a new material disclosure."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 11,
-          "max": 20,
-          "reason": "adequate disclosure detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 10,
-          "max": 10,
-          "reason": "published within the last 24 hours"
-        }
-      ],
-      "scoreExplanation": "Informational. The score is 30/100 from business materiality 9/35, evidence 11/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Evidence specificity: adequate disclosure detail; direct source filing available"
-      ],
-      "scoreLimitations": [
-        "The event is a meeting/recording update, not evidence of institutional buying or a change in business fundamentals.",
-        "No reliable amount, percentage or reporting period was extracted.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/acc-limited-2026-11-03-ea53cd293e47/"
-      ],
-      "eventSlug": "acc-limited-2026-11-03-ea53cd293e47",
-      "eventUrl": "/stock-triggers/events/acc-limited-2026-11-03-ea53cd293e47/",
-      "stockHubUrl": "/stocks/acc/",
-      "categoryUrl": "/stock-triggers/category/investor-meeting/"
-    },
-    {
-      "id": "695b50b888157d9969",
-      "exchangeEventId": "106842207",
-      "stableEventId": "ee00d6f36685",
-      "symbol": "WEALTH",
-      "stockName": "Wealth First Portfolio Managers Limited",
-      "companyName": "Wealth First Portfolio Managers Limited",
-      "category": "GUIDANCE",
-      "categoryLabel": "Guidance / Business Outlook",
-      "sentiment": "Neutral",
-      "subject": "Investor Presentation",
-      "rawSubject": "Investor Presentation",
-      "summary": "Wealth First Portfolio Managers Limited has informed the Exchange about Investor Presentation",
-      "detailsText": "Wealth First Portfolio Managers Limited has informed the Exchange about Investor Presentation",
-      "summaryBasis": "Exchange announcement text",
-      "filingExtracted": false,
-      "filingKeyFacts": [],
-      "whyItMatters": "Management guidance can reset market expectations. Track whether future results support the stated targets.",
-      "riskNote": "Guidance is forward-looking and may be revised if demand, costs or execution change.",
-      "highlights": [],
-      "matchedSignals": [
-        "investor presentation"
-      ],
-      "publishedAt": "2026-11-03T17:24:07+05:30",
-      "publishedDisplay": "03-Nov-2026 17:24 IST",
-      "sourceType": "NSE Corporate Announcement",
-      "sourceUrl": "https://nsearchives.nseindia.com/corporate/WEALTH_03112026172358_InvestorPresentation.pdf",
-      "sourcePageUrl": "https://www.nseindia.com/companies-listing/corporate-filings-announcements?symbol=WEALTH&tabIndex=equity",
-      "attachmentUrl": "https://nsearchives.nseindia.com/corporate/WEALTH_03112026172358_InvestorPresentation.pdf",
-      "sourceLinkType": "original-filing",
-      "cmp": null,
-      "changePct": null,
-      "indices": [],
-      "isFree": false,
-      "accessTier": "premium",
-      "profileUrl": "/technical-analysis/",
-      "triggerUrl": "/stocks/wealth/",
-      "aiEnhanced": false,
-      "impactScore": 40,
-      "materialityBand": "Low materiality",
-      "dataConfidence": 39,
-      "scoreVersion": "2.0",
-      "scoreBreakdown": [
-        {
-          "id": "businessMateriality",
-          "label": "Business materiality",
-          "score": 23,
-          "max": 35,
-          "reason": "Guidance can change future expectations but remains forward-looking."
-        },
-        {
-          "id": "evidenceSpecificity",
-          "label": "Evidence specificity",
-          "score": 7,
-          "max": 20,
-          "reason": "some supporting detail; direct source filing available"
-        },
-        {
-          "id": "financialMagnitude",
-          "label": "Financial magnitude",
-          "score": 0,
-          "max": 20,
-          "reason": "no reliable monetary or percentage magnitude was disclosed"
-        },
-        {
-          "id": "marketConfirmation",
-          "label": "Market confirmation",
-          "score": 0,
-          "max": 15,
-          "reason": "no current price/volume confirmation available"
-        },
-        {
-          "id": "recencyUrgency",
-          "label": "Recency / urgency",
-          "score": 10,
-          "max": 10,
-          "reason": "published within the last 24 hours"
-        }
-      ],
-      "scoreExplanation": "Low materiality. The score is 40/100 from business materiality 23/35, evidence 7/20, financial magnitude 0/20, market confirmation 0/15 and recency 10/10.",
-      "scoreDrivers": [
-        "Recency / urgency: published within the last 24 hours",
-        "Business materiality: Guidance can change future expectations but remains forward-looking."
-      ],
-      "scoreLimitations": [
-        "No reliable amount, percentage or reporting period was extracted.",
-        "The subject is generic and may omit the actual business impact.",
-        "No unusual price or volume confirmation was available in the latest scanner data."
-      ],
-      "extractedFacts": {
-        "amountsCrore": [],
-        "largestAmountCrore": null,
-        "percentages": [],
-        "perShareRupees": [],
-        "actionRatios": [],
-        "highlightCount": 0
-      },
-      "marketContext": {
-        "changePct": null,
-        "volumeSurgeRatio": null,
-        "strengthScore": null,
-        "momentumScore": null,
-        "momentumBias": "",
-        "strengthSignal": "",
-        "updatedAt": ""
-      },
-      "legacyEventUrls": [
-        "/stock-triggers/events/wealth-first-portfolio-managers-limited-2026-11-03-ee00d6f36685/"
-      ],
-      "eventSlug": "wealth-first-portfolio-managers-limited-2026-11-03-ee00d6f36685",
-      "eventUrl": "/stock-triggers/events/wealth-first-portfolio-managers-limited-2026-11-03-ee00d6f36685/",
-      "stockHubUrl": "/stocks/wealth/",
-      "categoryUrl": "/stock-triggers/category/guidance/"
     }
   ]
 }
